@@ -90,3 +90,60 @@ for (entry in elements) {
 
 `break` can be used at any time inside a loop to abort the current and all following runs.
 `continue` will only abort the current run and _continues_ with the next run (if the condition is still true)
+
+
+## Count
+
+There are multiple different strategies to iterate through a loop a specific number of times.
+
+::: code-group
+
+
+```groovy:no-line-numbers [while]
+def x = 0
+while (x < 10) {
+    log.info x++
+}
+```
+
+```groovy:no-line-numbers [do-while]
+def x = 0
+do {
+    log.info x++ // this would execute at least once, even if x was greater than 10
+} while (x < 10)
+```
+
+```groovy:no-line-numbers [for]
+for (def x = 0; x < 10; x++) {
+    log.info x
+}
+```
+
+```groovy:no-line-numbers [enhanced list]
+for (def x in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) {
+    log.info x
+}
+for (def x : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) { // "in" and ":" are the same here
+    log.info x
+}
+```
+
+```groovy:no-line-numbers [each list]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].each {
+    log.info x
+}
+```
+
+```groovy:no-line-numbers [for in range]
+for (def x : 0..<10) { // creates a range
+    log.info x
+}
+```
+
+```groovy:no-line-numbers [each range]
+(0..<10).each {
+    log.info x
+}
+```
+
+:::
