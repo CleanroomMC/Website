@@ -69,13 +69,13 @@ ore_dict.add('netherStar', item('minecraft:gold_ingot'))
     ore_dict.clear(String)
     ```
 
-- Removes all registered recipes:
+- Removes all itemstacks from the given oredict:
 
     ```groovy:no-line-numbers
     ore_dict.removeAll(String)
     ```
 
-- Removes all registered recipes:
+- Removes all itemstacks from all oredicts:
 
     ```groovy:no-line-numbers
     ore_dict.removeAll()
