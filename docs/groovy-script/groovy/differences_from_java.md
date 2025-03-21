@@ -38,9 +38,9 @@ Parentheses around parameters are optional when there is no ambiguity.
 ::: code-group
 
 ```java
-Code.run('example');
-Code.run(Code.nested('example'));
-println('hello');
+Code.run("example");
+Code.run(Code.nested("example"));
+System.out.println("hello");
 ```
 
 ```groovy
@@ -105,7 +105,7 @@ In Groovy, you can easily create a list using square braces `[]`, using commas `
 ::: code-group
 
 ```java
-List<Integer> list = new ArrayList<>();
+List<String> list = new ArrayList<>();
 list.add("example");
 list.add("demo");
 ```
@@ -131,7 +131,11 @@ map.put(3, "demo");
 ```
 
 ```groovy
-def map = [1: "example", 3: "demo"]
+def map0 = [:]
+map0[1] = "example"
+map0[3] = "demo"
+def map1 = [1: "example", 3: "demo"]     // shorthand
+def map2 = [(1): "example", (3): "demo"] // if the key is an expression, wrapping it in parentheses may be needed
 ```
 
 :::
@@ -166,6 +170,7 @@ If the field is final, only a *getter* method will be created.
 
 ```java
 public class DemoClass {
+    private final String internal = "internal";
     private final String value = "value";
     private String name = "example";
 
@@ -185,8 +190,9 @@ public class DemoClass {
 
 ```groovy
 class DemoClass {
-    final def value = "value"
-    def name = "example"
+    private final def internal = 'internal'
+    final def value = 'value'
+    def name = 'example'
 }
 ```
 
@@ -244,7 +250,7 @@ public class DemoClass {
 
 ```groovy
 class DemoClass {
-    DemoClass foo() {
+    def foo() {
         this
     }
 
@@ -334,9 +340,9 @@ Groovy has multiple ways of simplifying interacting with multiple methods or fie
 DemoClass obj = new DemoClass();
 obj.sayHi();
 obj.value = 1;
-obj.name = 'hello';
+obj.name = "hello";
 obj.total = 100;
-obj.clay = 'clay';
+obj.clay = "clay";
 obj.current = 5;
 obj.sayGoodbye();
 ```
