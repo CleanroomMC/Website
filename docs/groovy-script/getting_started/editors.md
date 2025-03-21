@@ -90,8 +90,9 @@ This language support will work with any variation of Emacs, but will presume yo
 
 1. Open Emacs and install [lsp-mode](https://emacs-lsp.github.io/lsp-mode/page/installation/), and follow further installation instructions for lsp-mode.
 2. Install the GroovyScript LSP file here:
-::: details GroovyScript LSP {id="example"}
-```lisp title="lsp-groovyscript.el"
+:::: details GroovyScript LSP {id="example"}
+::: code-group
+```lisp [lsp-groovyscript.el]
 ;;; lsp-groovyscript.el --- GroovyScript LSP support for lsp-mode -*- lexical-binding: t; -*-
 
 ;; Version: 1.0.0
@@ -143,6 +144,7 @@ This language support will work with any variation of Emacs, but will presume yo
 ;;; lsp-groovyscript.el ends here
 ```
 :::
+::::
 3. [Start the Language Server](#start-the-language-server) via the instructions above
 4. The port in the `groovyscript.cfg` config file must match the port setting.
 5. Done

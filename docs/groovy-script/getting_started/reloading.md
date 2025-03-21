@@ -43,8 +43,10 @@ However, you can add your own custom class and implement reloading for your reci
 To do so, first make a new file in `classes` with the class containing an `add`, `remove`, and an `onReload` method.
 It should have an instance created inside it for access purposes.
 
-::: info DemoRegistry {id="example"}
-```groovy
+:::: info Example {id="example"}
+::: code-group {id="example"}
+
+```groovy [classes/DemoRegistry.groovy]
 import example.DemoHolder
 import example.DemoRecipe
 
@@ -74,11 +76,14 @@ class DemoRegistry {
 }
 ```
 :::
+::::
 
 Then, add an event listener that is listening for `GroovyReloadEvent`.
 Inside of this event listener, call the `onReload` method.
 
-```groovy
+::: code-group
+
+```groovy [postInit/ReloadHelper.groovy]
 import classes.DemoRegistry
 import com.cleanroommc.groovyscript.event.GroovyReloadEvent
 
@@ -86,6 +91,8 @@ eventManager.listen(GroovyReloadEvent) {
     DemoRegistry.instance.onReload()
 }
 ```
+
+:::
 
 Finally, any time you would add a recipe to or remove a recipe from `DemoHolder.DemoRecipeList`,
 ensure it is manipulated via `DemoRegistry.instance`.
