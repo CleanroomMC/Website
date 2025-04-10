@@ -60,14 +60,17 @@ import static net.minecraft.util.math.MathHelper.*
 ## Maps
 
 
-GroovyScript replaces the use of `LinkedHashMap` with uses `Object2ObjectLinkedOpenHashMap` as the default map used in Groovy.
-This is done because it is slightly more memory efficient and keeps the element order.
+GroovyScript replaces uses of `LinkedHashMap` with `Object2ObjectLinkedOpenHashMap` as the default map used in Groovy.
+This is done because it is slightly more memory efficient while still keeping the element order.
 
+If you want to create a `LinkedHashMap` anyways, you can simply import it and create a new instance of it as normal.
+This only changes the shorthand method of creating maps (`[:]`).
 
 
 ## Security Restrictions
 
 
-A number of packages or classes are banned, and not able to be used by Groovy.
+A number of packages, classes, and methods are banned, and not able to be used by Groovy.
 
-When interacting with a File object through Groovy, the File can only refer to a file path that targets inside the minecraft directory.
+In particular, when interacting with a File object through Groovy,
+the File can only refer to a file path that targets inside the minecraft directory.
