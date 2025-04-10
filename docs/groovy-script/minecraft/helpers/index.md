@@ -4,15 +4,19 @@ order: 700
 ---
 
 
-# Helpers
+# Registries
 
 ## Categories
 
-Has 5 subcategories.
+Has 7 subcategories.
+
+* [Custom Commands](./command.md)
 
 * [Crafting Table](./crafting.md)
 
 * [Furnace](./furnace.md)
+
+* [Default GameRules](./game_rule.md)
 
 * [Ore Dictionary](./ore_dict.md)
 

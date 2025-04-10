@@ -18,6 +18,20 @@ Refer to this via any of the following:
 ```groovy:no-line-numbers {1}
 furnace/* Used as page default */ // [!code focus]
 Furnace
+minecraft.furnace
+minecraft.Furnace
+Minecraft.furnace
+Minecraft.Furnace
+vanilla.furnace
+vanilla.Furnace
+Vanilla.furnace
+Vanilla.Furnace
+mods.mc.furnace
+mods.mc.Furnace
+mods.vanilla.furnace
+mods.vanilla.Furnace
+mods.minecraft.furnace
+mods.minecraft.Furnace
 ```
 
 
@@ -50,6 +64,22 @@ Just like other recipe types, the Furnace also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
 :::::::::: details furnace.recipeBuilder() {open id="abstract"}
+- `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
+
+    ```groovy:no-line-numbers
+    input(IIngredient)
+    input(IIngredient...)
+    input(Collection<IIngredient>)
+    ```
+
+- `ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
+
+    ```groovy:no-line-numbers
+    output(ItemStack)
+    output(ItemStack...)
+    output(Collection<ItemStack>)
+    ```
+
 - `float`. Sets the experience rewarded for smelting the given input. Requires greater than or equal to 0. (Default `0.0f`).
 
     ```groovy:no-line-numbers
