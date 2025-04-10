@@ -31,6 +31,12 @@ mods.pyrotech.SoakingPot
     mods.pyrotech.soaking_pot.add(String, IIngredient, FluidStack, ItemStack, int)
     ```
 
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.soaking_pot.add(SoakingPotRecipe)
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.pyrotech.soaking_pot.add('dirt_to_apple', item('minecraft:dirt'), fluid('water'), item('minecraft:apple'), 1200)
@@ -111,6 +117,24 @@ mods.pyrotech.soaking_pot.recipeBuilder()
 ::::::::::
 
 ## Removing Recipes
+
+- Removes the recipe with the given Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.soaking_pot.remove(ResourceLocation)
+    ```
+
+- Removes the recipe with the given String as its Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.soaking_pot.remove(String)
+    ```
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.soaking_pot.remove(SoakingPotRecipe)
+    ```
 
 - Removes all recipes that match the given input:
 

@@ -31,6 +31,12 @@ mods.pyrotech.DryingRack
     mods.pyrotech.drying_rack.add(String, IIngredient, ItemStack, int)
     ```
 
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.drying_rack.add(DryingRackRecipe)
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.pyrotech.drying_rack.add('apple_to_dirt', item('minecraft:apple'), item('minecraft:dirt'), 1200)
@@ -95,6 +101,24 @@ mods.pyrotech.drying_rack.recipeBuilder()
 ::::::::::
 
 ## Removing Recipes
+
+- Removes the recipe with the given Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.drying_rack.remove(ResourceLocation)
+    ```
+
+- Removes the recipe with the given String as its Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.drying_rack.remove(String)
+    ```
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.drying_rack.remove(DryingRackRecipe)
+    ```
 
 - Removes all recipes that match the given input:
 

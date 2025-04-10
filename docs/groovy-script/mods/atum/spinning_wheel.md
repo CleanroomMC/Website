@@ -25,6 +25,13 @@ mods.atum.SpinningWheel
 
 ## Adding Recipes
 
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    mods.atum.spinning_wheel.add(ISpinningWheelRecipe)
+    ```
+
+
 ### Recipe Builder
 
 Just like other recipe types, the Spinning Wheel also uses a recipe builder.
@@ -87,6 +94,24 @@ mods.atum.spinning_wheel.recipeBuilder()
 ::::::::::
 
 ## Removing Recipes
+
+- Removes the recipe with the given Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.atum.spinning_wheel.remove(ResourceLocation)
+    ```
+
+- Removes the recipe with the given String as its Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.atum.spinning_wheel.remove(String)
+    ```
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    mods.atum.spinning_wheel.remove(ISpinningWheelRecipe)
+    ```
 
 - Removes all recipes that match the given input:
 

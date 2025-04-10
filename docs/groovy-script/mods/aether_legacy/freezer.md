@@ -31,6 +31,12 @@ mods.aether.Freezer
     mods.aether_legacy.freezer.add(ItemStack, ItemStack, int)
     ```
 
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.freezer.add(AetherFreezable)
+    ```
+
 
 ### Recipe Builder
 
@@ -81,6 +87,24 @@ mods.aether_legacy.freezer.recipeBuilder()
 ::::::::::
 
 ## Removing Recipes
+
+- Removes the recipe with the given Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.freezer.remove(ResourceLocation)
+    ```
+
+- Removes the recipe with the given String as its Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.freezer.remove(String)
+    ```
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.freezer.remove(AetherFreezable)
+    ```
 
 - Removes all recipes that match the given output:
 

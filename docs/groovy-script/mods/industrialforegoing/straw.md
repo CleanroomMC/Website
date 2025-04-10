@@ -35,6 +35,12 @@ mods.industrialforegoing.Straw
     mods.industrialforegoing.straw.add(String, FluidStack, Collection<PotionEffect>)
     ```
 
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    mods.industrialforegoing.straw.add(StrawHandler)
+    ```
+
 
 ### Recipe Builder
 
@@ -85,6 +91,24 @@ mods.industrialforegoing.straw.recipeBuilder()
 ::::::::::
 
 ## Removing Recipes
+
+- Removes the recipe with the given Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.industrialforegoing.straw.remove(ResourceLocation)
+    ```
+
+- Removes the recipe with the given String as its Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.industrialforegoing.straw.remove(String)
+    ```
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    mods.industrialforegoing.straw.remove(StrawHandler)
+    ```
 
 - Removes all registered recipes:
 

@@ -35,6 +35,12 @@ mods.aether.EnchanterFuel
     mods.aether_legacy.enchanter_fuel.add(ItemStack, int)
     ```
 
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.enchanter_fuel.add(AetherEnchantmentFuel)
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.aether_legacy.enchanter_fuel.add(item('minecraft:blaze_rod'), 1000)
@@ -43,6 +49,24 @@ mods.aether_legacy.enchanter_fuel.add(item('minecraft:blaze_rod'), 1000)
 ::::::::::
 
 ## Removing Recipes
+
+- Removes the recipe with the given Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.enchanter_fuel.remove(ResourceLocation)
+    ```
+
+- Removes the recipe with the given String as its Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.enchanter_fuel.remove(String)
+    ```
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.enchanter_fuel.remove(AetherEnchantmentFuel)
+    ```
 
 - Removes all recipes that match the given input:
 

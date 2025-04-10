@@ -25,6 +25,13 @@ mods.pyrotech.ChoppingBlock
 
 ## Adding Recipes
 
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.chopping_block.add(ChoppingBlockRecipe)
+    ```
+
+
 ### Recipe Builder
 
 Just like other recipe types, the Chopping Block also uses a recipe builder.
@@ -91,6 +98,24 @@ mods.pyrotech.chopping_block.recipeBuilder()
 ::::::::::
 
 ## Removing Recipes
+
+- Removes the recipe with the given Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.chopping_block.remove(ResourceLocation)
+    ```
+
+- Removes the recipe with the given String as its Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.chopping_block.remove(String)
+    ```
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.chopping_block.remove(ChoppingBlockRecipe)
+    ```
 
 - Removes all recipes that match the given input:
 

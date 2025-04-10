@@ -23,6 +23,13 @@ mods.atum.Kiln
 
 ## Adding Recipes
 
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    mods.atum.kiln.add(IKilnRecipe)
+    ```
+
+
 ### Recipe Builder
 
 Just like other recipe types, the Kiln also uses a recipe builder.
@@ -84,6 +91,24 @@ mods.atum.kiln.recipeBuilder()
 ::::::::::
 
 ## Removing Recipes
+
+- Removes the recipe with the given Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.atum.kiln.remove(ResourceLocation)
+    ```
+
+- Removes the recipe with the given String as its Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.atum.kiln.remove(String)
+    ```
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    mods.atum.kiln.remove(IKilnRecipe)
+    ```
 
 - Removes all recipes that match the given input:
 

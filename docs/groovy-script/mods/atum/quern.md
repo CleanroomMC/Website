@@ -23,6 +23,13 @@ mods.atum.Quern
 
 ## Adding Recipes
 
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    mods.atum.quern.add(IQuernRecipe)
+    ```
+
+
 ### Recipe Builder
 
 Just like other recipe types, the Quern also uses a recipe builder.
@@ -85,6 +92,24 @@ mods.atum.quern.recipeBuilder()
 ::::::::::
 
 ## Removing Recipes
+
+- Removes the recipe with the given Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.atum.quern.remove(ResourceLocation)
+    ```
+
+- Removes the recipe with the given String as its Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.atum.quern.remove(String)
+    ```
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    mods.atum.quern.remove(IQuernRecipe)
+    ```
 
 - Removes all recipes that match the given input:
 

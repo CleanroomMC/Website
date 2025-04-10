@@ -31,6 +31,12 @@ mods.pyrotech.BrickKiln
     mods.pyrotech.brick_kiln.add(String, IIngredient, ItemStack, int, float, ItemStack...)
     ```
 
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.brick_kiln.add(BrickKilnRecipe)
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.pyrotech.brick_kiln.add('clay_to_iron_brick', item('minecraft:clay_ball') * 5, item('minecraft:iron_ingot'), 1200, 0.5f, item('minecraft:dirt'), item('minecraft:cobblestone'))
@@ -111,6 +117,24 @@ mods.pyrotech.brick_kiln.recipeBuilder()
 ::::::::::
 
 ## Removing Recipes
+
+- Removes the recipe with the given Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.brick_kiln.remove(ResourceLocation)
+    ```
+
+- Removes the recipe with the given String as its Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.brick_kiln.remove(String)
+    ```
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.brick_kiln.remove(BrickKilnRecipe)
+    ```
 
 - Removes all recipes that match the given input:
 

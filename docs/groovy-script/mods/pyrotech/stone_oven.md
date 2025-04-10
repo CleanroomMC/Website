@@ -35,6 +35,12 @@ mods.pyrotech.StoneOven
     mods.pyrotech.stone_oven.add(String, IIngredient, ItemStack, int)
     ```
 
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.stone_oven.add(StoneOvenRecipe)
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.pyrotech.stone_oven.add('apple_to_dirt_stone', item('minecraft:apple'), item('minecraft:dirt'), 1000)
@@ -99,6 +105,24 @@ mods.pyrotech.stone_oven.recipeBuilder()
 ::::::::::
 
 ## Removing Recipes
+
+- Removes the recipe with the given Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.stone_oven.remove(ResourceLocation)
+    ```
+
+- Removes the recipe with the given String as its Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.stone_oven.remove(String)
+    ```
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.stone_oven.remove(StoneOvenRecipe)
+    ```
 
 - Removes all recipes that match the given input:
 

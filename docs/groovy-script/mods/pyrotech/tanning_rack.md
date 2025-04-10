@@ -31,6 +31,12 @@ mods.pyrotech.TanningRack
     mods.pyrotech.tanning_rack.add(String, IIngredient, ItemStack, int, ItemStack)
     ```
 
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.tanning_rack.add(TanningRackRecipe)
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.pyrotech.tanning_rack.add('apple_to_dirt', item('minecraft:apple'), item('minecraft:dirt'), 1200, item('minecraft:clay_ball'))
@@ -101,6 +107,24 @@ mods.pyrotech.tanning_rack.recipeBuilder()
 ::::::::::
 
 ## Removing Recipes
+
+- Removes the recipe with the given Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.tanning_rack.remove(ResourceLocation)
+    ```
+
+- Removes the recipe with the given String as its Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.tanning_rack.remove(String)
+    ```
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.tanning_rack.remove(TanningRackRecipe)
+    ```
 
 - Removes all recipes that match the given input:
 

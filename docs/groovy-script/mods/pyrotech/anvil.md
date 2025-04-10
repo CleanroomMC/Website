@@ -29,6 +29,12 @@ mods.pyrotech.Anvil
     mods.pyrotech.anvil.add(String, IIngredient, ItemStack, int, String, String)
     ```
 
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.anvil.add(AnvilRecipe)
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.pyrotech.anvil.add('iron_to_clay', ore('ingotIron'), item('minecraft:clay_ball'), 9, 'granite', 'hammer')
@@ -130,6 +136,24 @@ mods.pyrotech.anvil.recipeBuilder()
 ::::::::::
 
 ## Removing Recipes
+
+- Removes the recipe with the given Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.anvil.remove(ResourceLocation)
+    ```
+
+- Removes the recipe with the given String as its Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.anvil.remove(String)
+    ```
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.anvil.remove(AnvilRecipe)
+    ```
 
 - Removes all recipes that match the given output:
 
