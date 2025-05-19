@@ -31,6 +31,12 @@ mods.aether.Accessory
     mods.aether_legacy.accessory.add(ItemStack, String)
     ```
 
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.accessory.add(AetherAccessory)
+    ```
+
 
 ### Recipe Builder
 
@@ -73,6 +79,24 @@ mods.aether_legacy.accessory.recipeBuilder()
 ::::::::::
 
 ## Removing Recipes
+
+- Removes the recipe with the given Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.accessory.remove(ResourceLocation)
+    ```
+
+- Removes the recipe with the given String as its Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.accessory.remove(String)
+    ```
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.accessory.remove(AetherAccessory)
+    ```
 
 - Removes all recipes that match the given input:
 

@@ -22,18 +22,30 @@ Refer to this via any of the following:
 ```groovy:no-line-numbers {1}
 rarity/* Used as page default */ // [!code focus]
 Rarity
+minecraft.rarity
+minecraft.Rarity
+Minecraft.rarity
+Minecraft.Rarity
+vanilla.rarity
+vanilla.Rarity
+Vanilla.rarity
+Vanilla.Rarity
+mods.mc.rarity
+mods.mc.Rarity
+mods.minecraft.rarity
+mods.minecraft.Rarity
 ```
 
 
-## Editing Values
+## Adding Entries
 
-- Sets the color of the given itemstack in the format `color`, `item`:
+- Sets the color of the given itemstack in the format `rarity`, `item`:
 
     ```groovy:no-line-numbers
     rarity.set(IRarity, Closure<Boolean>)
     ```
 
-- Sets the color of the given itemstack in the format `color`, `item`:
+- Sets the color of the given itemstack in the format `rarity`, `item`:
 
     ```groovy:no-line-numbers
     rarity.set(IRarity, ItemStack)

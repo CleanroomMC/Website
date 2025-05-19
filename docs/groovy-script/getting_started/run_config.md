@@ -13,8 +13,9 @@ Scripts with stuff like Item Creation go in `groovy/preInit`.
 
 Let's see what the file can look like.
 
-::: info Example {id="example"}
-```json
+:::: info Example {id="example"}
+::: code-group
+```json [groovy/runConfig.json]
 {
   "packName": "",
   "packId": "",
@@ -42,6 +43,7 @@ Let's see what the file can look like.
 }
 ```
 :::
+::::
 
 Let's go through it bit by bit:
 

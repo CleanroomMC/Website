@@ -15,6 +15,10 @@ Sets the starting inventory of the player, including armor slots and offhand.
 No more than a total of 41 items can be inserted into the inventory.
 ::::::::::
 
+:::::::::: details Tip {open id="tip"}
+When testing the Starting Inventory items, use `setTestStartingItems(true)` to allow testing every time a player logs in instead of just the first.
+::::::::::
+
 ## Identifier
 
 Refer to this via any of the following:
@@ -22,31 +26,42 @@ Refer to this via any of the following:
 ```groovy:no-line-numbers {1}
 player/* Used as page default */ // [!code focus]
 Player
+minecraft.player
+minecraft.Player
+Minecraft.player
+Minecraft.Player
+vanilla.player
+vanilla.Player
+Vanilla.player
+Vanilla.Player
+mods.mc.player
+mods.mc.Player
+mods.minecraft.player
+mods.minecraft.Player
 ```
 
 
 ## Editing Values
 
-- Sets if items given when joining the world regardless of if the flag has already been set:
-
-    ```groovy:no-line-numbers
-    player.testingStartingItems
-    ```
-
 - Sets if the player inventory is cleared prior to giving the player these items:
 
     ```groovy:no-line-numbers
-    player.replaceDefaultInventory
+    mods.minecraft.player.setReplaceDefaultInventory(boolean)
+    ```
+
+- Sets if items given when joining the world regardless of if the flag has already been set:
+
+    ```groovy:no-line-numbers
+    mods.minecraft.player.setTestStartingItems(boolean)
     ```
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-player.testingStartingItems = true
-player.replaceDefaultInventory = true
+mods.minecraft.player.setReplaceDefaultInventory(true)
+mods.minecraft.player.setTestStartingItems(true)
 ```
 
 ::::::::::
-
 
 ## Adding Entries
 

@@ -34,7 +34,7 @@ We are using the map we created above here.
 ```groovy:no-line-numbers
 println(elements['Pb']) // Lead
 println(elements['Ag']) // Silver
-println(elements['B']) // null since there is no key 'B'
+println(elements['B'])  // null since there is no key 'B'
 ```
 
 ## Modifying maps
@@ -42,6 +42,29 @@ println(elements['B']) // null since there is no key 'B'
 We are using the map we created above here.
 
 ```groovy:no-line-numbers
-elements['Au'] = 'Copper' // Au is know mapped to copper
-elements.remove('H') // removes H: Hydrogen
+elements['Au'] = 'Copper' // Au is now mapped to copper
+elements.remove('H')      // removes H: Hydrogen
 ```
+
+## Variable keys
+
+Groovy can have the keys of a map be set via variables.
+However, in order to do this, the key might need to be surrounded in parentheses
+to be properly handled.
+
+This is particularly relevant with GroovyScript [Object Mappers](../getting_started/object_mappers.md).
+
+```groovy:no-line-numbers
+def itemStackToValue = [
+    (item('minecraft:dirt')): -1,
+    (item('minecraft:stone')): 5,
+    (item('minecraft:clay')): 1000,
+]
+```
+
+::: info Warning {id="danger"}
+
+Failing to properly surround a key in parentheses if it requires them may result in the script file
+throwing a `MultipleCompilationErrorsException` due to being "unable to resolve class".
+
+:::

@@ -31,6 +31,12 @@ mods.pyrotech.CompactingBin
     mods.pyrotech.compacting_bin.add(String, IIngredient, ItemStack, int)
     ```
 
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.compacting_bin.add(CompactingBinRecipe)
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.pyrotech.compacting_bin.add('iron_to_clay', ore('ingotIron') * 5, item('minecraft:clay_ball') * 20, 9)
@@ -95,6 +101,24 @@ mods.pyrotech.compacting_bin.recipeBuilder()
 ::::::::::
 
 ## Removing Recipes
+
+- Removes the recipe with the given Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.compacting_bin.remove(ResourceLocation)
+    ```
+
+- Removes the recipe with the given String as its Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.compacting_bin.remove(String)
+    ```
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.compacting_bin.remove(CompactingBinRecipe)
+    ```
 
 - Removes all recipes that match the given input:
 

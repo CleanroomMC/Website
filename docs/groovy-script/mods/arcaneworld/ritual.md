@@ -23,6 +23,13 @@ mods.arcaneworld.Ritual
 
 ## Adding Recipes
 
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.add(Ritual)
+    ```
+
+
 ### Recipe Builder
 
 Just like other recipe types, the Ritual also uses a recipe builder.
@@ -698,6 +705,24 @@ mods.arcaneworld.ritual.recipeBuilderWeather()
 ::::::::::
 
 ## Removing Recipes
+
+- Removes the recipe with the given Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.remove(ResourceLocation)
+    ```
+
+- Removes the recipe with the given String as its Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.remove(String)
+    ```
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.remove(Ritual)
+    ```
 
 - Removes all recipes that match the given input:
 

@@ -29,24 +29,32 @@ The default package classes are located in is `classes`, so you would run `impor
 
 ## Example
 
-::: info Basic Example {id="example"}
+:::: info Basic Example {id="example"}
 
-With this file, named `DemoClass.groovy`, placed inside the `classes` folder, and the folder being added to the `classes` element in `runConfig.json`:
+With a named `DemoClass.groovy` that is registered by the `runConfig.json` to the `classes` element,
+you can access that class from any script file or another class.
 
-```groovy
+::: code-group
+
+```groovy [classes/DemoClass.groovy]
 class DemoClass {
     final static def iron = item 'minecraft:iron_ingot'
     final static def gold = item 'minecraft:gold_ingot'
 }
 ```
 
-You are able to import and use it in other script files:
-
-```groovy
-import classes.DemoClass
-
-log.info DemoClass.iron in ore('ingotIron')
+```json [runConfig.json]
+"classes": [
+  "classes/" // targets either the file or a folder that the file is nested within
+]
 ```
 
+```groovy [postInit/CheckIron.groovy]
+import classes.DemoClass
+
+log.info(DemoClass.iron in ore('ingotIron'))
+```
 
 :::
+
+::::

@@ -15,12 +15,12 @@ A normal crafting recipe that takes place in the Vanilla Crafting Table, convert
 While shorthand methods to create recipes have been supplied, it is far easier to use the recipe builder.
 ::::::::::
 
-:::::::::: details Tip {open id="tip"}
-You can view recipe names in JEI/HEI by hovering over the output with `F3+h` mode enabled.
-::::::::::
-
 :::::::::: details Note {open id="note"}
 Fallback keys are global and apply to all classes using the matrix feature of `AbstractCraftingRecipeBuilder`.
+::::::::::
+
+:::::::::: details Tip {open id="tip"}
+You can view recipe names in JEI/HEI by hovering over the output with `F3+h` mode enabled.
 ::::::::::
 
 ## Identifier
@@ -30,6 +30,20 @@ Refer to this via any of the following:
 ```groovy:no-line-numbers {1}
 crafting/* Used as page default */ // [!code focus]
 Crafting
+minecraft.crafting
+minecraft.Crafting
+Minecraft.crafting
+Minecraft.Crafting
+vanilla.crafting
+vanilla.Crafting
+Vanilla.crafting
+Vanilla.Crafting
+mods.mc.crafting
+mods.mc.Crafting
+mods.vanilla.crafting
+mods.vanilla.Crafting
+mods.minecraft.crafting
+mods.minecraft.Crafting
 ```
 
 
@@ -50,6 +64,12 @@ Crafting
 
 ## Adding Recipes
 
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    crafting.add(IRecipe)
+    ```
+
 - Adds a shaped recipe in the format `output`, `input`:
 
     ```groovy:no-line-numbers
@@ -68,55 +88,55 @@ Crafting
     crafting.addShaped(String, ItemStack, List<List<IIngredient>>)
     ```
 
-- Adds a shapeless in the format `output`, `input`:
+- Adds a shapeless recipe in the format `output`, `input`:
 
     ```groovy:no-line-numbers
     crafting.addShapeless(ItemStack, List<IIngredient>)
     ```
 
-- Adds a shapeless in the format `name`, `output`, `input`:
+- Adds a shapeless recipe in the format `name`, `output`, `input`:
 
     ```groovy:no-line-numbers
     crafting.addShapeless(ResourceLocation, ItemStack, List<IIngredient>)
     ```
 
-- Adds a shapeless in the format `name`, `output`, `input`:
+- Adds a shapeless recipe in the format `name`, `output`, `input`:
 
     ```groovy:no-line-numbers
     crafting.addShapeless(String, ItemStack, List<IIngredient>)
     ```
 
-- Adds a shaped in the format `output`, `input` and removes the recipe matching the given output:
+- Adds a shaped recipe in the format `output`, `input` and removes the recipe matching the given output:
 
     ```groovy:no-line-numbers
     crafting.replaceShaped(ItemStack, List<List<IIngredient>>)
     ```
 
-- Adds a shaped in the format `name`, `output`, `input` and removes the recipe matching the given name:
+- Adds a shaped recipe in the format `name`, `output`, `input` and removes the recipe matching the given name:
 
     ```groovy:no-line-numbers
     crafting.replaceShaped(ResourceLocation, ItemStack, List<List<IIngredient>>)
     ```
 
-- Adds a shaped in the format `name`, `output`, `input` and removes the recipe matching the given name:
+- Adds a shaped recipe in the format `name`, `output`, `input` and removes the recipe matching the given name:
 
     ```groovy:no-line-numbers
     crafting.replaceShaped(String, ItemStack, List<List<IIngredient>>)
     ```
 
-- Adds a shapeless in the format `output`, `input` and removes the recipe matching the given output:
+- Adds a shapeless recipe in the format `output`, `input` and removes the recipe matching the given output:
 
     ```groovy:no-line-numbers
     crafting.replaceShapeless(ItemStack, List<IIngredient>)
     ```
 
-- Adds a shapeless in the format `name`, `output`, `input` and removes the recipe matching the given name:
+- Adds a shapeless recipe in the format `name`, `output`, `input` and removes the recipe matching the given name:
 
     ```groovy:no-line-numbers
     crafting.replaceShapeless(ResourceLocation, ItemStack, List<IIngredient>)
     ```
 
-- Adds a shapeless in the format `name`, `output`, `input` and removes the recipe matching the given name:
+- Adds a shapeless recipe in the format `name`, `output`, `input` and removes the recipe matching the given name:
 
     ```groovy:no-line-numbers
     crafting.replaceShapeless(String, ItemStack, List<IIngredient>)
@@ -404,6 +424,24 @@ crafting.shapelessBuilder()
 
 ## Removing Recipes
 
+- Removes the recipe with the given Resource Location:
+
+    ```groovy:no-line-numbers
+    crafting.remove(ResourceLocation)
+    ```
+
+- Removes the recipe with the given String as its Resource Location:
+
+    ```groovy:no-line-numbers
+    crafting.remove(String)
+    ```
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    crafting.remove(IRecipe)
+    ```
+
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
@@ -425,6 +463,8 @@ crafting.shapelessBuilder()
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 crafting.removeByOutput(item('minecraft:gold_ingot'))
+crafting.remove('minecraft:mossy_stonebrick')
+crafting.remove(resource('minecraft:stonebrick'))
 crafting.removeAll()
 ```
 

@@ -31,6 +31,12 @@ mods.aether.Enchanter
     mods.aether_legacy.enchanter.add(ItemStack, ItemStack, int)
     ```
 
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.enchanter.add(AetherEnchantment)
+    ```
+
 
 ### Recipe Builder
 
@@ -81,6 +87,24 @@ mods.aether_legacy.enchanter.recipeBuilder()
 ::::::::::
 
 ## Removing Recipes
+
+- Removes the recipe with the given Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.enchanter.remove(ResourceLocation)
+    ```
+
+- Removes the recipe with the given String as its Resource Location:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.enchanter.remove(String)
+    ```
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.enchanter.remove(AetherEnchantment)
+    ```
 
 - Removes all recipes that match the given output:
 
