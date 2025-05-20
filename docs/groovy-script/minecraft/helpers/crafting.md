@@ -460,19 +460,7 @@ crafting.shapelessBuilder()
     crafting.remove(ResourceLocation)
     ```
 
-- groovyscript.wiki.minecraft.crafting.remove:
-
-    ```groovy:no-line-numbers
-    crafting.remove(ResourceLocation)
-    ```
-
 - Removes the recipe with the given String as its Resource Location:
-
-    ```groovy:no-line-numbers
-    crafting.remove(String)
-    ```
-
-- groovyscript.wiki.minecraft.crafting.remove:
 
     ```groovy:no-line-numbers
     crafting.remove(String)
