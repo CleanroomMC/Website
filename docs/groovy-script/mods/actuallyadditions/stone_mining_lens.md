@@ -42,7 +42,18 @@ Just like other recipe types, the Stone Mining Lens also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.actuallyadditions.stone_mining_lens.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.actuallyadditions.stone_mining_lens.recipeBuilder()
+    ```
+
+---
+
 - `String`. Sets the ore given by the recipe. Requires not null.
 
     ```groovy:no-line-numbers
@@ -56,11 +67,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     weight(int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `de.ellpeck.actuallyadditions.api.recipe.WeightedOre`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

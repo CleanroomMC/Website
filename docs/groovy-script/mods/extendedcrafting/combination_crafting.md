@@ -56,7 +56,18 @@ Just like other recipe types, the Combination Crafting also uses a recipe builde
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.extendedcrafting.combination_crafting.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.extendedcrafting.combination_crafting.recipeBuilder()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -73,7 +84,7 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     output(Collection<ItemStack>)
     ```
 
-- `long`. Sets the amount of RF required to complete the craft. Requires greater than or equal to 0. (Default `0`).
+- `long`. Sets the amount of RF required to complete the craft. Requires greater than or equal to 0. (Default `0L`).
 
     ```groovy:no-line-numbers
     cost(long)
@@ -95,11 +106,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     pedestals(Collection<IIngredient>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `com.blakebr0.extendedcrafting.crafting.CombinationRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

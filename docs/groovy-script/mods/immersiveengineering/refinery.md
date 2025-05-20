@@ -44,7 +44,18 @@ Just like other recipe types, the Refinery also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.immersiveengineering.refinery.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.immersiveengineering.refinery.recipeBuilder()
+    ```
+
+---
+
 - `FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 2.
 
     ```groovy:no-line-numbers
@@ -67,11 +78,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     energy(int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `blusunrize.immersiveengineering.api.crafting.RefineryRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
