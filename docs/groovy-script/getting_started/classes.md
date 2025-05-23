@@ -2,37 +2,87 @@
 # Classes
 
 
-While all Groovy files are technically class files,
-this refers specifically to files interacting with the [`runConfig.json`](./run_config.md#classes) classes section.
+All groovy files are classes.
+However, if no specific class declaration is used, the file will be parsed as a script file.
 
 
-## Class Declaration
+## Groovy File Extensions
 
 
-::: info Bug {id="bug"}
+A Groovy file is a file with the extension `groovy`, `gy`, `gvy`, or `gsh`.
 
-Starting from version `1.0.0` and getting fixed in version `1.1.0`
-there was a bug which caused class files require a package declaration
-in the form of `package classes` at the top of the script to be functional.
+In almost all places on the wiki, only `groovy` will be used.
+
+
+## Script Files
+
+
+Script files must be placed in a specific [loader](./run_config.md#loaders) to be run,
+and will be executed in that stage.
+
+::: code-group
+
+```groovy [postInit/Example.groovy]
+log.info('A normal script file')
+```
+
+```json [runConfig.json]
+{
+  "loaders": {
+    "postInit": [
+      "postInit/Example.groovy"
+    ]
+  },
+}
+```
+:::
+
+Behind the scenes, a script file will be converted like so:
+
+::: code-group
+
+```groovy [postInit/Example.groovy]
+import groovy.transform.Field
+
+@Field // this annotation makes what would otherwise be a local to become a field
+int baseValue = 2
+
+def hello = 'hello, world!' // creates a local variable
+
+log.info(hello)
+int power(int n) { baseValue**n }
+log.info(power(3))
+```
+
+```groovy [Script File]
+package postInit
+
+import groovy.transform.Field
+// imports still occur before the code
+
+class Example extends groovy.lang.Script {
+
+    @Field
+    int baseValue = 2
+
+    int power(int n) { baseValue**n } // if baseValue was not annotated with @Field, an exception will be thrown!
+
+    def run() {
+        def hello = 'hello, world!'
+        log.info(hello)
+        log.info(power(3))
+    }
+}
+```
 
 :::
 
-Classes must be declared in the locations specified in the [`runConfig.json`](./run_config.md#classes) by the classes element.
 
-
-## Importing
-
-
-You can import these classes the same way you would any package from Java.
-The default package classes are located in is `classes`, so you would run `import classes.DemoClass`
-
-
-## Example
+## Custom Classes
 
 :::: info Basic Example {id="example"}
 
-With a named `DemoClass.groovy` that is registered by the `runConfig.json` to the `classes` element,
-you can access that class from any script file or another class.
+With a named `DemoClass.groovy` from any other groovy class.
 
 ::: code-group
 
@@ -44,9 +94,11 @@ class DemoClass {
 ```
 
 ```json [runConfig.json]
-"classes": [
-  "classes/" // targets either the file or a folder that the file is nested within
-]
+"loaders": {
+  "preInit": [
+    "classes/" // targets either the file or a folder that the file is nested within
+  ]
+}
 ```
 
 ```groovy [postInit/CheckIron.groovy]
