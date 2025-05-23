@@ -31,7 +31,18 @@ Just like other recipe types, the Runic Shear Entity also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.roots.runic_shear_entity.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.roots.runic_shear_entity.recipeBuilder()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -65,11 +76,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     functionMap(Function<EntityLivingBase, ItemStack>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `epicsquid.roots.recipe.RunicShearEntityRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

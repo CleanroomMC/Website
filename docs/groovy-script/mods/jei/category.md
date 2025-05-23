@@ -60,7 +60,18 @@ Just like other recipe types, the Categories also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.jei.category.categoryBuilder() {open id="abstract"}
+:::::::::: details Category Builder {open id="abstract"}
+
+---
+
+- Create a builder for custom JEI categories.
+
+    ```groovy:no-line-numbers
+    mods.jei.category.categoryBuilder()
+    ```
+
+---
+
 - `String`. Sets the ID of the Category, which must be unique among all other Categories. Requires not empty.
 
     ```groovy:no-line-numbers
@@ -89,11 +100,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     category(Function<IGuiHelper, ? extends IRecipeCategory<? extends IRecipeWrapper>>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `com.cleanroommc.groovyscript.compat.mods.jei.Category$CustomCategory`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

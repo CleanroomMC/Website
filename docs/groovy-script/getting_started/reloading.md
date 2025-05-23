@@ -78,12 +78,13 @@ class DemoRegistry {
 :::
 ::::
 
-Then, add an event listener that is listening for `GroovyReloadEvent`.
-Inside of this event listener, call the `onReload` method.
+Then, you can accomplish reloading via one of two ways:
+1. Create an event listener that is listening for `GroovyReloadEvent` *in the `init` stage*.
+2. Check `isReloading()` *in the `postInit` stage*.
 
 ::: code-group
 
-```groovy [postInit/ReloadHelper.groovy]
+```groovy [init/ReloadHelper.groovy]
 import classes.DemoRegistry
 import com.cleanroommc.groovyscript.event.GroovyReloadEvent
 
@@ -91,6 +92,15 @@ eventManager.listen(GroovyReloadEvent) {
     DemoRegistry.instance.onReload()
 }
 ```
+
+```groovy [postInit/ReloadHelper.groovy]
+import classes.DemoRegistry
+
+if (!isReloading()) return
+
+DemoRegistry.instance.onReload()
+```
+
 
 :::
 

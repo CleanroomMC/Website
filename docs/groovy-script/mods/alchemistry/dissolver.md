@@ -40,19 +40,24 @@ Just like other recipe types, the Chemical Dissolver also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.alchemistry.dissolver.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.alchemistry.dissolver.recipeBuilder()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
     input(IIngredient)
     input(IIngredient...)
     input(Collection<IIngredient>)
-    ```
-
-- `ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
-
-    ```groovy:no-line-numbers
-    output(ItemStack)
     ```
 
 - `int`. Sets the number of rolls to produce outputs. Requires greater than or equal to 1. (Default `1`).
@@ -71,8 +76,7 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 - `List<ProbabilityGroup>`. Sets the probability sets rolled to produce output. Requires greater than or equal to 1.
 
     ```groovy:no-line-numbers
-    output(Collection)
-    output(ItemStack[])
+    output(ItemStack)
     output(ItemStack...)
     output(Collection<ItemStack>)
     probabilityOutput(ItemStack...)
@@ -88,11 +92,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     relativeProbability(boolean)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `al132.alchemistry.recipes.DissolverRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

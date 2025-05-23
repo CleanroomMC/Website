@@ -38,7 +38,18 @@ Just like other recipe types, the Plate Bending Machine also uses a recipe build
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.techreborn.plate_bending_machine.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.techreborn.plate_bending_machine.recipeBuilder()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -67,11 +78,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     perTick(int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `reborncore.api.praescriptum.recipes.Recipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -106,6 +121,18 @@ mods.techreborn.plate_bending_machine.recipeBuilder()
 
     ```groovy:no-line-numbers
     mods.techreborn.plate_bending_machine.removeByInput(IIngredient)
+    ```
+
+- Removes all recipes that match the given input:
+
+    ```groovy:no-line-numbers
+    mods.techreborn.plate_bending_machine.removeByInput(IIngredient)
+    ```
+
+- Removes all recipes that match the given output:
+
+    ```groovy:no-line-numbers
+    mods.techreborn.plate_bending_machine.removeByOutput(IIngredient)
     ```
 
 - Removes all recipes that match the given output:

@@ -62,7 +62,18 @@ Just like other recipe types, the Table Crafting also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.extendedcrafting.table_crafting.shapedBuilder() {open id="abstract"}
+:::::::::: details Shaped Extreme Crafting Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for Shaped Extreme Crafting Table recipes.
+
+    ```groovy:no-line-numbers
+    mods.extendedcrafting.table_crafting.shapedBuilder()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -129,11 +140,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     recipeAction(Closure<Void>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `com.blakebr0.extendedcrafting.crafting.table.ITieredRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -193,7 +208,18 @@ mods.extendedcrafting.table_crafting.shapedBuilder()
 
 ::::::::::
 
-:::::::::: details mods.extendedcrafting.table_crafting.shapelessBuilder() {open id="abstract"}
+:::::::::: details Shapeless Extreme Crafting Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for Shapeless Extreme Crafting Table recipes.
+
+    ```groovy:no-line-numbers
+    mods.extendedcrafting.table_crafting.shapelessBuilder()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -238,11 +264,15 @@ mods.extendedcrafting.table_crafting.shapedBuilder()
     recipeAction(Closure<Void>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `com.blakebr0.extendedcrafting.crafting.table.ITieredRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

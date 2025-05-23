@@ -46,19 +46,19 @@ mods.minecraft.Player
 - Sets if the player inventory is cleared prior to giving the player these items:
 
     ```groovy:no-line-numbers
-    mods.minecraft.player.setReplaceDefaultInventory(boolean)
+    player.setReplaceDefaultInventory(boolean)
     ```
 
 - Sets if items given when joining the world regardless of if the flag has already been set:
 
     ```groovy:no-line-numbers
-    mods.minecraft.player.setTestStartingItems(boolean)
+    player.setTestStartingItems(boolean)
     ```
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.minecraft.player.setReplaceDefaultInventory(true)
-mods.minecraft.player.setTestStartingItems(true)
+player.setReplaceDefaultInventory(true)
+player.setTestStartingItems(true)
 ```
 
 ::::::::::

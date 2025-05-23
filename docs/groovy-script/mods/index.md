@@ -40,6 +40,7 @@ search:
 * [Extended Crafting](./extendedcrafting/)
 * [Extra Botany](./extrabotany/)
 * [Extra Utilities 2](./extrautils2/)
+* [Factory Tech](./factorytech/)
 * [Forestry](./forestry/)
 * [Future MC](./futuremc/)
 * [GregTech](./gtceu/)

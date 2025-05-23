@@ -38,7 +38,18 @@ Just like other recipe types, the Meteor also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.bloodmagic.meteor.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.bloodmagic.meteor.recipeBuilder()
+    ```
+
+---
+
 - `int`. Sets the amount of Life Essence drained from the Blood Network to spawn the meteor. Requires greater than or equal to 0. (Default `1000000`).
 
     ```groovy:no-line-numbers
@@ -73,11 +84,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     explosionStrength(float)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `WayofTime.bloodmagic.meteor.Meteor`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

@@ -58,7 +58,18 @@ Just like other recipe types, the Entity/Block Aspects also uses a recipe builde
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.thaumcraft.aspect_helper.aspectBuilder() {open id="abstract"}
+:::::::::: details Aspect Builder {open id="abstract"}
+
+---
+
+- Create a helper to modify the provided entity or object with the given aspects. This is not a traditional builder.
+
+    ```groovy:no-line-numbers
+    mods.thaumcraft.aspect_helper.aspectBuilder()
+    ```
+
+---
+
 - `EntityEntry`. Sets the entity being modified. Requires either entity or object must be defined, but not both.
 
     ```groovy:no-line-numbers
@@ -84,11 +95,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     stripAspects()
     ```
 
+---
+
 - First validates the builder, outputting errors to the log file if the validation failed, then registers the builder.
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

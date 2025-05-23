@@ -21,9 +21,6 @@ Let's see what the file can look like.
   "packId": "",
   "version": "1.0.0",
   "debug": false,
-  "classes": [
-    "classes/"
-  ],
   "loaders": {
     "preInit": [
       "preInit/"
@@ -86,6 +83,21 @@ and logs the line numbers in errors.
 
 ## `classes`
 
+This *was* an element used to control what files were loaded as class files
+prior to [GroovyScript 1.2.3](https://github.com/CleanroomMC/GroovyScript/tree/v1.2.3).
+
+::: info Failure {id="failure"}
+
+If `classes` is an element in your `runConfig.json` file, a fatal message will be logged
+and you **must** remove it in order to be able to launch.
+
+Instead, load your classes via one of the loaders - typically [`preInit`](#preinit).
+To migrate in this fashion, simply add `"classes/"` to the `preInit` loader.
+
+:::
+
+:::: details Prior to GroovyScript 1.2.3 {id="warning"}
+
 Files that contain a single class should be specified here.
 It makes sure classes are loaded when scripts try to access them.
 You can specify classes to only load in certain loaders.
@@ -112,6 +124,8 @@ This works exactly like the `loaders` property.
 }
 ```
 :::
+
+::::
 
 ## `loaders`
 

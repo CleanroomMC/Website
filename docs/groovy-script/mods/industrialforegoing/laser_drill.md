@@ -31,7 +31,18 @@ Just like other recipe types, the Laser Drill also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.industrialforegoing.laser_drill.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.industrialforegoing.laser_drill.recipeBuilder()
+    ```
+
+---
+
 - `ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -80,11 +91,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     whitelist(Collection<Biome>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `com.buuz135.industrial.api.recipe.LaserDrillEntry$LaserDrillEntryExtended`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
