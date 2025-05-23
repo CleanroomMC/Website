@@ -13,6 +13,25 @@ A Groovy file is a file with the extension `groovy`, `gy`, `gvy`, or `gsh`.
 
 In almost all places on the wiki, only `groovy` will be used.
 
+Groovy file names must follow the [Java class naming specification](https://docs.oracle.com/javase/specs/jls/se7/html/jls-3.html#jls-3.8),
+meaning valid names match the regex pattern of `[a-zA-Z$_][a-zA-Z0-9$_]*`.
+To spell it out: a file name must begin with a letter, dollar sign, or underscore,
+and every character afterwards is must be either a letter, number, dollar sign, or underscore.
+
+::: warning Invalid Name {id="danger"}
+
+If the file does not have a valid name it will not be loaded!
+
+:::
+
+::: warning Global Object Confusion {id="warning"}
+
+As the file name will create a class with the same name, naming your file with the
+same name as a global object such as `item`, `mods`, `eventManager`, or otherwise
+may cause unexpected issues due to accessing the class instead of the desired global object!
+
+:::
+
 
 ## Script Files
 
@@ -74,6 +93,14 @@ class Example extends groovy.lang.Script {
     }
 }
 ```
+
+:::
+
+::: warning Maximum method size {id="danger"}
+
+Java cannot load methods larger than [64kb](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.11).
+Particularly large GroovyScript scripts may pass this - in this situation,
+you will need to refactor your scripts in some fashion to avoid this issue.
 
 :::
 
