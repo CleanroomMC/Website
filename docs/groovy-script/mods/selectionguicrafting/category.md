@@ -36,7 +36,18 @@ Just like other recipe types, the Crafting Category also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.selectionguicrafting.category.categoryBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.selectionguicrafting.category.categoryBuilder()
+    ```
+
+---
+
 - `String`. The Category ID, must be unique. Requires not null and the ID must be unique.
 
     ```groovy:no-line-numbers
@@ -50,7 +61,7 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     frame(ResourceLocation)
     ```
 
-- `Sound`. The sounds that will be played when the recipe is crafted. Can be overridden by the recipe.  The first `float` value is the volume, the second `float` value is the pitch of the sound.
+- `Sound`. The sounds that will be played when the recipe is crafted. Can be overridden by the recipe. The first `float` value is the volume, the second `float` value is the pitch of the sound.
 
     ```groovy:no-line-numbers
     sound(Sound)
@@ -69,7 +80,7 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     border(ResourceLocation)
     ```
 
-- `AbstractTrigger`. groovyscript.wiki.selectionguicrafting.category.trigger.value. Requires not null and A category needs at least one trigger..
+- `AbstractTrigger`. A trigger that will open a GUI with all recipes for that category. Can be a block or an item. The first `double` value modifies the item damage, the second the crafting time, the third the amount of xp given to the player. Requires not null and a category needs at least one trigger.
 
     ```groovy:no-line-numbers
     trigger(Block)
@@ -133,12 +144,14 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     bar(ResourceLocation)
     ```
 
-- `ResourceLocation`. How the background will be rendered. The resource must be loaded via external methods. Allowed values are: `SINGLE_STRETCH`, `TILE`, or `SINGLE_CUT`. `TILE` uses a 16x16 texture and repeats it. `SINGLE_STRETCH` stretches the texture ratio to fill the screen. `SINGLE_CUT` stretches the texture while keeping the aspect ratio and cuts of anything that goes outside the gui. The texture is centered on the x and y axis. (Default `TILE`).
+- `BackgroundType`. How the background will be rendered. The resource must be loaded via external methods. Allowed values are: `SINGLE_STRETCH`, `TILE`, or `SINGLE_CUT`. `TILE` uses a 16x16 texture and repeats it. `SINGLE_STRETCH` stretches the texture ratio to fill the screen. `SINGLE_CUT` stretches the texture while keeping the aspect ratio and cuts of anything that goes outside the gui. The texture is centered on the x and y axis. (Default `TILE`).
 
     ```groovy:no-line-numbers
     backgroundType(String)
     backgroundType(BackgroundType)
     ```
+
+---
 
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `io.enderdev.selectionguicrafting.registry.category.Category`).
 
@@ -146,11 +159,13 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     register()
     ```
 
+---
+
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.selectionguicrafting.category.categoryBuilder()
     .id('dummy_category')
-    .trigger(item('minecraft:diamond'))
+    .trigger(item('minecraft:diamond'), 0.2, 0.8, 2.65)
     .background('selectionguicrafting:textures/gui/background/wood.png')
     .register()
 

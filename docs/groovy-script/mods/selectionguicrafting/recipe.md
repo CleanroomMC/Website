@@ -36,7 +36,18 @@ Just like other recipe types, the Crafting Recipe also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.selectionguicrafting.recipe.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.selectionguicrafting.recipe.recipeBuilder()
+    ```
+
+---
+
 - `Integer`. The amount of XP that will be granted to the player when the recipe is crafted. Requires greater than or equal to 0. (Default `0`).
 
     ```groovy:no-line-numbers
@@ -56,14 +67,12 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     frame(ResourceLocation)
     ```
 
-- `RecipeInput`. The input items that are required to craft the recipe. Input refers to the offhand item. You can add multiple inputs each with a different amount. Requires greater than or equal to 0.
+- `RecipeInput`. The input items that are required to craft the recipe. Input refers to the offhand item. You can add multiple inputs each with a different amount. The `int` value is the damage applied to the item, the `double` value is the chance the item will be damaged / consumed. Requires greater than or equal to 0.
 
     ```groovy:no-line-numbers
-    input(Collection)
     input(IIngredient)
     input(RecipeInput)
     input(Collection<?>)
-    input(RecipeInput[])
     input(IIngredient...)
     input(RecipeInput...)
     input(IIngredient, int)
@@ -71,7 +80,7 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     input(IIngredient, double, int)
     ```
 
-- `String`. The skills required to craft the recipe.
+- `String`. The skills required to craft the recipe. (Requires: [Reskillable](https://www.curseforge.com/minecraft/mc-mods/reskillable-fork)).
 
     ```groovy:no-line-numbers
     skill(String, int)
@@ -89,29 +98,25 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     sound(ResourceLocation, float, float)
     ```
 
-- `RecipeOutput`. The output items that will be given to the player. You can add multiple outputs each with a different chance. The `float` value is the chance of the item being dropped. Requires greater than or equal to 1.
+- `RecipeOutput`. The output items that will be given to the player. You can add multiple outputs each with a different chance. The `double` value is the chance of the item being dropped. Requires greater than or equal to 1.
 
     ```groovy:no-line-numbers
     output(ItemStack)
-    output(Collection)
-    output(ItemStack[])
     output(ItemStack...)
     output(RecipeOutput)
     output(Collection<?>)
-    output(RecipeOutput[])
     output(RecipeOutput...)
     output(ItemStack, double)
     ```
 
-- `String`. The command to execute after crafting the recipe.
+- `String`. The commands to execute after crafting the recipe.
 
     ```groovy:no-line-numbers
     command(String)
-    command(String[])
     command(String...)
     ```
 
-- `RecipeInput`. The offhand input that will be used to craft the recipe. Requires greater than or equal to 0 and less than or equal to 1.
+- `RecipeInput`. The offhand input that will be used to craft the recipe. The `int` value is the damage applied to the item, the `double` value is the chance the item will be damaged / consumed. Requires greater than or equal to 0 and less than or equal to 1.
 
     ```groovy:no-line-numbers
     offhand(IIngredient)
@@ -127,7 +132,7 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     category(String)
     ```
 
-- `RecipeInput`. The mainhand input that will be used to craft the recipe. Requires greater than or equal to 0 and less than or equal to 1.
+- `RecipeInput`. The mainhand input that will be used to craft the recipe. The `int` value is the damage applied to the item, the `double` value is the chance the item will be damaged / consumed. Requires greater than or equal to 0 and less than or equal to 1.
 
     ```groovy:no-line-numbers
     mainhand(IIngredient)
@@ -147,11 +152,10 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     particle(EnumParticleTypes, int, float)
     ```
 
-- `String`. The game stages required to craft the recipe.
+- `String`. The game stages required to craft the recipe. (Requires: [Game Stages](https://www.curseforge.com/minecraft/mc-mods/game-stages)).
 
     ```groovy:no-line-numbers
     gamestage(String)
-    gamestage(String[])
     gamestage(String...)
     ```
 
@@ -181,10 +185,8 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 
     ```groovy:no-line-numbers
     advancement(String)
-    advancement(String[])
     advancement(String...)
     advancement(ResourceLocation)
-    advancement(ResourceLocation[])
     advancement(ResourceLocation...)
     ```
 
@@ -195,18 +197,22 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     progressBar(ResourceLocation)
     ```
 
-- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `io.enderdev.selectionguicrafting.registry.IRegisterObject`).
+---
+
+- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `io.enderdev.selectionguicrafting.registry.recipe.Recipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.selectionguicrafting.recipe.recipeBuilder()
     .category('dummy_category')
     .input(item('minecraft:stone') * 3)
-    .output(item('minecraft:cobblestone') * 2, 0.5f)
+    .output(item('minecraft:cobblestone') * 2, 0.5)
     .time(200)
     .xp(1)
     .sound('minecraft:block.anvil.land', 1.0f, 1.0f)
@@ -215,16 +221,16 @@ mods.selectionguicrafting.recipe.recipeBuilder()
 mods.selectionguicrafting.recipe.recipeBuilder()
     .category('blub')
     .input(item('minecraft:diamond'))
-    .output(item('minecraft:wheat_seeds') * 5, 0.5f)
+    .output(item('minecraft:wheat_seeds') * 5, 0.5)
     .register()
 
 mods.selectionguicrafting.recipe.recipeBuilder()
     .category('dummy_category')
     .input(item('minecraft:stone') * 32)
-    .output(item('minecraft:diamond') * 50, 0.5f)
-    .output(item('minecraft:clay') * 2, 0.1f)
+    .output(item('minecraft:diamond') * 50, 0.5)
+    .output(item('minecraft:clay') * 2, 0.1)
     .time(200)
-    .xp(1)
+    .xp(10)
     .sound('minecraft:block.anvil.land', 1.0f, 1.0f)
     .register()
 
@@ -235,7 +241,7 @@ mods.selectionguicrafting.recipe.recipeBuilder()
     .time(40)
     .queueable(false)
     .outputType('DROP')
-    .xp(1)
+    .xp(100)
     .register()
 
 mods.selectionguicrafting.recipe.recipeBuilder()
