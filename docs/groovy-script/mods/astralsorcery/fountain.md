@@ -50,7 +50,18 @@ Just like other recipe types, the Fountain also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.astralsorcery.fountain.chanceHelper() {open id="abstract"}
+:::::::::: details Chance Helper {open id="abstract"}
+
+---
+
+- Create a Builder for fluids obtainable from the Necromantic Prime.
+
+    ```groovy:no-line-numbers
+    mods.astralsorcery.fountain.chanceHelper()
+    ```
+
+---
+
 - `Fluid`. Sets the fluid being generated. Requires not null.
 
     ```groovy:no-line-numbers
@@ -76,11 +87,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     minimumAmount(int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `hellfirepvp.astralsorcery.common.base.FluidRarityRegistry$FluidRarityEntry`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -104,13 +119,13 @@ mods.astralsorcery.fountain.chanceHelper()
     mods.astralsorcery.fountain.remove(FluidRarityRegistry.FluidRarityEntry)
     ```
 
-- Removes an entry matching the given `Fluid`:
+- Removes an entry matching the given `fluid`:
 
     ```groovy:no-line-numbers
     mods.astralsorcery.fountain.remove(Fluid)
     ```
 
-- Removes an entry matching the given `FluidStack`:
+- Removes an entry matching the given `fluid`:
 
     ```groovy:no-line-numbers
     mods.astralsorcery.fountain.remove(FluidStack)

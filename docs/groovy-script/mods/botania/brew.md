@@ -29,7 +29,18 @@ Just like other recipe types, the Brew Effect also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.botania.brew.brewBuilder() {open id="abstract"}
+:::::::::: details Brew Builder {open id="abstract"}
+
+---
+
+- Create a builder to create custom brews.
+
+    ```groovy:no-line-numbers
+    mods.botania.brew.brewBuilder()
+    ```
+
+---
+
 - `String`. Sets a unique key for the effect. Requires not null.
 
     ```groovy:no-line-numbers
@@ -77,11 +88,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     bloodPendant(boolean)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `vazkii.botania.api.brew.Brew`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

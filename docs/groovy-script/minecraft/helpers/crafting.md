@@ -166,7 +166,18 @@ Just like other recipe types, the Crafting Table also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details crafting.shapedBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    crafting.shapedBuilder()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -229,11 +240,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     recipeAction(Closure<Void>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `net.minecraft.item.crafting.IRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -331,7 +346,18 @@ crafting.shapedBuilder()
 
 ::::::::::
 
-:::::::::: details crafting.shapelessBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    crafting.shapelessBuilder()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -372,11 +398,15 @@ crafting.shapedBuilder()
     recipeAction(Closure<Void>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `net.minecraft.item.crafting.IRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -462,9 +492,9 @@ crafting.shapelessBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-crafting.removeByOutput(item('minecraft:gold_ingot'))
-crafting.remove('minecraft:mossy_stonebrick')
 crafting.remove(resource('minecraft:stonebrick'))
+crafting.remove('minecraft:mossy_stonebrick')
+crafting.removeByOutput(item('minecraft:gold_ingot'))
 crafting.removeAll()
 ```
 

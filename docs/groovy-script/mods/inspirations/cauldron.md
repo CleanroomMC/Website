@@ -40,7 +40,18 @@ Just like other recipe types, the Cauldron also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.inspirations.cauldron.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for any type of recipe.
+
+    ```groovy:no-line-numbers
+    mods.inspirations.cauldron.recipeBuilder()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -107,7 +118,7 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     levels(int)
     ```
 
-- `Boolean`. Sets if the cauldron must be boiling, requiring fire or another heat source beneath. (Default `false`).
+- `Boolean`. Sets if the cauldron must be boiling, requiring fire or another heat source beneath.
 
     ```groovy:no-line-numbers
     boiling()
@@ -126,11 +137,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     outputPotion(PotionType)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `knightminer.inspirations.library.recipe.cauldron.ICauldronRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -149,7 +164,18 @@ mods.inspirations.cauldron.recipeBuilder()
 
 ::::::::::
 
-:::::::::: details mods.inspirations.cauldron.recipeBuilderBrewing() {open id="abstract"}
+:::::::::: details Brewing Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a brewing recipe, with an input itemstack, input potion, and output potion.
+
+    ```groovy:no-line-numbers
+    mods.inspirations.cauldron.recipeBuilderBrewing()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -170,11 +196,15 @@ mods.inspirations.cauldron.recipeBuilder()
     outputPotion(PotionType)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `knightminer.inspirations.library.recipe.cauldron.ICauldronRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -189,7 +219,18 @@ mods.inspirations.cauldron.recipeBuilderBrewing()
 
 ::::::::::
 
-:::::::::: details mods.inspirations.cauldron.recipeBuilderDye() {open id="abstract"}
+:::::::::: details Dye Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a dye recipe, with an input itemstack, output itemstack, level of fluid, and dye color.
+
+    ```groovy:no-line-numbers
+    mods.inspirations.cauldron.recipeBuilderDye()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -219,11 +260,15 @@ mods.inspirations.cauldron.recipeBuilderBrewing()
     levels(int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `knightminer.inspirations.library.recipe.cauldron.ICauldronRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -239,7 +284,18 @@ mods.inspirations.cauldron.recipeBuilderDye()
 
 ::::::::::
 
-:::::::::: details mods.inspirations.cauldron.recipeBuilderFill() {open id="abstract"}
+:::::::::: details Fill Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a fill recipe, with an input itemstack, input fluidstack, output itemstack and sound.
+
+    ```groovy:no-line-numbers
+    mods.inspirations.cauldron.recipeBuilderFill()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -271,18 +327,22 @@ mods.inspirations.cauldron.recipeBuilderDye()
     sound(SoundEvent)
     ```
 
-- `Boolean`. Sets if the cauldron must be boiling, requiring fire or another heat source beneath. (Default `false`).
+- `Boolean`. Sets if the cauldron must be boiling, requiring fire or another heat source beneath.
 
     ```groovy:no-line-numbers
     boiling()
     boiling(Boolean)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `knightminer.inspirations.library.recipe.cauldron.ICauldronRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -298,7 +358,18 @@ mods.inspirations.cauldron.recipeBuilderFill()
 
 ::::::::::
 
-:::::::::: details mods.inspirations.cauldron.recipeBuilderMix() {open id="abstract"}
+:::::::::: details Mix Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a mix recipe, with an two input fluidstacks and an output itemstack.
+
+    ```groovy:no-line-numbers
+    mods.inspirations.cauldron.recipeBuilderMix()
+    ```
+
+---
+
 - `FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 2.
 
     ```groovy:no-line-numbers
@@ -315,11 +386,15 @@ mods.inspirations.cauldron.recipeBuilderFill()
     output(Collection<ItemStack>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `knightminer.inspirations.library.recipe.cauldron.ICauldronRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -333,7 +408,18 @@ mods.inspirations.cauldron.recipeBuilderMix()
 
 ::::::::::
 
-:::::::::: details mods.inspirations.cauldron.recipeBuilderPotion() {open id="abstract"}
+:::::::::: details Potion Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a potion recipe, with an input itemstack, input potion, output itemstack, and level of fluid consumed.
+
+    ```groovy:no-line-numbers
+    mods.inspirations.cauldron.recipeBuilderPotion()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -356,7 +442,7 @@ mods.inspirations.cauldron.recipeBuilderMix()
     levels(int)
     ```
 
-- `Boolean`. Sets if the cauldron must be boiling, requiring fire or another heat source beneath. (Default `false`).
+- `Boolean`. Sets if the cauldron must be boiling, requiring fire or another heat source beneath.
 
     ```groovy:no-line-numbers
     boiling()
@@ -369,11 +455,15 @@ mods.inspirations.cauldron.recipeBuilderMix()
     inputPotion(PotionType)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `knightminer.inspirations.library.recipe.cauldron.ICauldronRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -389,7 +479,18 @@ mods.inspirations.cauldron.recipeBuilderPotion()
 
 ::::::::::
 
-:::::::::: details mods.inspirations.cauldron.recipeBuilderStandard() {open id="abstract"}
+:::::::::: details Standard Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a standard recipe, with an input itemstack, input fluidstack, output itemstack, level of fluid consumed, and sound.
+
+    ```groovy:no-line-numbers
+    mods.inspirations.cauldron.recipeBuilderStandard()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -427,18 +528,22 @@ mods.inspirations.cauldron.recipeBuilderPotion()
     levels(int)
     ```
 
-- `Boolean`. Sets if the cauldron must be boiling, requiring fire or another heat source beneath. (Default `false`).
+- `Boolean`. Sets if the cauldron must be boiling, requiring fire or another heat source beneath.
 
     ```groovy:no-line-numbers
     boiling()
     boiling(Boolean)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `knightminer.inspirations.library.recipe.cauldron.ICauldronRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -455,7 +560,18 @@ mods.inspirations.cauldron.recipeBuilderStandard()
 
 ::::::::::
 
-:::::::::: details mods.inspirations.cauldron.recipeBuilderTransform() {open id="abstract"}
+:::::::::: details Transform Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a transform recipe, with an input itemstack, input fluidstack, output fluidstack, and level of fluid consumed.
+
+    ```groovy:no-line-numbers
+    mods.inspirations.cauldron.recipeBuilderTransform()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -493,18 +609,22 @@ mods.inspirations.cauldron.recipeBuilderStandard()
     levels(int)
     ```
 
-- `Boolean`. Sets if the cauldron must be boiling, requiring fire or another heat source beneath. (Default `false`).
+- `Boolean`. Sets if the cauldron must be boiling, requiring fire or another heat source beneath.
 
     ```groovy:no-line-numbers
     boiling()
     boiling(Boolean)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `knightminer.inspirations.library.recipe.cauldron.ICauldronRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

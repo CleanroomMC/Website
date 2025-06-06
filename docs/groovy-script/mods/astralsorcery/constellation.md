@@ -50,7 +50,18 @@ Just like other recipe types, the Constellation also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.astralsorcery.constellation.constellationBuilder() {open id="abstract"}
+:::::::::: details Constellation Builder {open id="abstract"}
+
+---
+
+- Create a builder to create new custom Constellations.
+
+    ```groovy:no-line-numbers
+    mods.astralsorcery.constellation.constellationBuilder()
+    ```
+
+---
+
 - `String`. Sets the name of the Constellation. Requires not null.
 
     ```groovy:no-line-numbers
@@ -85,11 +96,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     connection(int, int, int, int)
     ```
 
+---
+
 - First validates the builder, outputting errors to the log file if the validation failed, then registers the builder.
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -117,7 +132,18 @@ mods.astralsorcery.constellation.constellationBuilder()
 
 ::::::::::
 
-:::::::::: details mods.astralsorcery.constellation.constellationMapEffectBuilder() {open id="abstract"}
+:::::::::: details ConstellationMapEffect Builder {open id="abstract"}
+
+---
+
+- Create a builder to control the Potion Effects and Enchantments the Constellation can create.
+
+    ```groovy:no-line-numbers
+    mods.astralsorcery.constellation.constellationMapEffectBuilder()
+    ```
+
+---
+
 - `List<ConstellationMapEffectRegistry.PotionMapEffect>`. Sets the potion effects and strength available via the Stellar Refraction Table. Requires greater than or equal to 0.
 
     ```groovy:no-line-numbers
@@ -136,11 +162,15 @@ mods.astralsorcery.constellation.constellationBuilder()
     enchantmentEffect(Enchantment, int, int)
     ```
 
+---
+
 - First validates the builder, outputting errors to the log file if the validation failed, then registers the builder.
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -155,7 +185,18 @@ mods.astralsorcery.constellation.constellationMapEffectBuilder()
 
 ::::::::::
 
-:::::::::: details mods.astralsorcery.constellation.signatureItems() {open id="abstract"}
+:::::::::: details Signature Items Builder {open id="abstract"}
+
+---
+
+- Create a builder to control the Signature Items used for the Constellation Paper and Mantle of Stars recipes.
+
+    ```groovy:no-line-numbers
+    mods.astralsorcery.constellation.signatureItems()
+    ```
+
+---
+
 - `List<IIngredient>`. Sets the signature items of the Constellation.
 
     ```groovy:no-line-numbers
@@ -174,11 +215,15 @@ mods.astralsorcery.constellation.constellationMapEffectBuilder()
     constellation(IConstellation)
     ```
 
+---
+
 - First validates the builder, outputting errors to the log file if the validation failed, then registers the builder.
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

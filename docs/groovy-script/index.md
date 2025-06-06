@@ -3,6 +3,7 @@
 next:
   text: 'Getting Started'
   link: '/groovy-script/getting_started/'
+description: "GroovyScript is a comprehensive scripting sandbox for Minecraft 1.12.2 via the Groovy language."
 ---
 
 # GroovyScript

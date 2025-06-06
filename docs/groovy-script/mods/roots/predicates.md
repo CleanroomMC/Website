@@ -1,7 +1,7 @@
 ---
 title: "Predicates"
 titleTemplate: "Roots 3 | CleanroomMC"
-description: "Predicates are used in Transmution and RunicShearBlock. They either match all blockstates of a block, or all blockstates that have the given properties that match the input blockstate."
+description: "Predicates are used in Transmutation and RunicShearBlock. They either match all blockstates of a block, or all blockstates that have the given properties that match the input blockstate."
 source_code_link: "https://github.com/CleanroomMC/GroovyScript/blob/master/src/main/java/com/cleanroommc/groovyscript/compat/mods/roots/Predicates.java"
 ---
 
@@ -9,7 +9,7 @@ source_code_link: "https://github.com/CleanroomMC/GroovyScript/blob/master/src/m
 
 ## Description
 
-Predicates are used in Transmution and RunicShearBlock. They either match all blockstates of a block, or all blockstates that have the given properties that match the input blockstate.
+Predicates are used in Transmutation and RunicShearBlock. They either match all blockstates of a block, or all blockstates that have the given properties that match the input blockstate.
 
 ## Identifier
 
@@ -29,7 +29,18 @@ Just like other recipe types, the Predicates also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.roots.predicates.stateBuilder() {open id="abstract"}
+:::::::::: details State Builder {open id="abstract"}
+
+---
+
+- Create a builder for custom State Predicates for other Roots methods.
+
+    ```groovy:no-line-numbers
+    mods.roots.predicates.stateBuilder()
+    ```
+
+---
+
 - `boolean`. Sets if the predicate checks the block above for validation. Requires that only at most one of either `above` or `below` may be true. (Default `false`).
 
     ```groovy:no-line-numbers
@@ -56,11 +67,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     properties(Collection<String>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `epicsquid.roots.recipe.transmutation.MatchingStates`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

@@ -44,7 +44,18 @@ Just like other recipe types, the Rolling Machine also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.techreborn.rolling_machine.shapedBuilder() {open id="abstract"}
+:::::::::: details Shaped Rolling Machine Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for Shaped Rolling Machine Crafting recipes.
+
+    ```groovy:no-line-numbers
+    mods.techreborn.rolling_machine.shapedBuilder()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -100,11 +111,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     recipeAction(Closure<Void>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `net.minecraft.item.crafting.IRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -129,7 +144,18 @@ mods.techreborn.rolling_machine.shapedBuilder()
 
 ::::::::::
 
-:::::::::: details mods.techreborn.rolling_machine.shapelessBuilder() {open id="abstract"}
+:::::::::: details Shapeless Rolling Machine Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for Shapeless Rolling Machine Crafting recipes.
+
+    ```groovy:no-line-numbers
+    mods.techreborn.rolling_machine.shapelessBuilder()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -163,11 +189,15 @@ mods.techreborn.rolling_machine.shapedBuilder()
     recipeAction(Closure<Void>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `net.minecraft.item.crafting.IRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

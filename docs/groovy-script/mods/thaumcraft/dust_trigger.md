@@ -39,7 +39,18 @@ Just like other recipe types, the Dust Trigger also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.thaumcraft.dust_trigger.triggerBuilder() {open id="abstract"}
+:::::::::: details Dust Trigger Builder {open id="abstract"}
+
+---
+
+- Create a builder to make a Salis Mundus conversion recipe.
+
+    ```groovy:no-line-numbers
+    mods.thaumcraft.dust_trigger.triggerBuilder()
+    ```
+
+---
+
 - `String`. Sets the input as an ore. Requires either ore or target must be defined, but not both.
 
     ```groovy:no-line-numbers
@@ -65,11 +76,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     researchKey(String)
     ```
 
+---
+
 - First validates the builder, outputting errors to the log file if the validation failed, then registers the builder.
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

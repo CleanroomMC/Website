@@ -50,7 +50,18 @@ Just like other recipe types, the Manual Grindstone also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.horsepower.manual_grindstone.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.horsepower.manual_grindstone.recipeBuilder()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -79,11 +90,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     chance(int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `se.gory_moon.horsepower.recipes.GrindstoneRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

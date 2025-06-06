@@ -57,7 +57,18 @@ Just like other recipe types, the Light Transmutation also uses a recipe builder
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.astralsorcery.light_transmutation.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.astralsorcery.light_transmutation.recipeBuilder()
+    ```
+
+---
+
 - `double`. Sets the amount of starlight required to complete the craft. Requires greater than or equal to 0. (Default `0.0d`).
 
     ```groovy:no-line-numbers
@@ -101,11 +112,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     constellation(IWeakConstellation)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `hellfirepvp.astralsorcery.common.base.LightOreTransmutations$Transmutation`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
