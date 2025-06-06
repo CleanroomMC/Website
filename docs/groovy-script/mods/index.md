@@ -70,6 +70,7 @@ search:
 * [Rustic](./rustic/)
 * [SelectionGUI Crafting](./selectionguicrafting/)
 * [Silent's Gems](./silentgems/)
+* [Soot Unofficial Extended Life](./soot/)
 * [Tech Reborn](./techreborn/)
 * [Thaumcraft](./thaumcraft/)
 * [The Aurorian](./theaurorian/)
