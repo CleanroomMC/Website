@@ -31,7 +31,18 @@ Just like other recipe types, the Alchemical Mixer also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.soot.alchemical_mixer.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.soot.alchemical_mixer.recipeBuilder()
+    ```
+
+---
+
 - `FluidStackList`. Sets the fluid inputs of the recipe. Requires greater than or equal to 2 and less than or equal to 3.
 
     ```groovy:no-line-numbers
@@ -54,11 +65,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     setAspect(String, int, int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `soot.recipe.RecipeAlchemicalMixer`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

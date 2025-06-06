@@ -25,7 +25,7 @@ mods.soot.StillCatalyst
 
 ## Editing Values
 
-- Return the amount of value that is removed from the catalyst.:
+- Return the amount of value that is removed from the catalyst:
 
     ```groovy:no-line-numbers
     mods.soot.still_catalyst.getAmount(IIngredient)
@@ -40,7 +40,7 @@ mods.soot.still_catalyst.getAmount(item('minecraft:snowball'))
 
 ## Adding Recipes
 
-- Adds a new catalyst with the specified amount.:
+- Adds a new catalyst with the specified amount:
 
     ```groovy:no-line-numbers
     mods.soot.still_catalyst.addCatalyst(IIngredient, int)
@@ -56,7 +56,7 @@ mods.soot.still_catalyst.addCatalyst(item('minecraft:glass'), 50)
 
 ## Removing Recipes
 
-- Removes the specified value from the catalyst. Recipes with this Catalyst won't be removed. Instead the Catalyst will have the default value of 1000.:
+- Removes the specified value from the catalyst. Recipes with this Catalyst won't be removed. Instead the Catalyst will have the default value of 1000:
 
     ```groovy:no-line-numbers
     mods.soot.still_catalyst.removeCatalyst(IIngredient)
@@ -78,7 +78,7 @@ mods.soot.still_catalyst.removeAll()
 
 ## Getting the value of recipes
 
-- Returns a stream of all specified Catalysts.:
+- Returns a stream of all specified Catalysts:
 
     ```groovy:no-line-numbers
     mods.soot.still_catalyst.streamCatalysts()
