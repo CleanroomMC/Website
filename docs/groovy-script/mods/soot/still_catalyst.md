@@ -38,7 +38,7 @@ mods.soot.still_catalyst.getAmount(item('minecraft:snowball'))
 
 ::::::::::
 
-## Adding Recipes
+## Adding Entries
 
 - Adds a new catalyst with the specified amount:
 
@@ -54,7 +54,7 @@ mods.soot.still_catalyst.addCatalyst(item('minecraft:glass'), 50)
 
 ::::::::::
 
-## Removing Recipes
+## Removing Entries
 
 - Removes the specified value from the catalyst. Recipes with this Catalyst won't be removed. Instead the Catalyst will have the default value of 1000:
 
@@ -76,7 +76,7 @@ mods.soot.still_catalyst.removeAll()
 
 ::::::::::
 
-## Getting the value of recipes
+## Getting the value of entries
 
 - Returns a stream of all specified Catalysts:
 
