@@ -65,7 +65,18 @@ Just like other recipe types, the Reactant Dynamo also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.thermalexpansion.reactant.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.thermalexpansion.reactant.recipeBuilder()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -88,11 +99,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     energy(int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `cofh.thermalexpansion.util.managers.dynamo.ReactantManager$Reaction`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

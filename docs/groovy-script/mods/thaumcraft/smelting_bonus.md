@@ -52,7 +52,18 @@ Just like other recipe types, the Smelting Bonus also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.thaumcraft.smelting_bonus.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.thaumcraft.smelting_bonus.recipeBuilder()
+    ```
+
+---
+
 - `IIngredient`. Sets the input of the smelting operation. Requires not null.
 
     ```groovy:no-line-numbers
@@ -71,11 +82,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     chance(float)
     ```
 
+---
+
 - First validates the builder, outputting errors to the log file if the validation failed, then registers the builder.
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

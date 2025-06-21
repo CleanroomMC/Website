@@ -31,7 +31,18 @@ Just like other recipe types, the Runic Shear Block also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.roots.runic_shear_block.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.roots.runic_shear_block.recipeBuilder()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -66,11 +77,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     replacementState(IBlockState)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `epicsquid.roots.recipe.RunicShearRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

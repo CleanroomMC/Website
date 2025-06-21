@@ -36,7 +36,18 @@ Just like other recipe types, the Ancestral Infusion Crafting also uses a recipe
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.betterwithaddons.infuser.shapedBuilder() {open id="abstract"}
+:::::::::: details Shaped Infusion Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for Shaped Infusion Crafting recipes.
+
+    ```groovy:no-line-numbers
+    mods.betterwithaddons.infuser.shapedBuilder()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -98,11 +109,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     recipeAction(Closure<Void>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `betterwithaddons.crafting.recipes.infuser.InfuserRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -129,7 +144,18 @@ mods.betterwithaddons.infuser.shapedBuilder()
 
 ::::::::::
 
-:::::::::: details mods.betterwithaddons.infuser.shapelessBuilder() {open id="abstract"}
+:::::::::: details Shapeless Infusion Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for Shapeless Infusion Crafting recipes.
+
+    ```groovy:no-line-numbers
+    mods.betterwithaddons.infuser.shapelessBuilder()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -169,11 +195,15 @@ mods.betterwithaddons.infuser.shapedBuilder()
     recipeAction(Closure<Void>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `betterwithaddons.crafting.recipes.infuser.InfuserRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

@@ -42,7 +42,18 @@ Just like other recipe types, the Crab Pot Filter Silt also uses a recipe builde
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.thebetweenlands.crab_pot_filter_silt.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.thebetweenlands.crab_pot_filter_silt.recipeBuilder()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -59,11 +70,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     output(Collection<ItemStack>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `thebetweenlands.api.recipes.ICrabPotFilterRecipeSilt`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

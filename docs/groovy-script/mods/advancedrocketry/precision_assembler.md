@@ -54,7 +54,18 @@ Just like other recipe types, the Precision Assembler also uses a recipe builder
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.advancedrocketry.precision_assembler.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.advancedrocketry.precision_assembler.recipeBuilder()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires either `input` or `fluidInput` to be non-null.
 
     ```groovy:no-line-numbers
@@ -106,11 +117,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     outputSize(int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `zmaster587.libVulpes.interfaces.IRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
