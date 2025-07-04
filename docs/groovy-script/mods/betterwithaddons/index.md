@@ -7,7 +7,7 @@ aside: false
 
 ## Categories
 
-Has 11 subcategories.
+Has 12 subcategories.
 
 * [Drying Unit](./drying_box.md)
 
@@ -16,6 +16,8 @@ Has 11 subcategories.
 * [Ancestral Infusion Crafting](./infuser.md)
 
 * [Alicio Tree Foods](./lure_tree.md)
+
+* [Packing](./packing.md)
 
 * [Rotting Food](./rotting.md)
 

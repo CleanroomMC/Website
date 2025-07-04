@@ -42,7 +42,18 @@ Just like other recipe types, the Ball of Fur also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.actuallyadditions.ball_of_fur.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.actuallyadditions.ball_of_fur.recipeBuilder()
+    ```
+
+---
+
 - `ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -57,11 +68,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     weight(int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `de.ellpeck.actuallyadditions.api.recipe.BallOfFurReturn`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

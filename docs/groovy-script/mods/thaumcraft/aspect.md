@@ -33,7 +33,18 @@ Just like other recipe types, the Aspect Creator also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.thaumcraft.aspect.aspectBuilder() {open id="abstract"}
+:::::::::: details Aspect Builder {open id="abstract"}
+
+---
+
+- Create a builder to create a custom aspect.
+
+    ```groovy:no-line-numbers
+    mods.thaumcraft.aspect.aspectBuilder()
+    ```
+
+---
+
 - `String`. Sets the name of the new Aspect. Requires not null and the name must be a unique string.
 
     ```groovy:no-line-numbers
@@ -68,11 +79,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     component(String, int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `thaumcraft.api.aspects.Aspect`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

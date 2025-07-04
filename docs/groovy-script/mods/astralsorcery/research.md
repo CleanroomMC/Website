@@ -57,7 +57,18 @@ Just like other recipe types, the Research Pages also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.astralsorcery.research.researchBuilder() {open id="abstract"}
+:::::::::: details Research Builder {open id="abstract"}
+
+---
+
+- Create a builder to create research pages.
+
+    ```groovy:no-line-numbers
+    mods.astralsorcery.research.researchBuilder()
+    ```
+
+---
+
 - `String`. Sets the unlocalized name of the node. Requires not null.
 
     ```groovy:no-line-numbers
@@ -100,11 +111,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     connectionFrom(ResearchNode)
     ```
 
+---
+
 - First validates the builder, outputting errors to the log file if the validation failed, then registers the builder.
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

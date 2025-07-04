@@ -140,6 +140,30 @@ def map2 = [(1): "example", (3): "demo"] // if the key is an expression, wrappin
 
 :::
 
+## Equality
+
+In Java, you can compare two objects by reference equality using two equal signs.
+Objects can override `equals` to provide a custom equal check.
+
+In Groovy, comparing two objects by reference equality requires *three* equal signs,
+and using two defers to `equals` via [operator overloading](./operators.md#operator-overloading).
+
+::: code-group
+
+```java
+a == b // reference equality
+a.equals(b) // requires that a is non-null
+a == null ? b == null : a.equals(b) // null-safe check
+```
+
+```groovy
+a === b // reference equality
+a == b // shorthand for a.equals(b)
+a.equals(b) // null-safe check
+```
+
+:::
+
 ## Visibility
 
 In Java, fields, classes, and methods that do not have an access specifier stated are `package-private` by default, meaning they are only visible to other classes inside the package.
