@@ -33,7 +33,7 @@ However, this way is somewhat inefficient, and you might run into problems with 
 ```groovy
 import net.minecraftforge.event.entity.player.ItemTooltipEvent
 
-def tooltipMap = [:]
+@groovy.transform.Field def tooltipMap = [:]
 
 event_manager.listen { ItemTooltipEvent event ->
     for (def entry in tooltipMap) { // iterate tooltip map
