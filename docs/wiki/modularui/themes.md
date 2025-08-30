@@ -15,17 +15,17 @@ You can reload themes by either reloading resources (which is slow) or by runnin
 
 ### Registering themes
 
-First create a `JsonBuilder` instance (`com.cleanroommc.modularui.utils.JsonBuilder`). This will be your theme data.
-ModularUI will automatically parse the json.
+First create a `ThemeBuilder` instance. This will be your theme data. Feel free to extend the class for additional
+helpers. The class is just a json wrapper.
 Next you need to register it. Make sure to do that before resource packs are loaded (that's when themes gets loaded and
 parsed). `FMLPreInit` works fine.
 
 ```java
-JsonBuilder myTheme = new JsonBuilder();
-IThemeApi.get().registerTheme("mymodid:my_theme", myTheme);
+ThemeBuilder<?> myTheme = new ThemeBuilder<>("mymodid:my_theme");
+IThemeApi.get().registerTheme(myTheme);
 ```
 
-It is not required to have the mod id in the name, but it will help identifying the theme.
+It is not required to have the mod id in the name, but it will help identifying the theme and having a unique name.
 Multiple themes with the same name can be registered. Themes that are added later will override all properties of all
 previously registered themes.
 
