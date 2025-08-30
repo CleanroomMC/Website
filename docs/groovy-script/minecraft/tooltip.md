@@ -38,7 +38,7 @@ def tooltipMap = [:]
 event_manager.listen { ItemTooltipEvent event ->
     for (def entry in tooltipMap) { // iterate tooltip map
         if (event.getItemStack() in entry.key) { // if the item in the event matches the map entry
-            event.getTooltip() << entry.value    // add the line of the map entry
+            event.getToolTip() << entry.value    // add the line of the map entry
         }
     }
 }
