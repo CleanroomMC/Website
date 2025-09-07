@@ -1,11 +1,11 @@
 ---
 title: "Heat Coil"
-titleTemplate: "Embers | CleanroomMC"
+titleTemplate: "Embers Unofficial Extended Life | CleanroomMC"
 description: "Convert an input item into an output item in a Heat Coil."
 source_code_link: "https://github.com/Ender-Development/Embers-Extended-Life/blob/master/src/main/java/teamroots/embers/compat/groovyscript/HeatCoil.java"
 ---
 
-# Heat Coil (Embers)
+# Heat Coil (Embers Unofficial Extended Life)
 
 ## Description
 
@@ -31,7 +31,18 @@ Just like other recipe types, the Heat Coil also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.embers.heat_coil.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.embers.heat_coil.recipeBuilder()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -48,11 +59,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     output(Collection<ItemStack>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `teamroots.embers.recipe.HeatCoilRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
