@@ -23,3 +23,4 @@ Has 7 subcategories.
 * [Starting Inventory](./player.md)
 
 * [Rarity](./rarity.md)
+

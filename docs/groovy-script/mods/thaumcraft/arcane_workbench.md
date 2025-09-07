@@ -39,7 +39,18 @@ Just like other recipe types, the Arcane Workbench also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.thaumcraft.arcane_workbench.shapedBuilder() {open id="abstract"}
+:::::::::: details Shaped Arcane Crafting Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for Shaped Arcane Crafting recipes.
+
+    ```groovy:no-line-numbers
+    mods.thaumcraft.arcane_workbench.shapedBuilder()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -88,9 +99,11 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     aspect(String)
     aspect(AspectStack)
     aspect(String, int)
+    aspect(AspectStack...)
+    aspect(Collection<AspectStack>)
     ```
 
-- `byte`. Sets if the recipe is removed. A value of 1 removes by the output, and a value of 2 removes by the resource location. (Default `0`).
+- `byte`. Sets if the recipe is removed. The `replace` method removes by the output itemstack, and the `replaceByName` method removes by the Resource Location. (Default `0`).
 
     ```groovy:no-line-numbers
     replace()
@@ -122,11 +135,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     recipeAction(Closure<Void>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `net.minecraft.item.crafting.IRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -157,7 +174,18 @@ mods.thaumcraft.arcane_workbench.shapedBuilder()
 
 ::::::::::
 
-:::::::::: details mods.thaumcraft.arcane_workbench.shapelessBuilder() {open id="abstract"}
+:::::::::: details Shapeless Arcane Crafting Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for Shapeless Arcane Crafting recipes.
+
+    ```groovy:no-line-numbers
+    mods.thaumcraft.arcane_workbench.shapelessBuilder()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -191,9 +219,11 @@ mods.thaumcraft.arcane_workbench.shapedBuilder()
     aspect(String)
     aspect(AspectStack)
     aspect(String, int)
+    aspect(AspectStack...)
+    aspect(Collection<AspectStack>)
     ```
 
-- `byte`. Sets if the recipe is removed. A value of 1 removes by the output, and a value of 2 removes by the resource location. (Default `0`).
+- `byte`. Sets if the recipe is removed. The `replace` method removes by the output itemstack, and the `replaceByName` method removes by the Resource Location. (Default `0`).
 
     ```groovy:no-line-numbers
     replace()
@@ -218,11 +248,15 @@ mods.thaumcraft.arcane_workbench.shapedBuilder()
     recipeAction(Closure<Void>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `net.minecraft.item.crafting.IRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

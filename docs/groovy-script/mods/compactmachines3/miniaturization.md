@@ -38,7 +38,18 @@ Just like other recipe types, the Miniaturization also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.compactmachines3.miniaturization.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.compactmachines3.miniaturization.recipeBuilder()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -67,6 +78,7 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 
     ```groovy:no-line-numbers
     ticks(int)
+    duration(int)
     ```
 
 - `Char2ObjectOpenHashMap<Miniaturization.RecipeBuilder.ReferenceValues>`. Sets the IBlockState, specific NBT, if the metadata is checked, and a representative itemstack for each `char` key. (Default `' ' = air, '_' = air`).
@@ -86,11 +98,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     symmetrical(boolean)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `org.dave.compactmachines3.miniaturization.MultiblockRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

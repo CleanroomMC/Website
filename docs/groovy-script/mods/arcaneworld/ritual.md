@@ -36,7 +36,18 @@ Just like other recipe types, the Ritual also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.arcaneworld.ritual.recipeBuilder() {open id="abstract"}
+:::::::::: details Standard Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for any type of recipe, always requiring up to 5 input itemstacks and a translation key.
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.recipeBuilder()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -117,11 +128,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     weatherType(RitualWeather.WeatherType)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -138,7 +153,18 @@ mods.arcaneworld.ritual.recipeBuilder()
 
 ::::::::::
 
-:::::::::: details mods.arcaneworld.ritual.recipeBuilderArena() {open id="abstract"}
+:::::::::: details Arena Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for an arena recipe, with the basic values and an entity. Teleports the player to a custom dimension to fight the entity when completed.
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.recipeBuilderArena()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -182,11 +208,15 @@ mods.arcaneworld.ritual.recipeBuilder()
     ritualType(RitualWrapper.RitualType)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -201,7 +231,18 @@ mods.arcaneworld.ritual.recipeBuilderArena()
 
 ::::::::::
 
-:::::::::: details mods.arcaneworld.ritual.recipeBuilderCommand() {open id="abstract"}
+:::::::::: details Command Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a command recipe, with the basic values and an number of commands. Runs those commands when completed.
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.recipeBuilderCommand()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -246,11 +287,15 @@ mods.arcaneworld.ritual.recipeBuilderArena()
     ritualType(RitualWrapper.RitualType)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -266,7 +311,18 @@ mods.arcaneworld.ritual.recipeBuilderCommand()
 
 ::::::::::
 
-:::::::::: details mods.arcaneworld.ritual.recipeBuilderCreateItem() {open id="abstract"}
+:::::::::: details CreateItem Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a create item recipe, with the basic values and an output itemstack. Spawns the itemstack in-world when completed.
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.recipeBuilderCreateItem()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -311,11 +367,15 @@ mods.arcaneworld.ritual.recipeBuilderCommand()
     ritualType(RitualWrapper.RitualType)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -330,7 +390,18 @@ mods.arcaneworld.ritual.recipeBuilderCreateItem()
 
 ::::::::::
 
-:::::::::: details mods.arcaneworld.ritual.recipeBuilderCustom() {open id="abstract"}
+:::::::::: details Custom Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a custom recipe, with the basic values and a closure. Runs the closure when completed.
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.recipeBuilderCustom()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -373,11 +444,15 @@ mods.arcaneworld.ritual.recipeBuilderCreateItem()
     ritualType(RitualWrapper.RitualType)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -392,7 +467,18 @@ mods.arcaneworld.ritual.recipeBuilderCustom()
 
 ::::::::::
 
-:::::::::: details mods.arcaneworld.ritual.recipeBuilderDragonBreath() {open id="abstract"}
+:::::::::: details DragonBreath Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a dragon breath recipe, with only the basic values. Summons Dragons Breath when completed.
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.recipeBuilderDragonBreath()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -429,11 +515,15 @@ mods.arcaneworld.ritual.recipeBuilderCustom()
     ritualType(RitualWrapper.RitualType)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -447,7 +537,18 @@ mods.arcaneworld.ritual.recipeBuilderDragonBreath()
 
 ::::::::::
 
-:::::::::: details mods.arcaneworld.ritual.recipeBuilderDungeon() {open id="abstract"}
+:::::::::: details Dungeon Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a dungeon recipe, with only the basic values. Teleports the player to a custom dimension with a dungeon when completed.
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.recipeBuilderDungeon()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -484,11 +585,15 @@ mods.arcaneworld.ritual.recipeBuilderDragonBreath()
     ritualType(RitualWrapper.RitualType)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -502,7 +607,18 @@ mods.arcaneworld.ritual.recipeBuilderDungeon()
 
 ::::::::::
 
-:::::::::: details mods.arcaneworld.ritual.recipeBuilderSummon() {open id="abstract"}
+:::::::::: details Summon Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a summon recipe, with the basic values and an entity. Spawns that entity when completed.
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.recipeBuilderSummon()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -546,11 +662,15 @@ mods.arcaneworld.ritual.recipeBuilderDungeon()
     ritualType(RitualWrapper.RitualType)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -565,7 +685,18 @@ mods.arcaneworld.ritual.recipeBuilderSummon()
 
 ::::::::::
 
-:::::::::: details mods.arcaneworld.ritual.recipeBuilderTime() {open id="abstract"}
+:::::::::: details Time Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a time recipe, with the basic values and a time integer. Rapidly changes the time of day to the set time when completed.
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.recipeBuilderTime()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -608,11 +739,15 @@ mods.arcaneworld.ritual.recipeBuilderSummon()
     ritualType(RitualWrapper.RitualType)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -627,7 +762,18 @@ mods.arcaneworld.ritual.recipeBuilderTime()
 
 ::::::::::
 
-:::::::::: details mods.arcaneworld.ritual.recipeBuilderWeather() {open id="abstract"}
+:::::::::: details Weather Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a weather recipe, with the basic values and a weather value. Changes the weather type to the given value when completed.
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.recipeBuilderWeather()
+    ```
+
+---
+
 - `ResourceLocation`. Sets the Resource Location of the recipe.
 
     ```groovy:no-line-numbers
@@ -673,11 +819,15 @@ mods.arcaneworld.ritual.recipeBuilderTime()
     weatherType(RitualWeather.WeatherType)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

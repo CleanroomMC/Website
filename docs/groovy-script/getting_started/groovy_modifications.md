@@ -74,3 +74,32 @@ A number of packages, classes, and methods are banned, and not able to be used b
 
 In particular, when interacting with a File object through Groovy,
 the File can only refer to a file path that targets inside the minecraft directory.
+
+
+## MetaClass
+
+
+Groovy adds a new property to every object, `MetaClass`, which can be accessed via `object.metaClass`.
+This can be used for meta-programming, but in GroovyScript we have custom additions to it
+to allow modifying the visibility and mutability of fields and methods.
+
+To strip `final` from a field, allowing it to be set, do
+
+::: info Example {id="example"}
+
+```groovy:no-line-numbers
+obj.metaClass.makeMutable('fieldName')
+```
+
+:::
+
+To make a method or field public, allowing it to be accessed, do
+
+::: info Example {id="example"}
+
+```groovy:no-line-numbers
+obj.metaClass.makePublic('fieldName')
+obj.metaClass.makePublic('methodName')
+```
+
+:::

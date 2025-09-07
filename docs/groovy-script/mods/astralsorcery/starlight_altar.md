@@ -35,7 +35,18 @@ Just like other recipe types, the Starlight Altar also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.astralsorcery.starlight_altar.discoveryRecipeBuilder() {open id="abstract"}
+:::::::::: details Discovery Altar Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for Astral Sorcery Crafting recipes for the Discovery (1st) tier of the Starlight Altar.
+
+    ```groovy:no-line-numbers
+    mods.astralsorcery.starlight_altar.discoveryRecipeBuilder()
+    ```
+
+---
+
 - `String[]`. Sets the items required in each slot of the grid as char. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both.
 
     ```groovy:no-line-numbers
@@ -83,11 +94,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     starlight(int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `hellfirepvp.astralsorcery.common.crafting.altar.AbstractAltarRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -106,7 +121,18 @@ mods.astralsorcery.starlight_altar.discoveryRecipeBuilder()
 
 ::::::::::
 
-:::::::::: details mods.astralsorcery.starlight_altar.attunementRecipeBuilder() {open id="abstract"}
+:::::::::: details Attunement Altar Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for Astral Sorcery Crafting recipes for the Attunement (2nd) tier of the Starlight Altar.
+
+    ```groovy:no-line-numbers
+    mods.astralsorcery.starlight_altar.attunementRecipeBuilder()
+    ```
+
+---
+
 - `String[]`. Sets the items required in each slot of the grid as char. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both.
 
     ```groovy:no-line-numbers
@@ -154,17 +180,28 @@ mods.astralsorcery.starlight_altar.discoveryRecipeBuilder()
     starlight(int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `hellfirepvp.astralsorcery.common.crafting.altar.AbstractAltarRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
 
-
-
 ::::::::::
 
-:::::::::: details mods.astralsorcery.starlight_altar.constellationRecipeBuilder() {open id="abstract"}
+:::::::::: details Constellation Altar Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for Astral Sorcery Crafting recipes for the Constellation (3rd) tier of the Starlight Altar.
+
+    ```groovy:no-line-numbers
+    mods.astralsorcery.starlight_altar.constellationRecipeBuilder()
+    ```
+
+---
+
 - `String[]`. Sets the items required in each slot of the grid as char. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both.
 
     ```groovy:no-line-numbers
@@ -212,11 +249,15 @@ mods.astralsorcery.starlight_altar.discoveryRecipeBuilder()
     starlight(int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `hellfirepvp.astralsorcery.common.crafting.altar.AbstractAltarRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -236,7 +277,18 @@ mods.astralsorcery.starlight_altar.constellationRecipeBuilder()
 
 ::::::::::
 
-:::::::::: details mods.astralsorcery.starlight_altar.traitRecipeBuilder() {open id="abstract"}
+:::::::::: details Trait Altar Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for Astral Sorcery Crafting recipes for the Trait tier (4th) of the Starlight Altar.
+
+    ```groovy:no-line-numbers
+    mods.astralsorcery.starlight_altar.traitRecipeBuilder()
+    ```
+
+---
+
 - `String[]`. Sets the items required in each slot of the grid as char. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both.
 
     ```groovy:no-line-numbers
@@ -298,11 +350,15 @@ mods.astralsorcery.starlight_altar.constellationRecipeBuilder()
     constellation(IConstellation)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `hellfirepvp.astralsorcery.common.crafting.altar.AbstractAltarRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

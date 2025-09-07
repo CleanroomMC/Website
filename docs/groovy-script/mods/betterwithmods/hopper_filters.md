@@ -31,7 +31,18 @@ Just like other recipe types, the Hopper Filters also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.betterwithmods.hopper_filters.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.betterwithmods.hopper_filters.recipeBuilder()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the valid items allowed through the filter. Requires greater than or equal to 0.
 
     ```groovy:no-line-numbers
@@ -46,11 +57,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     filter(IIngredient)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `betterwithmods.api.tile.IHopperFilter`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
