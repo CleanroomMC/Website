@@ -1,11 +1,11 @@
 ---
 title: "Alchemy"
-titleTemplate: "Embers | CleanroomMC"
+titleTemplate: "Embers Unofficial Extended Life | CleanroomMC"
 description: "Convert input items into an output item on a Exchange Tablet."
 source_code_link: "https://github.com/Ender-Development/Embers-Extended-Life/blob/master/src/main/java/teamroots/embers/compat/groovyscript/Alchemy.java"
 ---
 
-# Alchemy (Embers)
+# Alchemy (Embers Unofficial Extended Life)
 
 ## Description
 
@@ -58,7 +58,18 @@ Just like other recipe types, the Alchemy also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.embers.alchemy.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.embers.alchemy.recipeBuilder()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 5.
 
     ```groovy:no-line-numbers
@@ -81,11 +92,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     setAspect(String, int, int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `teamroots.embers.recipe.AlchemyRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

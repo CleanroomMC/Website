@@ -1,11 +1,11 @@
 ---
 title: "Melter"
-titleTemplate: "Embers | CleanroomMC"
+titleTemplate: "Embers Unofficial Extended Life | CleanroomMC"
 description: "Converts an input item into an output fluidstack in a Melter with the ability to have a secondary output fluidstack by adding a Geologic Separator."
 source_code_link: "https://github.com/Ender-Development/Embers-Extended-Life/blob/master/src/main/java/teamroots/embers/compat/groovyscript/Melter.java"
 ---
 
-# Melter (Embers)
+# Melter (Embers Unofficial Extended Life)
 
 ## Description
 
@@ -29,7 +29,18 @@ Just like other recipe types, the Melter also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.embers.melter.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.embers.melter.recipeBuilder()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -46,11 +57,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     fluidOutput(Collection<FluidStack>)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `teamroots.embers.recipe.ItemMeltingRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

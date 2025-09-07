@@ -1,11 +1,11 @@
 ---
 title: "Mixer"
-titleTemplate: "Embers | CleanroomMC"
+titleTemplate: "Embers Unofficial Extended Life | CleanroomMC"
 description: "Converts up to 3 input fluidstacks into an output fluidstack in a Mixer. If Mystical Mechanics is installed, the Mechanical Actuator can be used to decrease the Ember cost of a recipe."
 source_code_link: "https://github.com/Ender-Development/Embers-Extended-Life/blob/master/src/main/java/teamroots/embers/compat/groovyscript/Mixer.java"
 ---
 
-# Mixer (Embers)
+# Mixer (Embers Unofficial Extended Life)
 
 ## Description
 
@@ -29,7 +29,18 @@ Just like other recipe types, the Mixer also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.embers.mixer.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.embers.mixer.recipeBuilder()
+    ```
+
+---
+
 - `FluidStackList`. Sets the fluid inputs of the recipe. Requires greater than or equal to 2 and less than or equal to 3.
 
     ```groovy:no-line-numbers
@@ -52,11 +63,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     powerRatio(int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `teamroots.embers.recipe.FluidMixingRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

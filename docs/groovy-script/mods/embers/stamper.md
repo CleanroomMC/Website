@@ -1,11 +1,11 @@
 ---
 title: "Stamper"
-titleTemplate: "Embers | CleanroomMC"
+titleTemplate: "Embers Unofficial Extended Life | CleanroomMC"
 description: "Converts an input fluid into an output item with a provided stamp in a Stamper."
 source_code_link: "https://github.com/Ender-Development/Embers-Extended-Life/blob/master/src/main/java/teamroots/embers/compat/groovyscript/Stamper.java"
 ---
 
-# Stamper (Embers)
+# Stamper (Embers Unofficial Extended Life)
 
 ## Description
 
@@ -29,7 +29,18 @@ Just like other recipe types, the Stamper also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.embers.stamper.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.embers.stamper.recipeBuilder()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1.
 
     ```groovy:no-line-numbers
@@ -60,11 +71,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     stamp(IIngredient)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `teamroots.embers.recipe.ItemStampingRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
