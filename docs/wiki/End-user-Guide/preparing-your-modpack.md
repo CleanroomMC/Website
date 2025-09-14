@@ -15,38 +15,38 @@ To prepare your modpack for Cleanroom Loader, review the lists below and make re
 
 ## Deprecated / Incompatible Mods
 
-- **FermiumBooter** → Outdated fork of MixinBooter with no meaningful changes.  
-  ✅ Use **MixinBooter** instead.
-
-- **normalasm** → Outdated fork of CensoredASM with no meaningful changes.  
-  ✅ Use **CensoredASM** instead.
-
-- **redirectionor** → Provides no real performance benefit.  
+- **AdvancedShader** → Binary patching, incompatible.  
   🚫 Recommended to remove.
 
-- **Noisethreader** → Known to cause crashes.  
+- **BetterFPS** → Breaks core functionality.  
   🚫 Recommended to remove.
 
 - **Betterer Biome Blender** → Minor fixes for an already useless mod.  
   🚫 Recommended to remove.
 
-- **FermiumASM** → CensoredASM fork, disables fixes when Dynamic Trees is loaded, and depends on FermiumBooter.  
+- **Clumps** →  
+  ✅ Use **Fixeroo** instead.
+
+- **Essential.gg** → Patched but causes many issues.  
+  ✅ Use **E4MC Retro** instead.
+
+- **FastFurnace** →  
   ✅ Use **CensoredASM** instead.
 
-- **Spark Unforged** → Backport of Spark with half the features removed.  
-  ✅ Use **Flare** instead.
-
-- **SpongeForge** →  
-  ✅ Use **SpongeForge LTS**.
-
-- **Phosphor** →  
-  ✅ Use **Hesperus** or **Alfheim Lighting Engine**.
+- **FoamFix** →  
+  ✅ Use **VintageFix** instead.
 
 - **Forgelin** →  
   ✅ Use **Forgelin-Continuous**.
 
-- **LibrarianLib** →  
-  ✅ Use **LibrarianLib-Continuous**. *(May break Wizardry animations.)*
+- **FermiumASM** → CensoredASM fork, disables fixes when Dynamic Trees is loaded, and depends on FermiumBooter.  
+  ✅ Use **CensoredASM** instead.
+
+- **FermiumBooter** → Outdated fork of MixinBooter with no meaningful changes.  
+  ✅ Use **MixinBooter** instead.
+
+- **Gnetum** →  
+  ✅ Use **StellarCore** instead.
 
 - **JustEnoughIDs (JEID)** →  
   ✅ Use **RoughlyEnoughIDs (REID)** instead.
@@ -54,43 +54,36 @@ To prepare your modpack for Cleanroom Loader, review the lists below and make re
 - **JustEnoughItems (JEI)** →  
   ✅ Use **HadEnoughItems (HEI)** instead.
 
-- **AdvancedShader** → Binary patching, incompatible.  
-  🚫 Recommended to remove.
+- **LibrarianLib** →  
+  ✅ Use **LibrarianLib-Continuous**. *(May break Wizardry animations.)*
 
-- **Polyfrost series** → Awaiting official fixes.
-
-- **Essential.gg** → Patched but causes many issues.  
-  ✅ Use **E4MC Retro** instead.
+- **Modular Machinery** →  
+  ✅ Use **Modular Machinery: Community Edition**.
 
 - **Mouse Tweaks** →  
   ✅ Use **Mouse Tweaks Unofficial**.
 
-- **TexFix** →  
-  ✅ Use **VintageFix** instead.
-
-- **VanillaFix** →  
-  ✅ Use **CensoredASM** instead.
-
-- **FoamFix** →  
-  ✅ Use **VintageFix** instead.
-
-- **BetterFPS** → Breaks core functionality.  
+- **Noisethreader** → Known to cause crashes.  
   🚫 Recommended to remove.
+
+- **normalasm** → Outdated fork of CensoredASM with no meaningful changes.  
+  ✅ Use **CensoredASM** instead.
 
 - **Performant** → Empty jar, does nothing.  
   🚫 Do not use.
 
-- **FastFurnace** →  
-  ✅ Use **CensoredASM** instead.
+- **Phosphor** →  
+  ✅ Use **Hesperus** or **Alfheim Lighting Engine**.
 
-- **Clumps** →  
-  ✅ Use **Fixeroo** instead.
+- **Polyfrost series** → Awaiting official fixes.
 
-- **Gnetum** →  
-  ✅ Use **StellarCore** instead.
+- **Raw Input** → Already included in Cleanroom.  
+  🚫 Recommended to remove.
 
-- **Modular Machinery** →  
-  ✅ Use **Modular Machinery: Community Edition**.
+- **redirectionor** → Provides no real performance benefit.  
+  🚫 Recommended to remove.
+
+- **Relictium** → See [Performance Mods](#performance-mods).
 
 - **Serialisation is Bad** → Redundant.  
   🚫 Recommended to remove.
@@ -98,10 +91,18 @@ To prepare your modpack for Cleanroom Loader, review the lists below and make re
 - **SmoothFont** → Breaks some mods.  
   🚫 Recommended to remove.
 
-- **Raw Input** → Already included in Cleanroom.  
-  🚫 Recommended to remove.
+- **Spark Unforged** → Backport of Spark with half the features removed.  
+  ✅ Use **Flare** instead.
 
-- **Relictium** → See [Performance Mods](#performance-mods).
+- **SpongeForge** →  
+  ✅ Use **SpongeForge LTS**.
+
+- **TexFix** →  
+  ✅ Use **VintageFix** instead.
+
+- **VanillaFix** →  
+  ✅ Use **CensoredASM** instead.
+
 
 ---
 
