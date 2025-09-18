@@ -5,6 +5,10 @@ hero:
   name: CleanroomMC
   text: Built on Minecraft 1.12.2.
   tagline: Innovating along with maintaining mods, features, and related toolchains.
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /wiki/end-user-guide/introduction
   image:
     src: /cleanroom.png
     alt: CleanroomMC Logo
