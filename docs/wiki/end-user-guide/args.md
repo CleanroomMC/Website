@@ -13,13 +13,9 @@ Keep in mind that JVM tuning is **hardware-dependent**: an argument that helps o
 
 ## Useful Arguments
 
-- `-XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders`  
-  *Introduced in Java 24.*  
-  Reduces the size of object headers in the JVM from 96–128 bits down to 64 bits, lowering heap usage and potentially improving performance.  
-  [See JEP 519](https://openjdk.org/jeps/519)
+- `-XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders` <br/> *Introduced in Java 24.* <br/> Reduces the size of object headers in the JVM from 96–128 bits down to 64 bits, lowering heap usage and potentially improving performance. Will be enabled by Default in Java 25 ([See JEP 450](https://openjdk.org/jeps/450))
 
-- `-XX:+UseZGC`  
-  Enables the **Z Garbage Collector (ZGC)**, which provides very low latency garbage collection and can virtually eliminate GC pauses.
+- `-XX:+UseZGC` <br/> Enables the **Z Garbage Collector (ZGC)**, which provides very low latency garbage collection and can virtually eliminate GC pauses.
 
 ## Notes
 
