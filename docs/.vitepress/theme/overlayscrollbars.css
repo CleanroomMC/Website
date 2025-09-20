@@ -1,0 +1,26 @@
+.os-scrollbar.os-theme-dark {
+  --os-handle-bg: rgba(255, 255, 255, 0.4);
+  --os-handle-bg-hover: rgba(255, 255, 255, 0.6);
+  --os-handle-bg-active: rgba(255, 255, 255, 0.8);
+}
+
+html:not(.dark) .os-scrollbar.os-theme-dark {
+  --os-handle-bg: rgba(0, 0, 0, 0.4);
+  --os-handle-bg-hover: rgba(0, 0, 0, 0.6);
+  --os-handle-bg-active: rgba(0, 0, 0, 0.8);
+}
+
+.os-scrollbar-horizontal .os-scrollbar-handle {
+  height: 4px;
+  border-radius: 9999px;
+}
+.os-scrollbar-horizontal:hover .os-scrollbar-handle {
+  height: 6px;
+}
+.os-scrollbar-vertical .os-scrollbar-handle {
+  width: 4px;
+  border-radius: 9999px;
+}
+.os-scrollbar-vertical:hover .os-scrollbar-handle {
+  width: 6px;
+}
