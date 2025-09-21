@@ -21,7 +21,7 @@ Steps:
    *(it will not load in a Forge environment)*
 2. Add [Scalar Legacy](https://www.curseforge.com/minecraft/mc-mods/scalar-legacy) to your mod folder  
    *(it will not load in a Forge environment)*
-3. ⚠️ **Warning:** Make sure your instance does not include problematic or deprecated mods.  
+3. :warning: **Warning:** Make sure your instance does not include problematic or deprecated mods.  
    See [Preparing your modpack](/wiki/End-user-Guide/preparing-your-modpack) for more details.
 4. Download the `Cleanroom-MMC-instance-` archive from the [Releases page](https://github.com/CleanroomMC/Cleanroom/releases).
 5. Import it into your launcher.  
@@ -40,7 +40,7 @@ Steps:
    *(it will not load in a Forge environment)*
 2. Add [Scalar Legacy](https://www.curseforge.com/minecraft/mc-mods/scalar-legacy) to your modlist  
    *(it will not load in a Forge environment)*
-3. ⚠️ **Warning:** Ensure your instance does not contain problematic or deprecated mods.  
+3. :warning: **Warning:** Ensure your instance does not contain problematic or deprecated mods.  
    See [Preparing your modpack](/wiki/End-user-Guide/preparing-your-modpack) for details.
 4. Add the [Relauncher](https://www.curseforge.com/minecraft/mc-mods/cleanroom-relauncher) mod to your modlist and launch the game with **Java 8**.
 5. In the Relauncher GUI, select the `javaw.exe` path of your **Java 25 installation**. (`javaw.exe` will not produce any commandline output and it the one that should be used in normal cases, while `java.exe` will produce  commandline output)
@@ -50,7 +50,7 @@ Steps:
 ## Notes
 
 - Relauncher’s configuration file can be found at `config/relauncher.cfg`. <br/> Deleting this file will prompt the setup GUI on the next launch.
-- ⚠️ **Warning:** Not all launchers are compatible with Cleanroom Loader. <br/> Supported launchers:
-    - ✅ MultiMC-based launchers (**Prism Launcher, PolyMC, etc.**)
-    - ⚠️ CurseForge Launcher *(limited support)*
-    - ⚠️ Official Minecraft Launcher *(limited support)*
+- :warning: **Warning:** Not all launchers are compatible with Cleanroom Loader. <br/> Supported launchers:
+    - :white_check_mark: MultiMC-based launchers (**Prism Launcher, PolyMC, etc.**)
+    - :warning: CurseForge Launcher *(limited support)*
+    - :warning: Official Minecraft Launcher *(limited support)*
