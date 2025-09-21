@@ -26,7 +26,7 @@ Steps:
 4. Download the `Cleanroom-MMC-instance-` archive from the [Releases page](https://github.com/CleanroomMC/Cleanroom/releases).
 5. Import it into your launcher.  
    *(Alternatively, unzip the patches and JSON files into an existing 1.12 instance.)*
-6. In your launcher, select the `javaw.exe` path of your **Java 21+ installation**. (`javaw.exe` will not produce any commandline output and it the one that should be used in normal cases, while `java.exe` will produce  commandline output)
+6. In your launcher, select the `javaw.exe` path of your **Java 25 installation**. (`javaw.exe` will not produce any commandline output and it the one that should be used in normal cases, while `java.exe` will produce  commandline output)
 7. *(Optional)* Add JVM arguments as described in the [JVM Arguments](/wiki/End-user-Guide/args) section.
 
 ### Relauncher
@@ -43,7 +43,7 @@ Steps:
 3. ⚠️ **Warning:** Ensure your instance does not contain problematic or deprecated mods.  
    See [Preparing your modpack](/wiki/End-user-Guide/preparing-your-modpack) for details.
 4. Add the [Relauncher](https://www.curseforge.com/minecraft/mc-mods/cleanroom-relauncher) mod to your modlist and launch the game with **Java 8**.
-5. In the Relauncher GUI, select the `javaw.exe` path of your **Java 21+ installation**. (`javaw.exe` will not produce any commandline output and it the one that should be used in normal cases, while `java.exe` will produce  commandline output)
+5. In the Relauncher GUI, select the `javaw.exe` path of your **Java 25 installation**. (`javaw.exe` will not produce any commandline output and it the one that should be used in normal cases, while `java.exe` will produce  commandline output)
 6. *(Optional)* Add JVM arguments from the [JVM Arguments](/wiki/End-user-Guide/args) section.
 7. Click **Relaunch**.
 

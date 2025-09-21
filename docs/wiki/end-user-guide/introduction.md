@@ -9,7 +9,7 @@ title: Introduction
 **Cleanroom Loader** is a modern fork of Forge for Minecraft **1.12.2**, designed to bring the game up to date with current technology while improving performance, load times and compatibility.
 
 ### Key Features
-- **Java 21+ support** – run Minecraft with the latest Java versions.
+- **Java 25 support** – run Minecraft with the latest Java versions.
 - **Upgraded LWJGL3** – benefit from modern rendering and input handling.
 - **Extended compatibility** – includes patches that allow nearly ≈99% Forge mods to run smoothly.
 
