@@ -48,8 +48,10 @@ Steps:
 7. Click **Relaunch**.
 
 ## Notes
-
 - Relauncher’s configuration file can be found at `config/relauncher.cfg`. <br/> Deleting this file will prompt the setup GUI on the next launch.
+  ::: info Note {id="note"}
+  Relauncher will check for cleanroom updates. Therefore, the UI will launch when an update rolls out.
+  :::
 - :warning: **Warning:** Not all launchers are compatible with Cleanroom Loader. <br/> Supported launchers:
     - :white_check_mark: MultiMC-based launchers (**Prism Launcher, PolyMC, etc.**)
     - :warning: CurseForge Launcher *(limited support)*
