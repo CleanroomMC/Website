@@ -22,12 +22,12 @@ Steps:
 2. Add [Scalar Legacy](https://www.curseforge.com/minecraft/mc-mods/scalar-legacy) to your mod folder<br/>
    *(it will not load in a Forge environment)*<br/>
 3. :warning: **Warning:** Make sure your instance does not include problematic or deprecated mods.<br/>
-   See [Preparing your modpack](/wiki/End-user-Guide/preparing-your-modpack) for more details.<br/>
+   See [Preparing your modpack](/wiki/end-user-guide/preparing-your-modpack) for more details.<br/>
 4. Download the `Cleanroom-MMC-instance-` archive from the [Releases page](https://github.com/CleanroomMC/Cleanroom/releases).<br/>
 5. Import it into your launcher.<br/>
    *(Alternatively, unzip the patches and JSON files into an existing 1.12 instance.)*<br/>
 6. In your launcher, select the `javaw.exe` path of your **Java 25 installation**. (`javaw.exe` will not produce any command-line output and it the one that should be used in normal cases, while `java.exe` will produce a command-line output)<br/>
-7. *(Optional)* Add JVM arguments as described in the [JVM Arguments](/wiki/End-user-Guide/args) section.<br/>
+7. *(Optional)* Add JVM arguments as described in the [JVM Arguments](/wiki/end-user-guide/args) section.<br/>
 
 ### Cleanroom Relauncher
 
@@ -40,10 +40,10 @@ Steps:
 2. Add [Scalar Legacy](https://www.curseforge.com/minecraft/mc-mods/scalar-legacy) to your modlist<br/>  
    *(it will not load in a Forge environment)*<br/>
 3. :warning: **Warning:** Ensure your instance does not contain problematic or deprecated mods.<br/>  
-   See [Preparing your modpack](/wiki/End-user-Guide/preparing-your-modpack) for details.<br/>
+   See [Preparing your modpack](/wiki/end-user-guide/preparing-your-modpack) for details.<br/>
 4. Add the [Cleanroom Relauncher](https://www.curseforge.com/minecraft/mc-mods/cleanroom-relauncher) mod to your modlist and launch the game with **Java 8**.<br/>
 5. In the Cleanroom Relauncher GUI, select the `javaw.exe` path of your **Java 25 installation**. (`javaw.exe` will not produce any command-line output and it the one that should be used in normal cases, while `java.exe` will produce a command-line output)<br/>
-6. *(Optional)* Add JVM arguments from the [JVM Arguments](/wiki/End-user-Guide/args) section.<br/>
+6. *(Optional)* Add JVM arguments from the [JVM Arguments](/wiki/end-user-guide/args) section.<br/>
 7. Click **Relaunch**.<br/>
 
 ## Notes
