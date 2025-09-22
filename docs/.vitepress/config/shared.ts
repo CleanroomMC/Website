@@ -82,9 +82,9 @@ export const shared = defineConfigWithTheme<CleanRoomConfig>({
             name: "MasterEnderman",
           },
           {
-            avatar: "https://avatars.githubusercontent.com/u/24524662?v=4",
-            username: "thermonuclear_minecraft_engineer",
-            name: "thermonuclear_minecraft_engineer",
+            avatar: "https://i.scdn.co/image/ab67616d00001e02c856d5eb1285c556e3271249",
+            username: "AnasDevO",
+            name: "Thermonuclear_Minecraft_Engineer",
           },
         ],
       }),
