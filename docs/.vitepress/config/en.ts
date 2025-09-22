@@ -65,6 +65,32 @@ function nav(): DefaultTheme.NavItem[] {
 function wikiSidebar(): DefaultTheme.SidebarItem[] {
   return [
     {
+      text: "End User Guide",
+      collapsed: false,
+      base: "/wiki/end-user-guide/",
+      items: [
+        {
+          text: "Introduction",
+          link: "introduction"
+        },
+        {
+          text: "Preparing your modpack",
+          link: "preparing-your-modpack"
+        },
+        {
+          text: "How To install",
+          collapsed: true,
+          base: "/wiki/end-user-guide//installation/",
+          items: [
+            { text: "Client", link: "install-client" },
+            { text: "Server", link: "install-server" }]
+        },
+        {
+          text: "JVM Arguments",
+          link: "args"
+        }]
+    },
+    {
       text: "Cleanroom Mod Development",
       collapsed: false,
       base: "/wiki/cleanroom-mod-development/",
