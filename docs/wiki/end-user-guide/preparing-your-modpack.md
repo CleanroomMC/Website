@@ -36,9 +36,9 @@ The most important optimization mods for **Minecraft 1.12.2** can be summed up t
 - **[VintageFix](https://www.curseforge.com/minecraft/mc-mods/vintagefix)** : Load time and RAM use improvements for Minecraft 1.12.2<br/>
 - **[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)** : A community project to consolidate various bugfixes and tweaks into a single solution for Minecraft 1.12.2<br/>
 - **[Stellar Core](https://www.curseforge.com/minecraft/mc-mods/stellarcore)** : Provides extensive bug fixes, performance improvements, and additional features across a wide range of mods<br/>
-  ::: info Note {id="note"}
-  Universal Tweaks supersedes a lot of mods which will not be mentioned here. This can be observed via an in-game warning or by looking at the incompatible mods list [**Here**](https://legacy.curseforge.com/minecraft/mc-mods/universal-tweaks/files/6953147).
-  :::
+::: info Note {id="note"}
+Universal Tweaks supersedes a lot of mods which will not be mentioned here. This can be observed via an in-game warning or by looking at the incompatible mods list [**Here**](https://legacy.curseforge.com/minecraft/mc-mods/universal-tweaks/files/6953147).
+:::
 ## Render optimization mods
 
 The most prominent Render optimization mods for **Minecraft 1.12.2** are:
@@ -55,7 +55,7 @@ In a simulated heavy-base scenario, we benchmarked the aforementioned mods again
 - **NVIDIA GPUs** → `Nothirium > Optifine > Celeritas`
 - **AMD GPUs** → `Celeritas > Optifine > Nothirium`
 - **Intel Integrated Graphics** → `Celeritas | Optifine` <br/> <br/>
-  :warning: Performance varies depending on your hardware and drivers. Test all three mods to see which provides the best results for your system.<br/>
+:warning: Performance varies depending on your hardware and drivers. Test all three mods to see which provides the best results for your system.<br/>
 
 ## Superseded mods
 ::: info Note {id="note"}
