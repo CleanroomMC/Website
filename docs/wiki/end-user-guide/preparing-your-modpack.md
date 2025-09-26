@@ -6,9 +6,9 @@ title: Preparing your modpack
 
 ## Overview
 
-Cleanroom Loader is compatible with the vast majority of Forge mods and will usually run them without issue.<br/>  
-However, some mods remain **deprecated, redundant, or outright incompatible**—either because they’ve been superseded by better alternatives or because they introduce critical problems.<br/>
-To prepare your modpack for Cleanroom Loader, review the lists below and make replacements where necessary.<br/>
+Cleanroom Loader is compatible with the vast majority of Forge mods and will usually run them without issue.<br>  
+However, some mods remain **deprecated, redundant, or outright incompatible**—either because they’ve been superseded by better alternatives or because they introduce critical problems.<br>
+To prepare your modpack for Cleanroom Loader, review the lists below and make replacements where necessary.<br>
 
 ## Incompatible / Problematic Mods on Cleanroom Launcher
 
@@ -34,10 +34,10 @@ If your modpack uses **Bansoukou 4**, make sure to **run the instance at least o
 ## Performance / Memory optimization mods
 
 The most important optimization mods for **Minecraft 1.12.2** can be summed up to the following list:
-- **[CensoredASM](https://www.curseforge.com/minecraft/mc-mods/lolasm)** : Huge optimizations that are targeted at Minecraft 1.12.2<br/>
-- **[VintageFix](https://www.curseforge.com/minecraft/mc-mods/vintagefix)** : Load time and RAM use improvements for Minecraft 1.12.2<br/>
-- **[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)** : A community project to consolidate various bugfixes and tweaks into a single solution for Minecraft 1.12.2<br/>
-- **[Stellar Core](https://www.curseforge.com/minecraft/mc-mods/stellarcore)** : Provides extensive bug fixes, performance improvements, and additional features across a wide range of mods<br/>
+- **[CensoredASM](https://www.curseforge.com/minecraft/mc-mods/lolasm)** : Huge optimizations that are targeted at Minecraft 1.12.2<br>
+- **[VintageFix](https://www.curseforge.com/minecraft/mc-mods/vintagefix)** : Load time and RAM use improvements for Minecraft 1.12.2<br>
+- **[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)** : A community project to consolidate various bugfixes and tweaks into a single solution for Minecraft 1.12.2<br>
+- **[Stellar Core](https://www.curseforge.com/minecraft/mc-mods/stellarcore)** : Provides extensive bug fixes, performance improvements, and additional features across a wide range of mods<br>
 
 ::: info Note {id="note"}
 Universal Tweaks supersedes a lot of mods which will be mostly not mentioned here. This can be observed via an in-game warning or by looking at the incompatible mods list [**Here**](https://legacy.curseforge.com/minecraft/mc-mods/universal-tweaks/files/6953147).
@@ -47,9 +47,9 @@ Universal Tweaks supersedes a lot of mods which will be mostly not mentioned her
 
 The most prominent Render optimization mods for **Minecraft 1.12.2** are:
 
-- **[Optifine](https://optifine.net/adloadx?f=preview_OptiFine_1.12.2_HD_U_G6_pre1.jar&x=c2f6)**<br/>
-- **[Celeritas](https://github.com/kappa-maintainer/Celeritas-auto-build/releases)** (Requires **_Cleanroom Loader_**, use the [version 2.3.0](https://github.com/kappa-maintainer/Celeritas-auto-build/releases/download/release%2F2.3.0-dev.13-54-g9e892798-20250819T004238/celeritas-forge-mc12.2-2.3.0-dev.jar) since 2.4.0 breaks with CensoredASM)<br/>
-- **[Nothirium](https://www.curseforge.com/minecraft/mc-mods/nothirium)** (Also requires **[Naughthirium](https://www.curseforge.com/minecraft/mc-mods/naughthirium)**)<br/>
+- **[Optifine](https://optifine.net/adloadx?f=preview_OptiFine_1.12.2_HD_U_G6_pre1.jar&x=c2f6)**<br>
+- **[Celeritas](https://github.com/kappa-maintainer/Celeritas-auto-build/releases)** (Requires **_Cleanroom Loader_**, use the [version 2.3.0](https://github.com/kappa-maintainer/Celeritas-auto-build/releases/download/release%2F2.3.0-dev.13-54-g9e892798-20250819T004238/celeritas-forge-mc12.2-2.3.0-dev.jar) since 2.4.0 breaks with CensoredASM)<br>
+- **[Nothirium](https://www.curseforge.com/minecraft/mc-mods/nothirium)** (Also requires **[Naughthirium](https://www.curseforge.com/minecraft/mc-mods/naughthirium)**)<br>
 
 ::: info Note {id="note"}
 **_Celeritas_** and **_Nothirium_** do decrease ram usage and footprint, while **_Optifine_** may increase ram usage and will lengthen load times.
@@ -57,11 +57,11 @@ The most prominent Render optimization mods for **Minecraft 1.12.2** are:
 
 ### Stress Test Results
 
-In a simulated heavy-base scenario, we benchmarked the aforementioned mods against each other, and therefore rank their performance according to which gpu is used: <br/>
+In a simulated heavy-base scenario, we benchmarked the aforementioned mods against each other, and therefore rank their performance according to which gpu is used: <br>
 - **NVIDIA GPUs** → `Nothirium > Optifine > Celeritas`
 - **AMD GPUs** → `Celeritas > Optifine > Nothirium`
-- **Intel Integrated Graphics** → `Celeritas | Optifine` <br/> <br/>
-:warning: Performance varies depending on your hardware and drivers. Test all three mods to see which provides the best results for your system.<br/>
+- **Intel Integrated Graphics** → `Celeritas | Optifine` <br> <br>
+:warning: Performance varies depending on your hardware and drivers. Test all three mods to see which provides the best results for your system.<br>
 
 ## Superseded mods
 
@@ -134,7 +134,7 @@ These mods are not necessarily incompatible with Cleanroom loader, but have been
 | **Performant**             | Empty jar, does nothing.                                                                                                | :no_entry_sign: Remove                                                                                       |
 | **Redirectionor**          | Provides no real performance benefit.                                                                                   | :no_entry_sign: Remove                                                                                       |
 | **Relictium**              | See [Performance Mods](#performance-mods).                                                                              | —                                                                                                            |
-| **Spark / Spark Unforged** | **Spark**: Outdated <br/> **Spark Unforged**: Backport of modern Spark with half the features removed.                  | :white_check_mark: Use **[Flare](https://www.curseforge.com/minecraft/mc-mods/flare)**                       |
+| **Spark / Spark Unforged** | **Spark**: Outdated <br> **Spark Unforged**: Backport of modern Spark with half the features removed.                  | :white_check_mark: Use **[Flare](https://www.curseforge.com/minecraft/mc-mods/flare)**                       |
 
 ### QoL Mods
 
