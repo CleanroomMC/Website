@@ -27,7 +27,7 @@ Make sure `-Xms` and `-Xmx` have the same size. This makes sure the JVM does not
 
 ## Notes
 
-- The latest tested Java version for Cleanroom Loader is **Java 25**, it is recommended to use this version, and to always stick to LTS versions
+- The latest tested Java version for Cleanroom Loader is **Java 25**, it is recommended to use this version, and to always stick to LTS versions.
 - On older CPUs, **ZGC** can be demanding: it increases RAM usage (since ZGC does not use compressed object pointers) and may reduce performance. <br> <br>  Test your game both **with** and **without ZGC**, and compare results. You can revert to Java 25’s default collector (**G1GC**) by removing `-XX:+UseZGC`
 - The use of `-XX:+ZGenerational` is not required when using ZGC. (It is enabled by default in Java 25)
 - Big heaps can only be correctly handled by **ZGC**. If using **G1GC**, make sure to pick reasonable heap sizes (Shouldn't exceed 11-12GB ram)
