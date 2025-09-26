@@ -164,8 +164,9 @@ These mods are not necessarily incompatible with Cleanroom loader, but have been
 
 A list of companion mods to further improve your experience with other mods 
 
-| Mod                      | Reason                    | Recommended Action                                                                                                      |
-|--------------------------|---------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| **IC2 EXP**              | Has a good amount of bugs | :white_check_mark: Add [IC2 Patcher](https://www.curseforge.com/minecraft/mc-mods/ic2-patcher) alongside                |
-| **Industrial Foregoing** | Has a good amount of bugs | :white_check_mark: Add [IFPatcher](https://www.curseforge.com/minecraft/mc-mods/ifpatcher) alongside                    |
-| **Witchery**             | Base mod is not usable    | :white_check_mark: Add [Witchery: Companion](https://www.curseforge.com/minecraft/mc-mods/witchery-companion) alongside |
+| Mod                       | Reason                       | Recommended Action                                                                                                                                                                                 |
+|---------------------------|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Thaumcraft 6**          | Bugs and lack of integration | :white_check_mark: Add **[Congrega Mystica](https://www.curseforge.com/minecraft/mc-mods/congrega-mystica)** and **[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker)** |
+| **IC2 EXP**               | Has a good amount of bugs    | :white_check_mark: Add **[IC2 Patcher](https://www.curseforge.com/minecraft/mc-mods/ic2-patcher)**                                                                                                 |
+| **Industrial Foregoing**  | Has a good amount of bugs    | :white_check_mark: Add **[IFPatcher](https://www.curseforge.com/minecraft/mc-mods/ifpatcher)**                                                                                                     |
+| **Witchery: Resurrected** | Base mod is not usable       | :white_check_mark: Add **[Witchery: Companion](https://www.curseforge.com/minecraft/mc-mods/witchery-companion)**                                                                                  |
