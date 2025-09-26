@@ -27,7 +27,7 @@ Steps:
    *(it will not load in a Forge environment)*
 3. :warning: **Warning:** Make sure your instance does not include problematic or deprecated mods.<br>
    See [Preparing your modpack](/wiki/end-user-guide/preparing-your-modpack) for more details.
-4. Download the `Cleanroom-MMC-instance-` archive from the [Releases page](https://github.com/CleanroomMC/Cleanroom/releases).
+4. Download the `Cleanroom-MMC-instance` archive from the [Releases page](https://github.com/CleanroomMC/Cleanroom/releases).
 5. Import it into your launcher.<br>
    *(Alternatively, unzip the patches and JSON files into an existing 1.12 instance.)*
 6. In your launcher, select the `javaw.exe` path of your **Java 25 installation**. (`javaw.exe` will not produce any command-line output and it the one that should be used in normal cases, while `java.exe` will produce a command-line output)
