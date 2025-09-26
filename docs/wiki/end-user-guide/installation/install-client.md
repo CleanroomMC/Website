@@ -32,6 +32,7 @@ Steps:
    *(Alternatively, unzip the patches and JSON files into an existing 1.12 instance.)*
 6. In your launcher, select the `javaw.exe` path of your **Java 25 installation**. (`javaw.exe` will not produce any command-line output and it the one that should be used in normal cases, while `java.exe` will produce a command-line output)
 7. *(Optional)* Add JVM arguments as described in the [JVM Arguments](/wiki/end-user-guide/args) section.
+8. Copy over the `/.minecraft` folder (can also be named `/minecraft` folder) from your modpack over to your Cleanroom instance.
 
 ### Cleanroom Relauncher
 
