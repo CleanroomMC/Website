@@ -5,7 +5,9 @@ title: Client
 # Client
 
 ## How to Install Cleanroom Loader on the Client
-
+::: warning {id="warning"}
+macOS is not well-supported by cleanroom, and may or may not work for you
+:::
 ### About Launchers
 
 The recommended way to run Cleanroom Loader is with a **MultiMC-based launcher**, such as **[Prism Launcher](https://prismlauncher.org/download/windows/)** or **[PolyMC](https://polymc.org/download/)**.<br/>  
