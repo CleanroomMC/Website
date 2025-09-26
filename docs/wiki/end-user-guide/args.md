@@ -21,13 +21,13 @@ GraalVM is being discontinued in favor of OpenJDK. We recommend to use [Zulu](ht
 Make sure `-Xms` and `-Xmx` have the same size. This makes sure the JVM does not have to resize, and will avoid OOM crashes (if you're using a launcher, make sure Max ram is equal to Min ram)<br>
 :::
 
-- `-XX:+UseCompactObjectHeaders` <br> Reduces the size of object headers in the JVM from 96–128 bits down to 64 bits, lowering heap usage and potentially improving performance. _Java_ 25 made this a product feature ([See JEP 450](https://openjdk.org/jeps/450)) ([See JEP 519](https://openjdk.org/jeps/519))<br> 
+- `-XX:+UseCompactObjectHeaders` <br> Reduces the size of object headers in the JVM from 96–128 bits down to 64 bits, lowering heap usage and potentially improving performance. _Java_ 25 made this a product feature ([See JEP 450](https://openjdk.org/jeps/450)) ([See JEP 519](https://openjdk.org/jeps/519)) 
 
-- `-XX:+UseZGC` <br> Enables the **Z Garbage Collector (ZGC)**, which provides very low latency garbage collection and can virtually eliminate GC pauses. <br>
+- `-XX:+UseZGC` <br> Enables the **Z Garbage Collector (ZGC)**, which provides very low latency garbage collection and can virtually eliminate GC pauses. 
 
 ## Notes
 
-- The latest tested Java version for Cleanroom Loader is **Java 25**, it is recommended to use this version, and to always stick to LTS versions<br>
-- On older CPUs, **ZGC** can be demanding: it increases RAM usage (since ZGC does not use compressed object pointers) and may reduce performance. <br> <br>  Test your game both **with** and **without ZGC**, and compare results. You can revert to Java 25’s default collector (**G1GC**) by removing `-XX:+UseZGC`<br>
-- The use of `-XX:+ZGenerational` is not required when using ZGC. (It is enabled by default in Java 25)<br>
-- Big heaps can only be correctly handled by **ZGC**. If using **G1GC**, make sure to pick reasonable heap sizes (Shouldn't exceed 11-12GB ram)<br>
+- The latest tested Java version for Cleanroom Loader is **Java 25**, it is recommended to use this version, and to always stick to LTS versions
+- On older CPUs, **ZGC** can be demanding: it increases RAM usage (since ZGC does not use compressed object pointers) and may reduce performance. <br> <br>  Test your game both **with** and **without ZGC**, and compare results. You can revert to Java 25’s default collector (**G1GC**) by removing `-XX:+UseZGC`
+- The use of `-XX:+ZGenerational` is not required when using ZGC. (It is enabled by default in Java 25)
+- Big heaps can only be correctly handled by **ZGC**. If using **G1GC**, make sure to pick reasonable heap sizes (Shouldn't exceed 11-12GB ram)

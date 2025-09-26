@@ -22,16 +22,16 @@ Importing Cleanroom Loader instance is only supported on MultiMC-based launchers
 :::
 Steps:
 1. Add [Fugue](https://www.curseforge.com/minecraft/mc-mods/fugue) to your mod folder<br>
-   *(it will not load in a Forge environment)*<br>
+   *(it will not load in a Forge environment)*
 2. Add [Scalar Legacy](https://www.curseforge.com/minecraft/mc-mods/scalar-legacy) to your mod folder<br>
-   *(it will not load in a Forge environment)*<br>
+   *(it will not load in a Forge environment)*
 3. :warning: **Warning:** Make sure your instance does not include problematic or deprecated mods.<br>
-   See [Preparing your modpack](/wiki/end-user-guide/preparing-your-modpack) for more details.<br>
-4. Download the `Cleanroom-MMC-instance-` archive from the [Releases page](https://github.com/CleanroomMC/Cleanroom/releases).<br>
+   See [Preparing your modpack](/wiki/end-user-guide/preparing-your-modpack) for more details.
+4. Download the `Cleanroom-MMC-instance-` archive from the [Releases page](https://github.com/CleanroomMC/Cleanroom/releases).
 5. Import it into your launcher.<br>
-   *(Alternatively, unzip the patches and JSON files into an existing 1.12 instance.)*<br>
-6. In your launcher, select the `javaw.exe` path of your **Java 25 installation**. (`javaw.exe` will not produce any command-line output and it the one that should be used in normal cases, while `java.exe` will produce a command-line output)<br>
-7. *(Optional)* Add JVM arguments as described in the [JVM Arguments](/wiki/end-user-guide/args) section.<br>
+   *(Alternatively, unzip the patches and JSON files into an existing 1.12 instance.)*
+6. In your launcher, select the `javaw.exe` path of your **Java 25 installation**. (`javaw.exe` will not produce any command-line output and it the one that should be used in normal cases, while `java.exe` will produce a command-line output)
+7. *(Optional)* Add JVM arguments as described in the [JVM Arguments](/wiki/end-user-guide/args) section.
 
 ### Cleanroom Relauncher
 
@@ -40,15 +40,15 @@ This is particularly useful for **modpack authors** who want to distribute Forge
 It is supported in both MultiMC-based launchers and standard launchers.<br>
 Steps:
 1. Add [Fugue](https://www.curseforge.com/minecraft/mc-mods/fugue) to your modlist<br>  
-   *(it will not load in a Forge environment)*<br>
+   *(it will not load in a Forge environment)*
 2. Add [Scalar Legacy](https://www.curseforge.com/minecraft/mc-mods/scalar-legacy) to your modlist<br>  
-   *(it will not load in a Forge environment)*<br>
+   *(it will not load in a Forge environment)*
 3. :warning: **Warning:** Ensure your instance does not contain problematic or deprecated mods.<br>  
-   See [Preparing your modpack](/wiki/end-user-guide/preparing-your-modpack) for details.<br>
-4. Add the [Cleanroom Relauncher](https://www.curseforge.com/minecraft/mc-mods/cleanroom-relauncher) mod to your modlist and launch the game with **Java 8**.<br>
-5. In the Cleanroom Relauncher GUI, select the `javaw.exe` path of your **Java 25 installation**. (`javaw.exe` will not produce any command-line output and it the one that should be used in normal cases, while `java.exe` will produce a command-line output)<br>
-6. *(Optional)* Add JVM arguments from the [JVM Arguments](/wiki/end-user-guide/args) section.<br>
-7. Click **Relaunch**.<br>
+   See [Preparing your modpack](/wiki/end-user-guide/preparing-your-modpack) for details.
+4. Add the [Cleanroom Relauncher](https://www.curseforge.com/minecraft/mc-mods/cleanroom-relauncher) mod to your modlist and launch the game with **Java 8**.
+5. In the Cleanroom Relauncher GUI, select the `javaw.exe` path of your **Java 25 installation**. (`javaw.exe` will not produce any command-line output and it the one that should be used in normal cases, while `java.exe` will produce a command-line output)
+6. *(Optional)* Add JVM arguments from the [JVM Arguments](/wiki/end-user-guide/args) section.
+7. Click **Relaunch**.
 
 ## Notes
 
@@ -57,6 +57,6 @@ Steps:
   Cleanroom Relauncher will check for cleanroom updates. Therefore, the UI will launch when an update rolls out.
   :::
 - :warning: **Warning:** Not all launchers are compatible with Cleanroom Loader. <br> Supported launchers:
-    - :white_check_mark: MultiMC-based launchers (**Prism Launcher, PolyMC, etc.**)<br>
-    - :warning: CurseForge Launcher *(limited support)*<br>
-    - :warning: Official Minecraft Launcher *(limited support)*<br>
+    - :white_check_mark: MultiMC-based launchers (**Prism Launcher, PolyMC, etc.**)
+    - :warning: CurseForge Launcher *(limited support)*
+    - :warning: Official Minecraft Launcher *(limited support)*
