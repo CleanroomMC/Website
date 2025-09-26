@@ -22,5 +22,5 @@ title: Server
 ## Notes
 
 - On Windows, you can point to modern Java executables either by updating your **Environment Variables** or by specifying the full path between double quotes in the Launch bat, e.g.:  
-  `"C:/Program Files/.../bin/javaw.exe"`
+  `"C:/Program Files/.../bin/java.exe"`
 - On Linux, you can use `SDKMAN!` to manage your java versions.
