@@ -5,9 +5,11 @@ title: Client
 # Client
 
 ## How to Install Cleanroom Loader on the Client
+
 ::: warning {id="warning"}
-macOS is not well-supported by cleanroom, and may or may not work for you
+macOS is not well-supported by Cleanroom, and may or may not work for you
 :::
+
 ### About Launchers
 
 The recommended way to run Cleanroom Loader is with a **MultiMC-based launcher**, such as **[Prism Launcher](https://prismlauncher.org/download/windows/)** or **[PolyMC](https://polymc.org/download/)**.<br/>  
@@ -49,6 +51,7 @@ Steps:
 7. Click **Relaunch**.<br/>
 
 ## Notes
+
 - Cleanroom Relauncher’s configuration file can be found at `config/relauncher.cfg`. <br/> Deleting this file will prompt the setup GUI on the next launch.<br/>
   ::: info Note {id="note"}
   Cleanroom Relauncher will check for cleanroom updates. Therefore, the UI will launch when an update rolls out.
