@@ -82,7 +82,7 @@ If `value` is not defined, [HSL](#hsl) will be used.
 ```
 :::
 
-::: note {id="note"}
+:::info Note {id="note"}
 The saturation is not the same from [HSV](#hsv) as from [HSL](#hsl) (they are calculated slightly different), but the hue is.
 :::
 
@@ -109,3 +109,27 @@ The saturation is not the same from [HSV](#hsv) as from [HSL](#hsl) (they are ca
 ::: warning {id="warning"}
 You can NOT mix any of those formats! (except of course alpha)
 :::
+
+## Predefined colors
+There is a shortcut for an invisible color:
+```json
+{
+  "color": "invisible"
+}
+```
+Which is equal to
+```json
+{
+  "color": "#00FFFFFF"
+}
+```
+Other predefined colors include for example `red`, `blue` and `green`. All predefined color ModularUI defines can be
+found [here](https://github.com/CleanroomMC/ModularUI/blob/master/src/main/java/com/cleanroommc/modularui/utils/Color.java#L878).
+You can also vary the shade of the predefined color by appending a ':' and a positive or negative integer. For example
+```json
+{
+  "color": "red:2"
+}
+```
+This would choose red, but two steps brighter. Negative number means darker. Zero is the main color. How many steps there
+are for a color is not constant. You will have to look it up at the page above.

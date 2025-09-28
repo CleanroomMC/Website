@@ -38,7 +38,8 @@ There are two ways to set a theme in a GUI.
 
 1. `IThemeApi.get().registerThemeForScreen(String screenOwner, String mainPanelName, String themeName)`
    This method can be used at any point. Registering another theme with the same screen name will overwrite the old one.
-2. When you create the screen: `new ModularScreen(...).useTheme(String themeName)`
+2. Setting it directly in the screen: `new ModularScreen(...).useTheme(String themeName)` (can also be called in build
+   method of a `CustomModularScreen`)
 
 If both methods are used, the first will always take priority.
 

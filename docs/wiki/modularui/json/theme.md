@@ -33,12 +33,14 @@ Let's look at an example. This is what the default vanilla theme as a json file 
       "type": "texture",
       "id": "mc_button"
     },
-    "hoverBackground": {
-      "type": "texture",
-      "id": "mc_button_hovered"
-    },
     "textColor": "#FFFFFFFF",
     "textShadow": true
+  },
+  "button:hover": {
+    "background": {
+      "type": "texture",
+      "id": "mc_button_hovered"
+    }
   },
   "itemSlot": {
     "background": {
@@ -68,20 +70,22 @@ Let's look at an example. This is what the default vanilla theme as a json file 
       "type": "texture",
       "id": "mc_button"
     },
-    "hoverBackground": {
-      "type": "texture",
-      "id": "mc_button_hovered"
-    },
     "textColor": "#FFFFFFFF",
     "textShadow": true,
     "selectedBackground": {
       "type": "texture",
       "id": "mc_button_disabled"
     },
-    "selectedHoverBackground": "none",
     "selectedColor": "#FFFFFFFF",
     "selectedTextColor": "#FFFFFFFF",
     "selectedTextShadow": true
+  },
+  "toggleButton:hover": {
+    "background": {
+      "type": "texture",
+      "id": "mc_button_hovered"
+    },
+    "selectedBackground": "none"
   }
 }
 ```
@@ -90,37 +94,43 @@ First we have the `parent` property. This defines the parent theme. If a theme d
 be taken from its parent. If the `parent` property is not set, it defaults to `DEFAULT`, which is just the vanilla
 theme.
 
-After that we have the `defaultWidth`, `defaultHeight`, `color`, `background`, `hoverBackground`, `textColor`,
+After that we have the `defaultWidth`, `defaultHeight`, `color`, `background`, `textColor`,
 `textShadow` and `iconColor` properties. These are fallback properties of [widget themes](#widget-themes). You can put
 any properties that any widget theme can have here. If a widget theme does not have said property it will fall back to
 the top level property if defined. The `defaultWidth` and `defaultHeight` properties determine the default widget size
 if it isn't specified. Note this won't work on every widget. `TextWidget` for example have a default size that is
-exactly the size of the text they are displaying. Note that `"none"` is used for `hoverBackground` so it will be ignored
-and the widget doesn't suddenly turn invisible. Read more about the difference between `"none"` and
-`null` [here](./drawable.md#empty-drawable).
+exactly the size of the text they are displaying.
 
-For `color`, `textColor` and `iconColor` see [color](./color.md). For `background` and `hoverBackground`
+For `color`, `textColor` and `iconColor` see [color](./color.md). For `background`
 see [drawables](./drawable.md). Note that if `textColor` or `iconColor` are set to `0` they will inherit the value of `color`.
 
 Next we have objects defined with the property name `panel`, `button`, `itemSlot`, `fluidSlot`, `textField` and
 `toggleButton`.
 These are widget themes. These are all widget themes ModularUI provides. Addons may add more.
 
+Additionally, you can add a
+```json
+{
+  "override": true
+}
+```
+property to the top level. This will discard any previous defined themes with the same name of other resourcepacks.
+Otherwise, they will be merged, where the theme will only override properties it has defined.
+
 ## Widget themes
 
 Widgets which don't use one of the existing widget themes use the fallback properties.
 
-All widget themes have the properties `color`, `background`, `hoverBackground`, `textColor` and `textShadow`. Which are
+All widget themes have the properties `color`, `background`, `textColor` and `textShadow`. Which are
 all mostly self-explanatory. `color` is applied additionally to the background (if possible).
 
-The `itemSlot` and `fluidSlot` also have the `slotHoverColor`, which is just the rendered color when the slot is
-hovered.
-Don't use full opacity here. Otherwise, you won't be able to see the item.
+The `itemSlot` and `fluidSlot` also have the `slotHoverColor`, which is just the rendered overlay color when the slot is
+hovered. Don't use full opacity here. Otherwise, you won't be able to see the item.
 
 The `textField` theme has the `markedColor` property which is the marked text background and the `hintColor` property
 which is the color of the text that is shown when the field is empty.
 
-The `toggleButton` has `selectedBackground`, `selectedHoverBackground`, `selectedColor`, `selectedTextColor` and
+The `toggleButton` has `selectedBackground`, `selectedColor`, `selectedTextColor` and
 `selectedTextShadow` which are all self-explanatory. Note that
 
 :::info Note {id="note"}
@@ -128,6 +138,26 @@ All widget themes are optional. You can define as many as you like. Not defined 
 parent theme.
 All properties of widget themes (and the fallback properties) are optional.
 :::
+
+## Hover widget themes
+You may have noticed the widget themes in the example `"button:hover": {...}` and `"toggleButton:hover": {...}`. This is
+because when a widget is hovered with the mouse a separate widget theme will be applied. This hover widget theme has all
+the properties of the non hover variant. In terms of property inheritance they behave like 
+[sub widget themes](#sub-widget-themes). If the non hover variant is specified in the current theme, then the properties
+will be inherited from there. Otherwise, it will be inherited from the hover widget theme in the parent theme. This also
+means that if the none hover variant is specified with any amount of properties, all hover effects from a parent theme
+are lost. You will have to re-add them to you current theme.
+Unlike sub widget themes, hover widget themes don't need to be registered. Just add the suffix `:hover` to any
+registered widget theme (yes, even sub widget themes) and it will work.
+
+Note that `"none"` is used for `background` inside the hover widget theme so it will be ignored
+and the widget doesn't suddenly turn invisible when you don't want a separate hover texture. Read more about the 
+difference between `"none"` and `null` [here](./drawable.md#empty-drawable).
+
+You might think that `slotHoverColor` from item slot and fluid slot would belong in the hover widget theme, however
+these are special. Specifying them in the hover widget theme variant has no effect.
+
+The `defaultWidth` and the `defaultHeight` property obviously have no effect in the hover variant.
 
 ## Inheritance of properties
 
@@ -180,7 +210,12 @@ Note that other mods may add properties which behaves similar to `color`.
 
 ## Sub Widget Themes
 Sometimes you want to have different widget themes for the same type of widget. Let's say for example you want to color
-the player slots differently than normal slots. In that case you would add a widget theme which may look like this
+the player slots differently than normal slots. In java, we first need to register the sub widget theme with
+```java
+WidgetThemeKey<SlotTheme> ITEM_SLOT_PLAYER = ITEM_SLOT.createSubKey("player");
+```
+
+Then inside a theme json we can do this.
 ```json
 {
   "itemSlot:player": {
@@ -190,9 +225,19 @@ the player slots differently than normal slots. In that case you would add a wid
 ```
 This will color only player slots red. The syntax is `parentWidgetThemeName:subName`. Every sub widget theme has to be
 defined via a mod. ModularUI currently only has the `itemSlot:player` sub widget theme defined. Every sub theme can have
-any properties it's parent can have. Sub widget themes can't have sub widget themes. 
+any properties it's parent can have. Sub widget themes can have sub widget themes.
+
+Let's say that we now want to color hotbar slots a different color. We could create a new sub widget theme from 
+`ITEM_SLOT`, but if the hotbar theme is not specified it should inherit the player slot theme. We therefore create a sub
+widget theme for the just created sub widget theme.
+```java
+WidgetThemeKey<SlotTheme> ITEM_SLOT_PLAYER_HOTBAR = ITEM_SLOT_PLAYER.createSubKey("playerHotbar");
+```
+This new widget theme can be accessed with `"itemSlot:playerHotbar"` and **not** `"itemSlot:player:playerHotbar"`.
+The syntax is `rootParentWidgetThemeName:subName`. ModularUI by default adds these two sub widget themes and for
+the main inventory (excluding hotbar), the offhand and the armor player slots.
 
 :::info Note {id="note"}
 This feature is intended for widgets with the same type and not for different widget types which use the same widget 
-class.
+theme class.
 :::
