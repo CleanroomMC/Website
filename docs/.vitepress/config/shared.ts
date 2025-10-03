@@ -6,8 +6,10 @@ import {
   GitChangelog,
   GitChangelogMarkdownSection,
 } from "@nolebase/vitepress-plugin-git-changelog/vite";
+import fs from "node:fs/promises";
 
 import { transformHeadMeta } from "@nolebase/vitepress-plugin-meta";
+import SatoriOg from "../plugins/satori-og";
 
 export const shared = defineConfigWithTheme<CleanRoomConfig>({
   vite: {
@@ -82,13 +84,15 @@ export const shared = defineConfigWithTheme<CleanRoomConfig>({
             name: "MasterEnderman",
           },
           {
-            avatar: "https://i.scdn.co/image/ab67616d00001e02c856d5eb1285c556e3271249",
+            avatar:
+              "https://i.scdn.co/image/ab67616d00001e02c856d5eb1285c556e3271249",
             username: "AnasDevO",
             name: "Thermonuclear_Minecraft_Engineer",
           },
         ],
       }),
       GitChangelogMarkdownSection(),
+      SatoriOg(),
     ],
   },
   title: "CleanroomMC",
@@ -163,9 +167,47 @@ export const shared = defineConfigWithTheme<CleanRoomConfig>({
     ],
   },
   async transformHead(context) {
-    let head = [...context.head];
-    const returnedHead = await transformHeadMeta()(head, <any>context);
-    if (typeof returnedHead !== "undefined") head = returnedHead;
+    const transformedHead = await transformHeadMeta()(
+      context.head,
+      context as any,
+    );
+    let head = transformedHead ?? [...context.head];
+
+    const rel = context.pageData?.relativePath ?? "";
+    const base = rel.replace(/\\/g, "/");
+    const slug = base.replace(/\.md$/, "").replace(/(^|\/)index$/, "$1");
+    const ogPath = `/og/${slug}.png`;
+
+    let haveOg = true;
+    let og = "https://cleanroommc.com/cleanroom-og.png";
+
+    try {
+      await fs.access(`docs/public${ogPath}`, fs.constants.R_OK);
+    } catch (err) {
+      console.log(`${context.pageData?.relativePath} will use default og.`);
+      haveOg = false;
+    }
+
+    if (haveOg) og = `https://cleanroommc.com${ogPath}`;
+
+    const upsertMeta = (
+      key: "property" | "name",
+      keyValue: string,
+      content: string,
+    ) => {
+      const idx = head.findIndex(
+        (e) => e?.[0] === "meta" && e?.[1] && e[1][key] === keyValue,
+      );
+      if (idx >= 0) {
+        head[idx] = ["meta", { ...head[idx][1], content }];
+      } else {
+        head.push(["meta", { [key]: keyValue, content }]);
+      }
+    };
+
+    upsertMeta("property", "og:image", og);
+    upsertMeta("name", "twitter:card", "summary_large_image");
+    upsertMeta("name", "twitter:image", og);
     return head;
   },
 });

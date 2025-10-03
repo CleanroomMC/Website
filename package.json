@@ -18,11 +18,18 @@
     "@nolebase/vitepress-plugin-inline-link-preview": "^2.18.2",
     "@nolebase/vitepress-plugin-meta": "^2.18.2",
     "@nolebase/vitepress-plugin-page-properties": "^2.18.2",
+    "@resvg/resvg-js": "^2.6.2",
     "@types/node": "^20.19.17",
     "@typescript-eslint/parser": "^8.44.0",
     "@vue/tsconfig": "^0.8.1",
+    "fast-glob": "^3.3.3",
+    "gray-matter": "^4.0.3",
     "markdown-it-mathjax3": "^4.3.2",
+    "p-limit": "^7.1.1",
     "prettier": "3.2.5",
+    "satori": "^0.18.3",
+    "satori-html": "^0.3.2",
+    "sharp": "^0.34.4",
     "taze": "^19.7.0",
     "vitepress": "1.6.3",
     "vitepress-sidebar": "^1.33.0",
@@ -38,6 +45,7 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild",
+      "sharp",
       "vue-demi"
     ]
   }
