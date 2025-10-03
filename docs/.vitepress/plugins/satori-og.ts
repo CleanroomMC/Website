@@ -109,7 +109,7 @@ export default function SatoriOg() {
     try {
       const src = await fs.stat(path.resolve(root, meta.file));
       const out = await fs.stat(
-        path.resolve(root, OUT_DIR, (meta.slug || "index") + ".png"),
+        path.resolve(root, OUT_DIR, (meta.slug || "index") + ".jpg"),
       );
       const latestInput = Math.max(src.mtimeMs, bgMtime, fontMtime);
       return out.mtimeMs >= latestInput;
@@ -191,7 +191,7 @@ export default function SatoriOg() {
           await sharpLimiter(async () => {
             const png = await svgToPng(svg);
             const outPath =
-              path.resolve(root, OUT_DIR, meta.slug || "index") + ".png";
+              path.resolve(root, OUT_DIR, meta.slug || "index") + ".jpg";
             await fs.mkdir(path.dirname(outPath), { recursive: true });
             await fs.writeFile(outPath, png);
           });
