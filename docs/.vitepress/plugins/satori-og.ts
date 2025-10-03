@@ -11,6 +11,7 @@ import pLimit from "p-limit";
 const SIZE = { width: 1200, height: 630 };
 const OUT_DIR = "docs/public/og";
 const FONT_FILE = "docs/.vitepress/assets/FlexSansGB-Regular.ttf";
+const FONT_FILE_SEMIBOLD = "docs/.vitepress/assets/FlexSansGB-SemiBold.ttf";
 const BG_FILE = "docs/.vitepress/assets/cleanroom-og-base.jpg";
 const SHARP_CONCURRENCY = 4;
 const SATORI_CONCURRENCY = Math.max(4, os.cpus().length);
@@ -25,8 +26,10 @@ type PageMeta = {
 export default function SatoriOg() {
   const root = process.cwd();
   let fontData: Buffer | undefined;
+  let fontData2: Buffer | undefined;
   let bgBase64: string | undefined;
   let fontMtime = 0;
+  let fontMtime2 = 0;
   let bgMtime = 0;
 
   async function ensureFont() {
@@ -39,7 +42,16 @@ export default function SatoriOg() {
       fontData = buf;
       fontMtime = st.mtimeMs;
     }
-    return fontData!;
+    if (!fontData2) {
+      const fontPath = path.resolve(root, FONT_FILE_SEMIBOLD);
+      const [buf, st] = await Promise.all([
+        fs.readFile(fontPath),
+        fs.stat(fontPath),
+      ]);
+      fontData2 = buf;
+      fontMtime2 = st.mtimeMs;
+    }
+    return [fontData!, fontData2!];
   }
 
   async function ensureBgBase64() {
@@ -119,7 +131,10 @@ export default function SatoriOg() {
   }
 
   async function renderSvg(meta: PageMeta) {
-    const [bg, font] = await Promise.all([ensureBgBase64(), ensureFont()]);
+    const [bg, [font, font2]] = await Promise.all([
+      ensureBgBase64(),
+      ensureFont(),
+    ]);
     const html = `
       <div style="
         position:relative;
@@ -128,12 +143,12 @@ export default function SatoriOg() {
         <img src="${bg}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"/>
         <div style="display:flex;flex-direction:column;padding:240px 64px 64px 64px;height:100%;justify-content:space-between;">
           <div style="display:flex;flex-direction:column;">
-            <div style="font-size:52px;line-height:1.2;font-weight:700;max-width:1000px;">
+            <div style="font-size:52px;line-height:1.2;font-weight:700;max-width:1000px;font-family:'Flex Sans GB SemiBold';">
               ${escapeHtml(meta.title)}
             </div>
             ${
               meta.description
-                ? `<div style="margin-top:24px;font-size:28px;opacity:.85;max-width:1000px;">
+                ? `<div style="margin-top:24px;font-size:28px;opacity:.90;max-width:1000px;">
                      ${escapeHtml(meta.description)}
                    </div>`
                 : ``
@@ -149,6 +164,12 @@ export default function SatoriOg() {
       height: SIZE.height,
       fonts: [
         { name: "Flex Sans GB", data: font, weight: 400, style: "normal" },
+        {
+          name: "Flex Sans GB SemiBold",
+          data: font2,
+          weight: 600,
+          style: "normal",
+        },
       ],
     });
   }
