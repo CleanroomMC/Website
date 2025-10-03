@@ -9,3 +9,4 @@ cache
 temp
 pnpm-global
 bun.lockb
+docs/public/og/
