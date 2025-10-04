@@ -69,6 +69,10 @@ here. A `UIFactory` is what finds the exact same `IGuiHolder` on client and serv
 
 Each factory may have its own custom method for opening a GUI. The factories then call `GuiManager.open(...)`.
 
+Should these not suit your needs you may implement you own factory. Just implement `UIFactory` (or `AbstractUIFactory`
+for some helpers) and register it with `GuiManager.registerFactory()`. UI factories also control the default container
+class and when the ui should be force closed (player out of range usually).
+
 Go [here](./synced-gui-tutorial.md) to get started on creating a synced GUI.
 
 #### Examples
