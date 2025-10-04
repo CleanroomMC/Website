@@ -172,6 +172,7 @@ function wikiSidebar(): DefaultTheme.SidebarItem[] {
             { text: "Color", link: "color" },
             { text: "Drawable", link: "drawable" },
             { text: "Theme", link: "theme" },
+            { text: "Widget Theme Reference", link: "theme_ref" }
           ],
         },
       ],

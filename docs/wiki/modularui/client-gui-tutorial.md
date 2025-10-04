@@ -77,7 +77,8 @@ for client side and a diamond. Then we open the screen with `ClientGUI.open()`. 
 method we just created. Now let's boot up minecraft and test it.
 
 :::info {id="info"}
-There are some overloads of `ClientGUI.open()` which allow you to pass in a `JeiSettings` or `UISettings` instance.
+There are some overloads of `ClientGUI.open()` which allow you to pass in a `RecipeViewerSettings` or `UISettings` 
+instance. (`RecipeViewer` refers to JEI in 1.12 and NEI in 1.7.10).
 :::
 
 ::: code-group

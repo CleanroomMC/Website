@@ -15,6 +15,8 @@ Each widget has several builder setter methods for position and size. They all c
 - `size(int width, int height)` is equivalent to `.width(width).height(height)`
 - `size(int val)` is equivalent to `.width(val).height(val)`
 - `sizeRel(float width, float height)` and `sizeRel(float val)` work analogue
+- `fullWidth()` and `fullHeight()` are shortcuts for `widthRel(1f)` and `heightRel(1f)` respectively
+- `full()` combines the previous two methods
 - `coverChildrenWidth()` makes the widget width wrapping tightly around its children
 - `coverChildrenHeight()` works analogue
 - `coverChildren()` wraps width and height tightly

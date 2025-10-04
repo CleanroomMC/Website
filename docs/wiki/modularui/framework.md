@@ -50,7 +50,7 @@ Useful methods are:
 - `getPartialTicks()` returns the partial ticks for the current frame
 - `getTheme()` returns the current active theme
 - `getUISettings()` returns the current UI settings
-- `getJeiSettings()` returns the current modifiable JEI settings
+- `getRecipeViewerSettings()` returns the current modifiable JEI/NEI settings
 
 ## ModularPanel
 

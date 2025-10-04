@@ -17,6 +17,10 @@ Inside we first check if the method is called on server side. This is important.
 server side!**. Then we simply call `GuiFactories.tileEntity().open(playerIn, pos);`. This will find the tile entity
 at the blocks position and tries to open the GUI on client and server side.
 
+:::info Note {id="note"}
+The forge/minecraft specific code might look different on different minecraft versions.
+:::
+
 ```java
 public class TutorialBlock extends Block implements ITileEntityProvider {
 
@@ -130,18 +134,24 @@ The whole syncing information is in this line:
 ```
 
 `value()` accepts an instance of `IDoubleValue`. If we want the value to be synced we need to use `DoubleSyncValue`. The
-constructor needs to arguments. A getter as `DoubleSupplier` and a setter as `DoubleConsumer`. The progress widget wants
-a double value between 0 and 1 so we need to divide by the maximum value (100). The getter is called on server side and
+constructor needs two arguments. A getter as `DoubleSupplier` and a setter as `DoubleConsumer`. The progress widget wants
+a double value between 0 and 1, so we need to divide by the maximum value (100). The getter is called on server side and
 compared by a cached value to figure out if it needs to be synced. On client side the setter is called to update our
 progress field on client side. But since only the widget needs that value and nothing else we could also pass in `null`
-for the second argument (the DoubleSyncValue caches it's own progress value based on the passed getter).
+for the second argument (the DoubleSyncValue caches its own progress value based on the passed getter).
 Most sync handlers work the same way, but can implement almost any custom behaviour.
 
-You can disable JEI in your synced GUI by adding this line into your `buildUI()` method. If JEI is currently not 
+:::info Note {id="note"}
+This method of registering synced values assumes, that the widget tree is build the same on client and server (which
+usually is the case). To be safe you can register sync values to the `syncManager` with a name and only pass the name to
+the widget.
+:::
+
+You can disable JEI/NEI in your synced GUI by adding this line into your `buildUI()` method. If JEI/NEI is currently not 
 installed, nothing will happen. The game won't crash.
 
 ```java
-settings.getJeiSettings().disableJei();
+settings.getRecipeViewerSettings().disableRecipeViewer();
 ```
 
 ## Result
@@ -157,8 +167,8 @@ public class TutorialTile extends TileEntity implements IGuiHolder<PosGuiData>, 
 
     @Override
     public ModularPanel buildUI(PosGuiData guiData, PanelSyncManager syncManager, UISettings settings) {
-        // disables jei
-        settings.getJeiSettings().disableJei();
+        // disables JEI/NEI
+        settings.getRecipeViewerSettings().disableRecipeViewer();
 
         ModularPanel panel = ModularPanel.defaultPanel("tutorial_gui");
         panel.bindPlayerInventory()
