@@ -61,8 +61,9 @@ here. A `UIFactory` is what finds the exact same `IGuiHolder` on client and serv
 `IGuiHolder` is then responsible for creating the UI. ModularUI has build-in factories for:
 
 - Standard tile entities (`GuiFactories.tileEntity()`, `PosGuiData`)
-- Items in a players hand (`GuiFactories.item()`, `HandGuiData`)
-- Sided tile entities (useful for GregTech covers) (`GuiFactories.sidedTileEntity()`, `SidedPosGuiData`)
+- Items in a players inventory (f.e. player hand or even Bauble slots, other mods can be integrated as well)
+  (`GuiFactories.playerInventory()`, `PlayerInventoryGuiData`)
+- Sided tile entities (useful for things like GregTech covers) (`GuiFactories.sidedTileEntity()`, `SidedPosGuiData`)
 - Entities (for example villager trading UI) (`GuiFactories.entity()`, `EntityGuiData`)
 - Simple factories (these always point to the same `IGuiHolder`) (`GuiFactories.createSimple()`, gui data irrelevant)
 
