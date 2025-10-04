@@ -45,6 +45,21 @@ If both methods are used, the first will always take priority.
 
 Checkout [this page](./json/theme.md) to find out what properties you can add to the builder.
 
+### Registering widget themes
+Call `IThemeAPI.get().registerWidgetTheme(String id, T defaultTheme, T defaultHoverTheme, WidgetThemeParser<T> parser)`
+or use the builder with `IThemeAPI.get().widgetThemeKeyBuilder(String id, Class<T> type)`. These methods return a
+`WidgetThemeKey<T>`. You should store it somewhere to be accessible everywhere, anytime.
+
+:::info Warning {id="warning"}
+You should include your mods id in the id otherwise your mod will be incompatible with mods who register a widget theme
+with the same id. Also note that you can't use colon (`:`) in the id since it's reserved for sub widget themes. You can
+use `-`, `_` or `$` to prefix your mod id.
+:::
+
+For sub widget themes simply call any overload of 
+`widgetThemeKey.createSubKey(String subName, @Nullable T defaultValue, @Nullable T defaultHoverValue)`. `widgetThemeKey`
+will be the parent of the new sub theme.
+
 ## For resource packs
 
 First create new file in your resource pack at `assets/modularui/themes.json`. You can replace `modularui` with any

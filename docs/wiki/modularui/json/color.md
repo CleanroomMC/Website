@@ -124,12 +124,12 @@ Which is equal to
 }
 ```
 Other predefined colors include for example `red`, `blue` and `green`. All predefined color ModularUI defines can be
-found [here](https://github.com/CleanroomMC/ModularUI/blob/master/src/main/java/com/cleanroommc/modularui/utils/Color.java#L878).
+found [here](https://github.com/CleanroomMC/ModularUI/blob/e52f70accd97d2c9b02635f6c70627d2112d9f6f/src/main/java/com/cleanroommc/modularui/utils/Color.java#L879).
 You can also vary the shade of the predefined color by appending a ':' and a positive or negative integer. For example
 ```json
 {
   "color": "red:2"
 }
 ```
-This would choose red, but two steps brighter. Negative number means darker. Zero is the main color. How many steps there
-are for a color is not constant. You will have to look it up at the page above.
+This would choose red, but two steps brighter. Negative number means darker. Zero is the main color. How many shades 
+there are for a color is not constant. You will have to look it up at the page above.

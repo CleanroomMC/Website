@@ -9,7 +9,7 @@ Make sure to check out [how to register themes](../themes.md).
 Here we will take a look what the theme file can look like. If you are a mod developer you can directly translate it to
 your `ThemeBuilder`.
 
-Let's look at an example. This is what the default vanilla theme as a json file would look like.
+Let's look at an example. This is what the default vanilla theme as a json file would mostly look like.
 
 ```json
 {
@@ -101,12 +101,8 @@ the top level property if defined. The `defaultWidth` and `defaultHeight` proper
 if it isn't specified. Note this won't work on every widget. `TextWidget` for example have a default size that is
 exactly the size of the text they are displaying.
 
-For `color`, `textColor` and `iconColor` see [color](./color.md). For `background`
-see [drawables](./drawable.md). Note that if `textColor` or `iconColor` are set to `0` they will inherit the value of `color`.
-
-Next we have objects defined with the property name `panel`, `button`, `itemSlot`, `fluidSlot`, `textField` and
-`toggleButton`.
-These are widget themes. These are all widget themes ModularUI provides. Addons may add more.
+See [widget themes](theme_ref.md) to find out what widget themes ModularUI provides and what properties they have. 
+Addons may add more.
 
 Additionally, you can add a
 ```json
@@ -116,22 +112,6 @@ Additionally, you can add a
 ```
 property to the top level. This will discard any previous defined themes with the same name of other resourcepacks.
 Otherwise, they will be merged, where the theme will only override properties it has defined.
-
-## Widget themes
-
-Widgets which don't use one of the existing widget themes use the fallback properties.
-
-All widget themes have the properties `color`, `background`, `textColor` and `textShadow`. Which are
-all mostly self-explanatory. `color` is applied additionally to the background (if possible).
-
-The `itemSlot` and `fluidSlot` also have the `slotHoverColor`, which is just the rendered overlay color when the slot is
-hovered. Don't use full opacity here. Otherwise, you won't be able to see the item.
-
-The `textField` theme has the `markedColor` property which is the marked text background and the `hintColor` property
-which is the color of the text that is shown when the field is empty.
-
-The `toggleButton` has `selectedBackground`, `selectedColor`, `selectedTextColor` and
-`selectedTextShadow` which are all self-explanatory. Note that
 
 :::info Note {id="note"}
 All widget themes are optional. You can define as many as you like. Not defined widget themes will be taken from the
@@ -205,7 +185,7 @@ Now the button color of B will be whatever the parent widget themes values is. I
 only have one value in the inherit list, it can be shortened to `"inherit": "color"`.
 
 :::info Note {id="note"}
-Note that other mods may add properties which behaves similar to `color`.
+Note that other mods may add properties which behave similar to `color`.
 :::
 
 ## Sub Widget Themes
@@ -234,8 +214,7 @@ widget theme for the just created sub widget theme.
 WidgetThemeKey<SlotTheme> ITEM_SLOT_PLAYER_HOTBAR = ITEM_SLOT_PLAYER.createSubKey("playerHotbar");
 ```
 This new widget theme can be accessed with `"itemSlot:playerHotbar"` and **not** `"itemSlot:player:playerHotbar"`.
-The syntax is `rootParentWidgetThemeName:subName`. ModularUI by default adds these two sub widget themes and for
-the main inventory (excluding hotbar), the offhand and the armor player slots.
+The syntax is `rootParentWidgetThemeName:subName`. You can find the sub widget themes ModularUI provides [here](theme_ref.md#sub-widget-themes).
 
 :::info Note {id="note"}
 This feature is intended for widgets with the same type and not for different widget types which use the same widget 
