@@ -137,11 +137,11 @@ progress field on client side. But since only the widget needs that value and no
 for the second argument (the DoubleSyncValue caches it's own progress value based on the passed getter).
 Most sync handlers work the same way, but can implement almost any custom behaviour.
 
-You can disable JEI in your synced GUI by adding this line into your `buildUI()` method. If JEI is currently not 
+You can disable JEI/NEI in your synced GUI by adding this line into your `buildUI()` method. If JEI/NEI is currently not 
 installed, nothing will happen. The game won't crash.
 
 ```java
-settings.getJeiSettings().disableJei();
+settings.getRecipeViewerSettings().disableRecipeViewer();
 ```
 
 ## Result
@@ -157,8 +157,8 @@ public class TutorialTile extends TileEntity implements IGuiHolder<PosGuiData>, 
 
     @Override
     public ModularPanel buildUI(PosGuiData guiData, PanelSyncManager syncManager, UISettings settings) {
-        // disables jei
-        settings.getJeiSettings().disableJei();
+        // disables JEI/NEI
+        settings.getRecipeViewerSettings().disableRecipeViewer();
 
         ModularPanel panel = ModularPanel.defaultPanel("tutorial_gui");
         panel.bindPlayerInventory()
