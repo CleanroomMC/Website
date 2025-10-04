@@ -101,21 +101,21 @@ export default function SatoriOg() {
     }
   }
 
-  function escapeHtml(s: string) {
-    return String(s).replace(
-      /[&<>"']/g,
-      (m) =>
-        (
-          ({
-            "&": "&amp;",
-            "<": "&lt;",
-            ">": "&gt;",
-            '"': "&quot;",
-            "'": "&#39;",
-          }) as const
-        )[m]!,
-    );
-  }
+  // function escapeHtml(s: string) {
+  //   return String(s).replace(
+  //     /[&<>"']/g,
+  //     (m) =>
+  //       (
+  //         ({
+  //           "&": "&amp;",
+  //           "<": "&lt;",
+  //           ">": "&gt;",
+  //           '"': "&quot;",
+  //           "'": "&#39;",
+  //         }) as const
+  //       )[m]!,
+  //   );
+  // }
 
   async function isUpToDate(meta: PageMeta) {
     try {
@@ -144,17 +144,17 @@ export default function SatoriOg() {
         <div style="display:flex;flex-direction:column;padding:240px 64px 64px 64px;height:100%;justify-content:space-between;">
           <div style="display:flex;flex-direction:column;">
             <div style="font-size:52px;line-height:1.2;font-weight:700;max-width:1000px;font-family:'Flex Sans GB SemiBold';">
-              ${escapeHtml(meta.title)}
+              ${meta.title}
             </div>
             ${
               meta.description
                 ? `<div style="margin-top:24px;font-size:28px;opacity:.90;max-width:1000px;">
-                     ${escapeHtml(meta.description)}
+                     ${meta.description}
                    </div>`
                 : ``
             }
           </div>
-          <div style="font-size:20px;opacity:.72">/${escapeHtml(meta.slug)}</div>
+          <div style="font-size:20px;opacity:.72">/${meta.slug}</div>
         </div>
       </div>`;
 
