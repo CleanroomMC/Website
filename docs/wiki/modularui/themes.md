@@ -15,17 +15,17 @@ You can reload themes by either reloading resources (which is slow) or by runnin
 
 ### Registering themes
 
-First create a `JsonBuilder` instance (`com.cleanroommc.modularui.utils.JsonBuilder`). This will be your theme data.
-ModularUI will automatically parse the json.
+First create a `ThemeBuilder` instance. This will be your theme data. Feel free to extend the class for additional
+helpers. The class is just a json wrapper.
 Next you need to register it. Make sure to do that before resource packs are loaded (that's when themes gets loaded and
 parsed). `FMLPreInit` works fine.
 
 ```java
-JsonBuilder myTheme = new JsonBuilder();
-IThemeApi.get().registerTheme("mymodid:my_theme", myTheme);
+ThemeBuilder<?> myTheme = new ThemeBuilder<>("mymodid:my_theme");
+IThemeApi.get().registerTheme(myTheme);
 ```
 
-It is not required to have the mod id in the name, but it will help identifying the theme.
+It is not required to have the mod id in the name, but it will help identifying the theme and having a unique name.
 Multiple themes with the same name can be registered. Themes that are added later will override all properties of all
 previously registered themes.
 
@@ -38,11 +38,27 @@ There are two ways to set a theme in a GUI.
 
 1. `IThemeApi.get().registerThemeForScreen(String screenOwner, String mainPanelName, String themeName)`
    This method can be used at any point. Registering another theme with the same screen name will overwrite the old one.
-2. When you create the screen: `new ModularScreen(...).useTheme(String themeName)`
+2. Setting it directly in the screen: `new ModularScreen(...).useTheme(String themeName)` (can also be called in build
+   method of a `CustomModularScreen`)
 
 If both methods are used, the first will always take priority.
 
 Checkout [this page](./json/theme.md) to find out what properties you can add to the builder.
+
+### Registering widget themes
+Call `IThemeAPI.get().registerWidgetTheme(String id, T defaultTheme, T defaultHoverTheme, WidgetThemeParser<T> parser)`
+or use the builder with `IThemeAPI.get().widgetThemeKeyBuilder(String id, Class<T> type)`. These methods return a
+`WidgetThemeKey<T>`. You should store it somewhere to be accessible everywhere, anytime.
+
+:::info Warning {id="warning"}
+You should include your mods id in the id otherwise your mod will be incompatible with mods who register a widget theme
+with the same id. Also note that you can't use colon (`:`) in the id since it's reserved for sub widget themes. You can
+use `-`, `_` or `$` to prefix your mod id.
+:::
+
+For sub widget themes simply call any overload of 
+`widgetThemeKey.createSubKey(String subName, @Nullable T defaultValue, @Nullable T defaultHoverValue)`. `widgetThemeKey`
+will be the parent of the new sub theme.
 
 ## For resource packs
 

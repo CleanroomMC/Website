@@ -25,7 +25,8 @@ Check the latest version on [Github releases](https://github.com/CleanroomMC/Mod
 
 ## Development Tools
 
-I highly recommend using IntelliJ in combination with the Single Hotswap plugin.
+I highly recommend using IntelliJ in combination with the Single Hotswap plugin (doesn't work for me in newer IntelliJ
+versions, maybe it does for you).
 
 ## Other documentation
 
@@ -39,7 +40,7 @@ First you need to decide if you want a client only screen or a client-server syn
 
 Client only GUIs are easier to work with, but they can't communicate with the server.
 You can open one by calling `ClientGUI.open(ModularScreen)`. You can additionally pass in a `UISettings` or
-`JeiSettings` instance. Client only GUIs don't display JEI on the side by default. This can be changed in the
+`RecipeViewerSettings` instance. Client only GUIs don't display JEI on the side by default. This can be changed in the
 JeiSettings. The options in `UISettings` are mostly for synced GUIs. The `ModularScreen` should be a new instance.
 
 Go [here](./client-gui-tutorial.md) to get started on creating a client GUI. Even if you are looking into making a
@@ -60,11 +61,17 @@ here. A `UIFactory` is what finds the exact same `IGuiHolder` on client and serv
 `IGuiHolder` is then responsible for creating the UI. ModularUI has build-in factories for:
 
 - Standard tile entities (`GuiFactories.tileEntity()`, `PosGuiData`)
-- Items in a players hand (`GuiFactories.item()`, `HandGuiData`)
-- Sided tile entities (useful for GregTech covers) (`GuiFactories.sidedTileEntity()`, `SidedPosGuiData`)
+- Items in a players inventory (f.e. player hand or even Bauble slots, other mods can be integrated as well)
+  (`GuiFactories.playerInventory()`, `PlayerInventoryGuiData`)
+- Sided tile entities (useful for things like GregTech covers) (`GuiFactories.sidedTileEntity()`, `SidedPosGuiData`)
+- Entities (for example villager trading UI) (`GuiFactories.entity()`, `EntityGuiData`)
 - Simple factories (these always point to the same `IGuiHolder`) (`GuiFactories.createSimple()`, gui data irrelevant)
 
 Each factory may have its own custom method for opening a GUI. The factories then call `GuiManager.open(...)`.
+
+Should these not suit your needs you may implement your own factory. Just implement `UIFactory` (or `AbstractUIFactory`
+for some helpers) and register it with `GuiManager.registerFactory()`. UI factories also control the default container
+class and when the ui should be force closed (player out of range usually).
 
 Go [here](./synced-gui-tutorial.md) to get started on creating a synced GUI.
 
