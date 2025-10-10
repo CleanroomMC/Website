@@ -52,6 +52,14 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 
 ---
 
+- `ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
+
+    ```groovy:no-line-numbers
+    output(ItemStack)
+    output(ItemStack...)
+    output(Collection<ItemStack>)
+    ```
+
 - `AspectList`. Sets the Aspects and amounts required to convert. Requires greater than 0.
 
     ```groovy:no-line-numbers

@@ -19,6 +19,10 @@ This compat is not fully documented. Some or all of its features are not present
 You cannot addVariation/removeVariation to chisel groups based on the oredict, you have to modify the oredict directly.
 ::::::::::
 
+:::::::::: info Bug {id="bug"}
+Some mods use "registry replacement" to change a preexisting entry in a registry. If this has been done to a block used by chisel, this will result in errors when manipulating *any* carving group and prevent the chiseling of that block. Of particular note is Inspirations, which can replace carpets and causes [this issue](https://github.com/Chisel-Team/Chisel/issues/828).
+::::::::::
+
 ## Identifier
 
 Refer to this via any of the following:

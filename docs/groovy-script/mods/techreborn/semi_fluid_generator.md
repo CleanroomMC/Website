@@ -113,12 +113,6 @@ mods.techreborn.semi_fluid_generator.recipeBuilder()
     mods.techreborn.semi_fluid_generator.removeByInput(IIngredient)
     ```
 
-- Removes all recipes that match the given input:
-
-    ```groovy:no-line-numbers
-    mods.techreborn.semi_fluid_generator.removeByInput(IIngredient)
-    ```
-
 - Removes all registered recipes:
 
     ```groovy:no-line-numbers

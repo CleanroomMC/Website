@@ -58,6 +58,29 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 
 ---
 
+- `ResourceLocation`. Sets the Resource Location of the recipe.
+
+    ```groovy:no-line-numbers
+    name(String)
+    name(ResourceLocation)
+    ```
+
+- `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1.
+
+    ```groovy:no-line-numbers
+    input(IIngredient)
+    input(IIngredient...)
+    input(Collection<IIngredient>)
+    ```
+
+- `ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
+
+    ```groovy:no-line-numbers
+    output(ItemStack)
+    output(ItemStack...)
+    output(Collection<ItemStack>)
+    ```
+
 - `AspectList`. Sets the Aspects and amounts required to complete the craft.
 
     ```groovy:no-line-numbers
