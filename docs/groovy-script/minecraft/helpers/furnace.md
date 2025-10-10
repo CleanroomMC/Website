@@ -1,7 +1,7 @@
 ---
 title: "Furnace"
 titleTemplate: "Minecraft | CleanroomMC"
-description: "Converts an input item into an output itemstack after a set amount of time, with the ability to give experience and using fuel to run."
+description: "Converts an input item into an output itemstack after a configurable amount of time, with the ability to give experience and using fuel to run. Can also convert the item in the fuel slot."
 source_code_link: "https://github.com/CleanroomMC/GroovyScript/blob/master/src/main/java/com/cleanroommc/groovyscript/compat/vanilla/Furnace.java"
 ---
 
@@ -9,7 +9,11 @@ source_code_link: "https://github.com/CleanroomMC/GroovyScript/blob/master/src/m
 
 ## Description
 
-Converts an input item into an output itemstack after a set amount of time, with the ability to give experience and using fuel to run.
+Converts an input item into an output itemstack after a configurable amount of time, with the ability to give experience and using fuel to run. Can also convert the item in the fuel slot.
+
+:::::::::: details Note {open id="note"}
+Fuel Conversion Recipes may not function as desired in all furnaces - only the vanilla furnace has specific support. By default the only recipe reproduces the vanilla behavior of a wet sponge converting an empty bucket into a water bucket.
+::::::::::
 
 ## Identifier
 
@@ -49,10 +53,30 @@ mods.minecraft.Furnace
     furnace.add(IIngredient, ItemStack, float)
     ```
 
+- Adds a recipe in the format `input`, `output`, `experience`, `time`:
+
+    ```groovy:no-line-numbers
+    furnace.add(IIngredient, ItemStack, float, int)
+    ```
+
+- Add the given recipe to the recipe list:
+
+    ```groovy:no-line-numbers
+    furnace.addFuelConversion(CustomFurnaceManager.FuelConversionRecipe)
+    ```
+
+- Add a conversion recipe in the format `smelted`, `fuel`, with `fuel` using an IIngredient transformer:
+
+    ```groovy:no-line-numbers
+    furnace.addFuelConversion(IIngredient, IIngredient)
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 furnace.add(ore('ingotIron'), item('minecraft:diamond'))
 furnace.add(item('minecraft:nether_star'), item('minecraft:clay') * 64, 13)
+furnace.add(item('minecraft:diamond'), item('minecraft:clay'), 2, 50)
+furnace.addFuelConversion(item('minecraft:diamond'), item('minecraft:bucket').transform(item('minecraft:lava_bucket')))
 ```
 
 ::::::::::
@@ -91,10 +115,17 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     output(Collection<ItemStack>)
     ```
 
-- `float`. Sets the experience rewarded for smelting the given input. Requires greater than or equal to 0. (Default `0.0f`).
+- `float`. Sets the experience rewarded for smelting the given input. Requires greater than or equal to 0. (Default `0.1f`).
 
     ```groovy:no-line-numbers
     exp(float)
+    experience(float)
+    ```
+
+- `int`. Sets the time in ticks the recipe takes. Requires greater than or equal to 1. (Default `200`).
+
+    ```groovy:no-line-numbers
+    time(int)
     ```
 
 ---
@@ -125,7 +156,7 @@ furnace.recipeBuilder()
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    furnace.removeByInput(ItemStack)
+    furnace.removeByInput(IIngredient)
     ```
 
 - Removes all recipes that match the given output:
@@ -134,22 +165,48 @@ furnace.recipeBuilder()
     furnace.removeByOutput(IIngredient)
     ```
 
+- Removes the given recipe from the recipe list:
+
+    ```groovy:no-line-numbers
+    furnace.removeFuelConversion(CustomFurnaceManager.FuelConversionRecipe)
+    ```
+
+- Removes all conversion recipes with the given smelted item:
+
+    ```groovy:no-line-numbers
+    furnace.removeFuelConversionBySmeltedStack(ItemStack)
+    ```
+
 - Removes all registered recipes:
 
     ```groovy:no-line-numbers
     furnace.removeAll()
     ```
 
+- Removes all conversion recipes:
+
+    ```groovy:no-line-numbers
+    furnace.removeAllFuelConversions()
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-furnace.removeByInput(item('minecraft:clay'))
+furnace.removeByInput(item('minecraft:clay:*'))
 furnace.removeByOutput(item('minecraft:brick'))
+furnace.removeFuelConversionBySmeltedStack(item('minecraft:sponge', 1))
 furnace.removeAll()
+furnace.removeAllFuelConversions()
 ```
 
 ::::::::::
 
 ## Getting the value of recipes
+
+- Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
+
+    ```groovy:no-line-numbers
+    furnace.streamFuelConversions()
+    ```
 
 - Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
 
