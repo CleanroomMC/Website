@@ -123,18 +123,6 @@ mods.techreborn.alloy_smelter.recipeBuilder()
     mods.techreborn.alloy_smelter.removeByInput(IIngredient)
     ```
 
-- Removes all recipes that match the given input:
-
-    ```groovy:no-line-numbers
-    mods.techreborn.alloy_smelter.removeByInput(IIngredient)
-    ```
-
-- Removes all recipes that match the given output:
-
-    ```groovy:no-line-numbers
-    mods.techreborn.alloy_smelter.removeByOutput(IIngredient)
-    ```
-
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers

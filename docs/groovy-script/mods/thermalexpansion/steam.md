@@ -11,6 +11,10 @@ source_code_link: "https://github.com/CleanroomMC/GroovyScript/blob/master/src/m
 
 Converts an input itemstack into power, taking time based on the power.
 
+:::::::::: details Info {open id="info"}
+If no energy is provided from an itemstack, the furnace fuel burn time will be checked, with the time in ticks being multiplied by 10 to calculate the energy output and if the energy is over 3000 the itemstack will be a valid fuel.
+::::::::::
+
 ## Identifier
 
 Refer to this via any of the following:

@@ -123,18 +123,6 @@ mods.techreborn.wire_mill.recipeBuilder()
     mods.techreborn.wire_mill.removeByInput(IIngredient)
     ```
 
-- Removes all recipes that match the given input:
-
-    ```groovy:no-line-numbers
-    mods.techreborn.wire_mill.removeByInput(IIngredient)
-    ```
-
-- Removes all recipes that match the given output:
-
-    ```groovy:no-line-numbers
-    mods.techreborn.wire_mill.removeByOutput(IIngredient)
-    ```
-
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers

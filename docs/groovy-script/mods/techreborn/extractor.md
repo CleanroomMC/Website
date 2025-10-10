@@ -121,18 +121,6 @@ mods.techreborn.extractor.recipeBuilder()
     mods.techreborn.extractor.removeByInput(IIngredient)
     ```
 
-- Removes all recipes that match the given input:
-
-    ```groovy:no-line-numbers
-    mods.techreborn.extractor.removeByInput(IIngredient)
-    ```
-
-- Removes all recipes that match the given output:
-
-    ```groovy:no-line-numbers
-    mods.techreborn.extractor.removeByOutput(IIngredient)
-    ```
-
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers

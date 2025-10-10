@@ -132,6 +132,17 @@ blockstate('minecraft:log:axis=z,variant=jungle')
 
 ```
 
+## Material
+
+The `blockmaterial` Object Mapper allows you to retrieve a `Material`.
+
+To target the desired `Material`, use its name.
+
+```groovy:no-line-numbers
+blockmaterial('tnt')
+blockmaterial('sponge')
+```
+
 ## Enchantment
 
 The `enchantment` Object Mapper allows you to retrieve an `Enchantment`.

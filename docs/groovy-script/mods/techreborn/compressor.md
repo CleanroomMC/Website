@@ -121,18 +121,6 @@ mods.techreborn.compressor.recipeBuilder()
     mods.techreborn.compressor.removeByInput(IIngredient)
     ```
 
-- Removes all recipes that match the given input:
-
-    ```groovy:no-line-numbers
-    mods.techreborn.compressor.removeByInput(IIngredient)
-    ```
-
-- Removes all recipes that match the given output:
-
-    ```groovy:no-line-numbers
-    mods.techreborn.compressor.removeByOutput(IIngredient)
-    ```
-
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers

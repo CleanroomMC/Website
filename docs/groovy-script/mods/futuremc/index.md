@@ -7,11 +7,13 @@ aside: false
 
 ## Categories
 
-Has 5 subcategories.
+Has 6 subcategories.
 
 * [Blast Furnace](./blast_furnace.md)
 
 * [Campfire](./campfire.md)
+
+* [Composter](./composter.md)
 
 * [Smithing](./smithing.md)
 

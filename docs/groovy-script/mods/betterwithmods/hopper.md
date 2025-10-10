@@ -100,7 +100,7 @@ mods.betterwithmods.hopper.recipeBuilder()
 
 mods.betterwithmods.hopper.recipeBuilder()
     .name('betterwithmods:wicker')
-    .input(item('minecraft:clay'))
+    .input(item('minecraft:clay') * 3)
     .inWorldItemOutput(item('minecraft:gold_ingot'))
     .register()
 ```

@@ -123,18 +123,6 @@ mods.techreborn.solid_canning_machine.recipeBuilder()
     mods.techreborn.solid_canning_machine.removeByInput(IIngredient)
     ```
 
-- Removes all recipes that match the given input:
-
-    ```groovy:no-line-numbers
-    mods.techreborn.solid_canning_machine.removeByInput(IIngredient)
-    ```
-
-- Removes all recipes that match the given output:
-
-    ```groovy:no-line-numbers
-    mods.techreborn.solid_canning_machine.removeByOutput(IIngredient)
-    ```
-
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers

@@ -66,3 +66,65 @@ Currently, the best way to observe what Object Mappers will do is to use the Lan
 :::
 
 - [All Vanilla Object Mappers](../minecraft/vanilla_object_mappers.md)
+
+
+## General Methods
+
+
+Many Object Mappers share the same set of the methods.
+Many of these methods utilize [Operator Overloading](../groovy/operators.md#operator-overloading),
+which allows things like `item(...)` to be an alias of `item.call(...)`.
+
+
+### Retrieval
+
+Using `call(...)` returns the relevant data of the Object Mapper,
+and is the primary purpose of an Object Mapper's existence.
+<br>
+Every Object Mapper has this capability, with the parameters varying based on the Object Mapper.
+
+See above for examples of this.
+
+
+### Default Value
+
+
+Using `call()` without any parameters will attempt to return
+the default value of the Object Mapper, presuming it exists.
+If it does not exist, `null` will be returned instead
+<br>
+Some Object Mappers have this functionality.
+
+::: info Example {id="example"}
+
+```groovy
+item()        // returns ItemStack.EMPTY
+block()       // returns Blocks.AIR
+creativeTab() // returns CreativeTabs.SEARCH
+```
+
+:::
+
+
+### Inversion
+
+
+Using `mod(...)` returns a String that can create the retrieval method
+of the parameter, presuming that the parameter is of the type that the Object Mapper returns.
+<br>
+The main purpose of this is to convert an object obtained through some means
+into text interpretable by GroovyScript.
+For some Object Mappers, there are multiple valid ways to retrieve the same object -
+in such a situation, the return value will only be one of those ways.
+<br>
+Most Object Mappers have this capability.
+
+::: info Example {id="example"}
+
+```groovy
+log(item % item('minecraft:clay')) // returns item('minecraft:clay')
+log(blockstate % blockstate('minecraft:log:0')) // returns blockstate('minecraft:log', 'axis=y', 'variant=oak')
+log(item % minecraft.getAllItems()) // returns a String for every item from vanilla minecraft
+```
+
+:::

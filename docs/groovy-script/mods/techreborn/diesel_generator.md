@@ -113,12 +113,6 @@ mods.techreborn.diesel_generator.recipeBuilder()
     mods.techreborn.diesel_generator.removeByInput(IIngredient)
     ```
 
-- Removes all recipes that match the given input:
-
-    ```groovy:no-line-numbers
-    mods.techreborn.diesel_generator.removeByInput(IIngredient)
-    ```
-
 - Removes all registered recipes:
 
     ```groovy:no-line-numbers

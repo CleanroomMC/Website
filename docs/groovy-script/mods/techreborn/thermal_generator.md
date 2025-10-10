@@ -113,12 +113,6 @@ mods.techreborn.thermal_generator.recipeBuilder()
     mods.techreborn.thermal_generator.removeByInput(IIngredient)
     ```
 
-- Removes all recipes that match the given input:
-
-    ```groovy:no-line-numbers
-    mods.techreborn.thermal_generator.removeByInput(IIngredient)
-    ```
-
 - Removes all registered recipes:
 
     ```groovy:no-line-numbers

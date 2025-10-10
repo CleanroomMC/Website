@@ -27,8 +27,10 @@ This can help improve readability of the log file, yet may hide errors that stil
 ## Interacting
 
 
-There are six main ways to add messages to the log file.
+There are seven main ways to add messages to the log file.
 Each has a different purpose and level of severity.
+
+The most basic way is calling `log(String)`, which logs the message on the info channel.
 
 When adding messages to the log via these methods,
 the time, side, log channel, currently loaded script, and currently running line
@@ -51,7 +53,7 @@ the [debug](./run_config.md#debug) option in the [`runConfig.json`](./run_config
 ### Info
 
 
-Called via `log.info(String)`, this indicates that the information is
+Called via either `log(String)` or `log.info(String)`, this indicates that the information is
 used to provide a record of the normal operation of the system.
 
 
