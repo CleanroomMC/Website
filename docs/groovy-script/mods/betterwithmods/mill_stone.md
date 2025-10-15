@@ -100,7 +100,7 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.betterwithmods.mill_stone.recipeBuilder()
-    .input(item('minecraft:diamond'))
+    .input(item('minecraft:diamond') * 3)
     .output(item('minecraft:gold_ingot') * 16)
     .register()
 

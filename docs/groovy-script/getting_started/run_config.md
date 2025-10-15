@@ -79,6 +79,8 @@ It currently doesn't do anything special.
 If this is false all messages that logged to debug will not be logged.
 This setting is great for debugging, as it adds additional information to the [`groovy.log`](./groovy_log.md)
 and logs the line numbers in errors.
+<br>
+This also controls if [keybindings](../minecraft/keybindings.md) are bound by default.
 - Can be accessed in a script via `isDebug()`.
 
 ## `classes`
@@ -86,15 +88,21 @@ and logs the line numbers in errors.
 This *was* an element used to control what files were loaded as class files
 prior to [GroovyScript 1.2.3](https://github.com/CleanroomMC/GroovyScript/tree/v1.2.3).
 
-::: info Failure {id="failure"}
+:::: info Warning {id="warning"}
 
-If `classes` is an element in your `runConfig.json` file, a fatal message will be logged
-and you **must** remove it in order to be able to launch.
+If `classes` is an element in your `runConfig.json` file, a error message will be logged.
 
 Instead, load your classes via one of the loaders - typically [`preInit`](#preinit).
 To migrate in this fashion, simply add `"classes/"` to the `preInit` loader.
 
+::: info Failure {id="failure"}
+
+Prior to [GroovyScript 1.3.0](https://github.com/CleanroomMC/GroovyScript/tree/v1.3.0)
+this would generate a fatal error, crashing the game.
+
 :::
+
+::::
 
 :::: details Prior to GroovyScript 1.2.3 {id="warning"}
 

@@ -96,7 +96,7 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.betterwithmods.cauldron.recipeBuilder()
-    .input(item('minecraft:clay'))
+    .input(item('minecraft:clay') * 3)
     .output(item('minecraft:diamond'))
     .heat(2)
     .register()
