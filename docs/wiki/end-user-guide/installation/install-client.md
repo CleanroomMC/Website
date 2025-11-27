@@ -52,7 +52,7 @@ Steps:
 7. Click **Relaunch**.
 
 ## Notes
-
+- When using a new java binary, laptop users may be met with underwhelming performance due to windows not assigning the dedicated GPU to the java binary. Make sure the java binary (javaw.exe) is set to high performance mode.
 - Cleanroom Relauncher’s configuration file can be found at `config/relauncher.cfg`. <br> Deleting this file will prompt the setup GUI on the next launch.<br>
   ::: info Note {id="note"}
   Cleanroom Relauncher will check for cleanroom updates. Therefore, the UI will launch when an update rolls out.

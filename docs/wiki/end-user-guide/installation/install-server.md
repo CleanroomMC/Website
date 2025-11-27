@@ -13,6 +13,9 @@ title: Server
    See [Preparing your modpack](/wiki/end-user-guide/preparing-your-modpack) for more details.
 3. Download the latest `cleanroom-x.x.x-installer.jar` from the [Releases page](https://github.com/CleanroomMC/Cleanroom/releases) and run it.
 4. In the installer GUI, select **Install server** and choose your server’s directory.
+   ::: info Note {id="note"}
+   Alternatively, you can call `java -jar installerName.jar --installServer` in a bat or sh file.
+   :::
 5. Add [Fugue](https://www.curseforge.com/minecraft/mc-mods/fugue) to your mod folder<br>
    *(it will not load in a Forge environment)*
 6. Add [Scalar Legacy](https://www.curseforge.com/minecraft/mc-mods/scalar-legacy) to your mod folder<br>
