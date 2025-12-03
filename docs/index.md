@@ -9,6 +9,9 @@ hero:
     - theme: brand
       text: Get Started
       link: /wiki/end-user-guide/introduction
+    - theme: alt
+      text: Download
+      link: https://download.cleanroommc.com/
   image:
     src: /cleanroom.png
     alt: CleanroomMC Logo

@@ -8,6 +8,13 @@ hero:
   image:
     src: /cleanroom.png
     alt: CleanroomMC Logo
+  actions:
+    - theme: brand
+      text: 快速开始
+      link: /zh/wiki/cleanroom-mod-development/introduction
+    - theme: alt
+      text: 下载
+      link: https://download.cleanroommc.com/
 features:
   - title: Cleanroom Loader
     details: 现代化的加载器。致力于性能、长效、可扩展性和稳定性。
