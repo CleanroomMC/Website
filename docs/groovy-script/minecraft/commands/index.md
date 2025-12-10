@@ -22,12 +22,22 @@ The [Language Server](../../getting_started/editors.md) can be started in multip
 You can [reload](../../getting_started/reloading.md) the GroovyScript `postInit` files
 via this command or via a keybind.
 
-Running `/gs reload --clean` will clean up the [log](../../getting_started/groovy_log.md) file
-and remove all prior text.
+If [HEI](https://www.curseforge.com/minecraft/mc-mods/had-enough-items) is installed,
+reloading will only reload its recipes instead of reloading everything,
+which will increase the reload speed.
 
+There are several modifiers that can be applied when reloading:
+- `--clean` will clean up the [log](../../getting_started/groovy_log.md) file and remove all prior text.<br>
 This can make it more readable and easier to identify errors with the current script instead of seeing
-all errors that have been experienced iin this minecraft session.
+all errors that have been experienced in this minecraft session.
 These errors will still impact the game.
+- `--skip-jei` will not try to reload JEI.<br>
+This can significantly speed up the reload time.
+All scripts will still be run and the recipes will still be changed.
+- `--entire-jei` will reload everything in JEI.<br>
+This only has an impact if [HEI](https://www.curseforge.com/minecraft/mc-mods/had-enough-items) is installed.
+It will make HEI reload everything, not just recipes, when run.
+
 
 ## Clean Log
 
