@@ -13,15 +13,20 @@ When running a Summon Creature Ritual, the input items placed on Catalyst Plate 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.roots.summon_creature` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.roots.summon_creature/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.roots.summoncreature
 mods.roots.summonCreature
 mods.roots.SummonCreature
+mods.roots.summon_creature/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -89,10 +94,10 @@ mods.roots.summon_creature.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the Summon Creature recipe for the given Entity:
+- Removes the Summon Creature recipe with the given name:
 
     ```groovy:no-line-numbers
-    mods.roots.summon_creature.removeByEntity(Class<? extends EntityLivingBase>)
+    mods.roots.summon_creature.removeByName(ResourceLocation)
     ```
 
 - Removes the Summon Creature recipe for the given Entity:
@@ -101,10 +106,10 @@ mods.roots.summon_creature.recipeBuilder()
     mods.roots.summon_creature.removeByEntity(EntityEntry)
     ```
 
-- Removes the Summon Creature recipe with the given name:
+- Removes the Summon Creature recipe for the given Entity:
 
     ```groovy:no-line-numbers
-    mods.roots.summon_creature.removeByName(ResourceLocation)
+    mods.roots.summon_creature.removeByEntity(Class<? extends EntityLivingBase>)
     ```
 
 - Removes all registered recipes:
@@ -115,8 +120,8 @@ mods.roots.summon_creature.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.roots.summon_creature.removeByEntity(entity('minecraft:chicken'))
 mods.roots.summon_creature.removeByName(resource('roots:cow'))
+mods.roots.summon_creature.removeByEntity(entity('minecraft:chicken'))
 mods.roots.summon_creature.removeAll()
 ```
 

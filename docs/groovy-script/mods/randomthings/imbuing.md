@@ -13,13 +13,18 @@ Converts four itemstacks into an itemstack in the Random Things Imbuing Station.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.randomthings.imbuing` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.randomthings.imbuing/* Used as page default */ // [!code focus]
 mods.randomthings.Imbuing
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.randomthings.Imbuing
     ```groovy:no-line-numbers
     mods.randomthings.imbuing.add(ImbuingRecipe)
     ```
-
 
 ### Recipe Builder
 

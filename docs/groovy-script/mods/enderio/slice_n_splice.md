@@ -13,27 +13,32 @@ Convert up to 6 input itemstacks into an output itemstack, using energy and givi
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.enderio.slice_n_splice` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.enderio.slice_n_splice/* Used as page default */ // [!code focus]
-mods.enderio.slicensplice
-mods.enderio.sliceNSplice
-mods.enderio.SliceNSplice
-mods.enderio.slice_and_splice
-mods.enderio.sliceandsplice
-mods.enderio.sliceAndSplice
-mods.enderio.SliceAndSplice
-mods.eio.slice_n_splice
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {12}
 mods.eio.slicensplice
 mods.eio.sliceNSplice
 mods.eio.SliceNSplice
-mods.eio.slice_and_splice
+mods.eio.slice_n_splice
 mods.eio.sliceandsplice
 mods.eio.sliceAndSplice
 mods.eio.SliceAndSplice
+mods.eio.slice_and_splice
+mods.enderio.slicensplice
+mods.enderio.sliceNSplice
+mods.enderio.SliceNSplice
+mods.enderio.slice_n_splice/* Used as page default */ // [!code focus]
+mods.enderio.sliceandsplice
+mods.enderio.sliceAndSplice
+mods.enderio.SliceAndSplice
+mods.enderio.slice_and_splice
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -48,7 +53,6 @@ mods.eio.SliceAndSplice
     ```groovy:no-line-numbers
     mods.enderio.slice_n_splice.add(ItemStack, List<IIngredient>, int)
     ```
-
 
 ### Recipe Builder
 

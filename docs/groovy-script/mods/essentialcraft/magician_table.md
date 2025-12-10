@@ -17,19 +17,24 @@ Certain OreDict entries might give unexpected results when used in the Magician 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.essentialcraft.magician_table` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.ec4.magician_table
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.ec4.magiciantable
 mods.ec4.magicianTable
 mods.ec4.MagicianTable
-mods.essentialcraft.magician_table/* Used as page default */ // [!code focus]
+mods.ec4.magician_table
 mods.essentialcraft.magiciantable
 mods.essentialcraft.magicianTable
 mods.essentialcraft.MagicianTable
+mods.essentialcraft.magician_table/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -38,7 +43,6 @@ mods.essentialcraft.MagicianTable
     ```groovy:no-line-numbers
     mods.essentialcraft.magician_table.add(MagicianTableRecipe)
     ```
-
 
 ### Recipe Builder
 

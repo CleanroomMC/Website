@@ -13,19 +13,24 @@ Controls what items can be used in the fertilizer slot of the Arboreal Extractor
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.tapper_fertilizer` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.thermal.tapper_fertilizer
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.thermal.tapperfertilizer
 mods.thermal.tapperFertilizer
 mods.thermal.TapperFertilizer
-mods.thermalexpansion.tapper_fertilizer/* Used as page default */ // [!code focus]
+mods.thermal.tapper_fertilizer
 mods.thermalexpansion.tapperfertilizer
 mods.thermalexpansion.tapperFertilizer
 mods.thermalexpansion.TapperFertilizer
+mods.thermalexpansion.tapper_fertilizer/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 

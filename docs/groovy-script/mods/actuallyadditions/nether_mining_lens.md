@@ -13,19 +13,24 @@ A weighted oredict for the block obtained via firing a Mining Lens at a block of
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.actuallyadditions.nether_mining_lens` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.aa.nether_mining_lens
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.aa.nethermininglens
 mods.aa.netherMiningLens
 mods.aa.NetherMiningLens
-mods.actuallyadditions.nether_mining_lens/* Used as page default */ // [!code focus]
+mods.aa.nether_mining_lens
 mods.actuallyadditions.nethermininglens
 mods.actuallyadditions.netherMiningLens
 mods.actuallyadditions.NetherMiningLens
+mods.actuallyadditions.nether_mining_lens/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.actuallyadditions.NetherMiningLens
     ```groovy:no-line-numbers
     mods.actuallyadditions.nether_mining_lens.add(WeightedOre)
     ```
-
 
 ### Recipe Builder
 
@@ -105,13 +109,13 @@ mods.actuallyadditions.nether_mining_lens.recipeBuilder()
 - Removes all recipes that match the given ore:
 
     ```groovy:no-line-numbers
-    mods.actuallyadditions.nether_mining_lens.removeByOre(OreDictIngredient)
+    mods.actuallyadditions.nether_mining_lens.removeByOre(String)
     ```
 
 - Removes all recipes that match the given ore:
 
     ```groovy:no-line-numbers
-    mods.actuallyadditions.nether_mining_lens.removeByOre(String)
+    mods.actuallyadditions.nether_mining_lens.removeByOre(OreDictIngredient)
     ```
 
 - Removes all registered recipes:
@@ -122,8 +126,8 @@ mods.actuallyadditions.nether_mining_lens.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.actuallyadditions.nether_mining_lens.removeByOre(ore('oreQuartz'))
 mods.actuallyadditions.nether_mining_lens.removeByOre('oreQuartz')
+mods.actuallyadditions.nether_mining_lens.removeByOre(ore('oreQuartz'))
 mods.actuallyadditions.nether_mining_lens.removeAll()
 ```
 

@@ -25,13 +25,18 @@ When crafting any recipe done via this, if the output of the Anvil was picked up
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.randomthings.anvil` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.randomthings.anvil/* Used as page default */ // [!code focus]
 mods.randomthings.Anvil
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -40,7 +45,6 @@ mods.randomthings.Anvil
     ```groovy:no-line-numbers
     mods.randomthings.anvil.add(AnvilRecipe)
     ```
-
 
 ### Recipe Builder
 

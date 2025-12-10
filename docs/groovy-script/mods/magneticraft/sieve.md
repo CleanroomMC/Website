@@ -13,13 +13,18 @@ Converts an input itemstack into up to three output itemstacks, each with a sepa
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.magneticraft.sieve` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.magneticraft.sieve/* Used as page default */ // [!code focus]
 mods.magneticraft.Sieve
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.magneticraft.Sieve
     ```groovy:no-line-numbers
     mods.magneticraft.sieve.add(ISieveRecipe)
     ```
-
 
 ### Recipe Builder
 

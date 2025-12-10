@@ -17,13 +17,18 @@ When an item (regardless of metadata) is the input of any entry in the Rotting m
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithaddons.rotting` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.betterwithaddons.rotting/* Used as page default */ // [!code focus]
 mods.betterwithaddons.Rotting
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -32,7 +37,6 @@ mods.betterwithaddons.Rotting
     ```groovy:no-line-numbers
     mods.betterwithaddons.rotting.add(RotHandler.RotInfo)
     ```
-
 
 ### Recipe Builder
 
@@ -117,13 +121,13 @@ mods.betterwithaddons.rotting.recipeBuilder()
 - Removes the given entry from the Rotting map:
 
     ```groovy:no-line-numbers
-    mods.betterwithaddons.rotting.remove(Map.Entry<Item, RotHandler.RotInfo>)
+    mods.betterwithaddons.rotting.remove(RotHandler.RotInfo)
     ```
 
 - Removes the given entry from the Rotting map:
 
     ```groovy:no-line-numbers
-    mods.betterwithaddons.rotting.remove(RotHandler.RotInfo)
+    mods.betterwithaddons.rotting.remove(Map.Entry<Item, RotHandler.RotInfo>)
     ```
 
 - Removes all recipes that match the given input:

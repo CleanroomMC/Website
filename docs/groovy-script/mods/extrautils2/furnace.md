@@ -17,7 +17,11 @@ When removing items, keep in mind that the default registry mostly contains INPU
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.extrautils2.furnace` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.extrautils2.furnace/* Used as page default */ // [!code focus]
@@ -26,6 +30,7 @@ mods.extrautilities2.furnace
 mods.extrautilities2.Furnace
 ```
 
+::::::::::
 
 ## Adding Recipes
 

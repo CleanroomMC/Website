@@ -13,15 +13,20 @@ Converts one fluid into another fluid at a given ratio.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.industrialforegoing.fluid_dictionary` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.industrialforegoing.fluid_dictionary/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.industrialforegoing.fluiddictionary
 mods.industrialforegoing.fluidDictionary
 mods.industrialforegoing.FluidDictionary
+mods.industrialforegoing.fluid_dictionary/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -40,13 +45,13 @@ mods.industrialforegoing.FluidDictionary
 - Adds a Fluid Dictionary Converter recipe in the format `input`, `output`, `ratio`:
 
     ```groovy:no-line-numbers
-    mods.industrialforegoing.fluid_dictionary.add(FluidStack, FluidStack, double)
+    mods.industrialforegoing.fluid_dictionary.add(String, String, double)
     ```
 
 - Adds a Fluid Dictionary Converter recipe in the format `input`, `output`, `ratio`:
 
     ```groovy:no-line-numbers
-    mods.industrialforegoing.fluid_dictionary.add(String, String, double)
+    mods.industrialforegoing.fluid_dictionary.add(FluidStack, FluidStack, double)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -70,25 +75,25 @@ mods.industrialforegoing.fluid_dictionary.add(fluid('latex'), fluid('essence'), 
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.industrialforegoing.fluid_dictionary.removeByInput(FluidStack)
+    mods.industrialforegoing.fluid_dictionary.removeByInput(String)
     ```
 
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.industrialforegoing.fluid_dictionary.removeByInput(String)
-    ```
-
-- Removes all recipes that match the given output:
-
-    ```groovy:no-line-numbers
-    mods.industrialforegoing.fluid_dictionary.removeByOutput(FluidStack)
+    mods.industrialforegoing.fluid_dictionary.removeByInput(FluidStack)
     ```
 
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers
     mods.industrialforegoing.fluid_dictionary.removeByOutput(String)
+    ```
+
+- Removes all recipes that match the given output:
+
+    ```groovy:no-line-numbers
+    mods.industrialforegoing.fluid_dictionary.removeByOutput(FluidStack)
     ```
 
 - Removes all registered recipes:

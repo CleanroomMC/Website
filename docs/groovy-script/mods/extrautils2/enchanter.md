@@ -13,7 +13,11 @@ Converts two input itemstacks into an output itemstack, consuming energy and req
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.extrautils2.enchanter` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.extrautils2.enchanter/* Used as page default */ // [!code focus]
@@ -22,6 +26,7 @@ mods.extrautilities2.enchanter
 mods.extrautilities2.Enchanter
 ```
 
+::::::::::
 
 ## Adding Recipes
 

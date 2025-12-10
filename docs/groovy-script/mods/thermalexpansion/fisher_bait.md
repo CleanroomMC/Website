@@ -13,19 +13,24 @@ Controls what items can be used in the bait slot of the Aquatic Entangler and ho
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.fisher_bait` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.thermal.fisher_bait
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.thermal.fisherbait
 mods.thermal.fisherBait
 mods.thermal.FisherBait
-mods.thermalexpansion.fisher_bait/* Used as page default */ // [!code focus]
+mods.thermal.fisher_bait
 mods.thermalexpansion.fisherbait
 mods.thermalexpansion.fisherBait
 mods.thermalexpansion.FisherBait
+mods.thermalexpansion.fisher_bait/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 

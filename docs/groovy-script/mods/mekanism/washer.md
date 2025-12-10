@@ -13,17 +13,22 @@ Converts an input gasstack into an output gasstack at the cost of 5mb of water.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.mekanism.washer` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.mekanism.washer/* Used as page default */ // [!code focus]
 mods.mekanism.Washer
-mods.mekanism.chemical_washer
 mods.mekanism.chemicalwasher
 mods.mekanism.chemicalWasher
 mods.mekanism.ChemicalWasher
+mods.mekanism.chemical_washer
 ```
 
+::::::::::
 
 ## Adding Recipes
 

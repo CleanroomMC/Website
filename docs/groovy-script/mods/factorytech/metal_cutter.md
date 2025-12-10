@@ -13,15 +13,20 @@ Converts an input itemstack into an output itemstack, with the ability to contro
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.factorytech.metal_cutter` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.factorytech.metal_cutter/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.factorytech.metalcutter
 mods.factorytech.metalCutter
 mods.factorytech.MetalCutter
+mods.factorytech.metal_cutter/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.factorytech.MetalCutter
     ```groovy:no-line-numbers
     mods.factorytech.metal_cutter.add(MachineRecipes.MachineRecipe<ItemStack, ItemStack>)
     ```
-
 
 ### Recipe Builder
 

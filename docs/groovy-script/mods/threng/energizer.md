@@ -13,7 +13,11 @@ Converts 1 input itemstack into an output itemstack, consuming a set amount of e
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.threng.energizer` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.threng.energizer/* Used as page default */ // [!code focus]
@@ -22,6 +26,7 @@ mods.lazyae2.energizer
 mods.lazyae2.Energizer
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.lazyae2.Energizer
     ```groovy:no-line-numbers
     mods.threng.energizer.add(EnergizeRecipe)
     ```
-
 
 ### Recipe Builder
 

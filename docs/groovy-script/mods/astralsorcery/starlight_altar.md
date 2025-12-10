@@ -13,19 +13,24 @@ Allows creation of shaped recipes in the Astral Sorcery Crafting Altar chain.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.astralsorcery.starlight_altar` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.astralsorcery.starlight_altar/* Used as page default */ // [!code focus]
-mods.astralsorcery.starlightaltar
-mods.astralsorcery.starlightAltar
-mods.astralsorcery.StarlightAltar
-mods.astral.starlight_altar
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.astral.starlightaltar
 mods.astral.starlightAltar
 mods.astral.StarlightAltar
+mods.astral.starlight_altar
+mods.astralsorcery.starlightaltar
+mods.astralsorcery.starlightAltar
+mods.astralsorcery.StarlightAltar
+mods.astralsorcery.starlight_altar/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

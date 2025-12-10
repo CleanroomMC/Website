@@ -13,23 +13,28 @@ Converts a block in-world into an item, when interacting with it with Salis Mund
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thaumcraft.dust_trigger` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.thaumcraft.dust_trigger/* Used as page default */ // [!code focus]
-mods.thaumcraft.dusttrigger
-mods.thaumcraft.dustTrigger
-mods.thaumcraft.DustTrigger
-mods.tc.dust_trigger
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {12}
 mods.tc.dusttrigger
 mods.tc.dustTrigger
 mods.tc.DustTrigger
-mods.thaum.dust_trigger
+mods.tc.dust_trigger
 mods.thaum.dusttrigger
 mods.thaum.dustTrigger
 mods.thaum.DustTrigger
+mods.thaum.dust_trigger
+mods.thaumcraft.dusttrigger
+mods.thaumcraft.dustTrigger
+mods.thaumcraft.DustTrigger
+mods.thaumcraft.dust_trigger/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

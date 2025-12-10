@@ -13,7 +13,11 @@ Converts two input itemstacks into an output itemstack and optional output items
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.smelter` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.thermal.smelter
@@ -22,6 +26,7 @@ mods.thermalexpansion.smelter/* Used as page default */ // [!code focus]
 mods.thermalexpansion.Smelter
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -121,6 +126,12 @@ mods.thermalexpansion.smelter.recipeBuilder()
 
 ## Removing Recipes
 
+- Removes an item from the Metallurgic Flux list, which filters the inputs for one of the Induction Smelter slots when enabled:
+
+    ```groovy:no-line-numbers
+    mods.thermalexpansion.smelter.removeFlux(ItemStack)
+    ```
+
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
@@ -131,12 +142,6 @@ mods.thermalexpansion.smelter.recipeBuilder()
 
     ```groovy:no-line-numbers
     mods.thermalexpansion.smelter.removeByOutput(IIngredient)
-    ```
-
-- Removes an item from the Metallurgic Flux list, which filters the inputs for one of the Induction Smelter slots when enabled:
-
-    ```groovy:no-line-numbers
-    mods.thermalexpansion.smelter.removeFlux(ItemStack)
     ```
 
 - Removes all registered recipes:

@@ -13,19 +13,24 @@ Converts an input itemstack into an output itemstack and an optional 'slag' item
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersiveengineering.blast_furnace` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.ie.blast_furnace
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.ie.blastfurnace
 mods.ie.blastFurnace
 mods.ie.BlastFurnace
-mods.immersiveengineering.blast_furnace/* Used as page default */ // [!code focus]
+mods.ie.blast_furnace
 mods.immersiveengineering.blastfurnace
 mods.immersiveengineering.blastFurnace
 mods.immersiveengineering.BlastFurnace
+mods.immersiveengineering.blast_furnace/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -40,7 +45,6 @@ mods.immersiveengineering.BlastFurnace
     ```groovy:no-line-numbers
     mods.immersiveengineering.blast_furnace.add(ItemStack, IIngredient, int, ItemStack)
     ```
-
 
 ### Recipe Builder
 

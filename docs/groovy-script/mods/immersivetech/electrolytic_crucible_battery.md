@@ -13,15 +13,20 @@ Converts an input fluidstack into up to three output fluidstacks after a given a
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersivetech.electrolytic_crucible_battery` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.immersivetech.electrolytic_crucible_battery/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.immersivetech.electrolyticcruciblebattery
 mods.immersivetech.electrolyticCrucibleBattery
 mods.immersivetech.ElectrolyticCrucibleBattery
+mods.immersivetech.electrolytic_crucible_battery/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.immersivetech.ElectrolyticCrucibleBattery
     ```groovy:no-line-numbers
     mods.immersivetech.electrolytic_crucible_battery.add(ElectrolyticCrucibleBatteryRecipe)
     ```
-
 
 ### Recipe Builder
 

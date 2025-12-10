@@ -29,15 +29,20 @@ The Electric Arc Furnace can support up to 11 input and output hatches. Each hat
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.advancedrocketry.electric_arc_furnace` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.advancedrocketry.electric_arc_furnace/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.advancedrocketry.electricarcfurnace
 mods.advancedrocketry.electricArcFurnace
 mods.advancedrocketry.ElectricArcFurnace
+mods.advancedrocketry.electric_arc_furnace/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -46,7 +51,6 @@ mods.advancedrocketry.ElectricArcFurnace
     ```groovy:no-line-numbers
     mods.advancedrocketry.electric_arc_furnace.add(R)
     ```
-
 
 ### Recipe Builder
 

@@ -13,23 +13,28 @@ Convert up to 3 itemstack inputs into an itemstack output, using energy and givi
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.enderio.alloy_smelter` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.enderio.alloy_smelter/* Used as page default */ // [!code focus]
-mods.enderio.alloysmelter
-mods.enderio.alloySmelter
-mods.enderio.AlloySmelter
-mods.enderio.alloying
-mods.enderio.Alloying
-mods.eio.alloy_smelter
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {12}
+mods.eio.alloying
+mods.eio.Alloying
 mods.eio.alloysmelter
 mods.eio.alloySmelter
 mods.eio.AlloySmelter
-mods.eio.alloying
-mods.eio.Alloying
+mods.eio.alloy_smelter
+mods.enderio.alloying
+mods.enderio.Alloying
+mods.enderio.alloysmelter
+mods.enderio.alloySmelter
+mods.enderio.AlloySmelter
+mods.enderio.alloy_smelter/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

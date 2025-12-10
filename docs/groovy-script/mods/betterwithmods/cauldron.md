@@ -13,13 +13,18 @@ Converts a large number of items into other items, with the ability to require s
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithmods.cauldron` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.betterwithmods.cauldron/* Used as page default */ // [!code focus]
 mods.betterwithmods.Cauldron
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.betterwithmods.Cauldron
     ```groovy:no-line-numbers
     mods.betterwithmods.cauldron.add(CookingPotRecipe)
     ```
-
 
 ### Recipe Builder
 

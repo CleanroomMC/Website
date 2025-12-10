@@ -17,19 +17,24 @@ Demon Trade recipes must set the correct NBT on all input items. This is a bug t
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.essentialcraft.demon_trade` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.ec4.demon_trade
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.ec4.demontrade
 mods.ec4.demonTrade
 mods.ec4.DemonTrade
-mods.essentialcraft.demon_trade/* Used as page default */ // [!code focus]
+mods.ec4.demon_trade
 mods.essentialcraft.demontrade
 mods.essentialcraft.demonTrade
 mods.essentialcraft.DemonTrade
+mods.essentialcraft.demon_trade/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 

@@ -13,19 +13,24 @@ Converts an input item into an output itemstack when a Silt Crab is placed insid
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thebetweenlands.crab_pot_filter_silt` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.betweenlands.crab_pot_filter_silt
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.betweenlands.crabpotfiltersilt
 mods.betweenlands.crabPotFilterSilt
 mods.betweenlands.CrabPotFilterSilt
-mods.thebetweenlands.crab_pot_filter_silt/* Used as page default */ // [!code focus]
+mods.betweenlands.crab_pot_filter_silt
 mods.thebetweenlands.crabpotfiltersilt
 mods.thebetweenlands.crabPotFilterSilt
 mods.thebetweenlands.CrabPotFilterSilt
+mods.thebetweenlands.crab_pot_filter_silt/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.thebetweenlands.CrabPotFilterSilt
     ```groovy:no-line-numbers
     mods.thebetweenlands.crab_pot_filter_silt.add(ICrabPotFilterRecipeSilt)
     ```
-
 
 ### Recipe Builder
 

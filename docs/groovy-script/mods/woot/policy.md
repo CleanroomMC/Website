@@ -17,15 +17,26 @@ If the whitelist contains any entities, any entities not in the whitelist are ba
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.woot.policy` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.woot.policy/* Used as page default */ // [!code focus]
 mods.woot.Policy
 ```
 
+::::::::::
 
 ## Adding Recipes
+
+- Prevents the given item from being dropped by any entity:
+
+    ```groovy:no-line-numbers
+    mods.woot.policy.addToItemBlacklist(ItemStack)
+    ```
 
 - Prevents the given entity from being captured and spawned:
 
@@ -37,12 +48,6 @@ mods.woot.Policy
 
     ```groovy:no-line-numbers
     mods.woot.policy.addToEntityBlacklist(WootMobName)
-    ```
-
-- Prevents entities from the given mod from being captured and spawned:
-
-    ```groovy:no-line-numbers
-    mods.woot.policy.addToEntityModBlacklist(String)
     ```
 
 - Prevents all entities not on the list from being spawned, overriding EntityBlacklist and EntityModBlacklist:
@@ -69,31 +74,37 @@ mods.woot.Policy
     mods.woot.policy.addToGenerateOnlyList(WootMobName)
     ```
 
-- Prevents the given item from being dropped by any entity:
-
-    ```groovy:no-line-numbers
-    mods.woot.policy.addToItemBlacklist(ItemStack)
-    ```
-
 - Prevents items from the given mod from being dropped by any entity:
 
     ```groovy:no-line-numbers
     mods.woot.policy.addToItemModBlacklist(String)
     ```
 
+- Prevents entities from the given mod from being captured and spawned:
+
+    ```groovy:no-line-numbers
+    mods.woot.policy.addToEntityModBlacklist(String)
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
+mods.woot.policy.addToItemBlacklist(item('minecraft:gunpowder'))
 mods.woot.policy.addToEntityBlacklist('minecraft:witch')
-mods.woot.policy.addToEntityModBlacklist('minecraft')
 mods.woot.policy.addToEntityWhitelist('minecraft:zombie')
 mods.woot.policy.addToGenerateOnlyList('minecraft:skeleton')
-mods.woot.policy.addToItemBlacklist(item('minecraft:gunpowder'))
 mods.woot.policy.addToItemModBlacklist('woot')
+mods.woot.policy.addToEntityModBlacklist('minecraft')
 ```
 
 ::::::::::
 
 ## Removing Recipes
+
+- Removes the given item from the ItemBlacklist:
+
+    ```groovy:no-line-numbers
+    mods.woot.policy.removeFromItemBlacklist(ItemStack)
+    ```
 
 - Removes the given entity from the EntityBlacklist:
 
@@ -105,12 +116,6 @@ mods.woot.policy.addToItemModBlacklist('woot')
 
     ```groovy:no-line-numbers
     mods.woot.policy.removeFromEntityBlacklist(WootMobName)
-    ```
-
-- Removes the given mod from the EntityModBlacklist:
-
-    ```groovy:no-line-numbers
-    mods.woot.policy.removeFromEntityModBlacklist(String)
     ```
 
 - Removes given entity from the EntityWhitelist:
@@ -137,28 +142,28 @@ mods.woot.policy.addToItemModBlacklist('woot')
     mods.woot.policy.removeFromGenerateOnlyList(WootMobName)
     ```
 
-- Removes the given item from the ItemBlacklist:
-
-    ```groovy:no-line-numbers
-    mods.woot.policy.removeFromItemBlacklist(ItemStack)
-    ```
-
 - Removes the given mod from the ItemModBlacklist:
 
     ```groovy:no-line-numbers
     mods.woot.policy.removeFromItemModBlacklist(String)
     ```
 
+- Removes the given mod from the EntityModBlacklist:
+
+    ```groovy:no-line-numbers
+    mods.woot.policy.removeFromEntityModBlacklist(String)
+    ```
+
+- Removes all items from the ItemBlacklist:
+
+    ```groovy:no-line-numbers
+    mods.woot.policy.removeAllFromItemBlacklist()
+    ```
+
 - Removes all entities from the EntityBlacklist:
 
     ```groovy:no-line-numbers
     mods.woot.policy.removeAllFromEntityBlacklist()
-    ```
-
-- Removes all mods from the EntityModBlacklist:
-
-    ```groovy:no-line-numbers
-    mods.woot.policy.removeAllFromEntityModBlacklist()
     ```
 
 - Removes all entities from the EntityWhitelist:
@@ -173,16 +178,16 @@ mods.woot.policy.addToItemModBlacklist('woot')
     mods.woot.policy.removeAllFromGenerateOnlyList()
     ```
 
-- Removes all items from the ItemBlacklist:
-
-    ```groovy:no-line-numbers
-    mods.woot.policy.removeAllFromItemBlacklist()
-    ```
-
 - Removes all mods from the ItemModBlacklist:
 
     ```groovy:no-line-numbers
     mods.woot.policy.removeAllFromItemModBlacklist()
+    ```
+
+- Removes all mods from the EntityModBlacklist:
+
+    ```groovy:no-line-numbers
+    mods.woot.policy.removeAllFromEntityModBlacklist()
     ```
 
 - Removes all registered recipes:
@@ -193,18 +198,18 @@ mods.woot.policy.addToItemModBlacklist('woot')
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
+mods.woot.policy.removeFromItemBlacklist(item('minecraft:sugar'))
 mods.woot.policy.removeFromEntityBlacklist('twilightforest:naga')
-mods.woot.policy.removeFromEntityModBlacklist('botania')
 mods.woot.policy.removeFromEntityWhitelist('minecraft:wither_skeleton')
 mods.woot.policy.removeFromGenerateOnlyList('minecraft:wither_skeleton')
-mods.woot.policy.removeFromItemBlacklist(item('minecraft:sugar'))
 mods.woot.policy.removeFromItemModBlacklist('minecraft')
+mods.woot.policy.removeFromEntityModBlacklist('botania')
+mods.woot.policy.removeAllFromItemBlacklist()
 mods.woot.policy.removeAllFromEntityBlacklist()
-mods.woot.policy.removeAllFromEntityModBlacklist()
 mods.woot.policy.removeAllFromEntityWhitelist()
 mods.woot.policy.removeAllFromGenerateOnlyList()
-mods.woot.policy.removeAllFromItemBlacklist()
 mods.woot.policy.removeAllFromItemModBlacklist()
+mods.woot.policy.removeAllFromEntityModBlacklist()
 mods.woot.policy.removeAll()
 ```
 

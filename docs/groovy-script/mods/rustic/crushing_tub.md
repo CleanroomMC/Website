@@ -13,15 +13,20 @@ Convert items into a fluidstacks and optionally itemstacks when any entity, typi
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.rustic.crushing_tub` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.rustic.crushing_tub/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.rustic.crushingtub
 mods.rustic.crushingTub
 mods.rustic.CrushingTub
+mods.rustic.crushing_tub/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.rustic.CrushingTub
     ```groovy:no-line-numbers
     mods.rustic.crushing_tub.add(ICrushingTubRecipe)
     ```
-
 
 ### Recipe Builder
 

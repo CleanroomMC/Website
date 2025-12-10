@@ -13,15 +13,20 @@ Converts four input itemstacks into one output itemstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.calculator.flawless_calculator` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.calculator.flawless_calculator/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.calculator.flawlesscalculator
 mods.calculator.flawlessCalculator
 mods.calculator.FlawlessCalculator
+mods.calculator.flawless_calculator/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.calculator.FlawlessCalculator
     ```groovy:no-line-numbers
     mods.calculator.flawless_calculator.add(CalculatorRecipe)
     ```
-
 
 ### Recipe Builder
 

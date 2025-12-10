@@ -13,15 +13,20 @@ Converts an input fluidstack into an output itemstack at a rate based on up 2 it
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.enderio.vat` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.enderio.vat/* Used as page default */ // [!code focus]
-mods.enderio.Vat
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
 mods.eio.vat
 mods.eio.Vat
+mods.enderio.vat/* Used as page default */ // [!code focus]
+mods.enderio.Vat
 ```
 
+::::::::::
 
 ## Adding Recipes
 

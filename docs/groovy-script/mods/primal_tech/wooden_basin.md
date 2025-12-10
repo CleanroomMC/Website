@@ -17,19 +17,24 @@ The recipe requires items to be inserted in a specific order, which is displayed
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.primal_tech.wooden_basin` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.primal_tech.wooden_basin/* Used as page default */ // [!code focus]
-mods.primal_tech.woodenbasin
-mods.primal_tech.woodenBasin
-mods.primal_tech.WoodenBasin
-mods.primaltech.wooden_basin
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.primaltech.woodenbasin
 mods.primaltech.woodenBasin
 mods.primaltech.WoodenBasin
+mods.primaltech.wooden_basin
+mods.primal_tech.woodenbasin
+mods.primal_tech.woodenBasin
+mods.primal_tech.WoodenBasin
+mods.primal_tech.wooden_basin/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -44,7 +49,6 @@ mods.primaltech.WoodenBasin
     ```groovy:no-line-numbers
     mods.primal_tech.wooden_basin.add(ItemStack, FluidStack, IIngredient...)
     ```
-
 
 ### Recipe Builder
 

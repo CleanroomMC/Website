@@ -13,15 +13,20 @@ Converts two input itemstacks into one output itemstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.calculator.scientific_calculator` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.calculator.scientific_calculator/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.calculator.scientificcalculator
 mods.calculator.scientificCalculator
 mods.calculator.ScientificCalculator
+mods.calculator.scientific_calculator/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.calculator.ScientificCalculator
     ```groovy:no-line-numbers
     mods.calculator.scientific_calculator.add(CalculatorRecipe)
     ```
-
 
 ### Recipe Builder
 

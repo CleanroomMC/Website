@@ -13,21 +13,20 @@ Entry creates a new entry in a given category.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.botania.entry` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.botania.entry/* Used as page default */ // [!code focus]
 mods.botania.Entry
 ```
 
+::::::::::
 
 ## Editing Values
-
-- Sets the Knowledge type of the given entry in the format `entry`, `type`:
-
-    ```groovy:no-line-numbers
-    mods.botania.entry.setKnowledgeType(String, KnowledgeType)
-    ```
 
 - Sets the Knowledge type of the given entry in the format `entry`, `type`:
 
@@ -35,14 +34,13 @@ mods.botania.Entry
     mods.botania.entry.setKnowledgeType(String, String)
     ```
 
-
-## Adding Entries
-
-- Adds a new Lexica Botania entry to the given Category in the format `name`, `category`:
+- Sets the Knowledge type of the given entry in the format `entry`, `type`:
 
     ```groovy:no-line-numbers
-    mods.botania.entry.add(String, LexiconCategory)
+    mods.botania.entry.setKnowledgeType(String, KnowledgeType)
     ```
+
+## Adding Entries
 
 - Adds a new Lexica Botania entry to the given Category in the format `name`, `category`:
 
@@ -50,6 +48,11 @@ mods.botania.Entry
     mods.botania.entry.add(String, String)
     ```
 
+- Adds a new Lexica Botania entry to the given Category in the format `name`, `category`:
+
+    ```groovy:no-line-numbers
+    mods.botania.entry.add(String, LexiconCategory)
+    ```
 
 ### Recipe Builder
 
@@ -147,10 +150,10 @@ mods.botania.entry.entryBuilder()
     mods.botania.entry.remove(String)
     ```
 
-- Removes all entries in the given Lexica Botania Category:
+- Removes the given Entry from the Lexica Botania:
 
     ```groovy:no-line-numbers
-    mods.botania.entry.removeByCategory(LexiconCategory)
+    mods.botania.entry.removeEntry(String)
     ```
 
 - Removes all entries in the given Lexica Botania Category:
@@ -159,10 +162,10 @@ mods.botania.entry.entryBuilder()
     mods.botania.entry.removeByCategory(String)
     ```
 
-- Removes the given Entry from the Lexica Botania:
+- Removes all entries in the given Lexica Botania Category:
 
     ```groovy:no-line-numbers
-    mods.botania.entry.removeEntry(String)
+    mods.botania.entry.removeByCategory(LexiconCategory)
     ```
 
 - Removes all registered recipes:

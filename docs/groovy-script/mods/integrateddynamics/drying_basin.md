@@ -13,19 +13,24 @@ Takes either an item or fluid input and gives either an item or fluid output aft
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.integrateddynamics.drying_basin` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.id.drying_basin
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.id.dryingbasin
 mods.id.dryingBasin
 mods.id.DryingBasin
-mods.integrateddynamics.drying_basin/* Used as page default */ // [!code focus]
+mods.id.drying_basin
 mods.integrateddynamics.dryingbasin
 mods.integrateddynamics.dryingBasin
 mods.integrateddynamics.DryingBasin
+mods.integrateddynamics.drying_basin/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.integrateddynamics.DryingBasin
     ```groovy:no-line-numbers
     mods.integrateddynamics.drying_basin.add(IRecipe<IngredientAndFluidStackRecipeComponent, IngredientAndFluidStackRecipeComponent, DurationRecipeProperties>)
     ```
-
 
 ### Recipe Builder
 

@@ -13,23 +13,28 @@ Converts an input itemstack and fluidstack into an output itemstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersiveengineering.bottling_machine` will be used as the default on this page.
 
-```groovy:no-line-numbers {7}
-mods.ie.bottling_machine
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {12}
+mods.ie.bottling
+mods.ie.Bottling
 mods.ie.bottlingmachine
 mods.ie.bottlingMachine
 mods.ie.BottlingMachine
-mods.ie.bottling
-mods.ie.Bottling
-mods.immersiveengineering.bottling_machine/* Used as page default */ // [!code focus]
+mods.ie.bottling_machine
+mods.immersiveengineering.bottling
+mods.immersiveengineering.Bottling
 mods.immersiveengineering.bottlingmachine
 mods.immersiveengineering.bottlingMachine
 mods.immersiveengineering.BottlingMachine
-mods.immersiveengineering.bottling
-mods.immersiveengineering.Bottling
+mods.immersiveengineering.bottling_machine/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -44,7 +49,6 @@ mods.immersiveengineering.Bottling
     ```groovy:no-line-numbers
     mods.immersiveengineering.bottling_machine.add(ItemStack, IIngredient, FluidStack)
     ```
-
 
 ### Recipe Builder
 

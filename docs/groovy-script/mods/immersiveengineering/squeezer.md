@@ -13,7 +13,11 @@ Converts an input itemstack into either an output itemstack, fluidstack, or both
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersiveengineering.squeezer` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.ie.squeezer
@@ -22,6 +26,7 @@ mods.immersiveengineering.squeezer/* Used as page default */ // [!code focus]
 mods.immersiveengineering.Squeezer
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -36,7 +41,6 @@ mods.immersiveengineering.Squeezer
     ```groovy:no-line-numbers
     mods.immersiveengineering.squeezer.add(FluidStack, ItemStack, IIngredient, int)
     ```
-
 
 ### Recipe Builder
 
@@ -139,6 +143,12 @@ mods.immersiveengineering.squeezer.recipeBuilder()
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers
+    mods.immersiveengineering.squeezer.removeByOutput(ItemStack)
+    ```
+
+- Removes all recipes that match the given output:
+
+    ```groovy:no-line-numbers
     mods.immersiveengineering.squeezer.removeByOutput(FluidStack)
     ```
 
@@ -146,12 +156,6 @@ mods.immersiveengineering.squeezer.recipeBuilder()
 
     ```groovy:no-line-numbers
     mods.immersiveengineering.squeezer.removeByOutput(FluidStack, ItemStack)
-    ```
-
-- Removes all recipes that match the given output:
-
-    ```groovy:no-line-numbers
-    mods.immersiveengineering.squeezer.removeByOutput(ItemStack)
     ```
 
 - Removes all registered recipes:
@@ -163,8 +167,8 @@ mods.immersiveengineering.squeezer.recipeBuilder()
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.immersiveengineering.squeezer.removeByInput(item('minecraft:wheat_seeds'))
-mods.immersiveengineering.squeezer.removeByOutput(fluid('plantoil'))
 mods.immersiveengineering.squeezer.removeByOutput(item('immersiveengineering:material:18'))
+mods.immersiveengineering.squeezer.removeByOutput(fluid('plantoil'))
 mods.immersiveengineering.squeezer.removeAll()
 ```
 

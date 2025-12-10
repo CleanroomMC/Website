@@ -13,15 +13,20 @@ Converts an input fluidstack into heat for the Boiler multiblock structure over 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersivetech.boiler_fuel` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.immersivetech.boiler_fuel/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.immersivetech.boilerfuel
 mods.immersivetech.boilerFuel
 mods.immersivetech.BoilerFuel
+mods.immersivetech.boiler_fuel/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -30,7 +35,6 @@ mods.immersivetech.BoilerFuel
     ```groovy:no-line-numbers
     mods.immersivetech.boiler_fuel.add(BoilerRecipe.BoilerFuelRecipe)
     ```
-
 
 ### Recipe Builder
 

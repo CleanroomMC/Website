@@ -13,19 +13,24 @@ Converts an input itemstack and input fluidstack into an output itemstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.industrialforegoing.ore_sieve` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.industrialforegoing.ore_sieve/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.industrialforegoing.oresieve
 mods.industrialforegoing.oreSieve
 mods.industrialforegoing.OreSieve
-mods.industrialforegoing.fluid_sieving
+mods.industrialforegoing.ore_sieve/* Used as page default */ // [!code focus]
 mods.industrialforegoing.fluidsieving
 mods.industrialforegoing.fluidSieving
 mods.industrialforegoing.FluidSieving
+mods.industrialforegoing.fluid_sieving
 ```
 
+::::::::::
 
 ## Adding Recipes
 

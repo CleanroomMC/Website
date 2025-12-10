@@ -13,15 +13,20 @@ Converts an input itemstack into up to 3 output itemstacks, with the ability to 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.factorytech.magnet_centrifuge` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.factorytech.magnet_centrifuge/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.factorytech.magnetcentrifuge
 mods.factorytech.magnetCentrifuge
 mods.factorytech.MagnetCentrifuge
+mods.factorytech.magnet_centrifuge/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.factorytech.MagnetCentrifuge
     ```groovy:no-line-numbers
     mods.factorytech.magnet_centrifuge.add(MachineRecipes.MachineRecipe<ItemStack, ItemStack[]>)
     ```
-
 
 ### Recipe Builder
 

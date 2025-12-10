@@ -13,13 +13,18 @@ Page creates a new page to be used in entries.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.botania.page` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.botania.page/* Used as page default */ // [!code focus]
 mods.botania.Page
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -27,60 +32,6 @@ mods.botania.Page
 
     ```groovy:no-line-numbers
     mods.botania.page.add(LexiconEntry, LexiconPage, int)
-    ```
-
-- Returns a `PageBrew` for use in adding to a LexiconEntry:
-
-    ```groovy:no-line-numbers
-    mods.botania.page.createBrewingPage(String, String, RecipeBrew)
-    ```
-
-- Returns a `PageCraftingRecipe` for use in adding to a LexiconEntry:
-
-    ```groovy:no-line-numbers
-    mods.botania.page.createCraftingPage(String, String...)
-    ```
-
-- Returns a `PageElvenRecipe` for use in adding to a LexiconEntry:
-
-    ```groovy:no-line-numbers
-    mods.botania.page.createElvenTradePage(String, RecipeElvenTrade...)
-    ```
-
-- Returns a `PageEntity` for use in adding to a LexiconEntry:
-
-    ```groovy:no-line-numbers
-    mods.botania.page.createEntityPage(String, int, EntityEntry)
-    ```
-
-- Returns a `PageEntity` for use in adding to a LexiconEntry:
-
-    ```groovy:no-line-numbers
-    mods.botania.page.createEntityPage(String, int, String)
-    ```
-
-- Returns a `PageImage` for use in adding to a LexiconEntry:
-
-    ```groovy:no-line-numbers
-    mods.botania.page.createImagePage(String, String)
-    ```
-
-- Returns a `PageManaInfusionRecipe` for use in adding to a LexiconEntry:
-
-    ```groovy:no-line-numbers
-    mods.botania.page.createInfusionPage(String, RecipeManaInfusion...)
-    ```
-
-- Returns a `PageLoreText` for use in adding to a LexiconEntry:
-
-    ```groovy:no-line-numbers
-    mods.botania.page.createLoreTextPage(String)
-    ```
-
-- Returns a `PagePetalRecipe` for use in adding to a LexiconEntry:
-
-    ```groovy:no-line-numbers
-    mods.botania.page.createPetalPage(String, RecipePetals...)
     ```
 
 - Returns a `PageRuneRecipe` for use in adding to a LexiconEntry:
@@ -95,19 +46,73 @@ mods.botania.Page
     mods.botania.page.createTextPage(String)
     ```
 
+- Returns a `PageImage` for use in adding to a LexiconEntry:
+
+    ```groovy:no-line-numbers
+    mods.botania.page.createImagePage(String, String)
+    ```
+
+- Returns a `PagePetalRecipe` for use in adding to a LexiconEntry:
+
+    ```groovy:no-line-numbers
+    mods.botania.page.createPetalPage(String, RecipePetals...)
+    ```
+
+- Returns a `PageEntity` for use in adding to a LexiconEntry:
+
+    ```groovy:no-line-numbers
+    mods.botania.page.createEntityPage(String, int, String)
+    ```
+
+- Returns a `PageEntity` for use in adding to a LexiconEntry:
+
+    ```groovy:no-line-numbers
+    mods.botania.page.createEntityPage(String, int, EntityEntry)
+    ```
+
+- Returns a `PageBrew` for use in adding to a LexiconEntry:
+
+    ```groovy:no-line-numbers
+    mods.botania.page.createBrewingPage(String, String, RecipeBrew)
+    ```
+
+- Returns a `PageCraftingRecipe` for use in adding to a LexiconEntry:
+
+    ```groovy:no-line-numbers
+    mods.botania.page.createCraftingPage(String, String...)
+    ```
+
+- Returns a `PageManaInfusionRecipe` for use in adding to a LexiconEntry:
+
+    ```groovy:no-line-numbers
+    mods.botania.page.createInfusionPage(String, RecipeManaInfusion...)
+    ```
+
+- Returns a `PageLoreText` for use in adding to a LexiconEntry:
+
+    ```groovy:no-line-numbers
+    mods.botania.page.createLoreTextPage(String)
+    ```
+
+- Returns a `PageElvenRecipe` for use in adding to a LexiconEntry:
+
+    ```groovy:no-line-numbers
+    mods.botania.page.createElvenTradePage(String, RecipeElvenTrade...)
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.botania.page.createBrewingPage('groovy.exampleBrewingPage', 'bottomText', 'bottomText', mods.botania.brewrecipe.recipeBuilder().input(item('minecraft:clay'), ore('ingotGold'), ore('gemDiamond')).brew(brew('absorption')).register())
-mods.botania.page.createCraftingPage('groovy.exampleCraftingPage', 'minecraft:clay')
-mods.botania.page.createElvenTradePage('groovy.exampleElvenTradePage', mods.botania.elventrade.recipeBuilder().input(ore('ingotGold'), ore('ingotIron')).output(item('botania:manaresource:7')).register())
-mods.botania.page.createEntityPage('groovy.exampleEntityPage', 5, entity('minecraft:wither_skeleton'))
-mods.botania.page.createEntityPage('groovy.exampleEntityPage', 100, 'minecraft:wither_skeleton')
-mods.botania.page.createImagePage('groovy.exampleImagePage', 'minecraft:textures/items/apple.png')
-mods.botania.page.createInfusionPage('groovy.exampleInfusionPage', mods.botania.manainfusion.recipeBuilder().input(ore('ingotGold')).output(item('botania:manaresource', 1)).mana(500).catalyst(blockstate('minecraft:stone')).register())
-mods.botania.page.createLoreTextPage('groovy.exampleLoreTextPage')
-mods.botania.page.createPetalPage('groovy.examplePetalPage', mods.botania.apothecary.recipeBuilder().input(ore('blockGold'), ore('ingotIron'), item('minecraft:apple')).output(item('minecraft:golden_apple')).register())
 mods.botania.page.createRunePage('groovy.exampleRunePage', mods.botania.runealtar.recipeBuilder().input(ore('gemEmerald'), item('minecraft:apple')).output(item('minecraft:diamond')).mana(500).register())
 mods.botania.page.createTextPage('groovy.exampleTextPage')
+mods.botania.page.createImagePage('groovy.exampleImagePage', 'minecraft:textures/items/apple.png')
+mods.botania.page.createPetalPage('groovy.examplePetalPage', mods.botania.apothecary.recipeBuilder().input(ore('blockGold'), ore('ingotIron'), item('minecraft:apple')).output(item('minecraft:golden_apple')).register())
+mods.botania.page.createEntityPage('groovy.exampleEntityPage', 100, 'minecraft:wither_skeleton')
+mods.botania.page.createEntityPage('groovy.exampleEntityPage', 5, entity('minecraft:wither_skeleton'))
+mods.botania.page.createBrewingPage('groovy.exampleBrewingPage', 'bottomText', 'bottomText', mods.botania.brewrecipe.recipeBuilder().input(item('minecraft:clay'), ore('ingotGold'), ore('gemDiamond')).brew(brew('absorption')).register())
+mods.botania.page.createCraftingPage('groovy.exampleCraftingPage', 'minecraft:clay')
+mods.botania.page.createInfusionPage('groovy.exampleInfusionPage', mods.botania.manainfusion.recipeBuilder().input(ore('ingotGold')).output(item('botania:manaresource', 1)).mana(500).catalyst(blockstate('minecraft:stone')).register())
+mods.botania.page.createLoreTextPage('groovy.exampleLoreTextPage')
+mods.botania.page.createElvenTradePage('groovy.exampleElvenTradePage', mods.botania.elventrade.recipeBuilder().input(ore('ingotGold'), ore('ingotIron')).output(item('botania:manaresource:7')).register())
 ```
 
 ::::::::::
@@ -123,13 +128,13 @@ mods.botania.page.createTextPage('groovy.exampleTextPage')
 - Removes all pages from the given LexiconEntry:
 
     ```groovy:no-line-numbers
-    mods.botania.page.removeByEntry(LexiconEntry)
+    mods.botania.page.removeByEntry(String)
     ```
 
 - Removes all pages from the given LexiconEntry:
 
     ```groovy:no-line-numbers
-    mods.botania.page.removeByEntry(String)
+    mods.botania.page.removeByEntry(LexiconEntry)
     ```
 
 - Removes all registered recipes:

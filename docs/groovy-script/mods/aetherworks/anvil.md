@@ -13,13 +13,18 @@ Converts an input item into an output item using the Aetherium Forge Anvil. The 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.aetherworks.anvil` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.aetherworks.anvil/* Used as page default */ // [!code focus]
 mods.aetherworks.Anvil
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -29,7 +34,18 @@ Just like other recipe types, the Aetherium Anvil also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.aetherworks.anvil.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.aetherworks.anvil.recipeBuilder()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -87,11 +103,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     temperatureFluctuation(int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `v0id.aw.common.recipe.AetheriumAnvilRecipes$AetheriumAnvilRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

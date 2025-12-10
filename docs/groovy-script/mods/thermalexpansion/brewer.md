@@ -13,7 +13,11 @@ Converts an input fluidstack and input itemstack into an output fluidstack, cost
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.brewer` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {5}
 mods.thermal.brewer
@@ -26,6 +30,7 @@ mods.thermalexpansion.imbuer
 mods.thermalexpansion.Imbuer
 ```
 
+::::::::::
 
 ## Adding Recipes
 

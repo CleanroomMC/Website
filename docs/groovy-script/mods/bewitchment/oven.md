@@ -13,13 +13,18 @@ Converts an input itemstack into an output itemstack, with the ability to have a
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bewitchment.oven` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.bewitchment.oven/* Used as page default */ // [!code focus]
 mods.bewitchment.Oven
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.bewitchment.Oven
     ```groovy:no-line-numbers
     mods.bewitchment.oven.add(OvenRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -116,10 +120,10 @@ mods.bewitchment.oven.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.oven.remove(ResourceLocation)
+    mods.bewitchment.oven.remove(OvenRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -128,10 +132,10 @@ mods.bewitchment.oven.recipeBuilder()
     mods.bewitchment.oven.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.oven.remove(OvenRecipe)
+    mods.bewitchment.oven.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

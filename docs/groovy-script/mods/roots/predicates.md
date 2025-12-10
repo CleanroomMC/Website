@@ -13,13 +13,18 @@ Predicates are used in Transmutation and RunicShearBlock. They either match all 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.roots.predicates` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.roots.predicates/* Used as page default */ // [!code focus]
 mods.roots.Predicates
 ```
 
+::::::::::
 
 ## Adding Entries
 

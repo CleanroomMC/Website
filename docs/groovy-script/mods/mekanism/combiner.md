@@ -13,13 +13,18 @@ Combines an input itemstack with an extra itemstack to create an output itemstac
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.mekanism.combiner` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.mekanism.combiner/* Used as page default */ // [!code focus]
 mods.mekanism.Combiner
 ```
 
+::::::::::
 
 ## Adding Recipes
 

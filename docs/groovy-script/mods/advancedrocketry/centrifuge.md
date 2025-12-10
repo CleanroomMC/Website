@@ -21,13 +21,18 @@ The recipes performed in this machine can have more than 9 outputs, but this mak
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.advancedrocketry.centrifuge` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.advancedrocketry.centrifuge/* Used as page default */ // [!code focus]
 mods.advancedrocketry.Centrifuge
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -36,7 +41,6 @@ mods.advancedrocketry.Centrifuge
     ```groovy:no-line-numbers
     mods.advancedrocketry.centrifuge.add(R)
     ```
-
 
 ### Recipe Builder
 

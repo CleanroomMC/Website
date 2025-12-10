@@ -13,28 +13,33 @@ Can convert multiple items into a new one when its full.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pyrotech.compost_bin` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.pyrotech.compost_bin/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.pyrotech.compostbin
 mods.pyrotech.compostBin
 mods.pyrotech.CompostBin
+mods.pyrotech.compost_bin/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds recipes in the format `name`, `input`, `output`, `compostValue`:
-
-    ```groovy:no-line-numbers
-    mods.pyrotech.compost_bin.add(String, IIngredient, ItemStack, int)
-    ```
 
 - Adds the recipe:
 
     ```groovy:no-line-numbers
     mods.pyrotech.compost_bin.add(CompostBinRecipe)
+    ```
+
+- Adds recipes in the format `name`, `input`, `output`, `compostValue`:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.compost_bin.add(String, IIngredient, ItemStack, int)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -117,10 +122,10 @@ mods.pyrotech.compost_bin.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.compost_bin.remove(ResourceLocation)
+    mods.pyrotech.compost_bin.remove(CompostBinRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -129,10 +134,10 @@ mods.pyrotech.compost_bin.recipeBuilder()
     mods.pyrotech.compost_bin.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.compost_bin.remove(CompostBinRecipe)
+    mods.pyrotech.compost_bin.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

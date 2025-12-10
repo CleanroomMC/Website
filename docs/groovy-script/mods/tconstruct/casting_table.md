@@ -13,29 +13,34 @@ Pours out fluid onto a table to solidify it into a solid, optionally with a cast
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.tconstruct.casting_table` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.tconstruct.casting_table/* Used as page default */ // [!code focus]
-mods.tconstruct.castingtable
-mods.tconstruct.castingTable
-mods.tconstruct.CastingTable
-mods.tconstruct.table
-mods.tconstruct.Table
-mods.tinkersconstruct.casting_table
-mods.tinkersconstruct.castingtable
-mods.tinkersconstruct.castingTable
-mods.tinkersconstruct.CastingTable
-mods.tinkersconstruct.table
-mods.tinkersconstruct.Table
-mods.ticon.casting_table
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {12}
+mods.ticon.table
+mods.ticon.Table
 mods.ticon.castingtable
 mods.ticon.castingTable
 mods.ticon.CastingTable
-mods.ticon.table
-mods.ticon.Table
+mods.ticon.casting_table
+mods.tconstruct.table
+mods.tconstruct.Table
+mods.tconstruct.castingtable
+mods.tconstruct.castingTable
+mods.tconstruct.CastingTable
+mods.tconstruct.casting_table/* Used as page default */ // [!code focus]
+mods.tinkersconstruct.table
+mods.tinkersconstruct.Table
+mods.tinkersconstruct.castingtable
+mods.tinkersconstruct.castingTable
+mods.tinkersconstruct.CastingTable
+mods.tinkersconstruct.casting_table
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -44,7 +49,6 @@ mods.ticon.Table
     ```groovy:no-line-numbers
     mods.tconstruct.casting_table.add(ICastingRecipe)
     ```
-
 
 ### Recipe Builder
 

@@ -13,15 +13,20 @@ Converts one or two itemstack inputs into up to four an itemstack output after a
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.techreborn.distillation_tower` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.techreborn.distillation_tower/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.techreborn.distillationtower
 mods.techreborn.distillationTower
 mods.techreborn.DistillationTower
+mods.techreborn.distillation_tower/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.techreborn.DistillationTower
     ```groovy:no-line-numbers
     mods.techreborn.distillation_tower.add(R)
     ```
-
 
 ### Recipe Builder
 

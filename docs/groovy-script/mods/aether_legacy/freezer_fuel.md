@@ -13,32 +13,37 @@ source_code_link: "https://github.com/CleanroomMC/GroovyScript/blob/master/src/m
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.aether_legacy.freezer_fuel` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.aether_legacy.freezer_fuel/* Used as page default */ // [!code focus]
-mods.aether_legacy.freezerfuel
-mods.aether_legacy.freezerFuel
-mods.aether_legacy.FreezerFuel
-mods.aether.freezer_fuel
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.aether.freezerfuel
 mods.aether.freezerFuel
 mods.aether.FreezerFuel
+mods.aether.freezer_fuel
+mods.aether_legacy.freezerfuel
+mods.aether_legacy.freezerFuel
+mods.aether_legacy.FreezerFuel
+mods.aether_legacy.freezer_fuel/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds a Freezer fuel in the format `item`, `timeGiven`:
-
-    ```groovy:no-line-numbers
-    mods.aether_legacy.freezer_fuel.add(ItemStack, int)
-    ```
 
 - Adds the recipe:
 
     ```groovy:no-line-numbers
     mods.aether_legacy.freezer_fuel.add(AetherFreezableFuel)
+    ```
+
+- Adds a Freezer fuel in the format `item`, `timeGiven`:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.freezer_fuel.add(ItemStack, int)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -50,10 +55,10 @@ mods.aether_legacy.freezer_fuel.add(item('minecraft:packed_ice'), 1000)
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.aether_legacy.freezer_fuel.remove(ResourceLocation)
+    mods.aether_legacy.freezer_fuel.remove(AetherFreezableFuel)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -62,10 +67,10 @@ mods.aether_legacy.freezer_fuel.add(item('minecraft:packed_ice'), 1000)
     mods.aether_legacy.freezer_fuel.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.aether_legacy.freezer_fuel.remove(AetherFreezableFuel)
+    mods.aether_legacy.freezer_fuel.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

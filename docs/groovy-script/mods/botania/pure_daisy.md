@@ -13,15 +13,20 @@ Convert a given block to another blockstate after a period of time.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.botania.pure_daisy` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.botania.pure_daisy/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.botania.puredaisy
 mods.botania.pureDaisy
 mods.botania.PureDaisy
+mods.botania.pure_daisy/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -42,7 +47,6 @@ mods.botania.PureDaisy
     ```groovy:no-line-numbers
     mods.botania.pure_daisy.add(IBlockState, IBlockState, int)
     ```
-
 
 ### Recipe Builder
 
@@ -123,6 +127,12 @@ mods.botania.pure_daisy.recipeBuilder()
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
+    mods.botania.pure_daisy.removeByInput(String)
+    ```
+
+- Removes all recipes that match the given input:
+
+    ```groovy:no-line-numbers
     mods.botania.pure_daisy.removeByInput(IBlockState)
     ```
 
@@ -130,12 +140,6 @@ mods.botania.pure_daisy.recipeBuilder()
 
     ```groovy:no-line-numbers
     mods.botania.pure_daisy.removeByInput(OreDictIngredient)
-    ```
-
-- Removes all recipes that match the given input:
-
-    ```groovy:no-line-numbers
-    mods.botania.pure_daisy.removeByInput(String)
     ```
 
 - Removes all recipes that match the given output:

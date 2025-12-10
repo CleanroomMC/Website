@@ -17,19 +17,24 @@ Tier 6 must be enabled in the config to use an Orb of that tier in the Alchemy T
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bloodmagic.alchemy_table` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.bm.alchemy_table
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.bm.alchemytable
 mods.bm.alchemyTable
 mods.bm.AlchemyTable
-mods.bloodmagic.alchemy_table/* Used as page default */ // [!code focus]
+mods.bm.alchemy_table
 mods.bloodmagic.alchemytable
 mods.bloodmagic.alchemyTable
 mods.bloodmagic.AlchemyTable
+mods.bloodmagic.alchemy_table/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -44,7 +49,6 @@ mods.bloodmagic.AlchemyTable
     ```groovy:no-line-numbers
     mods.bloodmagic.alchemy_table.add(NonNullList<Ingredient>, ItemStack, int, int, int)
     ```
-
 
 ### Recipe Builder
 

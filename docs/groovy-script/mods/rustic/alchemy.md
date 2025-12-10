@@ -13,7 +13,11 @@ Converts some number of input itemstacks and a fluidstack into a single output s
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.rustic.alchemy` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.rustic.alchemy/* Used as page default */ // [!code focus]
@@ -22,6 +26,7 @@ mods.rustic.condenser
 mods.rustic.Condenser
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.rustic.Condenser
     ```groovy:no-line-numbers
     mods.rustic.alchemy.add(ICondenserRecipe)
     ```
-
 
 ### Recipe Builder
 

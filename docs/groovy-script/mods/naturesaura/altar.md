@@ -13,7 +13,11 @@ Converts an input itemstack into an itemstack in a multiblock structure, with an
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.naturesaura.altar` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.naturesaura.altar/* Used as page default */ // [!code focus]
@@ -22,6 +26,7 @@ mods.naturesaura.infusion
 mods.naturesaura.Infusion
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -121,10 +126,10 @@ mods.naturesaura.altar.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes all recipes that match the given catalyst:
+- Removes the Natural Altar Infusion recipe with the given name:
 
     ```groovy:no-line-numbers
-    mods.naturesaura.altar.removeByCatalyst(IIngredient)
+    mods.naturesaura.altar.removeByName(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:
@@ -133,16 +138,16 @@ mods.naturesaura.altar.recipeBuilder()
     mods.naturesaura.altar.removeByInput(IIngredient)
     ```
 
-- Removes the Natural Altar Infusion recipe with the given name:
-
-    ```groovy:no-line-numbers
-    mods.naturesaura.altar.removeByName(ResourceLocation)
-    ```
-
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers
     mods.naturesaura.altar.removeByOutput(IIngredient)
+    ```
+
+- Removes all recipes that match the given catalyst:
+
+    ```groovy:no-line-numbers
+    mods.naturesaura.altar.removeByCatalyst(IIngredient)
     ```
 
 - Removes all registered recipes:
@@ -153,10 +158,10 @@ mods.naturesaura.altar.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.naturesaura.altar.removeByCatalyst(item('naturesaura:crushing_catalyst'))
-mods.naturesaura.altar.removeByInput(item('minecraft:rotten_flesh'))
 mods.naturesaura.altar.removeByName(resource('naturesaura:infused_iron'))
+mods.naturesaura.altar.removeByInput(item('minecraft:rotten_flesh'))
 mods.naturesaura.altar.removeByOutput(item('minecraft:soul_sand'))
+mods.naturesaura.altar.removeByCatalyst(item('naturesaura:crushing_catalyst'))
 mods.naturesaura.altar.removeAll()
 ```
 

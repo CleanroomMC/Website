@@ -13,15 +13,20 @@ Converts up to 6 input itemstacks into an output itemstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.cyclicmagic.packager` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.cyclicmagic.packager/* Used as page default */ // [!code focus]
-mods.cyclicmagic.Packager
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
 mods.cyclic.packager
 mods.cyclic.Packager
+mods.cyclicmagic.packager/* Used as page default */ // [!code focus]
+mods.cyclicmagic.Packager
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.cyclic.Packager
     ```groovy:no-line-numbers
     mods.cyclicmagic.packager.add(RecipePackager)
     ```
-
 
 ### Recipe Builder
 

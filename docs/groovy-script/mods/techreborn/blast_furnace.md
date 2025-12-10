@@ -17,15 +17,20 @@ Heat is increased by applying Kanthal and Nichrome Coils, improving the quality 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.techreborn.blast_furnace` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.techreborn.blast_furnace/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.techreborn.blastfurnace
 mods.techreborn.blastFurnace
 mods.techreborn.BlastFurnace
+mods.techreborn.blast_furnace/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.techreborn.BlastFurnace
     ```groovy:no-line-numbers
     mods.techreborn.blast_furnace.add(R)
     ```
-
 
 ### Recipe Builder
 

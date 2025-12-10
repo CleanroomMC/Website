@@ -13,19 +13,24 @@ Similar to a normal crafting table, but 4x4 instead.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithmods.anvil_crafting` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.betterwithmods.anvil_crafting/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.betterwithmods.anvilcrafting
 mods.betterwithmods.anvilCrafting
 mods.betterwithmods.AnvilCrafting
-mods.betterwithmods.soulforged_steel_anvil
+mods.betterwithmods.anvil_crafting/* Used as page default */ // [!code focus]
 mods.betterwithmods.soulforgedsteelanvil
 mods.betterwithmods.soulforgedSteelAnvil
 mods.betterwithmods.SoulforgedSteelAnvil
+mods.betterwithmods.soulforged_steel_anvil
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.betterwithmods.SoulforgedSteelAnvil
     ```groovy:no-line-numbers
     mods.betterwithmods.anvil_crafting.add(IRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -124,9 +128,9 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 mods.betterwithmods.anvil_crafting.shapedBuilder()
     .output(item('minecraft:diamond') * 32)
     .matrix([[item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),null],
-            [item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),null],
-            [item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),null],
-            [null,null,null,item('minecraft:gold_ingot').transform({ _ -> item('minecraft:diamond') })]])
+             [item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),null],
+             [item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),null],
+             [null,null,null,item('minecraft:gold_ingot').transform({ _ -> item('minecraft:diamond') })]])
     .register()
 
 mods.betterwithmods.anvil_crafting.shapedBuilder()

@@ -13,13 +13,18 @@ Converts an input gasstack into an output itemstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.mekanism.crystallizer` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.mekanism.crystallizer/* Used as page default */ // [!code focus]
 mods.mekanism.Crystallizer
 ```
 
+::::::::::
 
 ## Adding Recipes
 

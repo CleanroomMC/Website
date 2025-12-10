@@ -17,13 +17,18 @@ Reloading will not change chunks already 'discovered'.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersivepetroleum.reservoir` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.immersivepetroleum.reservoir/* Used as page default */ // [!code focus]
 mods.immersivepetroleum.Reservoir
 ```
 
+::::::::::
 
 ## Adding Entries
 

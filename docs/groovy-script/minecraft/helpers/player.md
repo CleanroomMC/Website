@@ -21,31 +21,42 @@ When testing the Starting Inventory items, use `setTestStartingItems(true)` to a
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `minecraft.player` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-minecraft.player/* Used as page default */ // [!code focus]
-minecraft.Player
-Minecraft.player
-Minecraft.Player
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {9}
+mc.player
+mc.Player
+MC.player
+MC.Player
 vanilla.player
 vanilla.Player
 Vanilla.player
 Vanilla.Player
+minecraft.player/* Used as page default */ // [!code focus]
+minecraft.Player
+Minecraft.player
+Minecraft.Player
 mods.mc.player
 mods.mc.Player
+mods.MC.player
+mods.MC.Player
+mods.vanilla.player
+mods.vanilla.Player
+mods.Vanilla.player
+mods.Vanilla.Player
 mods.minecraft.player
 mods.minecraft.Player
+mods.Minecraft.player
+mods.Minecraft.Player
 ```
 
+::::::::::
 
 ## Editing Values
-
-- Sets if the player inventory is cleared prior to giving the player these items:
-
-    ```groovy:no-line-numbers
-    minecraft.player.setReplaceDefaultInventory(boolean)
-    ```
 
 - Sets if items given when joining the world regardless of if the flag has already been set:
 
@@ -53,10 +64,16 @@ mods.minecraft.Player
     minecraft.player.setTestStartingItems(boolean)
     ```
 
+- Sets if the player inventory is cleared prior to giving the player these items:
+
+    ```groovy:no-line-numbers
+    minecraft.player.setReplaceDefaultInventory(boolean)
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-minecraft.player.setReplaceDefaultInventory(true)
 minecraft.player.setTestStartingItems(true)
+minecraft.player.setReplaceDefaultInventory(true)
 ```
 
 ::::::::::

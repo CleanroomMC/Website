@@ -13,7 +13,11 @@ Converts an input item into an output itemstack, consuming Sulfur and Swamp Wate
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thebetweenlands.purifier` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.betweenlands.purifier
@@ -22,6 +26,7 @@ mods.thebetweenlands.purifier/* Used as page default */ // [!code focus]
 mods.thebetweenlands.Purifier
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.thebetweenlands.Purifier
     ```groovy:no-line-numbers
     mods.thebetweenlands.purifier.add(IPurifierRecipe)
     ```
-
 
 ### Recipe Builder
 

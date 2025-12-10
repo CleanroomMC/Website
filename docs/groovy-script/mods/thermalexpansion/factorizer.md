@@ -13,7 +13,11 @@ Converts an input itemstack into an output itemstack, with the ability to undo t
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.factorizer` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.thermal.factorizer
@@ -22,6 +26,7 @@ mods.thermalexpansion.factorizer/* Used as page default */ // [!code focus]
 mods.thermalexpansion.Factorizer
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.thermalexpansion.Factorizer
     ```groovy:no-line-numbers
     mods.thermalexpansion.factorizer.add(boolean, boolean, IIngredient, ItemStack)
     ```
-
 
 ### Recipe Builder
 
@@ -112,10 +116,10 @@ mods.thermalexpansion.factorizer.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes all recipes with the given IIngredient input for the given mode, with `true` indicating split recipes and `false` indicating combine recipes:
+- Removes all recipes in the given mode, with `true` indicating split recipes, and `false` indicating combine recipes:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.factorizer.removeByInput(boolean, IIngredient)
+    mods.thermalexpansion.factorizer.removeByType(boolean)
     ```
 
 - Removes all recipes with the given IIngredient input for the given mode, with `true` indicating split recipes and `false` indicating combine recipes:
@@ -124,10 +128,10 @@ mods.thermalexpansion.factorizer.recipeBuilder()
     mods.thermalexpansion.factorizer.removeByInput(IIngredient)
     ```
 
-- Removes all recipes with the given IIngredient output for the given mode, with `true` indicating split recipes and `false` indicating combine recipes:
+- Removes all recipes with the given IIngredient input for the given mode, with `true` indicating split recipes and `false` indicating combine recipes:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.factorizer.removeByOutput(boolean, IIngredient)
+    mods.thermalexpansion.factorizer.removeByInput(boolean, IIngredient)
     ```
 
 - Removes all recipes that match the given output:
@@ -136,10 +140,10 @@ mods.thermalexpansion.factorizer.recipeBuilder()
     mods.thermalexpansion.factorizer.removeByOutput(IIngredient)
     ```
 
-- Removes all recipes in the given mode, with `true` indicating split recipes, and `false` indicating combine recipes:
+- Removes all recipes with the given IIngredient output for the given mode, with `true` indicating split recipes and `false` indicating combine recipes:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.factorizer.removeByType(boolean)
+    mods.thermalexpansion.factorizer.removeByOutput(boolean, IIngredient)
     ```
 
 - Removes all registered recipes:
@@ -150,11 +154,11 @@ mods.thermalexpansion.factorizer.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.thermalexpansion.factorizer.removeByInput(false, item('minecraft:diamond'))
-mods.thermalexpansion.factorizer.removeByInput(item('minecraft:coal:1'))
-mods.thermalexpansion.factorizer.removeByOutput(false, item('minecraft:coal:1'))
-mods.thermalexpansion.factorizer.removeByOutput(item('minecraft:emerald_block'))
 mods.thermalexpansion.factorizer.removeByType(true)
+mods.thermalexpansion.factorizer.removeByInput(item('minecraft:coal:1'))
+mods.thermalexpansion.factorizer.removeByInput(false, item('minecraft:diamond'))
+mods.thermalexpansion.factorizer.removeByOutput(item('minecraft:emerald_block'))
+mods.thermalexpansion.factorizer.removeByOutput(false, item('minecraft:coal:1'))
 mods.thermalexpansion.factorizer.removeAll()
 ```
 

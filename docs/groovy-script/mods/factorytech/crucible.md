@@ -13,13 +13,18 @@ Converts an input itemstack into an output fluidstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.factorytech.crucible` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.factorytech.crucible/* Used as page default */ // [!code focus]
 mods.factorytech.Crucible
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.factorytech.Crucible
     ```groovy:no-line-numbers
     mods.factorytech.crucible.add(MachineRecipes.MachineRecipe<ItemStack, FluidStack>)
     ```
-
 
 ### Recipe Builder
 

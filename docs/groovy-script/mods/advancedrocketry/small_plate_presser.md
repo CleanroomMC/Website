@@ -13,15 +13,20 @@ Converts a block right below it into output items when powered by redstone.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.advancedrocketry.small_plate_presser` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.advancedrocketry.small_plate_presser/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.advancedrocketry.smallplatepresser
 mods.advancedrocketry.smallPlatePresser
 mods.advancedrocketry.SmallPlatePresser
+mods.advancedrocketry.small_plate_presser/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.advancedrocketry.SmallPlatePresser
     ```groovy:no-line-numbers
     mods.advancedrocketry.small_plate_presser.add(R)
     ```
-
 
 ### Recipe Builder
 

@@ -13,13 +13,18 @@ Converts an input itemstack into an output fluidstack, consuming a set amount of
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.alchemistry.liquifier` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.alchemistry.liquifier/* Used as page default */ // [!code focus]
 mods.alchemistry.Liquifier
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.alchemistry.Liquifier
     ```groovy:no-line-numbers
     mods.alchemistry.liquifier.add(IIngredient, FluidStack)
     ```
-
 
 ### Recipe Builder
 

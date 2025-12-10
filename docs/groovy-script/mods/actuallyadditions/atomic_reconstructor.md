@@ -13,19 +13,24 @@ The Atomic Reconstructor is a block which uses energy to convert a block or item
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.actuallyadditions.atomic_reconstructor` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.aa.atomic_reconstructor
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.aa.atomicreconstructor
 mods.aa.atomicReconstructor
 mods.aa.AtomicReconstructor
-mods.actuallyadditions.atomic_reconstructor/* Used as page default */ // [!code focus]
+mods.aa.atomic_reconstructor
 mods.actuallyadditions.atomicreconstructor
 mods.actuallyadditions.atomicReconstructor
 mods.actuallyadditions.AtomicReconstructor
+mods.actuallyadditions.atomic_reconstructor/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.actuallyadditions.AtomicReconstructor
     ```groovy:no-line-numbers
     mods.actuallyadditions.atomic_reconstructor.add(LensConversionRecipe)
     ```
-
 
 ### Recipe Builder
 

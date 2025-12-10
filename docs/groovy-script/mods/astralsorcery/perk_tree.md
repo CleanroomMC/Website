@@ -17,19 +17,24 @@ This compat is not fully documented. Some or all of its features are not present
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.astralsorcery.perk_tree` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.astralsorcery.perk_tree/* Used as page default */ // [!code focus]
-mods.astralsorcery.perktree
-mods.astralsorcery.perkTree
-mods.astralsorcery.PerkTree
-mods.astral.perk_tree
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.astral.perktree
 mods.astral.perkTree
 mods.astral.PerkTree
+mods.astral.perk_tree
+mods.astralsorcery.perktree
+mods.astralsorcery.perkTree
+mods.astralsorcery.PerkTree
+mods.astralsorcery.perk_tree/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -39,16 +44,16 @@ mods.astral.PerkTree
     mods.astralsorcery.perk_tree.add(AbstractPerk)
     ```
 
-- Adds a connection between two perks:
-
-    ```groovy:no-line-numbers
-    mods.astralsorcery.perk_tree.addConnection(String, String)
-    ```
-
 - Moves the given perk to the x and y co-ords specified in the format `perk`, `x`, `z`:
 
     ```groovy:no-line-numbers
     mods.astralsorcery.perk_tree.movePerk(AbstractPerk, int, int)
+    ```
+
+- Adds a connection between two perks:
+
+    ```groovy:no-line-numbers
+    mods.astralsorcery.perk_tree.addConnection(String, String)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -84,11 +89,11 @@ mods.astralsorcery.perk_tree.remove('astralsorcery:mec_inc_ms_2')
 - Returns the perk with the given name:
 
     ```groovy:no-line-numbers
-    mods.astralsorcery.perk_tree.getPerk(ResourceLocation)
+    mods.astralsorcery.perk_tree.getPerk(String)
     ```
 
 - Returns the perk with the given name:
 
     ```groovy:no-line-numbers
-    mods.astralsorcery.perk_tree.getPerk(String)
+    mods.astralsorcery.perk_tree.getPerk(ResourceLocation)
     ```

@@ -13,15 +13,20 @@ Converts an itemstack input and fluidstack output into three itemstack outputs a
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.techreborn.industrial_sawmill` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.techreborn.industrial_sawmill/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.techreborn.industrialsawmill
 mods.techreborn.industrialSawmill
 mods.techreborn.IndustrialSawmill
+mods.techreborn.industrial_sawmill/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.techreborn.IndustrialSawmill
     ```groovy:no-line-numbers
     mods.techreborn.industrial_sawmill.add(R)
     ```
-
 
 ### Recipe Builder
 

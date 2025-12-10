@@ -13,13 +13,18 @@ Add or remove items from the magnet blacklist.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.botania.magnet` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.botania.magnet/* Used as page default */ // [!code focus]
 mods.botania.Magnet
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -67,7 +72,6 @@ mods.botania.magnet.addToBlacklist(item('minecraft:diamond'))
     ```groovy:no-line-numbers
     mods.botania.magnet.removeFromBlacklist(IIngredient)
     ```
-
 
 ## Getting the value of entries
 

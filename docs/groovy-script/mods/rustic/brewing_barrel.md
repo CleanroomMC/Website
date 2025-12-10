@@ -13,15 +13,20 @@ Converts a fluid into another fluid after a long period of time. If the fluid is
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.rustic.brewing_barrel` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.rustic.brewing_barrel/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.rustic.brewingbarrel
 mods.rustic.brewingBarrel
 mods.rustic.BrewingBarrel
+mods.rustic.brewing_barrel/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.rustic.BrewingBarrel
     ```groovy:no-line-numbers
     mods.rustic.brewing_barrel.add(IBrewingBarrelRecipe)
     ```
-
 
 ### Recipe Builder
 

@@ -13,15 +13,20 @@ Right clicking a Runic Shear on a block to convert it into a replacement block a
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.roots.runic_shear_block` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.roots.runic_shear_block/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.roots.runicshearblock
 mods.roots.runicShearBlock
 mods.roots.RunicShearBlock
+mods.roots.runic_shear_block/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -116,16 +121,16 @@ mods.roots.runic_shear_block.recipeBuilder()
     mods.roots.runic_shear_block.removeByName(ResourceLocation)
     ```
 
-- Removes the Runic Shear Block recipe with the given output itemstack:
-
-    ```groovy:no-line-numbers
-    mods.roots.runic_shear_block.removeByOutput(ItemStack)
-    ```
-
 - Removes the Runic Shear Block recipe with the given output IBlockState:
 
     ```groovy:no-line-numbers
     mods.roots.runic_shear_block.removeByState(IBlockState)
+    ```
+
+- Removes the Runic Shear Block recipe with the given output itemstack:
+
+    ```groovy:no-line-numbers
+    mods.roots.runic_shear_block.removeByOutput(ItemStack)
     ```
 
 - Removes all registered recipes:
@@ -137,8 +142,8 @@ mods.roots.runic_shear_block.recipeBuilder()
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.roots.runic_shear_block.removeByName(resource('roots:wildewheet'))
-mods.roots.runic_shear_block.removeByOutput(item('roots:spirit_herb'))
 mods.roots.runic_shear_block.removeByState(blockstate('minecraft:beetroots:age=3'))
+mods.roots.runic_shear_block.removeByOutput(item('roots:spirit_herb'))
 mods.roots.runic_shear_block.removeAll()
 ```
 

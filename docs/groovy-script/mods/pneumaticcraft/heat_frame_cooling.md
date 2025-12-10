@@ -13,15 +13,20 @@ Converts an input itemstack into an output itemstack when inside an inventory pl
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pneumaticcraft.heat_frame_cooling` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.pneumaticcraft.heat_frame_cooling/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.pneumaticcraft.heatframecooling
 mods.pneumaticcraft.heatFrameCooling
 mods.pneumaticcraft.HeatFrameCooling
+mods.pneumaticcraft.heat_frame_cooling/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.pneumaticcraft.HeatFrameCooling
     ```groovy:no-line-numbers
     mods.pneumaticcraft.heat_frame_cooling.add(HeatFrameCoolingRecipe)
     ```
-
 
 ### Recipe Builder
 

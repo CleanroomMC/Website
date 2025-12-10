@@ -13,13 +13,18 @@ Converts a block into output itemstacks after being powered via rotation power.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithmods.saw` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.betterwithmods.saw/* Used as page default */ // [!code focus]
 mods.betterwithmods.Saw
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.betterwithmods.Saw
     ```groovy:no-line-numbers
     mods.betterwithmods.saw.add(SawRecipe)
     ```
-
 
 ### Recipe Builder
 

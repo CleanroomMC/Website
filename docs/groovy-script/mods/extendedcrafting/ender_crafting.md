@@ -13,15 +13,20 @@ A normal crafting recipe, with the recipe being slowly crafted based on nearby E
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.extendedcrafting.ender_crafting` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.extendedcrafting.ender_crafting/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.extendedcrafting.endercrafting
 mods.extendedcrafting.enderCrafting
 mods.extendedcrafting.EnderCrafting
+mods.extendedcrafting.ender_crafting/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -31,22 +36,16 @@ mods.extendedcrafting.EnderCrafting
     mods.extendedcrafting.ender_crafting.add(IRecipe)
     ```
 
-- Adds a shaped crafting recipe in the format `time`, `output`, `input`:
-
-    ```groovy:no-line-numbers
-    mods.extendedcrafting.ender_crafting.addShaped(int, ItemStack, List<List<IIngredient>>)
-    ```
-
 - Adds a shaped crafting recipe in the format `output`, `input`:
 
     ```groovy:no-line-numbers
     mods.extendedcrafting.ender_crafting.addShaped(ItemStack, List<List<IIngredient>>)
     ```
 
-- Adds a shapeless crafting recipe in the format `time`, `output`, `input`:
+- Adds a shaped crafting recipe in the format `time`, `output`, `input`:
 
     ```groovy:no-line-numbers
-    mods.extendedcrafting.ender_crafting.addShapeless(int, ItemStack, List<IIngredient>)
+    mods.extendedcrafting.ender_crafting.addShaped(int, ItemStack, List<List<IIngredient>>)
     ```
 
 - Adds a shapeless crafting recipe in the format `output`, `input`:
@@ -55,6 +54,11 @@ mods.extendedcrafting.EnderCrafting
     mods.extendedcrafting.ender_crafting.addShapeless(ItemStack, List<IIngredient>)
     ```
 
+- Adds a shapeless crafting recipe in the format `time`, `output`, `input`:
+
+    ```groovy:no-line-numbers
+    mods.extendedcrafting.ender_crafting.addShapeless(int, ItemStack, List<IIngredient>)
+    ```
 
 ### Recipe Builder
 
@@ -113,9 +117,9 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 - `int`. Sets the duration in seconds for the recipe, reduced by each Ender Accelerator. Requires greater than or equal to 0. (Default `ModConfig.confEnderTimeRequired`).
 
     ```groovy:no-line-numbers
-    time(int)
-    ticks(int)
-    seconds(int)
+    time(int) // Sets the time in seconds
+    ticks(int) // Sets the time in ticks
+    seconds(int) // Sets the time in seconds
     ```
 
 - `boolean`. Sets if the recipe is horizontally mirrored. (Default `false`).
@@ -162,8 +166,8 @@ mods.extendedcrafting.ender_crafting.shapedBuilder()
 mods.extendedcrafting.ender_crafting.shapedBuilder()
     .output(item('minecraft:diamond') * 32)
     .matrix([[item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
-            [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
-            [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')]])
+             [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
+             [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')]])
     .time(1)
     .register()
 ```
@@ -208,9 +212,9 @@ mods.extendedcrafting.ender_crafting.shapedBuilder()
 - `int`. Sets the duration in seconds for the recipe, reduced by each Ender Accelerator. Requires greater than or equal to 0. (Default `ModConfig.confEnderTimeRequired`).
 
     ```groovy:no-line-numbers
-    time(int)
-    ticks(int)
-    seconds(int)
+    time(int) // Sets the time in seconds
+    ticks(int) // Sets the time in ticks
+    seconds(int) // Sets the time in seconds
     ```
 
 - `Closure<ItemStack>`. Sets an operation that modifies the input items or output item.

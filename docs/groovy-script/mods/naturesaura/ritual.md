@@ -17,13 +17,18 @@ The sapling used must extended `BlockSapling` for the recipe to function properl
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.naturesaura.ritual` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.naturesaura.ritual/* Used as page default */ // [!code focus]
 mods.naturesaura.Ritual
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -115,16 +120,16 @@ mods.naturesaura.ritual.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes all recipes that match the given input:
-
-    ```groovy:no-line-numbers
-    mods.naturesaura.ritual.removeByInput(IIngredient)
-    ```
-
 - Removes the Ritual of the Forest recipe with the given name:
 
     ```groovy:no-line-numbers
     mods.naturesaura.ritual.removeByName(ResourceLocation)
+    ```
+
+- Removes all recipes that match the given input:
+
+    ```groovy:no-line-numbers
+    mods.naturesaura.ritual.removeByInput(IIngredient)
     ```
 
 - Removes all recipes that match the given output:
@@ -147,8 +152,8 @@ mods.naturesaura.ritual.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.naturesaura.ritual.removeByInput(item('naturesaura:infused_stone'))
 mods.naturesaura.ritual.removeByName(resource('naturesaura:eye_improved'))
+mods.naturesaura.ritual.removeByInput(item('naturesaura:infused_stone'))
 mods.naturesaura.ritual.removeByOutput(item('naturesaura:eye'))
 mods.naturesaura.ritual.removeBySapling(item('minecraft:sapling:3'))
 mods.naturesaura.ritual.removeAll()

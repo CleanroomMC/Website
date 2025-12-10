@@ -13,13 +13,18 @@ The Thermopile generates energy from temperature differences modified by the the
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.magneticraft.thermopile` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.magneticraft.thermopile/* Used as page default */ // [!code focus]
 mods.magneticraft.Thermopile
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.magneticraft.Thermopile
     ```groovy:no-line-numbers
     mods.magneticraft.thermopile.add(IThermopileRecipe)
     ```
-
 
 ### Recipe Builder
 

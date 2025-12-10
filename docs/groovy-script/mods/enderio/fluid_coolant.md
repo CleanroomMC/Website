@@ -13,27 +13,32 @@ Create a Coolant with a given coolant rate that produces power with a Fuel while
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.enderio.fluid_coolant` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.enderio.fluid_coolant/* Used as page default */ // [!code focus]
-mods.enderio.fluidcoolant
-mods.enderio.fluidCoolant
-mods.enderio.FluidCoolant
-mods.enderio.combustion_coolant
-mods.enderio.combustioncoolant
-mods.enderio.combustionCoolant
-mods.enderio.CombustionCoolant
-mods.eio.fluid_coolant
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {12}
 mods.eio.fluidcoolant
 mods.eio.fluidCoolant
 mods.eio.FluidCoolant
-mods.eio.combustion_coolant
+mods.eio.fluid_coolant
 mods.eio.combustioncoolant
 mods.eio.combustionCoolant
 mods.eio.CombustionCoolant
+mods.eio.combustion_coolant
+mods.enderio.fluidcoolant
+mods.enderio.fluidCoolant
+mods.enderio.FluidCoolant
+mods.enderio.fluid_coolant/* Used as page default */ // [!code focus]
+mods.enderio.combustioncoolant
+mods.enderio.combustionCoolant
+mods.enderio.CombustionCoolant
+mods.enderio.combustion_coolant
 ```
 
+::::::::::
 
 ## Adding Recipes
 

@@ -13,15 +13,20 @@ Convert an input item into an output item in a Heat Coil.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.embers.heat_coil` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.embers.heat_coil/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.embers.heatcoil
 mods.embers.heatCoil
 mods.embers.HeatCoil
+mods.embers.heat_coil/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

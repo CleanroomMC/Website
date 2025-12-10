@@ -13,19 +13,24 @@ Converts two input itemstacks into an output itemstack, consuming fuel (based on
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersiveengineering.alloy_kiln` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.ie.alloy_kiln
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.ie.alloykiln
 mods.ie.alloyKiln
 mods.ie.AlloyKiln
-mods.immersiveengineering.alloy_kiln/* Used as page default */ // [!code focus]
+mods.ie.alloy_kiln
 mods.immersiveengineering.alloykiln
 mods.immersiveengineering.alloyKiln
 mods.immersiveengineering.AlloyKiln
+mods.immersiveengineering.alloy_kiln/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -40,7 +45,6 @@ mods.immersiveengineering.AlloyKiln
     ```groovy:no-line-numbers
     mods.immersiveengineering.alloy_kiln.add(ItemStack, IIngredient, IIngredient, int)
     ```
-
 
 ### Recipe Builder
 

@@ -13,13 +13,18 @@ Converts an input item into an output itemstack, consuming Spirits from the Infu
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithaddons.transmutation` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.betterwithaddons.transmutation/* Used as page default */ // [!code focus]
 mods.betterwithaddons.Transmutation
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.betterwithaddons.Transmutation
     ```groovy:no-line-numbers
     mods.betterwithaddons.transmutation.add(TransmutationRecipe)
     ```
-
 
 ### Recipe Builder
 

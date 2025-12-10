@@ -13,19 +13,24 @@ Converts an input item into an output itemstack after being interacted with by a
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.primal_tech.stone_anvil` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.primal_tech.stone_anvil/* Used as page default */ // [!code focus]
-mods.primal_tech.stoneanvil
-mods.primal_tech.stoneAnvil
-mods.primal_tech.StoneAnvil
-mods.primaltech.stone_anvil
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.primaltech.stoneanvil
 mods.primaltech.stoneAnvil
 mods.primaltech.StoneAnvil
+mods.primaltech.stone_anvil
+mods.primal_tech.stoneanvil
+mods.primal_tech.stoneAnvil
+mods.primal_tech.StoneAnvil
+mods.primal_tech.stone_anvil/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -40,7 +45,6 @@ mods.primaltech.StoneAnvil
     ```groovy:no-line-numbers
     mods.primal_tech.stone_anvil.add(ItemStack, IIngredient)
     ```
-
 
 ### Recipe Builder
 

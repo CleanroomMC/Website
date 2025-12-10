@@ -13,13 +13,18 @@ Controls extra drops given by mobs. Chance and Size are both arrays 4 long, cont
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.woot.drops` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.woot.drops/* Used as page default */ // [!code focus]
 mods.woot.Drops
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.woot.Drops
     ```groovy:no-line-numbers
     mods.woot.drops.add(WootMobName, ItemStack, List<Integer>, List<Integer>)
     ```
-
 
 ### Recipe Builder
 
@@ -110,25 +114,25 @@ mods.woot.drops.recipeBuilder()
 - Removes recipes matching the given entity:
 
     ```groovy:no-line-numbers
-    mods.woot.drops.removeByEntity(EntityEntry)
-    ```
-
-- Removes recipes matching the given entity:
-
-    ```groovy:no-line-numbers
     mods.woot.drops.removeByEntity(String)
     ```
 
 - Removes recipes matching the given entity:
 
     ```groovy:no-line-numbers
-    mods.woot.drops.removeByEntity(String, String)
+    mods.woot.drops.removeByEntity(EntityEntry)
     ```
 
 - Removes recipes matching the given entity:
 
     ```groovy:no-line-numbers
     mods.woot.drops.removeByEntity(WootMobName)
+    ```
+
+- Removes recipes matching the given entity:
+
+    ```groovy:no-line-numbers
+    mods.woot.drops.removeByEntity(String, String)
     ```
 
 - Removes recipes matching the given output item:
@@ -145,10 +149,10 @@ mods.woot.drops.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.woot.drops.removeByEntity(entity('minecraft:ender_dragon'))
 mods.woot.drops.removeByEntity('minecraft:ender_dragon')
-mods.woot.drops.removeByEntity('minecraft:ender_dragon', '')
+mods.woot.drops.removeByEntity(entity('minecraft:ender_dragon'))
 mods.woot.drops.removeByEntity(new WootMobName('minecraft:ender_dragon'))
+mods.woot.drops.removeByEntity('minecraft:ender_dragon', '')
 mods.woot.drops.removeByOutput(item('minecraft:dragon_breath'))
 mods.woot.drops.removeAll()
 ```

@@ -17,13 +17,18 @@ While more than 4 items can function as the input of a Altar of Birthing recipe,
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.naturesaura.spawning` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.naturesaura.spawning/* Used as page default */ // [!code focus]
 mods.naturesaura.Spawning
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -122,6 +127,18 @@ mods.naturesaura.spawning.recipeBuilder()
 
 ## Removing Recipes
 
+- Removes the Altar of Birthing recipe with the given name:
+
+    ```groovy:no-line-numbers
+    mods.naturesaura.spawning.removeByName(ResourceLocation)
+    ```
+
+- Removes all recipes that match the given input:
+
+    ```groovy:no-line-numbers
+    mods.naturesaura.spawning.removeByInput(IIngredient)
+    ```
+
 - Removes all Altar of Birthing recipes that summon the given entity:
 
     ```groovy:no-line-numbers
@@ -134,18 +151,6 @@ mods.naturesaura.spawning.recipeBuilder()
     mods.naturesaura.spawning.removeByEntity(ResourceLocation)
     ```
 
-- Removes all recipes that match the given input:
-
-    ```groovy:no-line-numbers
-    mods.naturesaura.spawning.removeByInput(IIngredient)
-    ```
-
-- Removes the Altar of Birthing recipe with the given name:
-
-    ```groovy:no-line-numbers
-    mods.naturesaura.spawning.removeByName(ResourceLocation)
-    ```
-
 - Removes all registered recipes:
 
     ```groovy:no-line-numbers
@@ -154,10 +159,10 @@ mods.naturesaura.spawning.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
+mods.naturesaura.spawning.removeByName(resource('naturesaura:cow'))
+mods.naturesaura.spawning.removeByInput(item('minecraft:bone'))
 mods.naturesaura.spawning.removeByEntity(entity('minecraft:polar_bear'))
 mods.naturesaura.spawning.removeByEntity(resource('minecraft:cave_spider'))
-mods.naturesaura.spawning.removeByInput(item('minecraft:bone'))
-mods.naturesaura.spawning.removeByName(resource('naturesaura:cow'))
 mods.naturesaura.spawning.removeAll()
 ```
 

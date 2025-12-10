@@ -13,15 +13,20 @@ Slowly produces the output entries while in a river biome surrounded by water, a
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.factorytech.river_grate` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.factorytech.river_grate/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.factorytech.rivergrate
 mods.factorytech.riverGrate
 mods.factorytech.RiverGrate
+mods.factorytech.river_grate/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -30,7 +35,6 @@ mods.factorytech.RiverGrate
     ```groovy:no-line-numbers
     mods.factorytech.river_grate.add(MachineRecipes.MachineRecipe<Double, ItemStack>)
     ```
-
 
 ### Recipe Builder
 

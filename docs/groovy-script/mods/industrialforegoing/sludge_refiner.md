@@ -13,15 +13,20 @@ Converts 1000mb of Sludge into a random itemstack based on the weight of the giv
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.industrialforegoing.sludge_refiner` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.industrialforegoing.sludge_refiner/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.industrialforegoing.sludgerefiner
 mods.industrialforegoing.sludgeRefiner
 mods.industrialforegoing.SludgeRefiner
+mods.industrialforegoing.sludge_refiner/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

@@ -13,15 +13,20 @@ Converts a fluidstack input into power, at a given rate per tick.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.techreborn.plasma_generator` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.techreborn.plasma_generator/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.techreborn.plasmagenerator
 mods.techreborn.plasmaGenerator
 mods.techreborn.PlasmaGenerator
+mods.techreborn.plasma_generator/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.techreborn.PlasmaGenerator
     ```groovy:no-line-numbers
     mods.techreborn.plasma_generator.add(R)
     ```
-
 
 ### Recipe Builder
 

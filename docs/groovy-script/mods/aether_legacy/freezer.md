@@ -13,23 +13,22 @@ The Freezer is used to turn certain items into frozen versions.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.aether_legacy.freezer` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.aether_legacy.freezer/* Used as page default */ // [!code focus]
-mods.aether_legacy.Freezer
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
 mods.aether.freezer
 mods.aether.Freezer
+mods.aether_legacy.freezer/* Used as page default */ // [!code focus]
+mods.aether_legacy.Freezer
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds a Freezer recipe in the format `input`, `output`, `time`:
-
-    ```groovy:no-line-numbers
-    mods.aether_legacy.freezer.add(ItemStack, ItemStack, int)
-    ```
 
 - Adds the recipe:
 
@@ -37,6 +36,11 @@ mods.aether.Freezer
     mods.aether_legacy.freezer.add(AetherFreezable)
     ```
 
+- Adds a Freezer recipe in the format `input`, `output`, `time`:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.freezer.add(ItemStack, ItemStack, int)
+    ```
 
 ### Recipe Builder
 
@@ -103,10 +107,10 @@ mods.aether_legacy.freezer.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.aether_legacy.freezer.remove(ResourceLocation)
+    mods.aether_legacy.freezer.remove(AetherFreezable)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -115,10 +119,10 @@ mods.aether_legacy.freezer.recipeBuilder()
     mods.aether_legacy.freezer.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.aether_legacy.freezer.remove(AetherFreezable)
+    mods.aether_legacy.freezer.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given output:

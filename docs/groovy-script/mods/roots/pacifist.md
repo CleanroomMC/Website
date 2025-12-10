@@ -13,13 +13,18 @@ Pacifist is a list of entities which killing will give the player the advancemen
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.roots.pacifist` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.roots.pacifist/* Used as page default */ // [!code focus]
 mods.roots.Pacifist
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -78,6 +83,12 @@ mods.roots.pacifist.recipeBuilder()
 
 ## Removing Entries
 
+- Removes the Pacifist entry with the given name:
+
+    ```groovy:no-line-numbers
+    mods.roots.pacifist.removeByName(ResourceLocation)
+    ```
+
 - Removes the Pacifist entry with the given Entity class:
 
     ```groovy:no-line-numbers
@@ -90,12 +101,6 @@ mods.roots.pacifist.recipeBuilder()
     mods.roots.pacifist.removeByEntity(EntityEntry)
     ```
 
-- Removes the Pacifist entry with the given name:
-
-    ```groovy:no-line-numbers
-    mods.roots.pacifist.removeByName(ResourceLocation)
-    ```
-
 - Removes all registered recipes:
 
     ```groovy:no-line-numbers
@@ -104,8 +109,8 @@ mods.roots.pacifist.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.roots.pacifist.removeByEntity(entity('minecraft:cow'))
 mods.roots.pacifist.removeByName(resource('minecraft:chicken'))
+mods.roots.pacifist.removeByEntity(entity('minecraft:cow'))
 mods.roots.pacifist.removeAll()
 ```
 

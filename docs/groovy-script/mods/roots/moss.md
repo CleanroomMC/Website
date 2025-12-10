@@ -13,13 +13,18 @@ Moss indicates a pair of items that can right click the input with a knife to tu
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.roots.moss` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.roots.moss/* Used as page default */ // [!code focus]
 mods.roots.Moss
 ```
 
+::::::::::
 
 ## Adding Recipes
 

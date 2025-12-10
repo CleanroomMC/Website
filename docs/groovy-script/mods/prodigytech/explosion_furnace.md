@@ -13,15 +13,20 @@ Uses an explosive, a dampener, and an optional reagent to convert items. The pow
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.prodigytech.explosion_furnace` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.prodigytech.explosion_furnace/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.prodigytech.explosionfurnace
 mods.prodigytech.explosionFurnace
 mods.prodigytech.ExplosionFurnace
+mods.prodigytech.explosion_furnace/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.prodigytech.ExplosionFurnace
     ```groovy:no-line-numbers
     mods.prodigytech.explosion_furnace.add(ExplosionFurnaceManager.ExplosionFurnaceRecipe)
     ```
-
 
 ### Recipe Builder
 

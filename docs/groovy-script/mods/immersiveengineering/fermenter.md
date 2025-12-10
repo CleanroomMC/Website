@@ -13,7 +13,11 @@ Converts an input itemstack into an output fluidstack with an optional output it
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersiveengineering.fermenter` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.ie.fermenter
@@ -22,6 +26,7 @@ mods.immersiveengineering.fermenter/* Used as page default */ // [!code focus]
 mods.immersiveengineering.Fermenter
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -36,7 +41,6 @@ mods.immersiveengineering.Fermenter
     ```groovy:no-line-numbers
     mods.immersiveengineering.fermenter.add(FluidStack, ItemStack, IIngredient, int)
     ```
-
 
 ### Recipe Builder
 

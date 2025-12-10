@@ -13,19 +13,24 @@ Converts 1 input itemstack with up to 4 additional inputs into an output itemsta
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersiveengineering.arc_furnace` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.ie.arc_furnace
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.ie.arcfurnace
 mods.ie.arcFurnace
 mods.ie.ArcFurnace
-mods.immersiveengineering.arc_furnace/* Used as page default */ // [!code focus]
+mods.ie.arc_furnace
 mods.immersiveengineering.arcfurnace
 mods.immersiveengineering.arcFurnace
 mods.immersiveengineering.ArcFurnace
+mods.immersiveengineering.arc_furnace/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -40,7 +45,6 @@ mods.immersiveengineering.ArcFurnace
     ```groovy:no-line-numbers
     mods.immersiveengineering.arc_furnace.add(ItemStack, IIngredient, List<IIngredient>, ItemStack, int, int)
     ```
-
 
 ### Recipe Builder
 
@@ -146,12 +150,6 @@ mods.immersiveengineering.arc_furnace.recipeBuilder()
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.immersiveengineering.arc_furnace.removeByInput(IIngredient, List<IIngredient>)
-    ```
-
-- Removes all recipes that match the given input:
-
-    ```groovy:no-line-numbers
     mods.immersiveengineering.arc_furnace.removeByInput(IIngredient...)
     ```
 
@@ -159,6 +157,12 @@ mods.immersiveengineering.arc_furnace.recipeBuilder()
 
     ```groovy:no-line-numbers
     mods.immersiveengineering.arc_furnace.removeByInput(List<IIngredient>)
+    ```
+
+- Removes all recipes that match the given input:
+
+    ```groovy:no-line-numbers
+    mods.immersiveengineering.arc_furnace.removeByInput(IIngredient, List<IIngredient>)
     ```
 
 - Removes all recipes that match the given output:

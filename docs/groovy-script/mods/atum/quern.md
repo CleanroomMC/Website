@@ -13,13 +13,18 @@ Converts an input item into an output itemstack after a given number of rotation
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.atum.quern` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.atum.quern/* Used as page default */ // [!code focus]
 mods.atum.Quern
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.atum.Quern
     ```groovy:no-line-numbers
     mods.atum.quern.add(IQuernRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -108,10 +112,10 @@ mods.atum.quern.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.atum.quern.remove(ResourceLocation)
+    mods.atum.quern.remove(IQuernRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -120,10 +124,10 @@ mods.atum.quern.recipeBuilder()
     mods.atum.quern.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.atum.quern.remove(IQuernRecipe)
+    mods.atum.quern.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

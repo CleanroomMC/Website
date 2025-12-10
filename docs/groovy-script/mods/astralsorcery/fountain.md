@@ -13,15 +13,20 @@ Adds virtual aquifers that can be accessed via the Evershifting Fountain's Necro
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.astralsorcery.fountain` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.astralsorcery.fountain/* Used as page default */ // [!code focus]
-mods.astralsorcery.Fountain
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
 mods.astral.fountain
 mods.astral.Fountain
+mods.astralsorcery.fountain/* Used as page default */ // [!code focus]
+mods.astralsorcery.Fountain
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -42,7 +47,6 @@ mods.astral.Fountain
     ```groovy:no-line-numbers
     mods.astralsorcery.fountain.add(FluidStack, int, int, int)
     ```
-
 
 ### Recipe Builder
 

@@ -13,21 +13,20 @@ Uses any number of specific types of Mortars to convert multiple items into a si
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.advancedmortars.mortar` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.advancedmortars.mortar/* Used as page default */ // [!code focus]
 mods.advancedmortars.Mortar
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds recipes in the format `types`, `output`, `duration`, `secondaryOutput`, `secondaryOutputChance`, `inputs`:
-
-    ```groovy:no-line-numbers
-    mods.advancedmortars.mortar.add(List<String>, ItemStack, int, ItemStack, float, List<IIngredient>)
-    ```
 
 - Adds recipes in the format `types`, `output`, `duration`, `inputs`:
 
@@ -35,11 +34,17 @@ mods.advancedmortars.Mortar
     mods.advancedmortars.mortar.add(List<String>, ItemStack, int, List<IIngredient>)
     ```
 
+- Adds recipes in the format `types`, `output`, `duration`, `secondaryOutput`, `secondaryOutputChance`, `inputs`:
+
+    ```groovy:no-line-numbers
+    mods.advancedmortars.mortar.add(List<String>, ItemStack, int, ItemStack, float, List<IIngredient>)
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.advancedmortars.mortar.add(['iron', 'wood'], item('minecraft:tnt') * 5, 4, item('minecraft:tnt'), 0.7, [ore('ingotIron'), ore('ingotIron'), ore('ingotIron'), ore('ingotIron'),ore('ingotIron'), ore('ingotIron'), ore('ingotIron'), ore('ingotIron')])
 mods.advancedmortars.mortar.add(['stone'], item('minecraft:diamond') * 4, 4, [ore('ingotGold')])
 mods.advancedmortars.mortar.add(['stone'], item('minecraft:tnt'), 4, [ore('ingotGold')])
+mods.advancedmortars.mortar.add(['iron', 'wood'], item('minecraft:tnt') * 5, 4, item('minecraft:tnt'), 0.7, [ore('ingotIron'), ore('ingotIron'), ore('ingotIron'), ore('ingotIron'),ore('ingotIron'), ore('ingotIron'), ore('ingotIron'), ore('ingotIron')])
 ```
 
 ::::::::::

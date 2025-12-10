@@ -13,15 +13,20 @@ Converts two input itemstacks into an output itemstack in a multiblock Dragonfor
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.iceandfire.fire_forge` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.iceandfire.fire_forge/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.iceandfire.fireforge
 mods.iceandfire.fireForge
 mods.iceandfire.FireForge
+mods.iceandfire.fire_forge/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.iceandfire.FireForge
     ```groovy:no-line-numbers
     mods.iceandfire.fire_forge.add(DragonForgeRecipe)
     ```
-
 
 ### Recipe Builder
 

@@ -13,15 +13,20 @@ Converts an input fluidstack into an output fluidstack after a given amount of t
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersivetech.high_pressure_steam_turbine` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.immersivetech.high_pressure_steam_turbine/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.immersivetech.highpressuresteamturbine
 mods.immersivetech.highPressureSteamTurbine
 mods.immersivetech.HighPressureSteamTurbine
+mods.immersivetech.high_pressure_steam_turbine/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.immersivetech.HighPressureSteamTurbine
     ```groovy:no-line-numbers
     mods.immersivetech.high_pressure_steam_turbine.add(HighPressureSteamTurbineRecipe)
     ```
-
 
 ### Recipe Builder
 

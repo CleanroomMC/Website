@@ -13,28 +13,33 @@ Converts an item into a new one by burning it. Has a chance to fail.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pyrotech.stone_kiln` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.pyrotech.stone_kiln/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.pyrotech.stonekiln
 mods.pyrotech.stoneKiln
 mods.pyrotech.StoneKiln
+mods.pyrotech.stone_kiln/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds recipes in the format `name`, `input`, `output`, `burnTime`, `failureChance`, `failureOutput`:
-
-    ```groovy:no-line-numbers
-    mods.pyrotech.stone_kiln.add(String, IIngredient, ItemStack, int, float, ItemStack...)
-    ```
 
 - Adds the recipe:
 
     ```groovy:no-line-numbers
     mods.pyrotech.stone_kiln.add(StoneKilnRecipe)
+    ```
+
+- Adds recipes in the format `name`, `input`, `output`, `burnTime`, `failureChance`, `failureOutput`:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.stone_kiln.add(String, IIngredient, ItemStack, int, float, ItemStack...)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -133,10 +138,10 @@ mods.pyrotech.stone_kiln.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.stone_kiln.remove(ResourceLocation)
+    mods.pyrotech.stone_kiln.remove(StoneKilnRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -145,10 +150,10 @@ mods.pyrotech.stone_kiln.recipeBuilder()
     mods.pyrotech.stone_kiln.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.stone_kiln.remove(StoneKilnRecipe)
+    mods.pyrotech.stone_kiln.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

@@ -13,19 +13,24 @@ Converts an input item into an output itemstack after a given amount of time. Re
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.primal_tech.clay_kiln` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.primal_tech.clay_kiln/* Used as page default */ // [!code focus]
-mods.primal_tech.claykiln
-mods.primal_tech.clayKiln
-mods.primal_tech.ClayKiln
-mods.primaltech.clay_kiln
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.primaltech.claykiln
 mods.primaltech.clayKiln
 mods.primaltech.ClayKiln
+mods.primaltech.clay_kiln
+mods.primal_tech.claykiln
+mods.primal_tech.clayKiln
+mods.primal_tech.ClayKiln
+mods.primal_tech.clay_kiln/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -40,7 +45,6 @@ mods.primaltech.ClayKiln
     ```groovy:no-line-numbers
     mods.primal_tech.clay_kiln.add(ItemStack, IIngredient, int)
     ```
-
 
 ### Recipe Builder
 

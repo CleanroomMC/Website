@@ -13,15 +13,20 @@ Converts an input fluidstack into an output fluidstack in a Reaction Chamber.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.embers.reaction_chamber` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.embers.reaction_chamber/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.embers.reactionchamber
 mods.embers.reactionChamber
 mods.embers.ReactionChamber
+mods.embers.reaction_chamber/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

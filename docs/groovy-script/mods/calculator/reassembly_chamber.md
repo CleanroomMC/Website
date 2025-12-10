@@ -13,15 +13,20 @@ Converts an input itemstack into an output itemstack, typically a Damaged Circui
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.calculator.reassembly_chamber` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.calculator.reassembly_chamber/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.calculator.reassemblychamber
 mods.calculator.reassemblyChamber
 mods.calculator.ReassemblyChamber
+mods.calculator.reassembly_chamber/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.calculator.ReassemblyChamber
     ```groovy:no-line-numbers
     mods.calculator.reassembly_chamber.add(CalculatorRecipe)
     ```
-
 
 ### Recipe Builder
 

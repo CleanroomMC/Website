@@ -13,15 +13,20 @@ A normal crafting recipe, but requiring either a specific tier, or at least a gi
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.extendedcrafting.table_crafting` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.extendedcrafting.table_crafting/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.extendedcrafting.tablecrafting
 mods.extendedcrafting.tableCrafting
 mods.extendedcrafting.TableCrafting
+mods.extendedcrafting.table_crafting/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -31,22 +36,16 @@ mods.extendedcrafting.TableCrafting
     mods.extendedcrafting.table_crafting.add(ITieredRecipe)
     ```
 
-- Adds a shaped crafting recipe in the format `tier`, `output`, `input`:
-
-    ```groovy:no-line-numbers
-    mods.extendedcrafting.table_crafting.addShaped(int, ItemStack, List<List<IIngredient>>)
-    ```
-
 - Adds a shaped crafting recipe in the format `output`, `input`:
 
     ```groovy:no-line-numbers
     mods.extendedcrafting.table_crafting.addShaped(ItemStack, List<List<IIngredient>>)
     ```
 
-- Adds a shapeless crafting recipe in the format `tier`, `output`, `input`:
+- Adds a shaped crafting recipe in the format `tier`, `output`, `input`:
 
     ```groovy:no-line-numbers
-    mods.extendedcrafting.table_crafting.addShapeless(int, ItemStack, List<IIngredient>)
+    mods.extendedcrafting.table_crafting.addShaped(int, ItemStack, List<List<IIngredient>>)
     ```
 
 - Adds a shapeless crafting recipe in the format `output`, `input`:
@@ -55,6 +54,11 @@ mods.extendedcrafting.TableCrafting
     mods.extendedcrafting.table_crafting.addShapeless(ItemStack, List<IIngredient>)
     ```
 
+- Adds a shapeless crafting recipe in the format `tier`, `output`, `input`:
+
+    ```groovy:no-line-numbers
+    mods.extendedcrafting.table_crafting.addShapeless(int, ItemStack, List<IIngredient>)
+    ```
 
 ### Recipe Builder
 
@@ -186,20 +190,20 @@ mods.extendedcrafting.table_crafting.shapedBuilder()
 
 mods.extendedcrafting.table_crafting.shapedBuilder()
     .matrix([[item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
-            [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
-            [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
-            [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
-            [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
-            [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
-            [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')]])
+             [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
+             [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
+             [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
+             [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
+             [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
+             [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')]])
     .output(item('minecraft:gold_ingot') * 64)
     .tier(4)
     .register()
 
 mods.extendedcrafting.table_crafting.shapedBuilder()
     .matrix([[item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
-            [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
-            [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')]])
+             [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
+             [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')]])
     .output(item('minecraft:gold_ingot') * 64)
     .register()
 ```

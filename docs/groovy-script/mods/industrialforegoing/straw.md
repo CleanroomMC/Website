@@ -13,15 +13,26 @@ Converts an fluid block in-world into various effects for the player when consum
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.industrialforegoing.straw` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.industrialforegoing.straw/* Used as page default */ // [!code focus]
 mods.industrialforegoing.Straw
 ```
 
+::::::::::
 
 ## Adding Recipes
+
+- Adds the recipe:
+
+    ```groovy:no-line-numbers
+    mods.industrialforegoing.straw.add(StrawHandler)
+    ```
 
 - Adds a Straw recipe in the format `fluidInput`, `effect`:
 
@@ -34,13 +45,6 @@ mods.industrialforegoing.Straw
     ```groovy:no-line-numbers
     mods.industrialforegoing.straw.add(String, FluidStack, Collection<PotionEffect>)
     ```
-
-- Adds the recipe:
-
-    ```groovy:no-line-numbers
-    mods.industrialforegoing.straw.add(StrawHandler)
-    ```
-
 
 ### Recipe Builder
 
@@ -107,10 +111,10 @@ mods.industrialforegoing.straw.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.industrialforegoing.straw.remove(ResourceLocation)
+    mods.industrialforegoing.straw.remove(StrawHandler)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -119,10 +123,10 @@ mods.industrialforegoing.straw.recipeBuilder()
     mods.industrialforegoing.straw.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.industrialforegoing.straw.remove(StrawHandler)
+    mods.industrialforegoing.straw.remove(ResourceLocation)
     ```
 
 - Removes all registered recipes:

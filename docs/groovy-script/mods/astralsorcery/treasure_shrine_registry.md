@@ -13,19 +13,24 @@ When the block in the middle of a Treasure Shrine structure is broken, a random 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.astralsorcery.treasure_shrine_registry` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.astralsorcery.treasure_shrine_registry/* Used as page default */ // [!code focus]
-mods.astralsorcery.treasureshrineregistry
-mods.astralsorcery.treasureShrineRegistry
-mods.astralsorcery.TreasureShrineRegistry
-mods.astral.treasure_shrine_registry
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.astral.treasureshrineregistry
 mods.astral.treasureShrineRegistry
 mods.astral.TreasureShrineRegistry
+mods.astral.treasure_shrine_registry
+mods.astralsorcery.treasureshrineregistry
+mods.astralsorcery.treasureShrineRegistry
+mods.astralsorcery.TreasureShrineRegistry
+mods.astralsorcery.treasure_shrine_registry/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -47,13 +52,13 @@ mods.astralsorcery.treasure_shrine_registry.add(ore('blockDiamond'), 10000)
 - Removes entries of the given ore:
 
     ```groovy:no-line-numbers
-    mods.astralsorcery.treasure_shrine_registry.remove(OreDictIngredient)
+    mods.astralsorcery.treasure_shrine_registry.remove(String)
     ```
 
 - Removes entries of the given ore:
 
     ```groovy:no-line-numbers
-    mods.astralsorcery.treasure_shrine_registry.remove(String)
+    mods.astralsorcery.treasure_shrine_registry.remove(OreDictIngredient)
     ```
 
 - Removes all registered recipes:

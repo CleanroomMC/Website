@@ -13,15 +13,20 @@ Converts an input itemstack into power, at the cost of a burnable fuel.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.calculator.starch_extractor` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.calculator.starch_extractor/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.calculator.starchextractor
 mods.calculator.starchExtractor
 mods.calculator.StarchExtractor
+mods.calculator.starch_extractor/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.calculator.StarchExtractor
     ```groovy:no-line-numbers
     mods.calculator.starch_extractor.add(DefaultSonarRecipe.Value)
     ```
-
 
 ### Recipe Builder
 

@@ -13,15 +13,20 @@ Converts an input itemstack into either an output itemstack, an output fluidstac
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.magneticraft.gasification_unit` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.magneticraft.gasification_unit/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.magneticraft.gasificationunit
 mods.magneticraft.gasificationUnit
 mods.magneticraft.GasificationUnit
+mods.magneticraft.gasification_unit/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.magneticraft.GasificationUnit
     ```groovy:no-line-numbers
     mods.magneticraft.gasification_unit.add(IGasificationUnitRecipe)
     ```
-
 
 ### Recipe Builder
 

@@ -13,15 +13,20 @@ Converts up to 27 itemstacks into an output itemstack at the cost of power.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.quarryplus.workbench_plus` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.quarryplus.workbench_plus/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.quarryplus.workbenchplus
 mods.quarryplus.workbenchPlus
 mods.quarryplus.WorkbenchPlus
+mods.quarryplus.workbench_plus/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

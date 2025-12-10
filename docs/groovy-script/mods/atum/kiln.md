@@ -13,13 +13,18 @@ Smelts an input item into an output itemstack and giving experience similar to a
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.atum.kiln` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.atum.kiln/* Used as page default */ // [!code focus]
 mods.atum.Kiln
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.atum.Kiln
     ```groovy:no-line-numbers
     mods.atum.kiln.add(IKilnRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -107,10 +111,10 @@ mods.atum.kiln.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.atum.kiln.remove(ResourceLocation)
+    mods.atum.kiln.remove(IKilnRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -119,10 +123,10 @@ mods.atum.kiln.recipeBuilder()
     mods.atum.kiln.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.atum.kiln.remove(IKilnRecipe)
+    mods.atum.kiln.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

@@ -13,23 +13,22 @@ Enchanting is a mechanic used to create new items, as well as repair tools, armo
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.aether_legacy.enchanter` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.aether_legacy.enchanter/* Used as page default */ // [!code focus]
-mods.aether_legacy.Enchanter
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
 mods.aether.enchanter
 mods.aether.Enchanter
+mods.aether_legacy.enchanter/* Used as page default */ // [!code focus]
+mods.aether_legacy.Enchanter
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds an Enchanting recipe in the format `input`, `output`, `time`:
-
-    ```groovy:no-line-numbers
-    mods.aether_legacy.enchanter.add(ItemStack, ItemStack, int)
-    ```
 
 - Adds the recipe:
 
@@ -37,6 +36,11 @@ mods.aether.Enchanter
     mods.aether_legacy.enchanter.add(AetherEnchantment)
     ```
 
+- Adds an Enchanting recipe in the format `input`, `output`, `time`:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.enchanter.add(ItemStack, ItemStack, int)
+    ```
 
 ### Recipe Builder
 
@@ -103,10 +107,10 @@ mods.aether_legacy.enchanter.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.aether_legacy.enchanter.remove(ResourceLocation)
+    mods.aether_legacy.enchanter.remove(AetherEnchantment)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -115,10 +119,10 @@ mods.aether_legacy.enchanter.recipeBuilder()
     mods.aether_legacy.enchanter.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.aether_legacy.enchanter.remove(AetherEnchantment)
+    mods.aether_legacy.enchanter.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given output:

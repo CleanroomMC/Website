@@ -13,15 +13,20 @@ A normal crafting recipe, but with a 5x5 grid and in the High-Tech Bench.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.armorplus.high_tech_bench` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.armorplus.high_tech_bench/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.armorplus.hightechbench
 mods.armorplus.highTechBench
 mods.armorplus.HighTechBench
+mods.armorplus.high_tech_bench/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.armorplus.HighTechBench
     ```groovy:no-line-numbers
     mods.armorplus.high_tech_bench.add(R)
     ```
-
 
 ### Recipe Builder
 
@@ -197,8 +201,8 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 mods.armorplus.high_tech_bench.shapedBuilder()
     .output(item('minecraft:diamond') * 32)
     .matrix([[item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
-            [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
-            [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')]])
+             [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
+             [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')]])
     .register()
 ```
 

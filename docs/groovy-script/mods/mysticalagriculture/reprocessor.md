@@ -13,13 +13,18 @@ Converts an input itemstack into an output itemstack, taking a set amount of tim
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.mysticalagriculture.reprocessor` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.mysticalagriculture.reprocessor/* Used as page default */ // [!code focus]
 mods.mysticalagriculture.Reprocessor
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.mysticalagriculture.Reprocessor
     ```groovy:no-line-numbers
     mods.mysticalagriculture.reprocessor.add(ReprocessorRecipe)
     ```
-
 
 ### Recipe Builder
 

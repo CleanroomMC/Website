@@ -13,15 +13,20 @@ The Alchemical Mixer is a device that can be used to mix fluids and ash to creat
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.soot.alchemical_mixer` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.soot.alchemical_mixer/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.soot.alchemicalmixer
 mods.soot.alchemicalMixer
 mods.soot.AlchemicalMixer
+mods.soot.alchemical_mixer/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

@@ -13,17 +13,22 @@ Convert an item into a different item by hanging it out to dry.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.tconstruct.drying` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
+mods.ticon.drying
+mods.ticon.Drying
 mods.tconstruct.drying/* Used as page default */ // [!code focus]
 mods.tconstruct.Drying
 mods.tinkersconstruct.drying
 mods.tinkersconstruct.Drying
-mods.ticon.drying
-mods.ticon.Drying
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -38,7 +43,6 @@ mods.ticon.Drying
     ```groovy:no-line-numbers
     mods.tconstruct.drying.add(IIngredient, ItemStack, int)
     ```
-
 
 ### Recipe Builder
 
@@ -117,16 +121,16 @@ mods.tconstruct.drying.recipeBuilder()
     mods.tconstruct.drying.removeByInput(IIngredient)
     ```
 
-- Removes all recipes that match the given input and the given output:
-
-    ```groovy:no-line-numbers
-    mods.tconstruct.drying.removeByInputAndOutput(IIngredient, ItemStack)
-    ```
-
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers
     mods.tconstruct.drying.removeByOutput(ItemStack)
+    ```
+
+- Removes all recipes that match the given input and the given output:
+
+    ```groovy:no-line-numbers
+    mods.tconstruct.drying.removeByInputAndOutput(IIngredient, ItemStack)
     ```
 
 - Removes all registered recipes:

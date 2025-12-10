@@ -13,13 +13,18 @@ Converts up to 25 itemstacks into a single output itemstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bewitchment.sigil` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.bewitchment.sigil/* Used as page default */ // [!code focus]
 mods.bewitchment.Sigil
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.bewitchment.Sigil
     ```groovy:no-line-numbers
     mods.bewitchment.sigil.add(SigilRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -83,10 +87,10 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.sigil.remove(ResourceLocation)
+    mods.bewitchment.sigil.remove(SigilRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -95,10 +99,10 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     mods.bewitchment.sigil.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.sigil.remove(SigilRecipe)
+    mods.bewitchment.sigil.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

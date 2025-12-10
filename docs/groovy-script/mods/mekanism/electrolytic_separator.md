@@ -13,17 +13,22 @@ Converts an input fluid into two output gasstacks at the cost of power.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.mekanism.electrolytic_separator` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.mekanism.electrolytic_separator/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {6}
+mods.mekanism.separator
+mods.mekanism.Separator
 mods.mekanism.electrolyticseparator
 mods.mekanism.electrolyticSeparator
 mods.mekanism.ElectrolyticSeparator
-mods.mekanism.separator
-mods.mekanism.Separator
+mods.mekanism.electrolytic_separator/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

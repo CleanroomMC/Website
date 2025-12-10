@@ -13,26 +13,31 @@ Converts stone blocks into one of a few ore blocks at the cost of mana.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.botania.orechid` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.botania.orechid/* Used as page default */ // [!code focus]
 mods.botania.Orechid
 ```
 
+::::::::::
 
 ## Adding Recipes
 
 - Adds recipes in the format `output`, `weight`:
 
     ```groovy:no-line-numbers
-    mods.botania.orechid.add(OreDictIngredient, int)
+    mods.botania.orechid.add(String, int)
     ```
 
 - Adds recipes in the format `output`, `weight`:
 
     ```groovy:no-line-numbers
-    mods.botania.orechid.add(String, int)
+    mods.botania.orechid.add(OreDictIngredient, int)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -48,13 +53,13 @@ mods.botania.orechid.add(ore('blockGold'), 1800)
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers
-    mods.botania.orechid.removeByOutput(OreDictIngredient)
+    mods.botania.orechid.removeByOutput(String)
     ```
 
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers
-    mods.botania.orechid.removeByOutput(String)
+    mods.botania.orechid.removeByOutput(OreDictIngredient)
     ```
 
 - Removes all registered recipes:
@@ -65,9 +70,9 @@ mods.botania.orechid.add(ore('blockGold'), 1800)
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
+mods.botania.orechid.removeByOutput('oreCoal')
 mods.botania.orechid.removeByOutput(ore('oreEmerald'))
 mods.botania.orechid.removeByOutput(ore('oreQuartz'))
-mods.botania.orechid.removeByOutput('oreCoal')
 mods.botania.orechid.removeAll()
 ```
 

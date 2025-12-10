@@ -21,15 +21,20 @@ Only one meta value can be used for a recipe per fluid, and the meta value will 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pneumaticcraft.plastic_mixer` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.pneumaticcraft.plastic_mixer/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.pneumaticcraft.plasticmixer
 mods.pneumaticcraft.plasticMixer
 mods.pneumaticcraft.PlasticMixer
+mods.pneumaticcraft.plastic_mixer/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -38,7 +43,6 @@ mods.pneumaticcraft.PlasticMixer
     ```groovy:no-line-numbers
     mods.pneumaticcraft.plastic_mixer.add(PlasticMixerRegistry.PlasticMixerRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -148,16 +152,16 @@ mods.pneumaticcraft.plastic_mixer.recipeBuilder()
     mods.pneumaticcraft.plastic_mixer.remove(PlasticMixerRegistry.PlasticMixerRecipe)
     ```
 
-- Removes all recipes with the given fluid input:
-
-    ```groovy:no-line-numbers
-    mods.pneumaticcraft.plastic_mixer.removeByFluid(IIngredient)
-    ```
-
 - Removes all recipes with the given item output:
 
     ```groovy:no-line-numbers
     mods.pneumaticcraft.plastic_mixer.removeByItem(IIngredient)
+    ```
+
+- Removes all recipes with the given fluid input:
+
+    ```groovy:no-line-numbers
+    mods.pneumaticcraft.plastic_mixer.removeByFluid(IIngredient)
     ```
 
 - Removes all registered recipes:
@@ -168,8 +172,8 @@ mods.pneumaticcraft.plastic_mixer.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.pneumaticcraft.plastic_mixer.removeByFluid(fluid('plastic'))
 mods.pneumaticcraft.plastic_mixer.removeByItem(item('pneumaticcraft:plastic'))
+mods.pneumaticcraft.plastic_mixer.removeByFluid(fluid('plastic'))
 mods.pneumaticcraft.plastic_mixer.removeAll()
 ```
 

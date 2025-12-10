@@ -13,17 +13,22 @@ Converts an input itemstack into an output gasstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.mekanism.chemical_oxidizer` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.mekanism.chemical_oxidizer/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {6}
+mods.mekanism.oxidizer
+mods.mekanism.Oxidizer
 mods.mekanism.chemicaloxidizer
 mods.mekanism.chemicalOxidizer
 mods.mekanism.ChemicalOxidizer
-mods.mekanism.oxidizer
-mods.mekanism.Oxidizer
+mods.mekanism.chemical_oxidizer/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

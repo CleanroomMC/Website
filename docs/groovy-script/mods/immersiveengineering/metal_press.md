@@ -13,19 +13,24 @@ Converts an input itemstack into an output itemstack, with a mold catalyst, cons
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersiveengineering.metal_press` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.ie.metal_press
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.ie.metalpress
 mods.ie.metalPress
 mods.ie.MetalPress
-mods.immersiveengineering.metal_press/* Used as page default */ // [!code focus]
+mods.ie.metal_press
 mods.immersiveengineering.metalpress
 mods.immersiveengineering.metalPress
 mods.immersiveengineering.MetalPress
+mods.immersiveengineering.metal_press/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.immersiveengineering.MetalPress
     ```groovy:no-line-numbers
     mods.immersiveengineering.metal_press.add(ItemStack, IIngredient, ItemStack, int)
     ```
-
 
 ### Recipe Builder
 
@@ -108,6 +112,12 @@ mods.immersiveengineering.metal_press.recipeBuilder()
 
 ## Removing Recipes
 
+- Removes all recipes with the given mold:
+
+    ```groovy:no-line-numbers
+    mods.immersiveengineering.metal_press.removeByMold(ItemStack)
+    ```
+
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
@@ -118,12 +128,6 @@ mods.immersiveengineering.metal_press.recipeBuilder()
 
     ```groovy:no-line-numbers
     mods.immersiveengineering.metal_press.removeByInput(ItemStack, ItemStack)
-    ```
-
-- Removes all recipes with the given mold:
-
-    ```groovy:no-line-numbers
-    mods.immersiveengineering.metal_press.removeByMold(ItemStack)
     ```
 
 - Removes all recipes that match the given output:
@@ -146,9 +150,9 @@ mods.immersiveengineering.metal_press.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
+mods.immersiveengineering.metal_press.removeByMold(item('immersiveengineering:mold:4'))
 mods.immersiveengineering.metal_press.removeByInput(item('minecraft:iron_ingot'))
 mods.immersiveengineering.metal_press.removeByInput(item('immersiveengineering:mold'), item('immersiveengineering:metal:8'))
-mods.immersiveengineering.metal_press.removeByMold(item('immersiveengineering:mold:4'))
 mods.immersiveengineering.metal_press.removeByOutput(item('immersiveengineering:material:2'))
 mods.immersiveengineering.metal_press.removeByOutput(item('immersiveengineering:mold'), item('immersiveengineering:metal:31'))
 mods.immersiveengineering.metal_press.removeAll()

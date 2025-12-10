@@ -13,15 +13,20 @@ Uses a given Program to convert an input itemstack into an output itemstack. Dri
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pneumaticcraft.assembly_controller` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.pneumaticcraft.assembly_controller/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.pneumaticcraft.assemblycontroller
 mods.pneumaticcraft.assemblyController
 mods.pneumaticcraft.AssemblyController
+mods.pneumaticcraft.assembly_controller/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -106,25 +111,25 @@ mods.pneumaticcraft.assembly_controller.recipeBuilder()
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.pneumaticcraft.assembly_controller.removeByInput(AssemblyController.AssemblyType, IIngredient)
+    mods.pneumaticcraft.assembly_controller.removeByInput(IIngredient)
     ```
 
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.pneumaticcraft.assembly_controller.removeByInput(IIngredient)
-    ```
-
-- Removes all recipes that match the given output:
-
-    ```groovy:no-line-numbers
-    mods.pneumaticcraft.assembly_controller.removeByOutput(AssemblyController.AssemblyType, IIngredient)
+    mods.pneumaticcraft.assembly_controller.removeByInput(AssemblyController.AssemblyType, IIngredient)
     ```
 
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers
     mods.pneumaticcraft.assembly_controller.removeByOutput(IIngredient)
+    ```
+
+- Removes all recipes that match the given output:
+
+    ```groovy:no-line-numbers
+    mods.pneumaticcraft.assembly_controller.removeByOutput(AssemblyController.AssemblyType, IIngredient)
     ```
 
 - Removes all registered recipes:

@@ -13,15 +13,20 @@ Right clicking a Runic Shear on an entity. The entity will have a cooldown, prev
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.roots.runic_shear_entity` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.roots.runic_shear_entity/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.roots.runicshearentity
 mods.roots.runicShearEntity
 mods.roots.RunicShearEntity
+mods.roots.runic_shear_entity/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -114,10 +119,10 @@ mods.roots.runic_shear_entity.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the Runic Shear Entity recipe for the given Entity:
+- Removes the Runic Shear Entity recipe with the given name:
 
     ```groovy:no-line-numbers
-    mods.roots.runic_shear_entity.removeByEntity(Class<? extends EntityLivingBase>)
+    mods.roots.runic_shear_entity.removeByName(ResourceLocation)
     ```
 
 - Removes the Runic Shear Entity recipe for the given Entity:
@@ -126,10 +131,10 @@ mods.roots.runic_shear_entity.recipeBuilder()
     mods.roots.runic_shear_entity.removeByEntity(EntityEntry)
     ```
 
-- Removes the Runic Shear Entity recipe with the given name:
+- Removes the Runic Shear Entity recipe for the given Entity:
 
     ```groovy:no-line-numbers
-    mods.roots.runic_shear_entity.removeByName(ResourceLocation)
+    mods.roots.runic_shear_entity.removeByEntity(Class<? extends EntityLivingBase>)
     ```
 
 - Removes the Runic Shear Entity recipe for the given output itemstack:
@@ -146,8 +151,8 @@ mods.roots.runic_shear_entity.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.roots.runic_shear_entity.removeByEntity(entity('minecraft:chicken'))
 mods.roots.runic_shear_entity.removeByName(resource('roots:slime_strange_ooze'))
+mods.roots.runic_shear_entity.removeByEntity(entity('minecraft:chicken'))
 mods.roots.runic_shear_entity.removeByOutput(item('roots:fey_leather'))
 mods.roots.runic_shear_entity.removeAll()
 ```

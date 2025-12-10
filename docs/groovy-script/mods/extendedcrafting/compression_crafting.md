@@ -13,17 +13,22 @@ Converts any number of a single item into an output itemstack, with a configurab
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.extendedcrafting.compression_crafting` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.extendedcrafting.compression_crafting/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {6}
+mods.extendedcrafting.compression
+mods.extendedcrafting.Compression
 mods.extendedcrafting.compressioncrafting
 mods.extendedcrafting.compressionCrafting
 mods.extendedcrafting.CompressionCrafting
-mods.extendedcrafting.compression
-mods.extendedcrafting.Compression
+mods.extendedcrafting.compression_crafting/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -44,7 +49,6 @@ mods.extendedcrafting.Compression
     ```groovy:no-line-numbers
     mods.extendedcrafting.compression_crafting.add(ItemStack, IIngredient, int, IIngredient, boolean, int, int)
     ```
-
 
 ### Recipe Builder
 
@@ -151,12 +155,6 @@ mods.extendedcrafting.compression_crafting.recipeBuilder()
     mods.extendedcrafting.compression_crafting.remove(CompressorRecipe)
     ```
 
-- Removes all recipes that match the given catalyst:
-
-    ```groovy:no-line-numbers
-    mods.extendedcrafting.compression_crafting.removeByCatalyst(IIngredient)
-    ```
-
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
@@ -169,6 +167,12 @@ mods.extendedcrafting.compression_crafting.recipeBuilder()
     mods.extendedcrafting.compression_crafting.removeByOutput(ItemStack)
     ```
 
+- Removes all recipes that match the given catalyst:
+
+    ```groovy:no-line-numbers
+    mods.extendedcrafting.compression_crafting.removeByCatalyst(IIngredient)
+    ```
+
 - Removes all registered recipes:
 
     ```groovy:no-line-numbers
@@ -177,9 +181,9 @@ mods.extendedcrafting.compression_crafting.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.extendedcrafting.compression_crafting.removeByCatalyst(item('extendedcrafting:material:11'))
 mods.extendedcrafting.compression_crafting.removeByInput(item('minecraft:gold_ingot'))
 mods.extendedcrafting.compression_crafting.removeByOutput(item('extendedcrafting:singularity:6'))
+mods.extendedcrafting.compression_crafting.removeByCatalyst(item('extendedcrafting:material:11'))
 mods.extendedcrafting.compression_crafting.removeAll()
 ```
 

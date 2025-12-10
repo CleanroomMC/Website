@@ -13,15 +13,20 @@ Converts an input fluidstack into an output fluidstack, consuming Pressure and T
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pneumaticcraft.thermopneumatic_processing_plant` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.pneumaticcraft.thermopneumatic_processing_plant/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.pneumaticcraft.thermopneumaticprocessingplant
 mods.pneumaticcraft.thermopneumaticProcessingPlant
 mods.pneumaticcraft.ThermopneumaticProcessingPlant
+mods.pneumaticcraft.thermopneumatic_processing_plant/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.pneumaticcraft.ThermopneumaticProcessingPlant
     ```groovy:no-line-numbers
     mods.pneumaticcraft.thermopneumatic_processing_plant.add(IThermopneumaticProcessingPlantRecipe)
     ```
-
 
 ### Recipe Builder
 

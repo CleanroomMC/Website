@@ -13,13 +13,18 @@ Converts an input itemstack into an output itemstack when placed on the Campfire
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.futuremc.campfire` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.futuremc.campfire/* Used as page default */ // [!code focus]
 mods.futuremc.Campfire
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.futuremc.Campfire
     ```groovy:no-line-numbers
     mods.futuremc.campfire.add(CampfireRecipe)
     ```
-
 
 ### Recipe Builder
 

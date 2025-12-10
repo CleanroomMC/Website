@@ -13,28 +13,33 @@ Converts an item over time into a new one.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pyrotech.tanning_rack` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.pyrotech.tanning_rack/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.pyrotech.tanningrack
 mods.pyrotech.tanningRack
 mods.pyrotech.TanningRack
+mods.pyrotech.tanning_rack/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds recipes in the format `name`, `input`, `output`, `dryTime`, `failureItem`:
-
-    ```groovy:no-line-numbers
-    mods.pyrotech.tanning_rack.add(String, IIngredient, ItemStack, int, ItemStack)
-    ```
 
 - Adds the recipe:
 
     ```groovy:no-line-numbers
     mods.pyrotech.tanning_rack.add(TanningRackRecipe)
+    ```
+
+- Adds recipes in the format `name`, `input`, `output`, `dryTime`, `failureItem`:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.tanning_rack.add(String, IIngredient, ItemStack, int, ItemStack)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -123,10 +128,10 @@ mods.pyrotech.tanning_rack.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.tanning_rack.remove(ResourceLocation)
+    mods.pyrotech.tanning_rack.remove(TanningRackRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -135,10 +140,10 @@ mods.pyrotech.tanning_rack.recipeBuilder()
     mods.pyrotech.tanning_rack.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.tanning_rack.remove(TanningRackRecipe)
+    mods.pyrotech.tanning_rack.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

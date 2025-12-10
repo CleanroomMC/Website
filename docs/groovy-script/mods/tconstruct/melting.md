@@ -13,17 +13,22 @@ Modifies what items can be melted down in the Smeltery.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.tconstruct.melting` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
+mods.ticon.melting
+mods.ticon.Melting
 mods.tconstruct.melting/* Used as page default */ // [!code focus]
 mods.tconstruct.Melting
 mods.tinkersconstruct.melting
 mods.tinkersconstruct.Melting
-mods.ticon.melting
-mods.ticon.Melting
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -38,7 +43,6 @@ mods.ticon.Melting
     ```groovy:no-line-numbers
     mods.tconstruct.melting.add(IIngredient, FluidStack, int)
     ```
-
 
 ### Recipe Builder
 
@@ -66,10 +70,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     input(Collection<IIngredient>)
     ```
 
-- `int`. Required temperature for melting. Also determines the speed of the melt. Requires greater than or equal to 1. (Default `300`).
+- `int`. Sets the time required for melting, which is based on temperature. Requires If time is set, temperature will be ignored. (Default `0`).
 
     ```groovy:no-line-numbers
     time(int)
+    ```
+
+- `int`. Required temperature for melting. Also determines the speed of the melt. Requires greater than or equal to 1 and if time is set, temperature will be ignored. (Default `300`).
+
+    ```groovy:no-line-numbers
     temperature(int)
     ```
 
@@ -110,16 +119,16 @@ mods.tconstruct.melting.recipeBuilder()
     mods.tconstruct.melting.removeByInput(IIngredient)
     ```
 
-- Removes all recipes that match the given input and the given output:
-
-    ```groovy:no-line-numbers
-    mods.tconstruct.melting.removeByInputAndOutput(IIngredient, FluidStack)
-    ```
-
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers
     mods.tconstruct.melting.removeByOutput(FluidStack)
+    ```
+
+- Removes all recipes that match the given input and the given output:
+
+    ```groovy:no-line-numbers
+    mods.tconstruct.melting.removeByInputAndOutput(IIngredient, FluidStack)
     ```
 
 - Removes all registered recipes:

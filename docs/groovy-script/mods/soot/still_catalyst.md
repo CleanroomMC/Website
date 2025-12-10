@@ -13,15 +13,20 @@ Tweak the values of various Catalysts used in the Still. If a catalyst is not de
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.soot.still_catalyst` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.soot.still_catalyst/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.soot.stillcatalyst
 mods.soot.stillCatalyst
 mods.soot.StillCatalyst
+mods.soot.still_catalyst/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Editing Values
 
@@ -38,7 +43,7 @@ mods.soot.still_catalyst.getAmount(item('minecraft:snowball'))
 
 ::::::::::
 
-## Adding Entries
+## Adding Recipes
 
 - Adds a new catalyst with the specified amount:
 
@@ -54,7 +59,7 @@ mods.soot.still_catalyst.addCatalyst(item('minecraft:glass'), 50)
 
 ::::::::::
 
-## Removing Entries
+## Removing Recipes
 
 - Removes the specified value from the catalyst. Recipes with this Catalyst won't be removed. Instead the Catalyst will have the default value of 1000:
 
@@ -76,7 +81,7 @@ mods.soot.still_catalyst.removeAll()
 
 ::::::::::
 
-## Getting the value of entries
+## Getting the value of recipes
 
 - Returns a stream of all specified Catalysts:
 

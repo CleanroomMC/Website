@@ -13,15 +13,20 @@ Converts two itemstack inputs into up to two itemstack outputs after a given pro
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.techreborn.implosion_compressor` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.techreborn.implosion_compressor/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.techreborn.implosioncompressor
 mods.techreborn.implosionCompressor
 mods.techreborn.ImplosionCompressor
+mods.techreborn.implosion_compressor/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.techreborn.ImplosionCompressor
     ```groovy:no-line-numbers
     mods.techreborn.implosion_compressor.add(R)
     ```
-
 
 ### Recipe Builder
 

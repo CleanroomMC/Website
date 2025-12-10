@@ -13,13 +13,18 @@ Converts a block into an output block and up to two itemstacks after being power
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithmods.turntable` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.betterwithmods.turntable/* Used as page default */ // [!code focus]
 mods.betterwithmods.Turntable
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.betterwithmods.Turntable
     ```groovy:no-line-numbers
     mods.betterwithmods.turntable.add(TurntableRecipe)
     ```
-
 
 ### Recipe Builder
 

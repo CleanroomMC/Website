@@ -13,15 +13,20 @@ Converts an input itemstack into an output fluidstack after a given amount of ti
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersivetech.melting_crucible` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.immersivetech.melting_crucible/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.immersivetech.meltingcrucible
 mods.immersivetech.meltingCrucible
 mods.immersivetech.MeltingCrucible
+mods.immersivetech.melting_crucible/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.immersivetech.MeltingCrucible
     ```groovy:no-line-numbers
     mods.immersivetech.melting_crucible.add(MeltingCrucibleRecipe)
     ```
-
 
 ### Recipe Builder
 

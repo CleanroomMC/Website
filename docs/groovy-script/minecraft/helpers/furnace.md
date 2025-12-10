@@ -17,27 +17,42 @@ Fuel Conversion Recipes may not function as desired in all furnaces - only the v
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `furnace` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-furnace/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {2}
 Furnace
-minecraft.furnace
-minecraft.Furnace
-Minecraft.furnace
-Minecraft.Furnace
+furnace/* Used as page default */ // [!code focus]
+mc.furnace
+mc.Furnace
+MC.furnace
+MC.Furnace
 vanilla.furnace
 vanilla.Furnace
 Vanilla.furnace
 Vanilla.Furnace
+minecraft.furnace
+minecraft.Furnace
+Minecraft.furnace
+Minecraft.Furnace
 mods.mc.furnace
 mods.mc.Furnace
+mods.MC.furnace
+mods.MC.Furnace
 mods.vanilla.furnace
 mods.vanilla.Furnace
+mods.Vanilla.furnace
+mods.Vanilla.Furnace
 mods.minecraft.furnace
 mods.minecraft.Furnace
+mods.Minecraft.furnace
+mods.Minecraft.Furnace
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -59,16 +74,16 @@ mods.minecraft.Furnace
     furnace.add(IIngredient, ItemStack, float, int)
     ```
 
-- Add the given recipe to the recipe list:
-
-    ```groovy:no-line-numbers
-    furnace.addFuelConversion(CustomFurnaceManager.FuelConversionRecipe)
-    ```
-
 - Add a conversion recipe in the format `smelted`, `fuel`, with `fuel` using an IIngredient transformer:
 
     ```groovy:no-line-numbers
     furnace.addFuelConversion(IIngredient, IIngredient)
+    ```
+
+- Add the given recipe to the recipe list:
+
+    ```groovy:no-line-numbers
+    furnace.addFuelConversion(CustomFurnaceManager.FuelConversionRecipe)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -205,11 +220,11 @@ furnace.removeAllFuelConversions()
 - Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
 
     ```groovy:no-line-numbers
-    furnace.streamFuelConversions()
+    furnace.streamRecipes()
     ```
 
 - Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
 
     ```groovy:no-line-numbers
-    furnace.streamRecipes()
+    furnace.streamFuelConversions()
     ```

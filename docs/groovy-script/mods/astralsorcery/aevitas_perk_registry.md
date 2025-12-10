@@ -13,19 +13,24 @@ Having the Stone Enrichment perk will convert nearby stone blocks into random or
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.astralsorcery.aevitas_perk_registry` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.astralsorcery.aevitas_perk_registry/* Used as page default */ // [!code focus]
-mods.astralsorcery.aevitasperkregistry
-mods.astralsorcery.aevitasPerkRegistry
-mods.astralsorcery.AevitasPerkRegistry
-mods.astral.aevitas_perk_registry
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.astral.aevitasperkregistry
 mods.astral.aevitasPerkRegistry
 mods.astral.AevitasPerkRegistry
+mods.astral.aevitas_perk_registry
+mods.astralsorcery.aevitasperkregistry
+mods.astralsorcery.aevitasPerkRegistry
+mods.astralsorcery.AevitasPerkRegistry
+mods.astralsorcery.aevitas_perk_registry/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -47,13 +52,13 @@ mods.astralsorcery.aevitas_perk_registry.add(ore('blockDiamond'), 10000)
 - Removes entries of the given ore:
 
     ```groovy:no-line-numbers
-    mods.astralsorcery.aevitas_perk_registry.remove(OreDictIngredient)
+    mods.astralsorcery.aevitas_perk_registry.remove(String)
     ```
 
 - Removes entries of the given ore:
 
     ```groovy:no-line-numbers
-    mods.astralsorcery.aevitas_perk_registry.remove(String)
+    mods.astralsorcery.aevitas_perk_registry.remove(OreDictIngredient)
     ```
 
 - Removes all registered recipes:

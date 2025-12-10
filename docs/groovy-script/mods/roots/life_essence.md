@@ -13,15 +13,20 @@ When shift right clicking a mob in the Life Essence Pool with Runic Shears, it w
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.roots.life_essence` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.roots.life_essence/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.roots.lifeessence
 mods.roots.lifeEssence
 mods.roots.LifeEssence
+mods.roots.life_essence/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 

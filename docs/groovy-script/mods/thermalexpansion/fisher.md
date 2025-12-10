@@ -13,7 +13,11 @@ Controls what itemstacks can be gained and how likely each is to be obtained.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.fisher` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.thermal.fisher
@@ -22,6 +26,7 @@ mods.thermalexpansion.fisher/* Used as page default */ // [!code focus]
 mods.thermalexpansion.Fisher
 ```
 
+::::::::::
 
 ## Adding Entries
 

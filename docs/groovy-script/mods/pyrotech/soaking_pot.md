@@ -13,28 +13,33 @@ Converts an item into a new one by soaking it in a liquid. Can require a campfir
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pyrotech.soaking_pot` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.pyrotech.soaking_pot/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.pyrotech.soakingpot
 mods.pyrotech.soakingPot
 mods.pyrotech.SoakingPot
+mods.pyrotech.soaking_pot/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds recipes in the format `name`, `input`, `output`, `time`:
-
-    ```groovy:no-line-numbers
-    mods.pyrotech.soaking_pot.add(String, IIngredient, FluidStack, ItemStack, int)
-    ```
 
 - Adds the recipe:
 
     ```groovy:no-line-numbers
     mods.pyrotech.soaking_pot.add(SoakingPotRecipe)
+    ```
+
+- Adds recipes in the format `name`, `input`, `output`, `time`:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.soaking_pot.add(String, IIngredient, FluidStack, ItemStack, int)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -133,10 +138,10 @@ mods.pyrotech.soaking_pot.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.soaking_pot.remove(ResourceLocation)
+    mods.pyrotech.soaking_pot.remove(SoakingPotRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -145,10 +150,10 @@ mods.pyrotech.soaking_pot.recipeBuilder()
     mods.pyrotech.soaking_pot.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.soaking_pot.remove(SoakingPotRecipe)
+    mods.pyrotech.soaking_pot.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

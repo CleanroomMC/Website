@@ -13,13 +13,18 @@ Converts up to 6 input ingredients into up to 6 output itemstacks in the Distill
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bewitchment.distillery` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.bewitchment.distillery/* Used as page default */ // [!code focus]
 mods.bewitchment.Distillery
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.bewitchment.Distillery
     ```groovy:no-line-numbers
     mods.bewitchment.distillery.add(DistilleryRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -99,10 +103,10 @@ mods.bewitchment.distillery.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.distillery.remove(ResourceLocation)
+    mods.bewitchment.distillery.remove(DistilleryRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -111,10 +115,10 @@ mods.bewitchment.distillery.recipeBuilder()
     mods.bewitchment.distillery.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.distillery.remove(DistilleryRecipe)
+    mods.bewitchment.distillery.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

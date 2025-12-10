@@ -13,15 +13,20 @@ Add custom Research Pages to the Astral Sorcery Book.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.astralsorcery.research` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.astralsorcery.research/* Used as page default */ // [!code focus]
-mods.astralsorcery.Research
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
 mods.astral.research
 mods.astral.Research
+mods.astralsorcery.research/* Used as page default */ // [!code focus]
+mods.astralsorcery.Research
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -31,22 +36,22 @@ mods.astral.Research
     mods.astralsorcery.research.addNode(ResearchProgression, ResearchNode)
     ```
 
-- Adds a connection between two nodes:
-
-    ```groovy:no-line-numbers
-    mods.astralsorcery.research.connectNodes(String, String)
-    ```
-
 - Moves the node with the given name to the x and y co-ords specified in the format `name`, `x`, `z`:
 
     ```groovy:no-line-numbers
     mods.astralsorcery.research.moveNode(String, int, int)
     ```
 
+- Adds a connection between two nodes:
+
+    ```groovy:no-line-numbers
+    mods.astralsorcery.research.connectNodes(String, String)
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.astralsorcery.research.connectNodes('MY_TEST_RESEARCH2', 'ENHANCED_COLLECTOR')
 mods.astralsorcery.research.moveNode('SOOTYMARBLE', 5, 6)
+mods.astralsorcery.research.connectNodes('MY_TEST_RESEARCH2', 'ENHANCED_COLLECTOR')
 ```
 
 ::::::::::
@@ -149,22 +154,22 @@ mods.astralsorcery.research.researchBuilder()
 
 ## Removing Entries
 
-- Removes a connection between two nodes:
-
-    ```groovy:no-line-numbers
-    mods.astralsorcery.research.disconnectNodes(String, String)
-    ```
-
 - Removes the node with the given name:
 
     ```groovy:no-line-numbers
     mods.astralsorcery.research.removeNode(String)
     ```
 
+- Removes a connection between two nodes:
+
+    ```groovy:no-line-numbers
+    mods.astralsorcery.research.disconnectNodes(String, String)
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.astralsorcery.research.disconnectNodes('MY_TEST_RESEARCH', 'ALTAR1')
 mods.astralsorcery.research.removeNode('CPAPER')
+mods.astralsorcery.research.disconnectNodes('MY_TEST_RESEARCH', 'ALTAR1')
 ```
 
 ::::::::::

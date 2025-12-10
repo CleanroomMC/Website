@@ -13,17 +13,22 @@ Combines an item with any number of Aspects to drop an output itemstack, potenti
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thaumcraft.crucible` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.thaumcraft.crucible/* Used as page default */ // [!code focus]
-mods.thaumcraft.Crucible
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {5}
 mods.tc.crucible
 mods.tc.Crucible
 mods.thaum.crucible
 mods.thaum.Crucible
+mods.thaumcraft.crucible/* Used as page default */ // [!code focus]
+mods.thaumcraft.Crucible
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -32,7 +37,6 @@ mods.thaum.Crucible
     ```groovy:no-line-numbers
     mods.thaumcraft.crucible.add(String, ItemStack, IIngredient, AspectList)
     ```
-
 
 ### Recipe Builder
 

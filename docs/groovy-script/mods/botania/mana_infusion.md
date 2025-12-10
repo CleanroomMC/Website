@@ -17,15 +17,20 @@ A mana cost greater than 10,000 cannot be converted in a Diluted Mana Pools and 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.botania.mana_infusion` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.botania.mana_infusion/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.botania.manainfusion
 mods.botania.manaInfusion
 mods.botania.ManaInfusion
+mods.botania.mana_infusion/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -40,7 +45,6 @@ mods.botania.ManaInfusion
     ```groovy:no-line-numbers
     mods.botania.mana_infusion.add(ItemStack, IIngredient, int)
     ```
-
 
 ### Recipe Builder
 
@@ -122,12 +126,6 @@ mods.botania.mana_infusion.recipeBuilder()
     mods.botania.mana_infusion.remove(RecipeManaInfusion)
     ```
 
-- Removes all recipes with the given IBlockState catalyst:
-
-    ```groovy:no-line-numbers
-    mods.botania.mana_infusion.removeByCatalyst(IBlockState)
-    ```
-
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
@@ -140,6 +138,12 @@ mods.botania.mana_infusion.recipeBuilder()
     mods.botania.mana_infusion.removeByOutput(ItemStack)
     ```
 
+- Removes all recipes with the given IBlockState catalyst:
+
+    ```groovy:no-line-numbers
+    mods.botania.mana_infusion.removeByCatalyst(IBlockState)
+    ```
+
 - Removes all registered recipes:
 
     ```groovy:no-line-numbers
@@ -148,9 +152,9 @@ mods.botania.mana_infusion.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.botania.mana_infusion.removeByCatalyst(blockstate('botania:alchemycatalyst'))
 mods.botania.mana_infusion.removeByInput(item('minecraft:ender_pearl'))
 mods.botania.mana_infusion.removeByOutput(item('botania:managlass'))
+mods.botania.mana_infusion.removeByCatalyst(blockstate('botania:alchemycatalyst'))
 mods.botania.mana_infusion.removeAll()
 ```
 

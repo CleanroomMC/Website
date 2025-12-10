@@ -17,7 +17,11 @@ Due to a limitation involving displaying the entry in JEI, entries must output a
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.coolant` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.thermal.coolant
@@ -26,6 +30,7 @@ mods.thermalexpansion.coolant/* Used as page default */ // [!code focus]
 mods.thermalexpansion.Coolant
 ```
 
+::::::::::
 
 ## Adding Entries
 

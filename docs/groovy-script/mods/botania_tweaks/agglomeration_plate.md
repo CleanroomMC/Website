@@ -13,15 +13,20 @@ Converts any number of input itemstacks into an item output, consuming mana to d
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.botania_tweaks.agglomeration_plate` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.botania_tweaks.agglomeration_plate/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.botania_tweaks.agglomerationplate
 mods.botania_tweaks.agglomerationPlate
 mods.botania_tweaks.AgglomerationPlate
+mods.botania_tweaks.agglomeration_plate/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.botania_tweaks.AgglomerationPlate
     ```groovy:no-line-numbers
     mods.botania_tweaks.agglomeration_plate.add(AgglomerationRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -70,7 +74,7 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 
     ```groovy:no-line-numbers
     edge(IBlockState)
-    baseStructure()
+    baseStructure() // Makes the structure the default, with livingrock and lapis blocks
     ```
 
 - `int`. Sets the mana cost of processing the recipe. Requires greater than or equal to 1. (Default `500,000`).
@@ -83,14 +87,14 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 
     ```groovy:no-line-numbers
     center(IBlockState)
-    baseStructure()
+    baseStructure() // Makes the structure the default, with livingrock and lapis blocks
     ```
 
 - `IBlockState`. Sets the IBlockState of the corners of the structure. Requires not null.
 
     ```groovy:no-line-numbers
     corner(IBlockState)
-    baseStructure()
+    baseStructure() // Makes the structure the default, with livingrock and lapis blocks
     ```
 
 - `int`. Sets the color hex code at the end of the recipe. (Default `0`).
@@ -191,18 +195,6 @@ mods.botania_tweaks.agglomeration_plate.recipeBuilder()
     mods.botania_tweaks.agglomeration_plate.remove(AgglomerationRecipe)
     ```
 
-- Removes all recipes with the given center IBlockState:
-
-    ```groovy:no-line-numbers
-    mods.botania_tweaks.agglomeration_plate.removeByCenter(IBlockState)
-    ```
-
-- Removes all recipes with the given corner IBlockState:
-
-    ```groovy:no-line-numbers
-    mods.botania_tweaks.agglomeration_plate.removeByCorner(IBlockState)
-    ```
-
 - Removes all recipes with the given edge IBlockState:
 
     ```groovy:no-line-numbers
@@ -213,6 +205,18 @@ mods.botania_tweaks.agglomeration_plate.recipeBuilder()
 
     ```groovy:no-line-numbers
     mods.botania_tweaks.agglomeration_plate.removeByInput(IIngredient)
+    ```
+
+- Removes all recipes with the given center IBlockState:
+
+    ```groovy:no-line-numbers
+    mods.botania_tweaks.agglomeration_plate.removeByCenter(IBlockState)
+    ```
+
+- Removes all recipes with the given corner IBlockState:
+
+    ```groovy:no-line-numbers
+    mods.botania_tweaks.agglomeration_plate.removeByCorner(IBlockState)
     ```
 
 - Removes all recipes that match the given output:
@@ -229,10 +233,10 @@ mods.botania_tweaks.agglomeration_plate.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.botania_tweaks.agglomeration_plate.removeByCenter(blockstate('botania:livingrock'))
-mods.botania_tweaks.agglomeration_plate.removeByCorner(blockstate('botania:livingrock'))
 mods.botania_tweaks.agglomeration_plate.removeByEdge(blockstate('minecraft:lapis_block'))
 mods.botania_tweaks.agglomeration_plate.removeByInput(item('botania:manaresource:2'))
+mods.botania_tweaks.agglomeration_plate.removeByCenter(blockstate('botania:livingrock'))
+mods.botania_tweaks.agglomeration_plate.removeByCorner(blockstate('botania:livingrock'))
 mods.botania_tweaks.agglomeration_plate.removeByOutput(item('botania:manaresource:4'))
 mods.botania_tweaks.agglomeration_plate.removeAll()
 ```

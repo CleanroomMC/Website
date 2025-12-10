@@ -13,27 +13,66 @@ Create custom commands, either generally or specifically for the client.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `minecraft.command` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-minecraft.command/* Used as page default */ // [!code focus]
-minecraft.Command
-Minecraft.command
-Minecraft.Command
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {9}
+mc.command
+mc.Command
+MC.command
+MC.Command
 vanilla.command
 vanilla.Command
 Vanilla.command
 Vanilla.Command
+minecraft.command/* Used as page default */ // [!code focus]
+minecraft.Command
+Minecraft.command
+Minecraft.Command
 mods.mc.command
 mods.mc.Command
+mods.MC.command
+mods.MC.Command
 mods.vanilla.command
 mods.vanilla.Command
+mods.Vanilla.command
+mods.Vanilla.Command
 mods.minecraft.command
 mods.minecraft.Command
+mods.Minecraft.command
+mods.Minecraft.Command
 ```
 
+::::::::::
 
 ## Adding Entries
+
+- Registers the given command:
+
+    ```groovy:no-line-numbers
+    minecraft.command.registerCommand(ICommand)
+    ```
+
+- Registers the given command to the given command handler, in the format `handler`, `command`:
+
+    ```groovy:no-line-numbers
+    minecraft.command.registerCommand(CommandHandler, ICommand)
+    ```
+
+- Registers the given command in the format `name`, `command`, with `command` being a Closure taking 3 parameters, `MinecraftServer server`, `ICommandSender sender`, and `String... args`:
+
+    ```groovy:no-line-numbers
+    minecraft.command.registerCommand(String, SimpleCommand.ICommand)
+    ```
+
+- Registers the given command in the format `name`, `usage`, `command`, with `command` being a Closure taking 3 parameters, `MinecraftServer server`, `ICommandSender sender`, and `String... args`:
+
+    ```groovy:no-line-numbers
+    minecraft.command.registerCommand(String, String, SimpleCommand.ICommand)
+    ```
 
 - Registers the given command to the client:
 
@@ -51,30 +90,6 @@ mods.minecraft.Command
 
     ```groovy:no-line-numbers
     minecraft.command.registerClientCommand(String, String, SimpleCommand.ICommand)
-    ```
-
-- Registers the given command to the given command handler, in the format `handler`, `command`:
-
-    ```groovy:no-line-numbers
-    minecraft.command.registerCommand(CommandHandler, ICommand)
-    ```
-
-- Registers the given command:
-
-    ```groovy:no-line-numbers
-    minecraft.command.registerCommand(ICommand)
-    ```
-
-- Registers the given command in the format `name`, `command`, with `command` being a Closure taking 3 parameters, `MinecraftServer server`, `ICommandSender sender`, and `String... args`:
-
-    ```groovy:no-line-numbers
-    minecraft.command.registerCommand(String, SimpleCommand.ICommand)
-    ```
-
-- Registers the given command in the format `name`, `usage`, `command`, with `command` being a Closure taking 3 parameters, `MinecraftServer server`, `ICommandSender sender`, and `String... args`:
-
-    ```groovy:no-line-numbers
-    minecraft.command.registerCommand(String, String, SimpleCommand.ICommand)
     ```
 
 :::::::::: details Example {open id="example"}

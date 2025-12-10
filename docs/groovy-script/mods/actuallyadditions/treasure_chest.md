@@ -13,19 +13,24 @@ A weighted item, with a weight to obtain and a minimum and maximum amount. Obtai
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.actuallyadditions.treasure_chest` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.aa.treasure_chest
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.aa.treasurechest
 mods.aa.treasureChest
 mods.aa.TreasureChest
-mods.actuallyadditions.treasure_chest/* Used as page default */ // [!code focus]
+mods.aa.treasure_chest
 mods.actuallyadditions.treasurechest
 mods.actuallyadditions.treasureChest
 mods.actuallyadditions.TreasureChest
+mods.actuallyadditions.treasure_chest/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.actuallyadditions.TreasureChest
     ```groovy:no-line-numbers
     mods.actuallyadditions.treasure_chest.add(TreasureChestLoot)
     ```
-
 
 ### Recipe Builder
 

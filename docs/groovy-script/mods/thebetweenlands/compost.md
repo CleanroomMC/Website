@@ -13,7 +13,11 @@ Converts an input itemstack into an amount of compost.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thebetweenlands.compost` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.betweenlands.compost
@@ -22,6 +26,7 @@ mods.thebetweenlands.compost/* Used as page default */ // [!code focus]
 mods.thebetweenlands.Compost
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.thebetweenlands.Compost
     ```groovy:no-line-numbers
     mods.thebetweenlands.compost.add(ICompostBinRecipe)
     ```
-
 
 ### Recipe Builder
 

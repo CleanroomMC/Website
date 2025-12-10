@@ -13,15 +13,20 @@ A simple 1 to 1 processing machine for dusts.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.prodigytech.magnetic_reassembler` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.prodigytech.magnetic_reassembler/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.prodigytech.magneticreassembler
 mods.prodigytech.magneticReassembler
 mods.prodigytech.MagneticReassembler
+mods.prodigytech.magnetic_reassembler/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

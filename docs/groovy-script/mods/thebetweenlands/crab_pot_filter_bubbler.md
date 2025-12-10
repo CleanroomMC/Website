@@ -13,19 +13,24 @@ Converts an input item into an output itemstack when a Bubbler Crab is placed in
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thebetweenlands.crab_pot_filter_bubbler` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.betweenlands.crab_pot_filter_bubbler
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.betweenlands.crabpotfilterbubbler
 mods.betweenlands.crabPotFilterBubbler
 mods.betweenlands.CrabPotFilterBubbler
-mods.thebetweenlands.crab_pot_filter_bubbler/* Used as page default */ // [!code focus]
+mods.betweenlands.crab_pot_filter_bubbler
 mods.thebetweenlands.crabpotfilterbubbler
 mods.thebetweenlands.crabPotFilterBubbler
 mods.thebetweenlands.CrabPotFilterBubbler
+mods.thebetweenlands.crab_pot_filter_bubbler/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.thebetweenlands.CrabPotFilterBubbler
     ```groovy:no-line-numbers
     mods.thebetweenlands.crab_pot_filter_bubbler.add(ICrabPotFilterRecipeBubbler)
     ```
-
 
 ### Recipe Builder
 

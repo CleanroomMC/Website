@@ -13,30 +13,35 @@ Converts an item into a new one by burning it. Has a chance to fail.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pyrotech.pit_kiln` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.pyrotech.pit_kiln/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {6}
+mods.pyrotech.kiln
+mods.pyrotech.Kiln
 mods.pyrotech.pitkiln
 mods.pyrotech.pitKiln
 mods.pyrotech.PitKiln
-mods.pyrotech.kiln
-mods.pyrotech.Kiln
+mods.pyrotech.pit_kiln/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds recipes in the format `name`, `input`, `output`, `burnTime`, `failureChance`, `failureOutput`:
-
-    ```groovy:no-line-numbers
-    mods.pyrotech.pit_kiln.add(String, IIngredient, ItemStack, int, float, Iterable<ItemStack>)
-    ```
 
 - Adds the recipe:
 
     ```groovy:no-line-numbers
     mods.pyrotech.pit_kiln.add(KilnPitRecipe)
+    ```
+
+- Adds recipes in the format `name`, `input`, `output`, `burnTime`, `failureChance`, `failureOutput`:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.pit_kiln.add(String, IIngredient, ItemStack, int, float, Iterable<ItemStack>)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -135,10 +140,10 @@ mods.pyrotech.pit_kiln.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.pit_kiln.remove(ResourceLocation)
+    mods.pyrotech.pit_kiln.remove(KilnPitRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -147,10 +152,10 @@ mods.pyrotech.pit_kiln.recipeBuilder()
     mods.pyrotech.pit_kiln.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.pit_kiln.remove(KilnPitRecipe)
+    mods.pyrotech.pit_kiln.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

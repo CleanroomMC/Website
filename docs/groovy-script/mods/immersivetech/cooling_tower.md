@@ -13,15 +13,20 @@ Converts up to two input fluidstacks into up to three output fluidstacks after a
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersivetech.cooling_tower` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.immersivetech.cooling_tower/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.immersivetech.coolingtower
 mods.immersivetech.coolingTower
 mods.immersivetech.CoolingTower
+mods.immersivetech.cooling_tower/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.immersivetech.CoolingTower
     ```groovy:no-line-numbers
     mods.immersivetech.cooling_tower.add(CoolingTowerRecipe)
     ```
-
 
 ### Recipe Builder
 

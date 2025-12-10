@@ -17,7 +17,11 @@ If no energy is provided from an itemstack, the furnace fuel burn time will be c
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.steam` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.thermal.steam
@@ -26,6 +30,7 @@ mods.thermalexpansion.steam/* Used as page default */ // [!code focus]
 mods.thermalexpansion.Steam
 ```
 
+::::::::::
 
 ## Adding Recipes
 

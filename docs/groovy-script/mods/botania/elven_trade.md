@@ -13,15 +13,20 @@ Convert in any number of item inputs into an item output.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.botania.elven_trade` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.botania.elven_trade/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.botania.elventrade
 mods.botania.elvenTrade
 mods.botania.ElvenTrade
+mods.botania.elven_trade/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -29,18 +34,6 @@ mods.botania.ElvenTrade
 
     ```groovy:no-line-numbers
     mods.botania.elven_trade.add(RecipeElvenTrade)
-    ```
-
-- Adds recipes in the format `output`, `inputs`:
-
-    ```groovy:no-line-numbers
-    mods.botania.elven_trade.add(Collection<ItemStack>, Collection<IIngredient>)
-    ```
-
-- Adds recipes in the format `output`, `inputs`:
-
-    ```groovy:no-line-numbers
-    mods.botania.elven_trade.add(ItemStack, Collection<IIngredient>)
     ```
 
 - Adds recipes in the format `output`, `inputs`:
@@ -55,6 +48,17 @@ mods.botania.ElvenTrade
     mods.botania.elven_trade.add(ItemStack[], IIngredient...)
     ```
 
+- Adds recipes in the format `output`, `inputs`:
+
+    ```groovy:no-line-numbers
+    mods.botania.elven_trade.add(ItemStack, Collection<IIngredient>)
+    ```
+
+- Adds recipes in the format `output`, `inputs`:
+
+    ```groovy:no-line-numbers
+    mods.botania.elven_trade.add(Collection<ItemStack>, Collection<IIngredient>)
+    ```
 
 ### Recipe Builder
 

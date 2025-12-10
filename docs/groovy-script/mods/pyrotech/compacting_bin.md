@@ -13,28 +13,33 @@ When using a shovel it can convert items.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pyrotech.compacting_bin` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.pyrotech.compacting_bin/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.pyrotech.compactingbin
 mods.pyrotech.compactingBin
 mods.pyrotech.CompactingBin
+mods.pyrotech.compacting_bin/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds recipes in the format `name`, `input`, `output`, `hits`:
-
-    ```groovy:no-line-numbers
-    mods.pyrotech.compacting_bin.add(String, IIngredient, ItemStack, int)
-    ```
 
 - Adds the recipe:
 
     ```groovy:no-line-numbers
     mods.pyrotech.compacting_bin.add(CompactingBinRecipe)
+    ```
+
+- Adds recipes in the format `name`, `input`, `output`, `hits`:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.compacting_bin.add(String, IIngredient, ItemStack, int)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -117,10 +122,10 @@ mods.pyrotech.compacting_bin.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.compacting_bin.remove(ResourceLocation)
+    mods.pyrotech.compacting_bin.remove(CompactingBinRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -129,10 +134,10 @@ mods.pyrotech.compacting_bin.recipeBuilder()
     mods.pyrotech.compacting_bin.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.compacting_bin.remove(CompactingBinRecipe)
+    mods.pyrotech.compacting_bin.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

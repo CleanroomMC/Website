@@ -13,13 +13,18 @@ Kills an entity in-world, dropping the mob's normal loot in addition to custom l
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.factorytech.disassembler` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.factorytech.disassembler/* Used as page default */ // [!code focus]
 mods.factorytech.Disassembler
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.factorytech.Disassembler
     ```groovy:no-line-numbers
     mods.factorytech.disassembler.add(Map.Entry<Class<? extends EntityLiving>, List<ItemStack>>)
     ```
-
 
 ### Recipe Builder
 
@@ -101,13 +105,13 @@ mods.factorytech.disassembler.recipeBuilder()
 - Removes all recipes matching the given entity class:
 
     ```groovy:no-line-numbers
-    mods.factorytech.disassembler.removeByEntity(Class<? extends EntityLiving>)
+    mods.factorytech.disassembler.removeByEntity(EntityEntry)
     ```
 
 - Removes all recipes matching the given entity class:
 
     ```groovy:no-line-numbers
-    mods.factorytech.disassembler.removeByEntity(EntityEntry)
+    mods.factorytech.disassembler.removeByEntity(Class<? extends EntityLiving>)
     ```
 
 - Removes all recipes that match the given output:

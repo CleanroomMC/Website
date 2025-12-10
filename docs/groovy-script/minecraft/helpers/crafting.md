@@ -25,27 +25,42 @@ You can view recipe names in JEI/HEI by hovering over the output with `F3+h` mod
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `crafting` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-crafting/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {2}
 Crafting
-minecraft.crafting
-minecraft.Crafting
-Minecraft.crafting
-Minecraft.Crafting
+crafting/* Used as page default */ // [!code focus]
+mc.crafting
+mc.Crafting
+MC.crafting
+MC.Crafting
 vanilla.crafting
 vanilla.Crafting
 Vanilla.crafting
 Vanilla.Crafting
+minecraft.crafting
+minecraft.Crafting
+Minecraft.crafting
+Minecraft.Crafting
 mods.mc.crafting
 mods.mc.Crafting
+mods.MC.crafting
+mods.MC.Crafting
 mods.vanilla.crafting
 mods.vanilla.Crafting
+mods.Vanilla.crafting
+mods.Vanilla.Crafting
 mods.minecraft.crafting
 mods.minecraft.Crafting
+mods.Minecraft.crafting
+mods.Minecraft.Crafting
 ```
 
+::::::::::
 
 ## Editing Values
 
@@ -60,7 +75,6 @@ mods.minecraft.Crafting
     ```groovy:no-line-numbers
     crafting.setFallback(String, IIngredient)
     ```
-
 
 ## Adding Recipes
 
@@ -79,13 +93,13 @@ mods.minecraft.Crafting
 - Adds a shaped recipe in the format `name`, `output`, `input`:
 
     ```groovy:no-line-numbers
-    crafting.addShaped(ResourceLocation, ItemStack, List<List<IIngredient>>)
+    crafting.addShaped(String, ItemStack, List<List<IIngredient>>)
     ```
 
 - Adds a shaped recipe in the format `name`, `output`, `input`:
 
     ```groovy:no-line-numbers
-    crafting.addShaped(String, ItemStack, List<List<IIngredient>>)
+    crafting.addShaped(ResourceLocation, ItemStack, List<List<IIngredient>>)
     ```
 
 - Adds a shapeless recipe in the format `output`, `input`:
@@ -97,13 +111,13 @@ mods.minecraft.Crafting
 - Adds a shapeless recipe in the format `name`, `output`, `input`:
 
     ```groovy:no-line-numbers
-    crafting.addShapeless(ResourceLocation, ItemStack, List<IIngredient>)
+    crafting.addShapeless(String, ItemStack, List<IIngredient>)
     ```
 
 - Adds a shapeless recipe in the format `name`, `output`, `input`:
 
     ```groovy:no-line-numbers
-    crafting.addShapeless(String, ItemStack, List<IIngredient>)
+    crafting.addShapeless(ResourceLocation, ItemStack, List<IIngredient>)
     ```
 
 - Adds a shaped recipe in the format `output`, `input` and removes the recipe matching the given output:
@@ -115,13 +129,13 @@ mods.minecraft.Crafting
 - Adds a shaped recipe in the format `name`, `output`, `input` and removes the recipe matching the given name:
 
     ```groovy:no-line-numbers
-    crafting.replaceShaped(ResourceLocation, ItemStack, List<List<IIngredient>>)
+    crafting.replaceShaped(String, ItemStack, List<List<IIngredient>>)
     ```
 
 - Adds a shaped recipe in the format `name`, `output`, `input` and removes the recipe matching the given name:
 
     ```groovy:no-line-numbers
-    crafting.replaceShaped(String, ItemStack, List<List<IIngredient>>)
+    crafting.replaceShaped(ResourceLocation, ItemStack, List<List<IIngredient>>)
     ```
 
 - Adds a shapeless recipe in the format `output`, `input` and removes the recipe matching the given output:
@@ -133,29 +147,29 @@ mods.minecraft.Crafting
 - Adds a shapeless recipe in the format `name`, `output`, `input` and removes the recipe matching the given name:
 
     ```groovy:no-line-numbers
-    crafting.replaceShapeless(ResourceLocation, ItemStack, List<IIngredient>)
+    crafting.replaceShapeless(String, ItemStack, List<IIngredient>)
     ```
 
 - Adds a shapeless recipe in the format `name`, `output`, `input` and removes the recipe matching the given name:
 
     ```groovy:no-line-numbers
-    crafting.replaceShapeless(String, ItemStack, List<IIngredient>)
+    crafting.replaceShapeless(ResourceLocation, ItemStack, List<IIngredient>)
     ```
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 crafting.addShaped(item('minecraft:gold_block'), [[item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),item('minecraft:gold_ingot')],[null, null, null],[item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),item('minecraft:gold_ingot')]])
-crafting.addShaped(resource('example:resource_location'), item('minecraft:clay'), [[item('minecraft:cobblestone')],[item('minecraft:nether_star')],[item('minecraft:cobblestone')]])
 crafting.addShaped('gold_v_to_clay', item('minecraft:clay'), [[item('minecraft:gold_ingot'),null,item('minecraft:gold_ingot')],[null,item('minecraft:gold_ingot'),null]])
+crafting.addShaped(resource('example:resource_location'), item('minecraft:clay'), [[item('minecraft:cobblestone')],[item('minecraft:nether_star')],[item('minecraft:cobblestone')]])
 crafting.addShapeless(item('minecraft:clay'), [item('minecraft:cobblestone'),item('minecraft:nether_star'),item('minecraft:gold_ingot')])
-crafting.addShapeless(resource('example:resource_location2'), item('minecraft:clay'), [item('minecraft:cobblestone'), item('minecraft:gold_ingot')])
 crafting.addShapeless('precious_to_clay', item('minecraft:clay'), [item('minecraft:diamond'),item('minecraft:gold_ingot'),item('minecraft:gold_ingot')])
+crafting.addShapeless(resource('example:resource_location2'), item('minecraft:clay'), [item('minecraft:cobblestone'), item('minecraft:gold_ingot')])
 crafting.replaceShaped(item('minecraft:chest'), [[ore('logWood'),ore('logWood'),ore('logWood')],[ore('logWood'),null,ore('logWood')],[ore('logWood'),ore('logWood'),ore('logWood')]])
-crafting.replaceShaped(resource('minecraft:sea_lantern'), item('minecraft:clay'), [[item('minecraft:glowstone')],[item('minecraft:glowstone')],[item('minecraft:glowstone')]])
 crafting.replaceShaped('gold_to_diamonds', item('minecraft:diamond') * 8, [[item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),item('minecraft:gold_ingot')],[item('minecraft:gold_ingot'),null,item('minecraft:gold_ingot')],[item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),item('minecraft:gold_ingot')]])
+crafting.replaceShaped(resource('minecraft:sea_lantern'), item('minecraft:clay'), [[item('minecraft:glowstone')],[item('minecraft:glowstone')],[item('minecraft:glowstone')]])
 crafting.replaceShapeless(item('minecraft:ender_eye'), [item('minecraft:ender_pearl'),item('minecraft:nether_star')])
+crafting.replaceShapeless('minecraft:pink_dye_from_pink_tulip', item('minecraft:clay'), [item('minecraft:nether_star')])
 crafting.replaceShapeless(resource('minecraft:pink_dye_from_peony'), item('minecraft:clay'), [item('minecraft:cobblestone'), item('minecraft:gold_ingot')])
-crafting.replaceShapeless('minecraft:pink_dye_from_pink_tulp', item('minecraft:clay'), [item('minecraft:nether_star')])
 ```
 
 ::::::::::
@@ -217,8 +231,8 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 - `byte`. Sets if the recipe is removed. The `replace` method removes by the output itemstack, and the `replaceByName` method removes by the Resource Location. (Default `0`).
 
     ```groovy:no-line-numbers
-    replace()
-    replaceByName()
+    replace() // Makes the recipe remove by the ItemStack output
+    replaceByName() // Makes the recipe remove by the Resource Location name
     ```
 
 - `boolean`. Sets if the recipe is horizontally mirrored. (Default `false`).
@@ -296,30 +310,30 @@ crafting.shapedBuilder()
 crafting.shapedBuilder()
     .output(item('minecraft:gold_block'))
     .shape([[item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),item('minecraft:gold_ingot')],
-           [null, null, null],
-           [item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),item('minecraft:gold_ingot')]])
+            [null, null, null],
+            [item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),item('minecraft:gold_ingot')]])
     .register()
 
 crafting.shapedBuilder()
     .name('gold_v_to_clay')
     .output(item('minecraft:clay'))
     .shape([[item('minecraft:gold_ingot'),null,item('minecraft:gold_ingot')],
-           [null,item('minecraft:stone_pickaxe').transformDamage(2).whenAnyDamage(),null]])
+            [null,item('minecraft:stone_pickaxe').transformDamage(2).whenAnyDamage(),null]])
     .register()
 
 crafting.shapedBuilder()
     .name(resource('example:resource_location'))
     .output(item('minecraft:clay'))
     .shape([[item('minecraft:cobblestone')],
-           [item('minecraft:nether_star')],
-           [item('minecraft:cobblestone')]])
+            [item('minecraft:nether_star')],
+            [item('minecraft:cobblestone')]])
     .register()
 
 crafting.shapedBuilder()
     .output(item('minecraft:chest'))
     .shape([[ore('logWood'),ore('logWood'),ore('logWood')],
-           [ore('logWood'),null,ore('logWood')],
-           [ore('logWood'),ore('logWood'),ore('logWood')]])
+            [ore('logWood'),null,ore('logWood')],
+            [ore('logWood'),ore('logWood'),ore('logWood')]])
     .replace()
     .register()
 
@@ -327,8 +341,8 @@ crafting.shapedBuilder()
     .name('gold_to_diamonds')
     .output(item('minecraft:diamond') * 8)
     .shape([[item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),item('minecraft:gold_ingot')],
-           [item('minecraft:gold_ingot'),null,item('minecraft:gold_ingot')],
-           [item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),item('minecraft:gold_ingot')]])
+            [item('minecraft:gold_ingot'),null,item('minecraft:gold_ingot')],
+            [item('minecraft:gold_ingot'),item('minecraft:gold_ingot'),item('minecraft:gold_ingot')]])
     .replaceByName()
     .register()
 
@@ -336,8 +350,8 @@ crafting.shapedBuilder()
     .name(resource('minecraft:sea_lantern'))
     .output(item('minecraft:clay'))
     .shape([[item('minecraft:glowstone')],
-           [item('minecraft:glowstone')],
-           [item('minecraft:glowstone')]])
+            [item('minecraft:glowstone')],
+            [item('minecraft:glowstone')]])
     .replaceByName()
     .register()
 ```
@@ -382,8 +396,8 @@ crafting.shapedBuilder()
 - `byte`. Sets if the recipe is removed. The `replace` method removes by the output itemstack, and the `replaceByName` method removes by the Resource Location. (Default `0`).
 
     ```groovy:no-line-numbers
-    replace()
-    replaceByName()
+    replace() // Makes the recipe remove by the ItemStack output
+    replaceByName() // Makes the recipe remove by the Resource Location name
     ```
 
 - `Closure<ItemStack>`. Sets an operation that modifies the input items or output item.
@@ -434,7 +448,7 @@ crafting.shapelessBuilder()
     .register()
 
 crafting.shapelessBuilder()
-    .name('minecraft:pink_dye_from_pink_tulp')
+    .name('minecraft:pink_dye_from_pink_tulip')
     .output(item('minecraft:clay'))
     .input([item('minecraft:nether_star')])
     .replaceByName()
@@ -454,10 +468,10 @@ crafting.shapelessBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    crafting.remove(ResourceLocation)
+    crafting.remove(IRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -466,10 +480,10 @@ crafting.shapelessBuilder()
     crafting.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    crafting.remove(IRecipe)
+    crafting.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:
@@ -492,8 +506,8 @@ crafting.shapelessBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-crafting.remove(resource('minecraft:stonebrick'))
 crafting.remove('minecraft:mossy_stonebrick')
+crafting.remove(resource('minecraft:stonebrick'))
 crafting.removeByOutput(item('minecraft:gold_ingot'))
 crafting.removeAll()
 ```

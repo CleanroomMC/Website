@@ -13,13 +13,18 @@ The Still is a device that can be used to distill fluids. The Still requires a h
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.soot.still` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.soot.still/* Used as page default */ // [!code focus]
 mods.soot.Still
 ```
 
+::::::::::
 
 ## Adding Recipes
 

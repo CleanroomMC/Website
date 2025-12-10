@@ -13,15 +13,20 @@ Converts up to two input fluidstacks into up to two output fluidstacks after a g
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersivetech.heat_exchanger` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.immersivetech.heat_exchanger/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.immersivetech.heatexchanger
 mods.immersivetech.heatExchanger
 mods.immersivetech.HeatExchanger
+mods.immersivetech.heat_exchanger/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.immersivetech.HeatExchanger
     ```groovy:no-line-numbers
     mods.immersivetech.heat_exchanger.add(HeatExchangerRecipe)
     ```
-
 
 ### Recipe Builder
 

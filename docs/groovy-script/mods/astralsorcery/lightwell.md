@@ -13,15 +13,20 @@ Converts an input item into fluid, with a chance at breaking every time fluid is
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.astralsorcery.lightwell` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.astralsorcery.lightwell/* Used as page default */ // [!code focus]
-mods.astralsorcery.Lightwell
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
 mods.astral.lightwell
 mods.astral.Lightwell
+mods.astralsorcery.lightwell/* Used as page default */ // [!code focus]
+mods.astralsorcery.Lightwell
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -36,7 +41,6 @@ mods.astral.Lightwell
     ```groovy:no-line-numbers
     mods.astralsorcery.lightwell.add(ItemStack, Fluid, float, float, Color)
     ```
-
 
 ### Recipe Builder
 
@@ -123,12 +127,6 @@ mods.astralsorcery.lightwell.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes all recipes that match the given catalyst:
-
-    ```groovy:no-line-numbers
-    mods.astralsorcery.lightwell.removeByCatalyst(ItemStack)
-    ```
-
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
@@ -141,6 +139,12 @@ mods.astralsorcery.lightwell.recipeBuilder()
     mods.astralsorcery.lightwell.removeByOutput(FluidStack)
     ```
 
+- Removes all recipes that match the given catalyst:
+
+    ```groovy:no-line-numbers
+    mods.astralsorcery.lightwell.removeByCatalyst(ItemStack)
+    ```
+
 - Removes all registered recipes:
 
     ```groovy:no-line-numbers
@@ -149,9 +153,9 @@ mods.astralsorcery.lightwell.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.astralsorcery.lightwell.removeByCatalyst(item('minecraft:ice'))
 mods.astralsorcery.lightwell.removeByInput(item('minecraft:packed_ice'))
 mods.astralsorcery.lightwell.removeByOutput(fluid('lava'))
+mods.astralsorcery.lightwell.removeByCatalyst(item('minecraft:ice'))
 mods.astralsorcery.lightwell.removeAll()
 ```
 

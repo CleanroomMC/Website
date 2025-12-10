@@ -13,13 +13,18 @@ Converts an input fluidstack into an output fluidstack after a given amount of t
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersivetech.boiler` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.immersivetech.boiler/* Used as page default */ // [!code focus]
 mods.immersivetech.Boiler
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.immersivetech.Boiler
     ```groovy:no-line-numbers
     mods.immersivetech.boiler.add(BoilerRecipe)
     ```
-
 
 ### Recipe Builder
 

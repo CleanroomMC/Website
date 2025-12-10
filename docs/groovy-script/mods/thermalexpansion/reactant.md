@@ -13,7 +13,11 @@ Converts an input itemstack and input fluidstack into power, taking time based o
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.reactant` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.thermal.reactant
@@ -22,6 +26,7 @@ mods.thermalexpansion.reactant/* Used as page default */ // [!code focus]
 mods.thermalexpansion.Reactant
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,13 +39,13 @@ mods.thermalexpansion.Reactant
 - Adds a fluid to the Element Catalyzer Fluid list, enabling its use with the Elemental Catalyzer augment installed:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.reactant.addElementalFluid(FluidStack)
+    mods.thermalexpansion.reactant.addElementalFluid(String)
     ```
 
 - Adds a fluid to the Element Catalyzer Fluid list, enabling its use with the Elemental Catalyzer augment installed:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.reactant.addElementalFluid(String)
+    mods.thermalexpansion.reactant.addElementalFluid(FluidStack)
     ```
 
 - Adds an itemstack to the Element Catalyzer Fluid list, enabling its use with the Elemental Catalyzer augment installed:
@@ -138,13 +143,13 @@ mods.thermalexpansion.reactant.recipeBuilder()
 - Removes a fluid from the Element Catalyzer Fluid list, disabling its use with the Elemental Catalyzer augment installed:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.reactant.removeElementalFluid(FluidStack)
+    mods.thermalexpansion.reactant.removeElementalFluid(String)
     ```
 
 - Removes a fluid from the Element Catalyzer Fluid list, disabling its use with the Elemental Catalyzer augment installed:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.reactant.removeElementalFluid(String)
+    mods.thermalexpansion.reactant.removeElementalFluid(FluidStack)
     ```
 
 - Removes an itemstack from the Element Catalyzer Fluid list, disabling its use with the Elemental Catalyzer augment installed:

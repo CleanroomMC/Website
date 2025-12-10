@@ -17,15 +17,20 @@ Recipes exclusive to the Mekanism Smelter may not be displayed in JEI.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.mekanism.smelting` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.mekanism.smelting/* Used as page default */ // [!code focus]
-mods.mekanism.Smelting
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
 mods.mekanism.smelter
 mods.mekanism.Smelter
+mods.mekanism.smelting/* Used as page default */ // [!code focus]
+mods.mekanism.Smelting
 ```
 
+::::::::::
 
 ## Adding Recipes
 

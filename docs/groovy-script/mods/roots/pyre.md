@@ -13,13 +13,18 @@ Converts 5 input items into the output after a period of time when the Pyre is l
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.roots.pyre` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.roots.pyre/* Used as page default */ // [!code focus]
 mods.roots.Pyre
 ```
 
+::::::::::
 
 ## Adding Recipes
 

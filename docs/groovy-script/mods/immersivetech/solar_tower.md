@@ -13,15 +13,20 @@ Converts an input fluidstack into an output fluidstack after a given amount of t
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersivetech.solar_tower` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.immersivetech.solar_tower/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.immersivetech.solartower
 mods.immersivetech.solarTower
 mods.immersivetech.SolarTower
+mods.immersivetech.solar_tower/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.immersivetech.SolarTower
     ```groovy:no-line-numbers
     mods.immersivetech.solar_tower.add(SolarTowerRecipe)
     ```
-
 
 ### Recipe Builder
 

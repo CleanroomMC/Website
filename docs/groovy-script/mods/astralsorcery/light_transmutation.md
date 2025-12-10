@@ -13,19 +13,24 @@ Converts an input Block or IBlockState into an output IBlockState after being se
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.astralsorcery.light_transmutation` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.astralsorcery.light_transmutation/* Used as page default */ // [!code focus]
-mods.astralsorcery.lighttransmutation
-mods.astralsorcery.lightTransmutation
-mods.astralsorcery.LightTransmutation
-mods.astral.light_transmutation
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.astral.lighttransmutation
 mods.astral.lightTransmutation
 mods.astral.LightTransmutation
+mods.astral.light_transmutation
+mods.astralsorcery.lighttransmutation
+mods.astralsorcery.lightTransmutation
+mods.astralsorcery.LightTransmutation
+mods.astralsorcery.light_transmutation/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Editing Values
 
@@ -49,7 +54,6 @@ mods.astralsorcery.light_transmutation.setStarmetalReplacementState(blockstate('
     ```groovy:no-line-numbers
     mods.astralsorcery.light_transmutation.add(LightOreTransmutations.Transmutation)
     ```
-
 
 ### Recipe Builder
 

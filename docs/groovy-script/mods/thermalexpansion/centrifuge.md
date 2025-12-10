@@ -13,7 +13,11 @@ Converts an input itemstack into an optional output fluidstack and up to four ou
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.centrifuge` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.thermal.centrifuge
@@ -22,6 +26,7 @@ mods.thermalexpansion.centrifuge/* Used as page default */ // [!code focus]
 mods.thermalexpansion.Centrifuge
 ```
 
+::::::::::
 
 ## Adding Recipes
 

@@ -13,15 +13,20 @@ Converts an input item in addition of an input fluid into an output item using t
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.aetherworks.metal_former` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.aetherworks.metal_former/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.aetherworks.metalformer
 mods.aetherworks.metalFormer
 mods.aetherworks.MetalFormer
+mods.aetherworks.metal_former/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -31,7 +36,18 @@ Just like other recipe types, the Metal Former also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.aetherworks.metal_former.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.aetherworks.metal_former.recipeBuilder()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
     ```groovy:no-line-numbers
@@ -62,11 +78,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     temperature(int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `v0id.aw.common.recipe.MetalFormerRecipes$MetalFormerRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers

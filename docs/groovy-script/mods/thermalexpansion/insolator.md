@@ -13,7 +13,11 @@ Converts two input itemstacks into an output itemstack and optional output items
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.insolator` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.thermal.insolator
@@ -22,6 +26,7 @@ mods.thermalexpansion.insolator/* Used as page default */ // [!code focus]
 mods.thermalexpansion.Insolator
 ```
 
+::::::::::
 
 ## Adding Recipes
 

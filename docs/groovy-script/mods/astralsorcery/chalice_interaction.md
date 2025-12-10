@@ -13,19 +13,24 @@ When two chalices containing different fluids are placed nearby, fluid may be co
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.astralsorcery.chalice_interaction` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.astralsorcery.chalice_interaction/* Used as page default */ // [!code focus]
-mods.astralsorcery.chaliceinteraction
-mods.astralsorcery.chaliceInteraction
-mods.astralsorcery.ChaliceInteraction
-mods.astral.chalice_interaction
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.astral.chaliceinteraction
 mods.astral.chaliceInteraction
 mods.astral.ChaliceInteraction
+mods.astral.chalice_interaction
+mods.astralsorcery.chaliceinteraction
+mods.astralsorcery.chaliceInteraction
+mods.astralsorcery.ChaliceInteraction
+mods.astralsorcery.chalice_interaction/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -40,7 +45,6 @@ mods.astral.ChaliceInteraction
     ```groovy:no-line-numbers
     mods.astralsorcery.chalice_interaction.add(int, FluidStack, FluidStack, LiquidInteraction.FluidInteractionAction)
     ```
-
 
 ### Recipe Builder
 
@@ -64,8 +68,8 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 
     ```groovy:no-line-numbers
     component(FluidStack)
-    component(FluidStack, float)
-    fluidInput(FluidStack)
+    component(FluidStack, float) // 100% chance
+    fluidInput(FluidStack) // 100% chance
     fluidInput(FluidStack...)
     fluidInput(FluidStack, float)
     fluidInput(Collection<FluidStack>)
@@ -74,11 +78,11 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 - `ItemStackList`. Sets the item outputs of the recipe. Requires greater than or equal to 0.
 
     ```groovy:no-line-numbers
-    output(ItemStack)
+    output(ItemStack) // 100% chance
     output(ItemStack...)
     output(ItemStack, int)
     output(Collection<ItemStack>)
-    result(ItemStack)
+    result(ItemStack) // 100% chance
     result(ItemStack, int)
     ```
 
@@ -86,17 +90,17 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 
     ```groovy:no-line-numbers
     component(FluidStack)
-    component(FluidStack, float)
-    fluidInput(FluidStack)
+    component(FluidStack, float) // 100% chance
+    fluidInput(FluidStack) // 100% chance
     fluidInput(FluidStack, float)
     ```
 
 - `IntArrayList`. Sets the chance a given output will occur among all possible combinations of the fluid. Requires greater than 0.
 
     ```groovy:no-line-numbers
-    output(ItemStack)
+    output(ItemStack) // 100% chance
     output(ItemStack, int)
-    result(ItemStack)
+    result(ItemStack) // 100% chance
     result(ItemStack, int)
     ```
 
@@ -140,13 +144,13 @@ mods.astralsorcery.chalice_interaction.recipeBuilder()
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.astralsorcery.chalice_interaction.removeByInput(Fluid, Fluid)
+    mods.astralsorcery.chalice_interaction.removeByInput(FluidStack)
     ```
 
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.astralsorcery.chalice_interaction.removeByInput(FluidStack)
+    mods.astralsorcery.chalice_interaction.removeByInput(Fluid, Fluid)
     ```
 
 - Removes all recipes that match the given input:

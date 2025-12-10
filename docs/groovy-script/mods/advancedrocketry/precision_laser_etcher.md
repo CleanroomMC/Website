@@ -17,15 +17,20 @@ The 'chances' used with the recipe outputs are actually output weights. For exam
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.advancedrocketry.precision_laser_etcher` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.advancedrocketry.precision_laser_etcher/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.advancedrocketry.precisionlaseretcher
 mods.advancedrocketry.precisionLaserEtcher
 mods.advancedrocketry.PrecisionLaserEtcher
+mods.advancedrocketry.precision_laser_etcher/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.advancedrocketry.PrecisionLaserEtcher
     ```groovy:no-line-numbers
     mods.advancedrocketry.precision_laser_etcher.add(R)
     ```
-
 
 ### Recipe Builder
 

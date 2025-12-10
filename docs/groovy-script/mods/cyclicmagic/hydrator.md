@@ -13,15 +13,20 @@ Converts up to 4 input itemstacks and some amount of water into an output itemst
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.cyclicmagic.hydrator` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.cyclicmagic.hydrator/* Used as page default */ // [!code focus]
-mods.cyclicmagic.Hydrator
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
 mods.cyclic.hydrator
 mods.cyclic.Hydrator
+mods.cyclicmagic.hydrator/* Used as page default */ // [!code focus]
+mods.cyclicmagic.Hydrator
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.cyclic.Hydrator
     ```groovy:no-line-numbers
     mods.cyclicmagic.hydrator.add(RecipeHydrate)
     ```
-
 
 ### Recipe Builder
 

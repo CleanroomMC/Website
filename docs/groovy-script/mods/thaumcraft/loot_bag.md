@@ -21,23 +21,28 @@ Armor chances are hard coded into randomized loot function, and are not currentl
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thaumcraft.loot_bag` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.thaumcraft.loot_bag/* Used as page default */ // [!code focus]
-mods.thaumcraft.lootbag
-mods.thaumcraft.lootBag
-mods.thaumcraft.LootBag
-mods.tc.loot_bag
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {12}
 mods.tc.lootbag
 mods.tc.lootBag
 mods.tc.LootBag
-mods.thaum.loot_bag
+mods.tc.loot_bag
 mods.thaum.lootbag
 mods.thaum.lootBag
 mods.thaum.LootBag
+mods.thaum.loot_bag
+mods.thaumcraft.lootbag
+mods.thaumcraft.lootBag
+mods.thaumcraft.LootBag
+mods.thaumcraft.loot_bag/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

@@ -13,17 +13,22 @@ Converts an input itemstack into any number of output itemstacks, divided in any
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.alchemistry.dissolver` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.alchemistry.dissolver/* Used as page default */ // [!code focus]
 mods.alchemistry.Dissolver
-mods.alchemistry.chemical_dissolver
 mods.alchemistry.chemicaldissolver
 mods.alchemistry.chemicalDissolver
 mods.alchemistry.ChemicalDissolver
+mods.alchemistry.chemical_dissolver
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -32,7 +37,6 @@ mods.alchemistry.ChemicalDissolver
     ```groovy:no-line-numbers
     mods.alchemistry.dissolver.add(DissolverRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -76,12 +80,12 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 - `List<ProbabilityGroup>`. Sets the probability sets rolled to produce output. Requires greater than or equal to 1.
 
     ```groovy:no-line-numbers
-    output(ItemStack)
-    output(ItemStack...)
-    output(Collection<ItemStack>)
-    probabilityOutput(ItemStack...)
+    output(ItemStack) // 100% chance
+    output(ItemStack...) // 100% chance
+    output(Collection<ItemStack>) // 100% chance
+    probabilityOutput(ItemStack...) // 100% chance
     probabilityOutput(double, ItemStack...)
-    probabilityOutput(Collection<ItemStack>)
+    probabilityOutput(Collection<ItemStack>) // 100% chance
     probabilityOutput(double, Collection<ItemStack>)
     ```
 

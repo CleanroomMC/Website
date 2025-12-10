@@ -17,13 +17,18 @@ Due to the complexity of custom rituals, only the basic item output rituals can 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bewitchment.ritual` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.bewitchment.ritual/* Used as page default */ // [!code focus]
 mods.bewitchment.Ritual
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -32,7 +37,6 @@ mods.bewitchment.Ritual
     ```groovy:no-line-numbers
     mods.bewitchment.ritual.add(Ritual)
     ```
-
 
 ### Recipe Builder
 
@@ -136,10 +140,10 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.ritual.remove(ResourceLocation)
+    mods.bewitchment.ritual.remove(Ritual)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -148,10 +152,10 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     mods.bewitchment.ritual.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.ritual.remove(Ritual)
+    mods.bewitchment.ritual.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

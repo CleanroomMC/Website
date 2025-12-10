@@ -13,17 +13,22 @@ When right clicking a mortar containing the input items with a pestle, it will d
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.roots.mortar` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.roots.mortar/* Used as page default */ // [!code focus]
 mods.roots.Mortar
-mods.roots.mortar_and_pestle
 mods.roots.mortarandpestle
 mods.roots.mortarAndPestle
 mods.roots.MortarAndPestle
+mods.roots.mortar_and_pestle
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -74,8 +79,8 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     red(float)
     red(float, float)
     red1(float)
-    color(float, float, float)
-    color(float, float, float, float, float, float)
+    color(float, float, float) // red, green, blue
+    color(float, float, float, float, float, float) // red1, green1, blue1, red2, green2, blue2
     ```
 
 - `float`. Sets the red color value of the second version of the particle spawned. Requires greater than or equal to 0 and less than or equal to 1. (Default `1.0f`).
@@ -84,8 +89,8 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     red(float)
     red(float, float)
     red2(float)
-    color(float, float, float)
-    color(float, float, float, float, float, float)
+    color(float, float, float) // red, green, blue
+    color(float, float, float, float, float, float) // red1, green1, blue1, red2, green2, blue2
     ```
 
 - `float`. Sets the blue color value of the first version of the particle spawned. Requires greater than or equal to 0 and less than or equal to 1. (Default `1.0f`).
@@ -94,8 +99,8 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     blue(float)
     blue(float, float)
     blue1(float)
-    color(float, float, float)
-    color(float, float, float, float, float, float)
+    color(float, float, float) // red, green, blue
+    color(float, float, float, float, float, float) // red1, green1, blue1, red2, green2, blue2
     ```
 
 - `float`. Sets the blue color value of the second version of the particle spawned. Requires greater than or equal to 0 and less than or equal to 1. (Default `1.0f`).
@@ -104,15 +109,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     blue(float)
     blue(float, float)
     blue2(float)
-    color(float, float, float)
-    color(float, float, float, float, float, float)
+    color(float, float, float) // red, green, blue
+    color(float, float, float, float, float, float) // red1, green1, blue1, red2, green2, blue2
     ```
 
 - `float`. Sets the green color value of the first version of the particle spawned. Requires greater than or equal to 0 and less than or equal to 1. (Default `1.0f`).
 
     ```groovy:no-line-numbers
-    color(float, float, float)
-    color(float, float, float, float, float, float)
+    color(float, float, float) // red, green, blue
+    color(float, float, float, float, float, float) // red1, green1, blue1, red2, green2, blue2
     green(float)
     green(float, float)
     green1(float)
@@ -121,8 +126,8 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 - `float`. Sets the green color value of the second version of the particle spawned. Requires greater than or equal to 0 and less than or equal to 1. (Default `1.0f`).
 
     ```groovy:no-line-numbers
-    color(float, float, float)
-    color(float, float, float, float, float, float)
+    color(float, float, float) // red, green, blue
+    color(float, float, float, float, float, float) // red1, green1, blue1, red2, green2, blue2
     green(float)
     green(float, float)
     green2(float)

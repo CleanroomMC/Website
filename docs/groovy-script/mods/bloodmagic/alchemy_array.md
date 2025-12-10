@@ -13,19 +13,24 @@ Converts two items into an output itemstack by using Arcane Ashes in-world. Has 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bloodmagic.alchemy_array` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.bm.alchemy_array
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.bm.alchemyarray
 mods.bm.alchemyArray
 mods.bm.AlchemyArray
-mods.bloodmagic.alchemy_array/* Used as page default */ // [!code focus]
+mods.bm.alchemy_array
 mods.bloodmagic.alchemyarray
 mods.bloodmagic.alchemyArray
 mods.bloodmagic.AlchemyArray
+mods.bloodmagic.alchemy_array/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -44,15 +49,14 @@ mods.bloodmagic.AlchemyArray
 - Adds recipes in the format `input`, `catalyst`, `output`, optional `circleTexture`:
 
     ```groovy:no-line-numbers
-    mods.bloodmagic.alchemy_array.add(IIngredient, IIngredient, ItemStack, ResourceLocation)
+    mods.bloodmagic.alchemy_array.add(IIngredient, IIngredient, ItemStack, String)
     ```
 
 - Adds recipes in the format `input`, `catalyst`, `output`, optional `circleTexture`:
 
     ```groovy:no-line-numbers
-    mods.bloodmagic.alchemy_array.add(IIngredient, IIngredient, ItemStack, String)
+    mods.bloodmagic.alchemy_array.add(IIngredient, IIngredient, ItemStack, ResourceLocation)
     ```
-
 
 ### Recipe Builder
 
@@ -139,28 +143,28 @@ mods.bloodmagic.alchemy_array.recipeBuilder()
     mods.bloodmagic.alchemy_array.remove(RecipeAlchemyArray)
     ```
 
-- Removes all recipes that match the given catalyst:
-
-    ```groovy:no-line-numbers
-    mods.bloodmagic.alchemy_array.removeByCatalyst(IIngredient)
-    ```
-
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
     mods.bloodmagic.alchemy_array.removeByInput(IIngredient)
     ```
 
-- This removes all recipes that match the given input and Catalyst:
-
-    ```groovy:no-line-numbers
-    mods.bloodmagic.alchemy_array.removeByInputAndCatalyst(IIngredient, IIngredient)
-    ```
-
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers
     mods.bloodmagic.alchemy_array.removeByOutput(ItemStack)
+    ```
+
+- Removes all recipes that match the given catalyst:
+
+    ```groovy:no-line-numbers
+    mods.bloodmagic.alchemy_array.removeByCatalyst(IIngredient)
+    ```
+
+- This removes all recipes that match the given input and Catalyst:
+
+    ```groovy:no-line-numbers
+    mods.bloodmagic.alchemy_array.removeByInputAndCatalyst(IIngredient, IIngredient)
     ```
 
 - Removes all registered recipes:
@@ -171,10 +175,10 @@ mods.bloodmagic.alchemy_array.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.bloodmagic.alchemy_array.removeByCatalyst(item('bloodmagic:slate:2'))
 mods.bloodmagic.alchemy_array.removeByInput(item('bloodmagic:component:13'))
-mods.bloodmagic.alchemy_array.removeByInputAndCatalyst(item('bloodmagic:component:7'), item('bloodmagic:slate:1'))
 mods.bloodmagic.alchemy_array.removeByOutput(item('bloodmagic:sigil_void'))
+mods.bloodmagic.alchemy_array.removeByCatalyst(item('bloodmagic:slate:2'))
+mods.bloodmagic.alchemy_array.removeByInputAndCatalyst(item('bloodmagic:component:7'), item('bloodmagic:slate:1'))
 mods.bloodmagic.alchemy_array.removeAll()
 ```
 

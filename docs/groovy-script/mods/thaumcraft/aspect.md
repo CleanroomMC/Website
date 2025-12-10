@@ -13,17 +13,22 @@ Creates a custom Aspect.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thaumcraft.aspect` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.thaumcraft.aspect/* Used as page default */ // [!code focus]
-mods.thaumcraft.Aspect
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {5}
 mods.tc.aspect
 mods.tc.Aspect
 mods.thaum.aspect
 mods.thaum.Aspect
+mods.thaumcraft.aspect/* Used as page default */ // [!code focus]
+mods.thaumcraft.Aspect
 ```
 
+::::::::::
 
 ## Adding Recipes
 

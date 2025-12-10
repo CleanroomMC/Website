@@ -13,15 +13,20 @@ A simple 1 to 1 processing machine making dusts.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.prodigytech.rotary_grinder` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.prodigytech.rotary_grinder/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.prodigytech.rotarygrinder
 mods.prodigytech.rotaryGrinder
 mods.prodigytech.RotaryGrinder
+mods.prodigytech.rotary_grinder/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

@@ -17,15 +17,20 @@ Requires [Ice And Fire: RotN edition](https://www.curseforge.com/minecraft/mc-mo
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.iceandfire.lightning_forge` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.iceandfire.lightning_forge/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.iceandfire.lightningforge
 mods.iceandfire.lightningForge
 mods.iceandfire.LightningForge
+mods.iceandfire.lightning_forge/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.iceandfire.LightningForge
     ```groovy:no-line-numbers
     mods.iceandfire.lightning_forge.add(DragonForgeRecipe)
     ```
-
 
 ### Recipe Builder
 

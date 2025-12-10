@@ -13,7 +13,11 @@ Converts an input itemstack into an output itemstack and optional output itemsta
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.pulverizer` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.thermal.pulverizer
@@ -22,6 +26,7 @@ mods.thermalexpansion.pulverizer/* Used as page default */ // [!code focus]
 mods.thermalexpansion.Pulverizer
 ```
 
+::::::::::
 
 ## Adding Recipes
 

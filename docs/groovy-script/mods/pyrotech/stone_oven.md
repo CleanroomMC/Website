@@ -17,28 +17,33 @@ Stone and Refractory Oven includes some recipes from the Furnace Registry that c
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pyrotech.stone_oven` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.pyrotech.stone_oven/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.pyrotech.stoneoven
 mods.pyrotech.stoneOven
 mods.pyrotech.StoneOven
+mods.pyrotech.stone_oven/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds recipes in the format `name`, `input`, `output`, `duration`:
-
-    ```groovy:no-line-numbers
-    mods.pyrotech.stone_oven.add(String, IIngredient, ItemStack, int)
-    ```
 
 - Adds the recipe:
 
     ```groovy:no-line-numbers
     mods.pyrotech.stone_oven.add(StoneOvenRecipe)
+    ```
+
+- Adds recipes in the format `name`, `input`, `output`, `duration`:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.stone_oven.add(String, IIngredient, ItemStack, int)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -121,10 +126,10 @@ mods.pyrotech.stone_oven.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.stone_oven.remove(ResourceLocation)
+    mods.pyrotech.stone_oven.remove(StoneOvenRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -133,10 +138,10 @@ mods.pyrotech.stone_oven.recipeBuilder()
     mods.pyrotech.stone_oven.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.stone_oven.remove(StoneOvenRecipe)
+    mods.pyrotech.stone_oven.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

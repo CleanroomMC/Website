@@ -13,7 +13,11 @@ Converts two input itemstacks and liquid experience into an output itemstack, co
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.enchanter` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.thermal.enchanter
@@ -22,6 +26,7 @@ mods.thermalexpansion.enchanter/* Used as page default */ // [!code focus]
 mods.thermalexpansion.Enchanter
 ```
 
+::::::::::
 
 ## Adding Recipes
 

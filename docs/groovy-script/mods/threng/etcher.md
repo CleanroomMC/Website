@@ -13,7 +13,11 @@ Converts up to 3 input itemstacks from specific slots into an output itemstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.threng.etcher` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.threng.etcher/* Used as page default */ // [!code focus]
@@ -22,6 +26,7 @@ mods.lazyae2.etcher
 mods.lazyae2.Etcher
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.lazyae2.Etcher
     ```groovy:no-line-numbers
     mods.threng.etcher.add(EtchRecipe)
     ```
-
 
 ### Recipe Builder
 

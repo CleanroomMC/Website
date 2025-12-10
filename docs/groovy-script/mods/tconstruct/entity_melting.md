@@ -13,23 +13,28 @@ Allows mobs to create a bit of fluid when hurt by the Smeltery.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.tconstruct.entity_melting` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.tconstruct.entity_melting/* Used as page default */ // [!code focus]
-mods.tconstruct.entitymelting
-mods.tconstruct.entityMelting
-mods.tconstruct.EntityMelting
-mods.tinkersconstruct.entity_melting
-mods.tinkersconstruct.entitymelting
-mods.tinkersconstruct.entityMelting
-mods.tinkersconstruct.EntityMelting
-mods.ticon.entity_melting
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.ticon.entitymelting
 mods.ticon.entityMelting
 mods.ticon.EntityMelting
+mods.ticon.entity_melting
+mods.tconstruct.entitymelting
+mods.tconstruct.entityMelting
+mods.tconstruct.EntityMelting
+mods.tconstruct.entity_melting/* Used as page default */ // [!code focus]
+mods.tinkersconstruct.entitymelting
+mods.tinkersconstruct.entityMelting
+mods.tinkersconstruct.EntityMelting
+mods.tinkersconstruct.entity_melting
 ```
 
+::::::::::
 
 ## Adding Recipes
 

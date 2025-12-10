@@ -17,39 +17,64 @@ GameRules are case-sensitive! Enable logging of new GameRules via `setWarnNewGam
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `minecraft.game_rule` will be used as the default on this page.
 
-```groovy:no-line-numbers {2}
-minecraft.gamerule
-minecraft.game_rule/* Used as page default */ // [!code focus]
-minecraft.gameRule
-minecraft.GameRule
-Minecraft.gamerule
-Minecraft.game_rule
-Minecraft.gameRule
-Minecraft.GameRule
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {23}
+mc.gamerule
+mc.gameRule
+mc.GameRule
+MC.gamerule
+MC.gameRule
+MC.GameRule
+mc.game_rule
+MC.game_rule
 vanilla.gamerule
-vanilla.game_rule
 vanilla.gameRule
 vanilla.GameRule
 Vanilla.gamerule
-Vanilla.game_rule
 Vanilla.gameRule
 Vanilla.GameRule
+vanilla.game_rule
+Vanilla.game_rule
+minecraft.gamerule
+minecraft.gameRule
+minecraft.GameRule
+Minecraft.gamerule
+Minecraft.gameRule
+Minecraft.GameRule
+minecraft.game_rule/* Used as page default */ // [!code focus]
+Minecraft.game_rule
 mods.mc.gamerule
-mods.mc.game_rule
 mods.mc.gameRule
 mods.mc.GameRule
+mods.MC.gamerule
+mods.MC.gameRule
+mods.MC.GameRule
+mods.mc.game_rule
+mods.MC.game_rule
 mods.vanilla.gamerule
-mods.vanilla.game_rule
 mods.vanilla.gameRule
 mods.vanilla.GameRule
+mods.Vanilla.gamerule
+mods.Vanilla.gameRule
+mods.Vanilla.GameRule
+mods.vanilla.game_rule
+mods.Vanilla.game_rule
 mods.minecraft.gamerule
-mods.minecraft.game_rule
 mods.minecraft.gameRule
 mods.minecraft.GameRule
+mods.Minecraft.gamerule
+mods.Minecraft.gameRule
+mods.Minecraft.GameRule
+mods.minecraft.game_rule
+mods.Minecraft.game_rule
 ```
 
+::::::::::
 
 ## Editing Values
 
@@ -68,22 +93,22 @@ minecraft.game_rule.setWarnNewGameRule(true)
 
 ## Adding Entries
 
-- Adds a map of GameRule name to values:
-
-    ```groovy:no-line-numbers
-    minecraft.game_rule.add(Map<String, String>)
-    ```
-
 - Adds a new entry in the format `name`, `value`, with `value` being a String that can represent a number (`-1`, `5`) or boolean (`true`, `false`):
 
     ```groovy:no-line-numbers
     minecraft.game_rule.add(String, String)
     ```
 
+- Adds a map of GameRule name to values:
+
+    ```groovy:no-line-numbers
+    minecraft.game_rule.add(Map<String, String>)
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-minecraft.game_rule.add(['mobGriefing': 'false', 'keepInventory': 'true'])
 minecraft.game_rule.add('doDaylightCycle', 'false')
+minecraft.game_rule.add(['mobGriefing': 'false', 'keepInventory': 'true'])
 ```
 
 ::::::::::

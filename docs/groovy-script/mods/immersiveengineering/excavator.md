@@ -17,7 +17,11 @@ Reloading will not change chunks already 'discovered'.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersiveengineering.excavator` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.ie.excavator
@@ -26,6 +30,7 @@ mods.immersiveengineering.excavator/* Used as page default */ // [!code focus]
 mods.immersiveengineering.Excavator
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -34,7 +39,6 @@ mods.immersiveengineering.Excavator
     ```groovy:no-line-numbers
     mods.immersiveengineering.excavator.add(String, int, float, String[], float[])
     ```
-
 
 ### Recipe Builder
 
@@ -138,10 +142,10 @@ mods.immersiveengineering.excavator.recipeBuilder()
 
 ## Removing Entries
 
-- Removes the Mineral Mix entry with the given name:
+- Removes all Mineral Mix entries containing any of the given ores:
 
     ```groovy:no-line-numbers
-    mods.immersiveengineering.excavator.removeByMineral(String)
+    mods.immersiveengineering.excavator.removeByOres(String...)
     ```
 
 - Removes all Mineral Mix entries containing any of the given ores:
@@ -150,10 +154,10 @@ mods.immersiveengineering.excavator.recipeBuilder()
     mods.immersiveengineering.excavator.removeByOres(OreDictIngredient...)
     ```
 
-- Removes all Mineral Mix entries containing any of the given ores:
+- Removes the Mineral Mix entry with the given name:
 
     ```groovy:no-line-numbers
-    mods.immersiveengineering.excavator.removeByOres(String...)
+    mods.immersiveengineering.excavator.removeByMineral(String)
     ```
 
 - Removes all registered recipes:
@@ -164,8 +168,8 @@ mods.immersiveengineering.excavator.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.immersiveengineering.excavator.removeByMineral('silt')
 mods.immersiveengineering.excavator.removeByOres(ore('oreAluminum'))
+mods.immersiveengineering.excavator.removeByMineral('silt')
 mods.immersiveengineering.excavator.removeAll()
 ```
 

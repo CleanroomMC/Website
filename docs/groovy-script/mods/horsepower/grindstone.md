@@ -13,13 +13,18 @@ Converts an itemstack input into an itemstack output, with the chance of an addi
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.horsepower.grindstone` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.horsepower.grindstone/* Used as page default */ // [!code focus]
 mods.horsepower.Grindstone
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -40,7 +45,6 @@ mods.horsepower.Grindstone
     ```groovy:no-line-numbers
     mods.horsepower.grindstone.add(IIngredient, ItemStack, ItemStack, int, int)
     ```
-
 
 ### Recipe Builder
 

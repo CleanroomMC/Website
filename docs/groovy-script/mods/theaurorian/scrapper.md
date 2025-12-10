@@ -13,7 +13,11 @@ Turns an input item into an output item. Can be sped up by placing a Crystal on 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.theaurorian.scrapper` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.aurorian.scrapper
@@ -22,6 +26,7 @@ mods.theaurorian.scrapper/* Used as page default */ // [!code focus]
 mods.theaurorian.Scrapper
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.theaurorian.Scrapper
     ```groovy:no-line-numbers
     mods.theaurorian.scrapper.add(ScrapperRecipe)
     ```
-
 
 ### Recipe Builder
 

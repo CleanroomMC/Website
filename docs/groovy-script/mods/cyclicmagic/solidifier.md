@@ -13,15 +13,20 @@ Converts up to 4 input itemstacks and an input fluidstack into an output itemsta
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.cyclicmagic.solidifier` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.cyclicmagic.solidifier/* Used as page default */ // [!code focus]
-mods.cyclicmagic.Solidifier
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
 mods.cyclic.solidifier
 mods.cyclic.Solidifier
+mods.cyclicmagic.solidifier/* Used as page default */ // [!code focus]
+mods.cyclicmagic.Solidifier
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.cyclic.Solidifier
     ```groovy:no-line-numbers
     mods.cyclicmagic.solidifier.add(RecipeSolidifier)
     ```
-
 
 ### Recipe Builder
 

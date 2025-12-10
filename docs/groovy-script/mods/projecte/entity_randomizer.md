@@ -13,23 +13,22 @@ Converts an entity on the list into a random other entity on the list when a pro
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.projecte.entity_randomizer` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.projecte.entity_randomizer/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.projecte.entityrandomizer
 mods.projecte.entityRandomizer
 mods.projecte.EntityRandomizer
+mods.projecte.entity_randomizer/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
-
-- Adds the given `entity` that extends `EntityLiving` to the mob list:
-
-    ```groovy:no-line-numbers
-    mods.projecte.entity_randomizer.addMob(Class<? extends EntityLiving>)
-    ```
 
 - Adds the given `entity` that extends `EntityLiving` to the mob list:
 
@@ -37,16 +36,22 @@ mods.projecte.EntityRandomizer
     mods.projecte.entity_randomizer.addMob(EntityEntry)
     ```
 
-- Adds the given `entity` that extends `EntityLiving` to the peaceful list:
+- Adds the given `entity` that extends `EntityLiving` to the mob list:
 
     ```groovy:no-line-numbers
-    mods.projecte.entity_randomizer.addPeaceful(Class<? extends EntityLiving>)
+    mods.projecte.entity_randomizer.addMob(Class<? extends EntityLiving>)
     ```
 
 - Adds the given `entity` that extends `EntityLiving` to the peaceful list:
 
     ```groovy:no-line-numbers
     mods.projecte.entity_randomizer.addPeaceful(EntityEntry)
+    ```
+
+- Adds the given `entity` that extends `EntityLiving` to the peaceful list:
+
+    ```groovy:no-line-numbers
+    mods.projecte.entity_randomizer.addPeaceful(Class<? extends EntityLiving>)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -62,25 +67,25 @@ mods.projecte.entity_randomizer.addPeaceful(entity('minecraft:zombie'))
 - Removes the given `entity` that extends `EntityLiving` from the mob list:
 
     ```groovy:no-line-numbers
-    mods.projecte.entity_randomizer.removeMob(Class<? extends EntityLiving>)
+    mods.projecte.entity_randomizer.removeMob(EntityEntry)
     ```
 
 - Removes the given `entity` that extends `EntityLiving` from the mob list:
 
     ```groovy:no-line-numbers
-    mods.projecte.entity_randomizer.removeMob(EntityEntry)
-    ```
-
-- Removes the given `entity` that extends `EntityLiving` from the peaceful list:
-
-    ```groovy:no-line-numbers
-    mods.projecte.entity_randomizer.removePeaceful(Class<? extends EntityLiving>)
+    mods.projecte.entity_randomizer.removeMob(Class<? extends EntityLiving>)
     ```
 
 - Removes the given `entity` that extends `EntityLiving` from the peaceful list:
 
     ```groovy:no-line-numbers
     mods.projecte.entity_randomizer.removePeaceful(EntityEntry)
+    ```
+
+- Removes the given `entity` that extends `EntityLiving` from the peaceful list:
+
+    ```groovy:no-line-numbers
+    mods.projecte.entity_randomizer.removePeaceful(Class<? extends EntityLiving>)
     ```
 
 - Removes all registered recipes:

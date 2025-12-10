@@ -13,26 +13,31 @@ Over time converts a fluid with four items into a new fluid.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pyrotech.barrel` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.pyrotech.barrel/* Used as page default */ // [!code focus]
 mods.pyrotech.Barrel
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds recipes in the format `name`, `input1`, `input2`, `input3`, `input4`, `fluidInput`, `fluidOutput`, `duration`:
-
-    ```groovy:no-line-numbers
-    mods.pyrotech.barrel.add(String, IIngredient, IIngredient, IIngredient, IIngredient, FluidStack, FluidStack, int)
-    ```
 
 - Adds the recipe:
 
     ```groovy:no-line-numbers
     mods.pyrotech.barrel.add(BarrelRecipe)
+    ```
+
+- Adds recipes in the format `name`, `input1`, `input2`, `input3`, `input4`, `fluidInput`, `fluidOutput`, `duration`:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.barrel.add(String, IIngredient, IIngredient, IIngredient, IIngredient, FluidStack, FluidStack, int)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -124,10 +129,10 @@ mods.pyrotech.barrel.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.barrel.remove(ResourceLocation)
+    mods.pyrotech.barrel.remove(BarrelRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -136,10 +141,10 @@ mods.pyrotech.barrel.recipeBuilder()
     mods.pyrotech.barrel.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.barrel.remove(BarrelRecipe)
+    mods.pyrotech.barrel.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given output:

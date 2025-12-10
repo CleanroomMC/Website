@@ -17,19 +17,24 @@ Hidden ingredients will still take up load time, and recipes to create them can 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.jei.ingredient` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.hei.ingredient
-mods.hei.Ingredient
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {7}
 mods.hei.sidebar
 mods.hei.Sidebar
-mods.jei.ingredient/* Used as page default */ // [!code focus]
-mods.jei.Ingredient
+mods.hei.ingredient
+mods.hei.Ingredient
 mods.jei.sidebar
 mods.jei.Sidebar
+mods.jei.ingredient/* Used as page default */ // [!code focus]
+mods.jei.Ingredient
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -48,7 +53,7 @@ mods.jei.Sidebar
 - Adds the given ingredient with its given NBT data to JEI:
 
     ```groovy:no-line-numbers
-    mods.jei.ingredient.add(IIngredientType<?>, Collection<Object>)
+    mods.jei.ingredient.add(Iterable<IIngredient>)
     ```
 
 - Adds the given ingredient with its given NBT data to JEI:
@@ -60,7 +65,7 @@ mods.jei.Sidebar
 - Adds the given ingredient with its given NBT data to JEI:
 
     ```groovy:no-line-numbers
-    mods.jei.ingredient.add(Iterable<IIngredient>)
+    mods.jei.ingredient.add(IIngredientType<?>, Collection<Object>)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -88,7 +93,7 @@ mods.jei.ingredient.add(VanillaTypes.ITEM, item('minecraft:bed').withNbt([displa
 - Hides the ingredient from JEI:
 
     ```groovy:no-line-numbers
-    mods.jei.ingredient.hide(IIngredientType<?>, Collection<Object>)
+    mods.jei.ingredient.hide(Iterable<IIngredient>)
     ```
 
 - Hides the ingredient from JEI:
@@ -100,7 +105,25 @@ mods.jei.ingredient.add(VanillaTypes.ITEM, item('minecraft:bed').withNbt([displa
 - Hides the ingredient from JEI:
 
     ```groovy:no-line-numbers
-    mods.jei.ingredient.hide(Iterable<IIngredient>)
+    mods.jei.ingredient.hide(IIngredientType<?>, Collection<Object>)
+    ```
+
+- Alias for `removeAndHide`:
+
+    ```groovy:no-line-numbers
+    mods.jei.ingredient.yeet(IIngredient)
+    ```
+
+- Alias for `removeAndHide`:
+
+    ```groovy:no-line-numbers
+    mods.jei.ingredient.yeet(IIngredient...)
+    ```
+
+- Alias for `removeAndHide`:
+
+    ```groovy:no-line-numbers
+    mods.jei.ingredient.yeet(Iterable<IIngredient>)
     ```
 
 - Hides all ingredients of the given type:
@@ -127,24 +150,6 @@ mods.jei.ingredient.add(VanillaTypes.ITEM, item('minecraft:bed').withNbt([displa
     mods.jei.ingredient.removeAndHide(Iterable<IIngredient>)
     ```
 
-- Alias for `removeAndHide`:
-
-    ```groovy:no-line-numbers
-    mods.jei.ingredient.yeet(IIngredient)
-    ```
-
-- Alias for `removeAndHide`:
-
-    ```groovy:no-line-numbers
-    mods.jei.ingredient.yeet(IIngredient...)
-    ```
-
-- Alias for `removeAndHide`:
-
-    ```groovy:no-line-numbers
-    mods.jei.ingredient.yeet(Iterable<IIngredient>)
-    ```
-
 - Hides all ingredients of all types from the sidebar. Functionally disables JEI:
 
     ```groovy:no-line-numbers
@@ -155,8 +160,8 @@ mods.jei.ingredient.add(VanillaTypes.ITEM, item('minecraft:bed').withNbt([displa
 ```groovy:no-line-numbers
 mods.jei.ingredient.hide(fluid('water'))
 mods.jei.ingredient.hide(item('minecraft:stone:1'), item('minecraft:stone:3'))
-mods.jei.ingredient.hide(VanillaTypes.ITEM, item('minecraft:bed:*'))
 mods.jei.ingredient.hide(mekanism.client.jei.MekanismJEI.TYPE_GAS, gas('tritium'))
+mods.jei.ingredient.hide(VanillaTypes.ITEM, item('minecraft:bed:*'))
 mods.jei.ingredient.hideByType(com.buuz135.thaumicjei.ThaumcraftJEIPlugin.ASPECT_LIST)
 mods.jei.ingredient.hideByType(mekanism.client.jei.MekanismJEI.TYPE_GAS)
 mods.jei.ingredient.hideByType(VanillaTypes.ITEM)

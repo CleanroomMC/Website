@@ -13,13 +13,18 @@ Converts an input fluid into an output item with a provided stamp in a Stamper.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.embers.stamper` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.embers.stamper/* Used as page default */ // [!code focus]
 mods.embers.Stamper
 ```
 
+::::::::::
 
 ## Adding Recipes
 

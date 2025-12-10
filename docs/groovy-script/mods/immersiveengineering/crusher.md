@@ -13,7 +13,11 @@ Converts an input itemstack into an output itemstack with optional additional ch
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersiveengineering.crusher` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.ie.crusher
@@ -22,6 +26,7 @@ mods.immersiveengineering.crusher/* Used as page default */ // [!code focus]
 mods.immersiveengineering.Crusher
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -36,7 +41,6 @@ mods.immersiveengineering.Crusher
     ```groovy:no-line-numbers
     mods.immersiveengineering.crusher.add(ItemStack, IIngredient, int)
     ```
-
 
 ### Recipe Builder
 

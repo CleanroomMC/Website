@@ -13,17 +13,22 @@ Converts input itemstacks into output itemstacks after being ground via rotation
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithmods.mill_stone` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.betterwithmods.mill_stone/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {6}
+mods.betterwithmods.mill
+mods.betterwithmods.Mill
 mods.betterwithmods.millstone
 mods.betterwithmods.millStone
 mods.betterwithmods.MillStone
-mods.betterwithmods.mill
-mods.betterwithmods.Mill
+mods.betterwithmods.mill_stone/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -32,7 +37,6 @@ mods.betterwithmods.Mill
     ```groovy:no-line-numbers
     mods.betterwithmods.mill_stone.add(MillRecipe)
     ```
-
 
 ### Recipe Builder
 

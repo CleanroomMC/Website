@@ -13,15 +13,20 @@ Converts an input itemstack into an output itemstack, with the ability to contro
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.factorytech.circuit_scribe` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.factorytech.circuit_scribe/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.factorytech.circuitscribe
 mods.factorytech.circuitScribe
 mods.factorytech.CircuitScribe
+mods.factorytech.circuit_scribe/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.factorytech.CircuitScribe
     ```groovy:no-line-numbers
     mods.factorytech.circuit_scribe.add(MachineRecipes.MachineRecipe<ItemStack, ItemStack>)
     ```
-
 
 ### Recipe Builder
 

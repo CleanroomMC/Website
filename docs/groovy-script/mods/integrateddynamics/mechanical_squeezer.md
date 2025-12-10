@@ -13,19 +13,24 @@ Takes an item and can give up to 3 chanced item outputs and a fluid.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.integrateddynamics.mechanical_squeezer` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.id.mechanical_squeezer
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.id.mechanicalsqueezer
 mods.id.mechanicalSqueezer
 mods.id.MechanicalSqueezer
-mods.integrateddynamics.mechanical_squeezer/* Used as page default */ // [!code focus]
+mods.id.mechanical_squeezer
 mods.integrateddynamics.mechanicalsqueezer
 mods.integrateddynamics.mechanicalSqueezer
 mods.integrateddynamics.MechanicalSqueezer
+mods.integrateddynamics.mechanical_squeezer/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.integrateddynamics.MechanicalSqueezer
     ```groovy:no-line-numbers
     mods.integrateddynamics.mechanical_squeezer.add(IRecipe<IngredientRecipeComponent, IngredientsAndFluidStackRecipeComponent, DurationRecipeProperties>)
     ```
-
 
 ### Recipe Builder
 

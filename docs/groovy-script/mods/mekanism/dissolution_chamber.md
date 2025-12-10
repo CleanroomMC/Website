@@ -13,17 +13,22 @@ Converts an input itemstack into an output gasstack at the cost of 100mb of Sulf
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.mekanism.dissolution_chamber` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.mekanism.dissolution_chamber/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {6}
+mods.mekanism.dissolver
+mods.mekanism.Dissolver
 mods.mekanism.dissolutionchamber
 mods.mekanism.dissolutionChamber
 mods.mekanism.DissolutionChamber
-mods.mekanism.dissolver
-mods.mekanism.Dissolver
+mods.mekanism.dissolution_chamber/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

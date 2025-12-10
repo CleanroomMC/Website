@@ -25,13 +25,18 @@ Magic Power is consumed at a rate of `16 * {itemCount - 1}` every second and eac
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bewitchment.brew` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.bewitchment.brew/* Used as page default */ // [!code focus]
 mods.bewitchment.Brew
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -40,7 +45,6 @@ mods.bewitchment.Brew
     ```groovy:no-line-numbers
     mods.bewitchment.brew.add(Brew)
     ```
-
 
 ### Recipe Builder
 
@@ -133,10 +137,10 @@ mods.bewitchment.brew.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.brew.remove(ResourceLocation)
+    mods.bewitchment.brew.remove(Brew)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -145,10 +149,10 @@ mods.bewitchment.brew.recipeBuilder()
     mods.bewitchment.brew.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.brew.remove(Brew)
+    mods.bewitchment.brew.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

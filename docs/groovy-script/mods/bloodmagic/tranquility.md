@@ -13,7 +13,11 @@ Blocks in the area around the Tranquility Altar provide tranquility up to the Al
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bloodmagic.tranquility` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.bm.tranquility
@@ -22,6 +26,7 @@ mods.bloodmagic.tranquility/* Used as page default */ // [!code focus]
 mods.bloodmagic.Tranquility
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -48,7 +53,6 @@ mods.bloodmagic.Tranquility
     ```groovy:no-line-numbers
     mods.bloodmagic.tranquility.add(IBlockState, TranquilityStack)
     ```
-
 
 ### Recipe Builder
 
@@ -130,28 +134,28 @@ mods.bloodmagic.tranquility.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes any Tranquility entry that matches the given Block and EnumTranquilityType:
-
-    ```groovy:no-line-numbers
-    mods.bloodmagic.tranquility.remove(Block, EnumTranquilityType)
-    ```
-
 - Removes any Tranquility entry that matches the given Block and Tranquility type as String:
 
     ```groovy:no-line-numbers
     mods.bloodmagic.tranquility.remove(Block, String)
     ```
 
-- Removes any Tranquility entry that matches the given IBlockState and EnumTranquilityType:
-
-    ```groovy:no-line-numbers
-    mods.bloodmagic.tranquility.remove(IBlockState, EnumTranquilityType)
-    ```
-
 - Removes any Tranquility entry that matches the given IBlockState and Tranquility as String:
 
     ```groovy:no-line-numbers
     mods.bloodmagic.tranquility.remove(IBlockState, String)
+    ```
+
+- Removes any Tranquility entry that matches the given Block and EnumTranquilityType:
+
+    ```groovy:no-line-numbers
+    mods.bloodmagic.tranquility.remove(Block, EnumTranquilityType)
+    ```
+
+- Removes any Tranquility entry that matches the given IBlockState and EnumTranquilityType:
+
+    ```groovy:no-line-numbers
+    mods.bloodmagic.tranquility.remove(IBlockState, EnumTranquilityType)
     ```
 
 - Removes all registered recipes:
