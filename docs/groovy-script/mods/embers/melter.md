@@ -13,13 +13,18 @@ Converts an input item into an output fluidstack in a Melter with the ability to
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.embers.melter` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.embers.melter/* Used as page default */ // [!code focus]
 mods.embers.Melter
 ```
 
+::::::::::
 
 ## Adding Recipes
 

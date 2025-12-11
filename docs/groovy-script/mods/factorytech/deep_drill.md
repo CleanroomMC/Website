@@ -13,15 +13,20 @@ Passively generates resources when placed at or below y 8 and.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.factorytech.deep_drill` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.factorytech.deep_drill/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.factorytech.deepdrill
 mods.factorytech.deepDrill
 mods.factorytech.DeepDrill
+mods.factorytech.deep_drill/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -30,7 +35,6 @@ mods.factorytech.DeepDrill
     ```groovy:no-line-numbers
     mods.factorytech.deep_drill.add(Pair<ItemStack, Double>)
     ```
-
 
 ### Recipe Builder
 

@@ -13,17 +13,22 @@ Converts up to 9 input itemstacks into an output itemstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.alchemistry.combiner` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.alchemistry.combiner/* Used as page default */ // [!code focus]
 mods.alchemistry.Combiner
-mods.alchemistry.chemical_combiner
 mods.alchemistry.chemicalcombiner
 mods.alchemistry.chemicalCombiner
 mods.alchemistry.ChemicalCombiner
+mods.alchemistry.chemical_combiner
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -32,7 +37,6 @@ mods.alchemistry.ChemicalCombiner
     ```groovy:no-line-numbers
     mods.alchemistry.combiner.add(CombinerRecipe)
     ```
-
 
 ### Recipe Builder
 

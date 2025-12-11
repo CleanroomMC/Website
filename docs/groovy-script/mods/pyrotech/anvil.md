@@ -13,26 +13,31 @@ When using hammer or pickaxe it can convert items.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pyrotech.anvil` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.pyrotech.anvil/* Used as page default */ // [!code focus]
 mods.pyrotech.Anvil
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds recipes in the format `name`, `input`, `output`, `hits`, `tier`, `type`:
-
-    ```groovy:no-line-numbers
-    mods.pyrotech.anvil.add(String, IIngredient, ItemStack, int, String, String)
-    ```
 
 - Adds the recipe:
 
     ```groovy:no-line-numbers
     mods.pyrotech.anvil.add(AnvilRecipe)
+    ```
+
+- Adds recipes in the format `name`, `input`, `output`, `hits`, `tier`, `type`:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.anvil.add(String, IIngredient, ItemStack, int, String, String)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -152,10 +157,10 @@ mods.pyrotech.anvil.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.anvil.remove(ResourceLocation)
+    mods.pyrotech.anvil.remove(AnvilRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -164,10 +169,10 @@ mods.pyrotech.anvil.recipeBuilder()
     mods.pyrotech.anvil.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.anvil.remove(AnvilRecipe)
+    mods.pyrotech.anvil.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given output:

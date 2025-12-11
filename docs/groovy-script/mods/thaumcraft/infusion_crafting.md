@@ -13,23 +13,28 @@ Combines any number of items and aspects together in the Infusion Altar, potenti
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thaumcraft.infusion_crafting` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.thaumcraft.infusion_crafting/* Used as page default */ // [!code focus]
-mods.thaumcraft.infusioncrafting
-mods.thaumcraft.infusionCrafting
-mods.thaumcraft.InfusionCrafting
-mods.tc.infusion_crafting
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {12}
 mods.tc.infusioncrafting
 mods.tc.infusionCrafting
 mods.tc.InfusionCrafting
-mods.thaum.infusion_crafting
+mods.tc.infusion_crafting
 mods.thaum.infusioncrafting
 mods.thaum.infusionCrafting
 mods.thaum.InfusionCrafting
+mods.thaum.infusion_crafting
+mods.thaumcraft.infusioncrafting
+mods.thaumcraft.infusionCrafting
+mods.thaumcraft.InfusionCrafting
+mods.thaumcraft.infusion_crafting/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -38,7 +43,6 @@ mods.thaum.InfusionCrafting
     ```groovy:no-line-numbers
     mods.thaumcraft.infusion_crafting.add(String, ItemStack, int, Collection<AspectStack>, IIngredient, IIngredient...)
     ```
-
 
 ### Recipe Builder
 

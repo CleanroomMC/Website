@@ -13,7 +13,11 @@ Converts an input itemstack into an output itemstack, with different modes each 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.compactor` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.thermal.compactor
@@ -22,6 +26,7 @@ mods.thermalexpansion.compactor/* Used as page default */ // [!code focus]
 mods.thermalexpansion.Compactor
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -122,10 +127,10 @@ mods.thermalexpansion.compactor.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the given IIngredient input from the given Compactor mode:
+- Removes all recipes for the given mode:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.compactor.removeByInput(CompactorManager.Mode, IIngredient)
+    mods.thermalexpansion.compactor.removeByMode(CompactorManager.Mode)
     ```
 
 - Removes the given IIngredient input from the given Compactor mode:
@@ -134,22 +139,22 @@ mods.thermalexpansion.compactor.recipeBuilder()
     mods.thermalexpansion.compactor.removeByInput(IIngredient)
     ```
 
-- Removes all recipes for the given mode:
+- Removes the given IIngredient input from the given Compactor mode:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.compactor.removeByMode(CompactorManager.Mode)
-    ```
-
-- Removes the given IIngredient output from the given Compactor mode:
-
-    ```groovy:no-line-numbers
-    mods.thermalexpansion.compactor.removeByOutput(CompactorManager.Mode, IIngredient)
+    mods.thermalexpansion.compactor.removeByInput(CompactorManager.Mode, IIngredient)
     ```
 
 - Removes the given IIngredient output from the given Compactor mode:
 
     ```groovy:no-line-numbers
     mods.thermalexpansion.compactor.removeByOutput(IIngredient)
+    ```
+
+- Removes the given IIngredient output from the given Compactor mode:
+
+    ```groovy:no-line-numbers
+    mods.thermalexpansion.compactor.removeByOutput(CompactorManager.Mode, IIngredient)
     ```
 
 - Removes all registered recipes:
@@ -160,12 +165,12 @@ mods.thermalexpansion.compactor.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.thermalexpansion.compactor.removeByInput(compactorMode('coin'), item('thermalfoundation:material:130'))
-mods.thermalexpansion.compactor.removeByInput(item('minecraft:iron_ingot'))
 mods.thermalexpansion.compactor.removeByMode(compactorMode('plate'))
-mods.thermalexpansion.compactor.removeByOutput(compactorMode('coin'), item('thermalfoundation:coin:102'))
+mods.thermalexpansion.compactor.removeByInput(item('minecraft:iron_ingot'))
+mods.thermalexpansion.compactor.removeByInput(compactorMode('coin'), item('thermalfoundation:material:130'))
 mods.thermalexpansion.compactor.removeByOutput(item('thermalfoundation:material:24'))
 mods.thermalexpansion.compactor.removeByOutput(item('minecraft:blaze_rod'))
+mods.thermalexpansion.compactor.removeByOutput(compactorMode('coin'), item('thermalfoundation:coin:102'))
 mods.thermalexpansion.compactor.removeAll()
 ```
 

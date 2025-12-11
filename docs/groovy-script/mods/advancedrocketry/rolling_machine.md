@@ -17,15 +17,20 @@ The 'chances' used with the recipe outputs are actually output weights. For exam
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.advancedrocketry.rolling_machine` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.advancedrocketry.rolling_machine/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.advancedrocketry.rollingmachine
 mods.advancedrocketry.rollingMachine
 mods.advancedrocketry.RollingMachine
+mods.advancedrocketry.rolling_machine/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.advancedrocketry.RollingMachine
     ```groovy:no-line-numbers
     mods.advancedrocketry.rolling_machine.add(R)
     ```
-
 
 ### Recipe Builder
 

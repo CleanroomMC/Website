@@ -21,15 +21,20 @@ The recipes performed in this machine can have more than 9 inputs, but this make
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.advancedrocketry.chemical_reactor` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.advancedrocketry.chemical_reactor/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.advancedrocketry.chemicalreactor
 mods.advancedrocketry.chemicalReactor
 mods.advancedrocketry.ChemicalReactor
+mods.advancedrocketry.chemical_reactor/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -38,7 +43,6 @@ mods.advancedrocketry.ChemicalReactor
     ```groovy:no-line-numbers
     mods.advancedrocketry.chemical_reactor.add(R)
     ```
-
 
 ### Recipe Builder
 

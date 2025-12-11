@@ -13,19 +13,24 @@ Converts an input item into an output itemstack after a given amount of time. Re
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.primal_tech.water_saw` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.primal_tech.water_saw/* Used as page default */ // [!code focus]
-mods.primal_tech.watersaw
-mods.primal_tech.waterSaw
-mods.primal_tech.WaterSaw
-mods.primaltech.water_saw
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.primaltech.watersaw
 mods.primaltech.waterSaw
 mods.primaltech.WaterSaw
+mods.primaltech.water_saw
+mods.primal_tech.watersaw
+mods.primal_tech.waterSaw
+mods.primal_tech.WaterSaw
+mods.primal_tech.water_saw/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -40,7 +45,6 @@ mods.primaltech.WaterSaw
     ```groovy:no-line-numbers
     mods.primal_tech.water_saw.add(ItemStack, IIngredient, int)
     ```
-
 
 ### Recipe Builder
 

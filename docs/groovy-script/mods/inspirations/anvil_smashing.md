@@ -13,15 +13,20 @@ Converts a Block or IBlockState into an IBlockState when an anvil falls on top o
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.inspirations.anvil_smashing` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.inspirations.anvil_smashing/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.inspirations.anvilsmashing
 mods.inspirations.anvilSmashing
 mods.inspirations.AnvilSmashing
+mods.inspirations.anvil_smashing/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -36,7 +41,6 @@ mods.inspirations.AnvilSmashing
     ```groovy:no-line-numbers
     mods.inspirations.anvil_smashing.add(IBlockState, IBlockState)
     ```
-
 
 ### Recipe Builder
 
@@ -103,6 +107,12 @@ mods.inspirations.anvil_smashing.recipeBuilder()
 
 ## Removing Recipes
 
+- Removes an Anvil Smashing recipe matching the given input material:
+
+    ```groovy:no-line-numbers
+    mods.inspirations.anvil_smashing.remove(Material)
+    ```
+
 - Removes an Anvil Smashing recipe in the format `input`, `output`:
 
     ```groovy:no-line-numbers
@@ -113,12 +123,6 @@ mods.inspirations.anvil_smashing.recipeBuilder()
 
     ```groovy:no-line-numbers
     mods.inspirations.anvil_smashing.remove(IBlockState, IBlockState)
-    ```
-
-- Removes an Anvil Smashing recipe matching the given input material:
-
-    ```groovy:no-line-numbers
-    mods.inspirations.anvil_smashing.remove(Material)
     ```
 
 - Removes an Anvil Smashing recipe with the given Block or IBlockState input:

@@ -13,13 +13,18 @@ Converts up to 5 input itemstacks into a wide number of possible effects, includ
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.arcaneworld.ritual` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.arcaneworld.ritual/* Used as page default */ // [!code focus]
 mods.arcaneworld.Ritual
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.arcaneworld.Ritual
     ```groovy:no-line-numbers
     mods.arcaneworld.ritual.add(Ritual)
     ```
-
 
 ### Recipe Builder
 
@@ -153,6 +157,83 @@ mods.arcaneworld.ritual.recipeBuilder()
 
 ::::::::::
 
+:::::::::: details Time Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a time recipe, with the basic values and a time integer. Rapidly changes the time of day to the set time when completed.
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.recipeBuilderTime()
+    ```
+
+---
+
+- `ResourceLocation`. Sets the Resource Location of the recipe.
+
+    ```groovy:no-line-numbers
+    name(String)
+    name(ResourceLocation)
+    ```
+
+- `String`. Sets the translation key used to localize the name of the ritual. Requires not null.
+
+    ```groovy:no-line-numbers
+    translationKey(String)
+    ```
+
+- `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 5.
+
+    ```groovy:no-line-numbers
+    input(IIngredient)
+    input(IIngredient...)
+    input(Collection<IIngredient>)
+    ```
+
+- `int`. Sets the amount of time that is passed when the Time Ritual is activated. Requires greater than or equal to 1. (Default `0`).
+
+    ```groovy:no-line-numbers
+    time(int)
+    ```
+
+- `RitualWrapper.RitualType`. Sets the mode of the ritual, different modes will require different values. (Default `RitualType.TIME`).
+
+    ```groovy:no-line-numbers
+    ritualTime()
+    ritualArena()
+    ritualCustom()
+    ritualSummon()
+    ritualCommand()
+    ritualDungeon()
+    ritualWeather()
+    ritualCreateItem()
+    ritualDragonBreath()
+    ritualType(RitualWrapper.RitualType)
+    ```
+
+---
+
+- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
+
+    ```groovy:no-line-numbers
+    register()
+    ```
+
+---
+
+::::::::: details Example {open id="example"}
+```groovy:no-line-numbers
+mods.arcaneworld.ritual.recipeBuilderTime()
+    .input(item('minecraft:diamond'), item('minecraft:clay'), item('minecraft:clay'), item('minecraft:clay'))
+    .translationKey('groovyscript.demo_time')
+    .time(5000)
+    .register()
+```
+
+:::::::::
+
+::::::::::
+
 :::::::::: details Arena Recipe Builder {open id="abstract"}
 
 ---
@@ -223,6 +304,161 @@ mods.arcaneworld.ritual.recipeBuilder()
 mods.arcaneworld.ritual.recipeBuilderArena()
     .input(item('minecraft:stone'), item('minecraft:stone'), item('minecraft:clay'))
     .translationKey('groovyscript.demo_arena')
+    .entity(entity('minecraft:chicken'))
+    .register()
+```
+
+:::::::::
+
+::::::::::
+
+:::::::::: details Custom Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a custom recipe, with the basic values and a closure. Runs the closure when completed.
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.recipeBuilderCustom()
+    ```
+
+---
+
+- `ResourceLocation`. Sets the Resource Location of the recipe.
+
+    ```groovy:no-line-numbers
+    name(String)
+    name(ResourceLocation)
+    ```
+
+- `String`. Sets the translation key used to localize the name of the ritual. Requires not null.
+
+    ```groovy:no-line-numbers
+    translationKey(String)
+    ```
+
+- `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 5.
+
+    ```groovy:no-line-numbers
+    input(IIngredient)
+    input(IIngredient...)
+    input(Collection<IIngredient>)
+    ```
+
+- `Closure<Void>`. Sets the effect that will happen when the Custom Ritual is run, with the Closure taking 4 parameters, `World world`, `BlockPos blockPos`, `EntityPlayer player`, and `ItemStack... itemStacks`. Requires not null.
+
+    ```groovy:no-line-numbers
+    onActivate(Closure<Void>)
+    ```
+
+- `RitualWrapper.RitualType`. Sets the mode of the ritual, different modes will require different values. (Default `RitualType.CUSTOM`).
+
+    ```groovy:no-line-numbers
+    ritualTime()
+    ritualArena()
+    ritualCustom()
+    ritualSummon()
+    ritualCommand()
+    ritualDungeon()
+    ritualWeather()
+    ritualCreateItem()
+    ritualDragonBreath()
+    ritualType(RitualWrapper.RitualType)
+    ```
+
+---
+
+- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
+
+    ```groovy:no-line-numbers
+    register()
+    ```
+
+---
+
+::::::::: details Example {open id="example"}
+```groovy:no-line-numbers
+mods.arcaneworld.ritual.recipeBuilderCustom()
+    .input(item('minecraft:diamond'), item('minecraft:diamond'), item('minecraft:clay'), item('minecraft:clay'))
+    .translationKey('groovyscript.demo_custom')
+    .onActivate({ World world, BlockPos blockPos, EntityPlayer player, ItemStack... itemStacks -> { log.info blockPos } })
+    .register()
+```
+
+:::::::::
+
+::::::::::
+
+:::::::::: details Summon Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a summon recipe, with the basic values and an entity. Spawns that entity when completed.
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.recipeBuilderSummon()
+    ```
+
+---
+
+- `ResourceLocation`. Sets the Resource Location of the recipe.
+
+    ```groovy:no-line-numbers
+    name(String)
+    name(ResourceLocation)
+    ```
+
+- `String`. Sets the translation key used to localize the name of the ritual. Requires not null.
+
+    ```groovy:no-line-numbers
+    translationKey(String)
+    ```
+
+- `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 5.
+
+    ```groovy:no-line-numbers
+    input(IIngredient)
+    input(IIngredient...)
+    input(Collection<IIngredient>)
+    ```
+
+- `Class<? extends Entity>`. Sets the entity spawned when the Arena or Summon Rituals are activated. Requires not null.
+
+    ```groovy:no-line-numbers
+    entity(EntityEntry)
+    entity(Class<? extends Entity>)
+    ```
+
+- `RitualWrapper.RitualType`. Sets the mode of the ritual, different modes will require different values. (Default `RitualType.SUMMON`).
+
+    ```groovy:no-line-numbers
+    ritualTime()
+    ritualArena()
+    ritualCustom()
+    ritualSummon()
+    ritualCommand()
+    ritualDungeon()
+    ritualWeather()
+    ritualCreateItem()
+    ritualDragonBreath()
+    ritualType(RitualWrapper.RitualType)
+    ```
+
+---
+
+- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
+
+    ```groovy:no-line-numbers
+    register()
+    ```
+
+---
+
+::::::::: details Example {open id="example"}
+```groovy:no-line-numbers
+mods.arcaneworld.ritual.recipeBuilderSummon()
+    .input(item('minecraft:stone'), item('minecraft:clay'), item('minecraft:clay'))
+    .translationKey('groovyscript.demo_summon')
     .entity(entity('minecraft:chicken'))
     .register()
 ```
@@ -311,232 +547,6 @@ mods.arcaneworld.ritual.recipeBuilderCommand()
 
 ::::::::::
 
-:::::::::: details CreateItem Recipe Builder {open id="abstract"}
-
----
-
-- Create a Recipe Builder for a create item recipe, with the basic values and an output itemstack. Spawns the itemstack in-world when completed.
-
-    ```groovy:no-line-numbers
-    mods.arcaneworld.ritual.recipeBuilderCreateItem()
-    ```
-
----
-
-- `ResourceLocation`. Sets the Resource Location of the recipe.
-
-    ```groovy:no-line-numbers
-    name(String)
-    name(ResourceLocation)
-    ```
-
-- `String`. Sets the translation key used to localize the name of the ritual. Requires not null.
-
-    ```groovy:no-line-numbers
-    translationKey(String)
-    ```
-
-- `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 5.
-
-    ```groovy:no-line-numbers
-    input(IIngredient)
-    input(IIngredient...)
-    input(Collection<IIngredient>)
-    ```
-
-- `ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
-
-    ```groovy:no-line-numbers
-    output(ItemStack)
-    output(ItemStack...)
-    output(Collection<ItemStack>)
-    ```
-
-- `RitualWrapper.RitualType`. Sets the mode of the ritual, different modes will require different values. (Default `RitualType.CREATE_ITEM`).
-
-    ```groovy:no-line-numbers
-    ritualTime()
-    ritualArena()
-    ritualCustom()
-    ritualSummon()
-    ritualCommand()
-    ritualDungeon()
-    ritualWeather()
-    ritualCreateItem()
-    ritualDragonBreath()
-    ritualType(RitualWrapper.RitualType)
-    ```
-
----
-
-- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
-
-    ```groovy:no-line-numbers
-    register()
-    ```
-
----
-
-::::::::: details Example {open id="example"}
-```groovy:no-line-numbers
-mods.arcaneworld.ritual.recipeBuilderCreateItem()
-    .input(item('minecraft:diamond'), item('minecraft:diamond'), item('minecraft:diamond'))
-    .translationKey('groovyscript.demo_create_item')
-    .output(item('minecraft:diamond'))
-    .register()
-```
-
-:::::::::
-
-::::::::::
-
-:::::::::: details Custom Recipe Builder {open id="abstract"}
-
----
-
-- Create a Recipe Builder for a custom recipe, with the basic values and a closure. Runs the closure when completed.
-
-    ```groovy:no-line-numbers
-    mods.arcaneworld.ritual.recipeBuilderCustom()
-    ```
-
----
-
-- `ResourceLocation`. Sets the Resource Location of the recipe.
-
-    ```groovy:no-line-numbers
-    name(String)
-    name(ResourceLocation)
-    ```
-
-- `String`. Sets the translation key used to localize the name of the ritual. Requires not null.
-
-    ```groovy:no-line-numbers
-    translationKey(String)
-    ```
-
-- `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 5.
-
-    ```groovy:no-line-numbers
-    input(IIngredient)
-    input(IIngredient...)
-    input(Collection<IIngredient>)
-    ```
-
-- `Closure<Void>`. Sets the effect that will happen when the Custom Ritual is run, with the Closure taking 4 parameters, `World world`, `BlockPos blockPos`, `EntityPlayer player`, and `ItemStack... itemStacks`. Requires not null.
-
-    ```groovy:no-line-numbers
-    onActivate(Closure<Void>)
-    ```
-
-- `RitualWrapper.RitualType`. Sets the mode of the ritual, different modes will require different values. (Default `RitualType.CUSTOM`).
-
-    ```groovy:no-line-numbers
-    ritualTime()
-    ritualArena()
-    ritualCustom()
-    ritualSummon()
-    ritualCommand()
-    ritualDungeon()
-    ritualWeather()
-    ritualCreateItem()
-    ritualDragonBreath()
-    ritualType(RitualWrapper.RitualType)
-    ```
-
----
-
-- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
-
-    ```groovy:no-line-numbers
-    register()
-    ```
-
----
-
-::::::::: details Example {open id="example"}
-```groovy:no-line-numbers
-mods.arcaneworld.ritual.recipeBuilderCustom()
-    .input(item('minecraft:diamond'), item('minecraft:diamond'), item('minecraft:clay'), item('minecraft:clay'))
-    .translationKey('groovyscript.demo_custom')
-    .onActivate({ World world, BlockPos blockPos, EntityPlayer player, ItemStack... itemStacks -> { log.info blockPos } })
-    .register()
-```
-
-:::::::::
-
-::::::::::
-
-:::::::::: details DragonBreath Recipe Builder {open id="abstract"}
-
----
-
-- Create a Recipe Builder for a dragon breath recipe, with only the basic values. Summons Dragons Breath when completed.
-
-    ```groovy:no-line-numbers
-    mods.arcaneworld.ritual.recipeBuilderDragonBreath()
-    ```
-
----
-
-- `ResourceLocation`. Sets the Resource Location of the recipe.
-
-    ```groovy:no-line-numbers
-    name(String)
-    name(ResourceLocation)
-    ```
-
-- `String`. Sets the translation key used to localize the name of the ritual. Requires not null.
-
-    ```groovy:no-line-numbers
-    translationKey(String)
-    ```
-
-- `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 5.
-
-    ```groovy:no-line-numbers
-    input(IIngredient)
-    input(IIngredient...)
-    input(Collection<IIngredient>)
-    ```
-
-- `RitualWrapper.RitualType`. Sets the mode of the ritual, different modes will require different values. (Default `RitualType.DRAGON_BREATH`).
-
-    ```groovy:no-line-numbers
-    ritualTime()
-    ritualArena()
-    ritualCustom()
-    ritualSummon()
-    ritualCommand()
-    ritualDungeon()
-    ritualWeather()
-    ritualCreateItem()
-    ritualDragonBreath()
-    ritualType(RitualWrapper.RitualType)
-    ```
-
----
-
-- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
-
-    ```groovy:no-line-numbers
-    register()
-    ```
-
----
-
-::::::::: details Example {open id="example"}
-```groovy:no-line-numbers
-mods.arcaneworld.ritual.recipeBuilderDragonBreath()
-    .input(item('minecraft:clay'), item('minecraft:clay'), item('minecraft:clay'), item('minecraft:clay'), item('minecraft:clay'))
-    .translationKey('groovyscript.demo_dragon_breath')
-    .register()
-```
-
-:::::::::
-
-::::::::::
-
 :::::::::: details Dungeon Recipe Builder {open id="abstract"}
 
 ---
@@ -600,161 +610,6 @@ mods.arcaneworld.ritual.recipeBuilderDragonBreath()
 mods.arcaneworld.ritual.recipeBuilderDungeon()
     .input(item('minecraft:diamond'), item('minecraft:clay'), item('minecraft:clay'))
     .translationKey('groovyscript.demo_dungeon')
-    .register()
-```
-
-:::::::::
-
-::::::::::
-
-:::::::::: details Summon Recipe Builder {open id="abstract"}
-
----
-
-- Create a Recipe Builder for a summon recipe, with the basic values and an entity. Spawns that entity when completed.
-
-    ```groovy:no-line-numbers
-    mods.arcaneworld.ritual.recipeBuilderSummon()
-    ```
-
----
-
-- `ResourceLocation`. Sets the Resource Location of the recipe.
-
-    ```groovy:no-line-numbers
-    name(String)
-    name(ResourceLocation)
-    ```
-
-- `String`. Sets the translation key used to localize the name of the ritual. Requires not null.
-
-    ```groovy:no-line-numbers
-    translationKey(String)
-    ```
-
-- `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 5.
-
-    ```groovy:no-line-numbers
-    input(IIngredient)
-    input(IIngredient...)
-    input(Collection<IIngredient>)
-    ```
-
-- `Class<? extends Entity>`. Sets the entity spawned when the Arena or Summon Rituals are activated. Requires not null.
-
-    ```groovy:no-line-numbers
-    entity(EntityEntry)
-    entity(Class<? extends Entity>)
-    ```
-
-- `RitualWrapper.RitualType`. Sets the mode of the ritual, different modes will require different values. (Default `RitualType.SUMMON`).
-
-    ```groovy:no-line-numbers
-    ritualTime()
-    ritualArena()
-    ritualCustom()
-    ritualSummon()
-    ritualCommand()
-    ritualDungeon()
-    ritualWeather()
-    ritualCreateItem()
-    ritualDragonBreath()
-    ritualType(RitualWrapper.RitualType)
-    ```
-
----
-
-- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
-
-    ```groovy:no-line-numbers
-    register()
-    ```
-
----
-
-::::::::: details Example {open id="example"}
-```groovy:no-line-numbers
-mods.arcaneworld.ritual.recipeBuilderSummon()
-    .input(item('minecraft:stone'), item('minecraft:clay'), item('minecraft:clay'))
-    .translationKey('groovyscript.demo_summon')
-    .entity(entity('minecraft:chicken'))
-    .register()
-```
-
-:::::::::
-
-::::::::::
-
-:::::::::: details Time Recipe Builder {open id="abstract"}
-
----
-
-- Create a Recipe Builder for a time recipe, with the basic values and a time integer. Rapidly changes the time of day to the set time when completed.
-
-    ```groovy:no-line-numbers
-    mods.arcaneworld.ritual.recipeBuilderTime()
-    ```
-
----
-
-- `ResourceLocation`. Sets the Resource Location of the recipe.
-
-    ```groovy:no-line-numbers
-    name(String)
-    name(ResourceLocation)
-    ```
-
-- `String`. Sets the translation key used to localize the name of the ritual. Requires not null.
-
-    ```groovy:no-line-numbers
-    translationKey(String)
-    ```
-
-- `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 5.
-
-    ```groovy:no-line-numbers
-    input(IIngredient)
-    input(IIngredient...)
-    input(Collection<IIngredient>)
-    ```
-
-- `int`. Sets the amount of time that is passed when the Time Ritual is activated. Requires greater than or equal to 1. (Default `0`).
-
-    ```groovy:no-line-numbers
-    time(int)
-    ```
-
-- `RitualWrapper.RitualType`. Sets the mode of the ritual, different modes will require different values. (Default `RitualType.TIME`).
-
-    ```groovy:no-line-numbers
-    ritualTime()
-    ritualArena()
-    ritualCustom()
-    ritualSummon()
-    ritualCommand()
-    ritualDungeon()
-    ritualWeather()
-    ritualCreateItem()
-    ritualDragonBreath()
-    ritualType(RitualWrapper.RitualType)
-    ```
-
----
-
-- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
-
-    ```groovy:no-line-numbers
-    register()
-    ```
-
----
-
-::::::::: details Example {open id="example"}
-```groovy:no-line-numbers
-mods.arcaneworld.ritual.recipeBuilderTime()
-    .input(item('minecraft:diamond'), item('minecraft:clay'), item('minecraft:clay'), item('minecraft:clay'))
-    .translationKey('groovyscript.demo_time')
-    .time(5000)
     .register()
 ```
 
@@ -854,12 +709,161 @@ mods.arcaneworld.ritual.recipeBuilderWeather()
 
 ::::::::::
 
-## Removing Recipes
+:::::::::: details CreateItem Recipe Builder {open id="abstract"}
 
-- Removes the recipe with the given Resource Location:
+---
+
+- Create a Recipe Builder for a create item recipe, with the basic values and an output itemstack. Spawns the itemstack in-world when completed.
 
     ```groovy:no-line-numbers
-    mods.arcaneworld.ritual.remove(ResourceLocation)
+    mods.arcaneworld.ritual.recipeBuilderCreateItem()
+    ```
+
+---
+
+- `ResourceLocation`. Sets the Resource Location of the recipe.
+
+    ```groovy:no-line-numbers
+    name(String)
+    name(ResourceLocation)
+    ```
+
+- `String`. Sets the translation key used to localize the name of the ritual. Requires not null.
+
+    ```groovy:no-line-numbers
+    translationKey(String)
+    ```
+
+- `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 5.
+
+    ```groovy:no-line-numbers
+    input(IIngredient)
+    input(IIngredient...)
+    input(Collection<IIngredient>)
+    ```
+
+- `ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
+
+    ```groovy:no-line-numbers
+    output(ItemStack)
+    output(ItemStack...)
+    output(Collection<ItemStack>)
+    ```
+
+- `RitualWrapper.RitualType`. Sets the mode of the ritual, different modes will require different values. (Default `RitualType.CREATE_ITEM`).
+
+    ```groovy:no-line-numbers
+    ritualTime()
+    ritualArena()
+    ritualCustom()
+    ritualSummon()
+    ritualCommand()
+    ritualDungeon()
+    ritualWeather()
+    ritualCreateItem()
+    ritualDragonBreath()
+    ritualType(RitualWrapper.RitualType)
+    ```
+
+---
+
+- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
+
+    ```groovy:no-line-numbers
+    register()
+    ```
+
+---
+
+::::::::: details Example {open id="example"}
+```groovy:no-line-numbers
+mods.arcaneworld.ritual.recipeBuilderCreateItem()
+    .input(item('minecraft:diamond'), item('minecraft:diamond'), item('minecraft:diamond'))
+    .translationKey('groovyscript.demo_create_item')
+    .output(item('minecraft:diamond'))
+    .register()
+```
+
+:::::::::
+
+::::::::::
+
+:::::::::: details DragonBreath Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a dragon breath recipe, with only the basic values. Summons Dragons Breath when completed.
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.recipeBuilderDragonBreath()
+    ```
+
+---
+
+- `ResourceLocation`. Sets the Resource Location of the recipe.
+
+    ```groovy:no-line-numbers
+    name(String)
+    name(ResourceLocation)
+    ```
+
+- `String`. Sets the translation key used to localize the name of the ritual. Requires not null.
+
+    ```groovy:no-line-numbers
+    translationKey(String)
+    ```
+
+- `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 5.
+
+    ```groovy:no-line-numbers
+    input(IIngredient)
+    input(IIngredient...)
+    input(Collection<IIngredient>)
+    ```
+
+- `RitualWrapper.RitualType`. Sets the mode of the ritual, different modes will require different values. (Default `RitualType.DRAGON_BREATH`).
+
+    ```groovy:no-line-numbers
+    ritualTime()
+    ritualArena()
+    ritualCustom()
+    ritualSummon()
+    ritualCommand()
+    ritualDungeon()
+    ritualWeather()
+    ritualCreateItem()
+    ritualDragonBreath()
+    ritualType(RitualWrapper.RitualType)
+    ```
+
+---
+
+- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `party.lemons.arcaneworld.crafting.ritual.Ritual`).
+
+    ```groovy:no-line-numbers
+    register()
+    ```
+
+---
+
+::::::::: details Example {open id="example"}
+```groovy:no-line-numbers
+mods.arcaneworld.ritual.recipeBuilderDragonBreath()
+    .input(item('minecraft:clay'), item('minecraft:clay'), item('minecraft:clay'), item('minecraft:clay'), item('minecraft:clay'))
+    .translationKey('groovyscript.demo_dragon_breath')
+    .register()
+```
+
+:::::::::
+
+::::::::::
+
+## Removing Recipes
+
+- Removes the recipe:
+
+    ```groovy:no-line-numbers
+    mods.arcaneworld.ritual.remove(Ritual)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -868,10 +872,10 @@ mods.arcaneworld.ritual.recipeBuilderWeather()
     mods.arcaneworld.ritual.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.arcaneworld.ritual.remove(Ritual)
+    mods.arcaneworld.ritual.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

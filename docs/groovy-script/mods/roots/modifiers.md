@@ -13,26 +13,31 @@ Controls what spell modifiers are enabled and can be used.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.roots.modifiers` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.roots.modifiers/* Used as page default */ // [!code focus]
 mods.roots.Modifiers
 ```
 
+::::::::::
 
 ## Adding Entries
+
+- Enable any disabled modifiers with the given string as a resource location, defaulting to a namespace of `roots` if not provided:
+
+    ```groovy:no-line-numbers
+    mods.roots.modifiers.enable(String)
+    ```
 
 - Enable the disabled modifier:
 
     ```groovy:no-line-numbers
     mods.roots.modifiers.enable(Modifier)
-    ```
-
-- Enable any disabled modifiers with the given resource location:
-
-    ```groovy:no-line-numbers
-    mods.roots.modifiers.enable(ResourceLocation)
     ```
 
 - Enable all disabled modifiers for the given spell:
@@ -41,10 +46,10 @@ mods.roots.Modifiers
     mods.roots.modifiers.enable(SpellBase)
     ```
 
-- Enable any disabled modifiers with the given string as a resource location, defaulting to a namespace of `roots` if not provided:
+- Enable any disabled modifiers with the given resource location:
 
     ```groovy:no-line-numbers
-    mods.roots.modifiers.enable(String)
+    mods.roots.modifiers.enable(ResourceLocation)
     ```
 
 - Enable all disabled modifiers:
@@ -55,9 +60,9 @@ mods.roots.Modifiers
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
+mods.roots.modifiers.enable('extended_geas')
 mods.roots.modifiers.enable(modifier('roots:weakened_response'))
 mods.roots.modifiers.enable(resource('roots:animal_savior'))
-mods.roots.modifiers.enable('extended_geas')
 mods.roots.modifiers.enableAll()
 ```
 
@@ -65,16 +70,16 @@ mods.roots.modifiers.enableAll()
 
 ## Removing Entries
 
+- Disable any enabled modifiers with the given string as a resource location, defaulting to a namespace of `roots` if not provided:
+
+    ```groovy:no-line-numbers
+    mods.roots.modifiers.disable(String)
+    ```
+
 - Disable the enabled modifier:
 
     ```groovy:no-line-numbers
     mods.roots.modifiers.disable(Modifier)
-    ```
-
-- Disable any enabled modifiers with the given resource location:
-
-    ```groovy:no-line-numbers
-    mods.roots.modifiers.disable(ResourceLocation)
     ```
 
 - Disable all enabled modifiers for the given spell:
@@ -83,10 +88,10 @@ mods.roots.modifiers.enableAll()
     mods.roots.modifiers.disable(SpellBase)
     ```
 
-- Disable any enabled modifiers with the given string as a resource location, defaulting to a namespace of `roots` if not provided:
+- Disable any enabled modifiers with the given resource location:
 
     ```groovy:no-line-numbers
-    mods.roots.modifiers.disable(String)
+    mods.roots.modifiers.disable(ResourceLocation)
     ```
 
 - Disable all enabled modifiers:

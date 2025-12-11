@@ -13,15 +13,20 @@ When using a axe it can convert items.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pyrotech.chopping_block` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.pyrotech.chopping_block/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.pyrotech.choppingblock
 mods.pyrotech.choppingBlock
 mods.pyrotech.ChoppingBlock
+mods.pyrotech.chopping_block/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.pyrotech.ChoppingBlock
     ```groovy:no-line-numbers
     mods.pyrotech.chopping_block.add(ChoppingBlockRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -114,10 +118,10 @@ mods.pyrotech.chopping_block.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.chopping_block.remove(ResourceLocation)
+    mods.pyrotech.chopping_block.remove(ChoppingBlockRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -126,10 +130,10 @@ mods.pyrotech.chopping_block.recipeBuilder()
     mods.pyrotech.chopping_block.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.chopping_block.remove(ChoppingBlockRecipe)
+    mods.pyrotech.chopping_block.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

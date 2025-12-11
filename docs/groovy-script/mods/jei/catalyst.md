@@ -13,7 +13,11 @@ Modify the items shown on the left of JEI Categories which indicate where the re
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.jei.catalyst` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.hei.catalyst
@@ -22,14 +26,9 @@ mods.jei.catalyst/* Used as page default */ // [!code focus]
 mods.jei.Catalyst
 ```
 
+::::::::::
 
 ## Adding Entries
-
-- Adds the given catalyst items to the given category:
-
-    ```groovy:no-line-numbers
-    mods.jei.catalyst.add(String, Collection<ItemStack>)
-    ```
 
 - Adds the given catalyst items to the given category:
 
@@ -41,6 +40,12 @@ mods.jei.Catalyst
 
     ```groovy:no-line-numbers
     mods.jei.catalyst.add(String, ItemStack...)
+    ```
+
+- Adds the given catalyst items to the given category:
+
+    ```groovy:no-line-numbers
+    mods.jei.catalyst.add(String, Collection<ItemStack>)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -55,12 +60,6 @@ mods.jei.catalyst.add('minecraft.smelting', item('minecraft:clay') * 8, item('mi
 - Removes the given catalyst items from the given category:
 
     ```groovy:no-line-numbers
-    mods.jei.catalyst.remove(String, Collection<ItemStack>)
-    ```
-
-- Removes the given catalyst items from the given category:
-
-    ```groovy:no-line-numbers
     mods.jei.catalyst.remove(String, ItemStack)
     ```
 
@@ -68,6 +67,12 @@ mods.jei.catalyst.add('minecraft.smelting', item('minecraft:clay') * 8, item('mi
 
     ```groovy:no-line-numbers
     mods.jei.catalyst.remove(String, ItemStack...)
+    ```
+
+- Removes the given catalyst items from the given category:
+
+    ```groovy:no-line-numbers
+    mods.jei.catalyst.remove(String, Collection<ItemStack>)
     ```
 
 - Removes all catalyst items from the given category:

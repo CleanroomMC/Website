@@ -13,15 +13,20 @@ Converts an input itemstack into power, at the cost of a burnable fuel.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.calculator.glowstone_extractor` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.calculator.glowstone_extractor/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.calculator.glowstoneextractor
 mods.calculator.glowstoneExtractor
 mods.calculator.GlowstoneExtractor
+mods.calculator.glowstone_extractor/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.calculator.GlowstoneExtractor
     ```groovy:no-line-numbers
     mods.calculator.glowstone_extractor.add(DefaultSonarRecipe.Value)
     ```
-
 
 ### Recipe Builder
 

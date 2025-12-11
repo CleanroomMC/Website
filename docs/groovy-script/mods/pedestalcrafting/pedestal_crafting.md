@@ -13,15 +13,20 @@ Converts a center item into a single output item. Additional inputs can be place
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pedestalcrafting.pedestal_crafting` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.pedestalcrafting.pedestal_crafting/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.pedestalcrafting.pedestalcrafting
 mods.pedestalcrafting.pedestalCrafting
 mods.pedestalcrafting.PedestalCrafting
+mods.pedestalcrafting.pedestal_crafting/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -31,7 +36,18 @@ Just like other recipe types, the Pedestal Crafting also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
 
-:::::::::: details mods.pedestalcrafting.pedestal_crafting.recipeBuilder() {open id="abstract"}
+:::::::::: details Recipe Builder {open id="abstract"}
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy:no-line-numbers
+    mods.pedestalcrafting.pedestal_crafting.recipeBuilder()
+    ```
+
+---
+
 - `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 0.
 
     ```groovy:no-line-numbers
@@ -81,11 +97,15 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     addPostCraftPedestalParticle(EnumParticleTypes, int)
     ```
 
+---
+
 - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `me.axieum.mcmod.pedestalcrafting.recipe.PedestalRecipe`).
 
     ```groovy:no-line-numbers
     register()
     ```
+
+---
 
 ::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
@@ -136,16 +156,16 @@ mods.pedestalcrafting.pedestal_crafting.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes all recipes where the center item matches the given input:
-
-    ```groovy:no-line-numbers
-    mods.pedestalcrafting.pedestal_crafting.removeByCenter(IIngredient)
-    ```
-
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
     mods.pedestalcrafting.pedestal_crafting.removeByInput(IIngredient)
+    ```
+
+- Removes all recipes where the center item matches the given input:
+
+    ```groovy:no-line-numbers
+    mods.pedestalcrafting.pedestal_crafting.removeByCenter(IIngredient)
     ```
 
 - Removes all recipes that match the given output:
@@ -162,8 +182,8 @@ mods.pedestalcrafting.pedestal_crafting.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.pedestalcrafting.pedestal_crafting.removeByCenter(item('minecraft:wool'))
 mods.pedestalcrafting.pedestal_crafting.removeByInput(item('minecraft:redstone_block'))
+mods.pedestalcrafting.pedestal_crafting.removeByCenter(item('minecraft:wool'))
 mods.pedestalcrafting.pedestal_crafting.removeByOutput(item('minecraft:stick'))
 mods.pedestalcrafting.pedestal_crafting.removeAll()
 ```

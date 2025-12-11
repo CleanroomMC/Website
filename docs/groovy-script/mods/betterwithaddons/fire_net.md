@@ -17,15 +17,20 @@ Because the Fire Net needs Lava/Fire below the net to work, items that are outpu
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithaddons.fire_net` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.betterwithaddons.fire_net/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.betterwithaddons.firenet
 mods.betterwithaddons.fireNet
 mods.betterwithaddons.FireNet
+mods.betterwithaddons.fire_net/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.betterwithaddons.FireNet
     ```groovy:no-line-numbers
     mods.betterwithaddons.fire_net.add(NetRecipe)
     ```
-
 
 ### Recipe Builder
 

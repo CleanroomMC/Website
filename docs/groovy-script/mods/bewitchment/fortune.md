@@ -13,13 +13,18 @@ Modifies potential Fortunes, with a random one being selected from the list when
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bewitchment.fortune` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.bewitchment.fortune/* Used as page default */ // [!code focus]
 mods.bewitchment.Fortune
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -29,13 +34,12 @@ mods.bewitchment.Fortune
     mods.bewitchment.fortune.add(Fortune)
     ```
 
-
 ## Removing Entries
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.fortune.remove(ResourceLocation)
+    mods.bewitchment.fortune.remove(Fortune)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -44,10 +48,10 @@ mods.bewitchment.Fortune
     mods.bewitchment.fortune.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.fortune.remove(Fortune)
+    mods.bewitchment.fortune.remove(ResourceLocation)
     ```
 
 - Removes all registered recipes:

@@ -13,29 +13,34 @@ Pours out fluid into a basin to solidify it into a solid, optionally with a cast
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.tconstruct.casting_basin` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.tconstruct.casting_basin/* Used as page default */ // [!code focus]
-mods.tconstruct.castingbasin
-mods.tconstruct.castingBasin
-mods.tconstruct.CastingBasin
-mods.tconstruct.basin
-mods.tconstruct.Basin
-mods.tinkersconstruct.casting_basin
-mods.tinkersconstruct.castingbasin
-mods.tinkersconstruct.castingBasin
-mods.tinkersconstruct.CastingBasin
-mods.tinkersconstruct.basin
-mods.tinkersconstruct.Basin
-mods.ticon.casting_basin
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {12}
+mods.ticon.basin
+mods.ticon.Basin
 mods.ticon.castingbasin
 mods.ticon.castingBasin
 mods.ticon.CastingBasin
-mods.ticon.basin
-mods.ticon.Basin
+mods.ticon.casting_basin
+mods.tconstruct.basin
+mods.tconstruct.Basin
+mods.tconstruct.castingbasin
+mods.tconstruct.castingBasin
+mods.tconstruct.CastingBasin
+mods.tconstruct.casting_basin/* Used as page default */ // [!code focus]
+mods.tinkersconstruct.basin
+mods.tinkersconstruct.Basin
+mods.tinkersconstruct.castingbasin
+mods.tinkersconstruct.castingBasin
+mods.tinkersconstruct.CastingBasin
+mods.tinkersconstruct.casting_basin
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -44,7 +49,6 @@ mods.ticon.Basin
     ```groovy:no-line-numbers
     mods.tconstruct.casting_basin.add(ICastingRecipe)
     ```
-
 
 ### Recipe Builder
 

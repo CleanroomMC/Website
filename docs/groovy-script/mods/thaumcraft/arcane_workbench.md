@@ -13,23 +13,28 @@ A special crafting table, allowing additional requirements in the form of Vis Cr
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thaumcraft.arcane_workbench` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.thaumcraft.arcane_workbench/* Used as page default */ // [!code focus]
-mods.thaumcraft.arcaneworkbench
-mods.thaumcraft.arcaneWorkbench
-mods.thaumcraft.ArcaneWorkbench
-mods.tc.arcane_workbench
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {12}
 mods.tc.arcaneworkbench
 mods.tc.arcaneWorkbench
 mods.tc.ArcaneWorkbench
-mods.thaum.arcane_workbench
+mods.tc.arcane_workbench
 mods.thaum.arcaneworkbench
 mods.thaum.arcaneWorkbench
 mods.thaum.ArcaneWorkbench
+mods.thaum.arcane_workbench
+mods.thaumcraft.arcaneworkbench
+mods.thaumcraft.arcaneWorkbench
+mods.thaumcraft.ArcaneWorkbench
+mods.thaumcraft.arcane_workbench/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -106,8 +111,8 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 - `byte`. Sets if the recipe is removed. The `replace` method removes by the output itemstack, and the `replaceByName` method removes by the Resource Location. (Default `0`).
 
     ```groovy:no-line-numbers
-    replace()
-    replaceByName()
+    replace() // Makes the recipe remove by the ItemStack output
+    replaceByName() // Makes the recipe remove by the Resource Location name
     ```
 
 - `boolean`. Sets if the recipe is horizontally mirrored. (Default `false`).
@@ -226,8 +231,8 @@ mods.thaumcraft.arcane_workbench.shapedBuilder()
 - `byte`. Sets if the recipe is removed. The `replace` method removes by the output itemstack, and the `replaceByName` method removes by the Resource Location. (Default `0`).
 
     ```groovy:no-line-numbers
-    replace()
-    replaceByName()
+    replace() // Makes the recipe remove by the ItemStack output
+    replaceByName() // Makes the recipe remove by the Resource Location name
     ```
 
 - `String`. Sets the research required to craft the recipe.

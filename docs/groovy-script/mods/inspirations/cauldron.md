@@ -17,13 +17,18 @@ Cauldrons have a cap of either 3 or 4 levels, depending on the config.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.inspirations.cauldron` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.inspirations.cauldron/* Used as page default */ // [!code focus]
 mods.inspirations.Cauldron
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -32,7 +37,6 @@ mods.inspirations.Cauldron
     ```groovy:no-line-numbers
     mods.inspirations.cauldron.add(ICauldronRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -164,61 +168,6 @@ mods.inspirations.cauldron.recipeBuilder()
 
 ::::::::::
 
-:::::::::: details Brewing Recipe Builder {open id="abstract"}
-
----
-
-- Create a Recipe Builder for a brewing recipe, with an input itemstack, input potion, and output potion.
-
-    ```groovy:no-line-numbers
-    mods.inspirations.cauldron.recipeBuilderBrewing()
-    ```
-
----
-
-- `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
-
-    ```groovy:no-line-numbers
-    input(IIngredient)
-    input(IIngredient...)
-    input(Collection<IIngredient>)
-    ```
-
-- `PotionType`. Sets the input potion type. Requires not null.
-
-    ```groovy:no-line-numbers
-    inputPotion(PotionType)
-    ```
-
-- `PotionType`. Sets the output potion type. Requires not null.
-
-    ```groovy:no-line-numbers
-    outputPotion(PotionType)
-    ```
-
----
-
-- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `knightminer.inspirations.library.recipe.cauldron.ICauldronRecipe`).
-
-    ```groovy:no-line-numbers
-    register()
-    ```
-
----
-
-::::::::: details Example {open id="example"}
-```groovy:no-line-numbers
-mods.inspirations.cauldron.recipeBuilderBrewing()
-    .input(item('minecraft:diamond_block'))
-    .inputPotion(potionType('minecraft:fire_resistance'))
-    .outputPotion(potionType('minecraft:strength'))
-    .register()
-```
-
-:::::::::
-
-::::::::::
-
 :::::::::: details Dye Recipe Builder {open id="abstract"}
 
 ---
@@ -277,6 +226,56 @@ mods.inspirations.cauldron.recipeBuilderDye()
     .output(item('minecraft:diamond_block'))
     .dye('blue')
     .levels(2)
+    .register()
+```
+
+:::::::::
+
+::::::::::
+
+:::::::::: details Mix Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a mix recipe, with an two input fluidstacks and an output itemstack.
+
+    ```groovy:no-line-numbers
+    mods.inspirations.cauldron.recipeBuilderMix()
+    ```
+
+---
+
+- `FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 2.
+
+    ```groovy:no-line-numbers
+    fluidInput(FluidStack)
+    fluidInput(FluidStack...)
+    fluidInput(Collection<FluidStack>)
+    ```
+
+- `ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
+
+    ```groovy:no-line-numbers
+    output(ItemStack)
+    output(ItemStack...)
+    output(Collection<ItemStack>)
+    ```
+
+---
+
+- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `knightminer.inspirations.library.recipe.cauldron.ICauldronRecipe`).
+
+    ```groovy:no-line-numbers
+    register()
+    ```
+
+---
+
+::::::::: details Example {open id="example"}
+```groovy:no-line-numbers
+mods.inspirations.cauldron.recipeBuilderMix()
+    .output(item('minecraft:clay'))
+    .fluidInput(fluid('milk'), fluid('lava'))
     .register()
 ```
 
@@ -358,56 +357,6 @@ mods.inspirations.cauldron.recipeBuilderFill()
 
 ::::::::::
 
-:::::::::: details Mix Recipe Builder {open id="abstract"}
-
----
-
-- Create a Recipe Builder for a mix recipe, with an two input fluidstacks and an output itemstack.
-
-    ```groovy:no-line-numbers
-    mods.inspirations.cauldron.recipeBuilderMix()
-    ```
-
----
-
-- `FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 2.
-
-    ```groovy:no-line-numbers
-    fluidInput(FluidStack)
-    fluidInput(FluidStack...)
-    fluidInput(Collection<FluidStack>)
-    ```
-
-- `ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
-
-    ```groovy:no-line-numbers
-    output(ItemStack)
-    output(ItemStack...)
-    output(Collection<ItemStack>)
-    ```
-
----
-
-- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `knightminer.inspirations.library.recipe.cauldron.ICauldronRecipe`).
-
-    ```groovy:no-line-numbers
-    register()
-    ```
-
----
-
-::::::::: details Example {open id="example"}
-```groovy:no-line-numbers
-mods.inspirations.cauldron.recipeBuilderMix()
-    .output(item('minecraft:clay'))
-    .fluidInput(fluid('milk'), fluid('lava'))
-    .register()
-```
-
-:::::::::
-
-::::::::::
-
 :::::::::: details Potion Recipe Builder {open id="abstract"}
 
 ---
@@ -472,6 +421,61 @@ mods.inspirations.cauldron.recipeBuilderPotion()
     .output(item('minecraft:diamond_block'))
     .inputPotion(potionType('minecraft:fire_resistance'))
     .levels(2)
+    .register()
+```
+
+:::::::::
+
+::::::::::
+
+:::::::::: details Brewing Recipe Builder {open id="abstract"}
+
+---
+
+- Create a Recipe Builder for a brewing recipe, with an input itemstack, input potion, and output potion.
+
+    ```groovy:no-line-numbers
+    mods.inspirations.cauldron.recipeBuilderBrewing()
+    ```
+
+---
+
+- `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
+
+    ```groovy:no-line-numbers
+    input(IIngredient)
+    input(IIngredient...)
+    input(Collection<IIngredient>)
+    ```
+
+- `PotionType`. Sets the input potion type. Requires not null.
+
+    ```groovy:no-line-numbers
+    inputPotion(PotionType)
+    ```
+
+- `PotionType`. Sets the output potion type. Requires not null.
+
+    ```groovy:no-line-numbers
+    outputPotion(PotionType)
+    ```
+
+---
+
+- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `knightminer.inspirations.library.recipe.cauldron.ICauldronRecipe`).
+
+    ```groovy:no-line-numbers
+    register()
+    ```
+
+---
+
+::::::::: details Example {open id="example"}
+```groovy:no-line-numbers
+mods.inspirations.cauldron.recipeBuilderBrewing()
+    .input(item('minecraft:diamond_block'))
+    .inputPotion(potionType('minecraft:fire_resistance'))
+    .outputPotion(potionType('minecraft:strength'))
     .register()
 ```
 
@@ -648,6 +652,18 @@ mods.inspirations.cauldron.recipeBuilderTransform()
     mods.inspirations.cauldron.remove(ICauldronRecipe)
     ```
 
+- Removes all recipes with the given item input:
+
+    ```groovy:no-line-numbers
+    mods.inspirations.cauldron.removeByInput(IIngredient)
+    ```
+
+- Removes all recipes with the given item output:
+
+    ```groovy:no-line-numbers
+    mods.inspirations.cauldron.removeByOutput(ItemStack)
+    ```
+
 - Removes all recipes with the given fluid input:
 
     ```groovy:no-line-numbers
@@ -672,18 +688,6 @@ mods.inspirations.cauldron.recipeBuilderTransform()
     mods.inspirations.cauldron.removeByFluidOutput(FluidStack)
     ```
 
-- Removes all recipes with the given item input:
-
-    ```groovy:no-line-numbers
-    mods.inspirations.cauldron.removeByInput(IIngredient)
-    ```
-
-- Removes all recipes with the given item output:
-
-    ```groovy:no-line-numbers
-    mods.inspirations.cauldron.removeByOutput(ItemStack)
-    ```
-
 - Removes all registered recipes:
 
     ```groovy:no-line-numbers
@@ -692,10 +696,10 @@ mods.inspirations.cauldron.recipeBuilderTransform()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.inspirations.cauldron.removeByFluidInput(fluid('mushroom_stew'))
-mods.inspirations.cauldron.removeByFluidOutput(fluid('beetroot_soup'))
 mods.inspirations.cauldron.removeByInput(item('minecraft:ghast_tear'))
 mods.inspirations.cauldron.removeByOutput(item('minecraft:piston'))
+mods.inspirations.cauldron.removeByFluidInput(fluid('mushroom_stew'))
+mods.inspirations.cauldron.removeByFluidOutput(fluid('beetroot_soup'))
 mods.inspirations.cauldron.removeAll()
 ```
 

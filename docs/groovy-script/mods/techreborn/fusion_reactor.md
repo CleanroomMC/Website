@@ -13,15 +13,20 @@ Converts two itemstack inputs into an itemstack output after a given process tim
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.techreborn.fusion_reactor` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.techreborn.fusion_reactor/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.techreborn.fusionreactor
 mods.techreborn.fusionReactor
 mods.techreborn.FusionReactor
+mods.techreborn.fusion_reactor/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

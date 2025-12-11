@@ -13,13 +13,18 @@ Converts a scrapbox into a random itemstack output, either via manual player int
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.techreborn.scrapbox` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.techreborn.scrapbox/* Used as page default */ // [!code focus]
 mods.techreborn.Scrapbox
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.techreborn.Scrapbox
     ```groovy:no-line-numbers
     mods.techreborn.scrapbox.add(R)
     ```
-
 
 ### Recipe Builder
 

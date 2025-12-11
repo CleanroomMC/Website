@@ -13,7 +13,11 @@ Converts up to two input itemstacks and an input fluidstack into energy over tim
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.extrautils2.generator` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.extrautils2.generator/* Used as page default */ // [!code focus]
@@ -22,6 +26,7 @@ mods.extrautilities2.generator
 mods.extrautilities2.Generator
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -128,10 +133,10 @@ mods.extrautils2.generator.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes a Generator recipe in the format `generator`, `fluidstack`:
+- Removes a Generator recipe in the format `generator`, `itemstack`:
 
     ```groovy:no-line-numbers
-    mods.extrautils2.generator.remove(Machine, FluidStack)
+    mods.extrautils2.generator.remove(String, ItemStack)
     ```
 
 - Removes a Generator recipe in the format `generator`, `itemstack`:
@@ -143,7 +148,13 @@ mods.extrautils2.generator.recipeBuilder()
 - Removes a Generator recipe in the format `generator`, `fluidstack`:
 
     ```groovy:no-line-numbers
-    mods.extrautils2.generator.remove(ResourceLocation, FluidStack)
+    mods.extrautils2.generator.remove(String, FluidStack)
+    ```
+
+- Removes a Generator recipe in the format `generator`, `fluidstack`:
+
+    ```groovy:no-line-numbers
+    mods.extrautils2.generator.remove(Machine, FluidStack)
     ```
 
 - Removes a Generator recipe in the format `generator`, `itemstack`:
@@ -155,13 +166,13 @@ mods.extrautils2.generator.recipeBuilder()
 - Removes a Generator recipe in the format `generator`, `fluidstack`:
 
     ```groovy:no-line-numbers
-    mods.extrautils2.generator.remove(String, FluidStack)
+    mods.extrautils2.generator.remove(ResourceLocation, FluidStack)
     ```
 
-- Removes a Generator recipe in the format `generator`, `itemstack`:
+- Removes all recipes with given generator:
 
     ```groovy:no-line-numbers
-    mods.extrautils2.generator.remove(String, ItemStack)
+    mods.extrautils2.generator.removeByGenerator(String)
     ```
 
 - Removes all recipes with given generator:
@@ -176,12 +187,6 @@ mods.extrautils2.generator.recipeBuilder()
     mods.extrautils2.generator.removeByGenerator(ResourceLocation)
     ```
 
-- Removes all recipes with given generator:
-
-    ```groovy:no-line-numbers
-    mods.extrautils2.generator.removeByGenerator(String)
-    ```
-
 - Removes all registered recipes:
 
     ```groovy:no-line-numbers
@@ -190,8 +195,8 @@ mods.extrautils2.generator.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.extrautils2.generator.remove('extrautils2:generator_lava', fluid('lava'))
 mods.extrautils2.generator.remove('extrautils2:generator_culinary', item('minecraft:apple'))
+mods.extrautils2.generator.remove('extrautils2:generator_lava', fluid('lava'))
 mods.extrautils2.generator.removeByGenerator('extrautils2:generator_death')
 mods.extrautils2.generator.removeAll()
 ```

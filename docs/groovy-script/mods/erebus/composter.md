@@ -21,21 +21,20 @@ Items extending `ItemFood` and `ItemSeed` will always be valid items unless adde
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.erebus.composter` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.erebus.composter/* Used as page default */ // [!code focus]
 mods.erebus.Composter
 ```
 
+::::::::::
 
 ## Adding Entries
-
-- Add the given ItemStack to the Composter Blacklist:
-
-    ```groovy:no-line-numbers
-    mods.erebus.composter.addBlacklist(ItemStack)
-    ```
 
 - Add the given Material to the Composter Material list:
 
@@ -49,23 +48,23 @@ mods.erebus.Composter
     mods.erebus.composter.addRegistry(ItemStack)
     ```
 
+- Add the given ItemStack to the Composter Blacklist:
+
+    ```groovy:no-line-numbers
+    mods.erebus.composter.addBlacklist(ItemStack)
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.erebus.composter.addBlacklist(item('erebus:wall_plants', 7))
-mods.erebus.composter.addBlacklist(item('erebus:wall_plants_cultivated', 7))
 mods.erebus.composter.addMaterial(blockmaterial('tnt'))
 mods.erebus.composter.addRegistry(item('minecraft:gold_ingot'))
+mods.erebus.composter.addBlacklist(item('erebus:wall_plants', 7))
+mods.erebus.composter.addBlacklist(item('erebus:wall_plants_cultivated', 7))
 ```
 
 ::::::::::
 
 ## Removing Entries
-
-- Removes all matching ItemStacks from the Blacklist:
-
-    ```groovy:no-line-numbers
-    mods.erebus.composter.removeFromBlacklist(IIngredient)
-    ```
 
 - Removes the provided Material from the Material list:
 
@@ -79,10 +78,10 @@ mods.erebus.composter.addRegistry(item('minecraft:gold_ingot'))
     mods.erebus.composter.removeFromRegistry(IIngredient)
     ```
 
-- Removes all entries from the Blacklist:
+- Removes all matching ItemStacks from the Blacklist:
 
     ```groovy:no-line-numbers
-    mods.erebus.composter.removeAllFromBlacklist()
+    mods.erebus.composter.removeFromBlacklist(IIngredient)
     ```
 
 - Removes all entries from the Material list:
@@ -97,14 +96,20 @@ mods.erebus.composter.addRegistry(item('minecraft:gold_ingot'))
     mods.erebus.composter.removeAllFromRegistry()
     ```
 
+- Removes all entries from the Blacklist:
+
+    ```groovy:no-line-numbers
+    mods.erebus.composter.removeAllFromBlacklist()
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.erebus.composter.removeFromBlacklist(item('erebus:wall_plants', 1))
 mods.erebus.composter.removeFromMaterial(blockmaterial('sponge'))
 mods.erebus.composter.removeFromRegistry(item('minecraft:stick'))
-mods.erebus.composter.removeAllFromBlacklist()
+mods.erebus.composter.removeFromBlacklist(item('erebus:wall_plants', 1))
 mods.erebus.composter.removeAllFromMaterial()
 mods.erebus.composter.removeAllFromRegistry()
+mods.erebus.composter.removeAllFromBlacklist()
 ```
 
 ::::::::::

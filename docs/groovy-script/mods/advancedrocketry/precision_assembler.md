@@ -29,15 +29,20 @@ The Precision Assembler can support up to 6 input and output hatches. Each hatch
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.advancedrocketry.precision_assembler` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.advancedrocketry.precision_assembler/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.advancedrocketry.precisionassembler
 mods.advancedrocketry.precisionAssembler
 mods.advancedrocketry.PrecisionAssembler
+mods.advancedrocketry.precision_assembler/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -46,7 +51,6 @@ mods.advancedrocketry.PrecisionAssembler
     ```groovy:no-line-numbers
     mods.advancedrocketry.precision_assembler.add(R)
     ```
-
 
 ### Recipe Builder
 

@@ -17,13 +17,18 @@ Amadron recipes added or removed via GroovyScript will be saved to a config file
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pneumaticcraft.amadron` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.pneumaticcraft.amadron/* Used as page default */ // [!code focus]
 mods.pneumaticcraft.Amadron
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -137,16 +142,16 @@ mods.pneumaticcraft.amadron.recipeBuilder()
     mods.pneumaticcraft.amadron.removeAll()
     ```
 
-- Removes all periodic recipes:
-
-    ```groovy:no-line-numbers
-    mods.pneumaticcraft.amadron.removeAllPeriodic()
-    ```
-
 - Removes all static recipes:
 
     ```groovy:no-line-numbers
     mods.pneumaticcraft.amadron.removeAllStatic()
+    ```
+
+- Removes all periodic recipes:
+
+    ```groovy:no-line-numbers
+    mods.pneumaticcraft.amadron.removeAllPeriodic()
     ```
 
 :::::::::: details Example {open id="example"}
@@ -154,8 +159,8 @@ mods.pneumaticcraft.amadron.recipeBuilder()
 mods.pneumaticcraft.amadron.removeByInput(item('minecraft:rotten_flesh'))
 mods.pneumaticcraft.amadron.removeByOutput(item('minecraft:emerald'))
 mods.pneumaticcraft.amadron.removeAll()
-mods.pneumaticcraft.amadron.removeAllPeriodic()
 mods.pneumaticcraft.amadron.removeAllStatic()
+mods.pneumaticcraft.amadron.removeAllPeriodic()
 ```
 
 ::::::::::

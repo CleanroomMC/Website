@@ -13,15 +13,20 @@ Turn an item into an explosive or into a dampener when inserted into the Explosi
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.prodigytech.explosion_furnace_additives` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.prodigytech.explosion_furnace_additives/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.prodigytech.explosionfurnaceadditives
 mods.prodigytech.explosionFurnaceAdditives
 mods.prodigytech.ExplosionFurnaceAdditives
+mods.prodigytech.explosion_furnace_additives/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 

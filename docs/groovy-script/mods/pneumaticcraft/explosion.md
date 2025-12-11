@@ -17,13 +17,18 @@ Consider using the inWorldCrafting Explosion compat instead!
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pneumaticcraft.explosion` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.pneumaticcraft.explosion/* Used as page default */ // [!code focus]
 mods.pneumaticcraft.Explosion
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -32,7 +37,6 @@ mods.pneumaticcraft.Explosion
     ```groovy:no-line-numbers
     mods.pneumaticcraft.explosion.add(ExplosionCraftingRecipe)
     ```
-
 
 ### Recipe Builder
 

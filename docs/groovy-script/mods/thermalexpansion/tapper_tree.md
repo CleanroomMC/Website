@@ -13,19 +13,24 @@ Controls what valid log blocks and leaf blocks are to define a tree structure wh
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.tapper_tree` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.thermal.tapper_tree
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.thermal.tappertree
 mods.thermal.tapperTree
 mods.thermal.TapperTree
-mods.thermalexpansion.tapper_tree/* Used as page default */ // [!code focus]
+mods.thermal.tapper_tree
 mods.thermalexpansion.tappertree
 mods.thermalexpansion.tapperTree
 mods.thermalexpansion.TapperTree
+mods.thermalexpansion.tapper_tree/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -44,16 +49,10 @@ mods.thermalexpansion.tapper_tree.add(blockstate('minecraft:clay'), blockstate('
 
 ## Removing Entries
 
-- Removes all entries with the given IBlockState as a leaf:
+- Removes all entries with the given IBlockState as a log:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.tapper_tree.removeByLeaf(BlockWrapper)
-    ```
-
-- Removes all entries with the given IBlockState as a leaf:
-
-    ```groovy:no-line-numbers
-    mods.thermalexpansion.tapper_tree.removeByLeaf(IBlockState)
+    mods.thermalexpansion.tapper_tree.removeByLog(IBlockState)
     ```
 
 - Removes all entries with the given IBlockState as a log:
@@ -62,10 +61,16 @@ mods.thermalexpansion.tapper_tree.add(blockstate('minecraft:clay'), blockstate('
     mods.thermalexpansion.tapper_tree.removeByLog(BlockWrapper)
     ```
 
-- Removes all entries with the given IBlockState as a log:
+- Removes all entries with the given IBlockState as a leaf:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.tapper_tree.removeByLog(IBlockState)
+    mods.thermalexpansion.tapper_tree.removeByLeaf(IBlockState)
+    ```
+
+- Removes all entries with the given IBlockState as a leaf:
+
+    ```groovy:no-line-numbers
+    mods.thermalexpansion.tapper_tree.removeByLeaf(BlockWrapper)
     ```
 
 - Removes all registered recipes:
@@ -76,8 +81,8 @@ mods.thermalexpansion.tapper_tree.add(blockstate('minecraft:clay'), blockstate('
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.thermalexpansion.tapper_tree.removeByLeaf(blockstate('minecraft:leaves', 'variant=birch'))
 mods.thermalexpansion.tapper_tree.removeByLog(blockstate('minecraft:log', 'variant=spruce'))
+mods.thermalexpansion.tapper_tree.removeByLeaf(blockstate('minecraft:leaves', 'variant=birch'))
 mods.thermalexpansion.tapper_tree.removeAll()
 ```
 

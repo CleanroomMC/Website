@@ -13,13 +13,18 @@ Converts an input itemstack in the form of a EntityItems into an IBlockState aft
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithaddons.packing` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.betterwithaddons.packing/* Used as page default */ // [!code focus]
 mods.betterwithaddons.Packing
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.betterwithaddons.Packing
     ```groovy:no-line-numbers
     mods.betterwithaddons.packing.add(PackingRecipe)
     ```
-
 
 ### Recipe Builder
 

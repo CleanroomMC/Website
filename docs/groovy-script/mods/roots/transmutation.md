@@ -13,13 +13,18 @@ When running the Transmutation, convert nearby blocks that match a set of condit
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.roots.transmutation` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.roots.transmutation/* Used as page default */ // [!code focus]
 mods.roots.Transmutation
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -113,28 +118,28 @@ mods.roots.transmutation.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the Transmutation recipe for the given input IBlockState:
-
-    ```groovy:no-line-numbers
-    mods.roots.transmutation.removeByInput(IBlockState)
-    ```
-
 - Removes the Transmutation recipe with the given name:
 
     ```groovy:no-line-numbers
     mods.roots.transmutation.removeByName(ResourceLocation)
     ```
 
-- Removes the Transmutation recipe for the given output IBlockState:
+- Removes the Transmutation recipe for the given input IBlockState:
 
     ```groovy:no-line-numbers
-    mods.roots.transmutation.removeByOutput(IBlockState)
+    mods.roots.transmutation.removeByInput(IBlockState)
     ```
 
 - Removes the Transmutation recipe for the given output itemstack:
 
     ```groovy:no-line-numbers
     mods.roots.transmutation.removeByOutput(ItemStack)
+    ```
+
+- Removes the Transmutation recipe for the given output IBlockState:
+
+    ```groovy:no-line-numbers
+    mods.roots.transmutation.removeByOutput(IBlockState)
     ```
 
 - Removes all registered recipes:
@@ -146,8 +151,8 @@ mods.roots.transmutation.recipeBuilder()
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.roots.transmutation.removeByName(resource('roots:redstone_block_to_glowstone'))
-mods.roots.transmutation.removeByOutput(blockstate('minecraft:log:variant=jungle'))
 mods.roots.transmutation.removeByOutput(item('minecraft:dye:3'))
+mods.roots.transmutation.removeByOutput(blockstate('minecraft:log:variant=jungle'))
 mods.roots.transmutation.removeAll()
 ```
 

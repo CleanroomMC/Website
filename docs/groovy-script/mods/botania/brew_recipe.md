@@ -13,15 +13,20 @@ Converts a non-infused Managlass Vial, Alfglass Flask, Incense Stick, or Tainted
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.botania.brew_recipe` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.botania.brew_recipe/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.botania.brewrecipe
 mods.botania.brewRecipe
 mods.botania.BrewRecipe
+mods.botania.brew_recipe/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.botania.BrewRecipe
     ```groovy:no-line-numbers
     mods.botania.brew_recipe.add(RecipeBrew)
     ```
-
 
 ### Recipe Builder
 

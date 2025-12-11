@@ -13,19 +13,24 @@ Converts an input fluidstack into an output fluidstack and optional output items
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.refinery_potion` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.thermal.refinery_potion
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.thermal.refinerypotion
 mods.thermal.refineryPotion
 mods.thermal.RefineryPotion
-mods.thermalexpansion.refinery_potion/* Used as page default */ // [!code focus]
+mods.thermal.refinery_potion
 mods.thermalexpansion.refinerypotion
 mods.thermalexpansion.refineryPotion
 mods.thermalexpansion.RefineryPotion
+mods.thermalexpansion.refinery_potion/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

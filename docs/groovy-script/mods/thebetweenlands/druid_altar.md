@@ -17,19 +17,24 @@ The 4 sapling recipe to reactivate the Druid Altar recipe will always appear in 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thebetweenlands.druid_altar` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.betweenlands.druid_altar
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.betweenlands.druidaltar
 mods.betweenlands.druidAltar
 mods.betweenlands.DruidAltar
-mods.thebetweenlands.druid_altar/* Used as page default */ // [!code focus]
+mods.betweenlands.druid_altar
 mods.thebetweenlands.druidaltar
 mods.thebetweenlands.druidAltar
 mods.thebetweenlands.DruidAltar
+mods.thebetweenlands.druid_altar/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -38,7 +43,6 @@ mods.thebetweenlands.DruidAltar
     ```groovy:no-line-numbers
     mods.thebetweenlands.druid_altar.add(IDruidAltarRecipe)
     ```
-
 
 ### Recipe Builder
 

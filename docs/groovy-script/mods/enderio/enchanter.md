@@ -13,15 +13,20 @@ Convert an input itemstack, player xp, and either a written book and lapis or a 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.enderio.enchanter` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.enderio.enchanter/* Used as page default */ // [!code focus]
-mods.enderio.Enchanter
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
 mods.eio.enchanter
 mods.eio.Enchanter
+mods.enderio.enchanter/* Used as page default */ // [!code focus]
+mods.enderio.Enchanter
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.eio.Enchanter
     ```groovy:no-line-numbers
     mods.enderio.enchanter.add(Enchantment, IIngredient)
     ```
-
 
 ### Recipe Builder
 

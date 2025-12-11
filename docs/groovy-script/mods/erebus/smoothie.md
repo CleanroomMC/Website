@@ -13,13 +13,18 @@ Converts a container item, up to 4 input items, and up to 4 input fluidstacks in
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.erebus.smoothie` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.erebus.smoothie/* Used as page default */ // [!code focus]
 mods.erebus.Smoothie
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.erebus.Smoothie
     ```groovy:no-line-numbers
     mods.erebus.smoothie.add(SmoothieMakerRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -127,12 +131,6 @@ mods.erebus.smoothie.recipeBuilder()
     mods.erebus.smoothie.remove(SmoothieMakerRecipe)
     ```
 
-- Removes all recipes matching the provided container:
-
-    ```groovy:no-line-numbers
-    mods.erebus.smoothie.removeByContainer(IIngredient)
-    ```
-
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
@@ -145,6 +143,12 @@ mods.erebus.smoothie.recipeBuilder()
     mods.erebus.smoothie.removeByOutput(IIngredient)
     ```
 
+- Removes all recipes matching the provided container:
+
+    ```groovy:no-line-numbers
+    mods.erebus.smoothie.removeByContainer(IIngredient)
+    ```
+
 - Removes all registered recipes:
 
     ```groovy:no-line-numbers
@@ -153,10 +157,10 @@ mods.erebus.smoothie.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.erebus.smoothie.removeByContainer(item('minecraft:bucket'))
 mods.erebus.smoothie.removeByInput(item('erebus:materials', 18))
 mods.erebus.smoothie.removeByInput(fluid('honey'))
 mods.erebus.smoothie.removeByOutput(item('erebus:materials', 21))
+mods.erebus.smoothie.removeByContainer(item('minecraft:bucket'))
 mods.erebus.smoothie.removeAll()
 ```
 

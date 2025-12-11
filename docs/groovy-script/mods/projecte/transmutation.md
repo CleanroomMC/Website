@@ -13,13 +13,18 @@ Converts an input blockstate into an output blockstate when right-clicked with b
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.projecte.transmutation` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.projecte.transmutation/* Used as page default */ // [!code focus]
 mods.projecte.Transmutation
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.projecte.Transmutation
     ```groovy:no-line-numbers
     mods.projecte.transmutation.add(WorldTransmutations.Entry)
     ```
-
 
 ### Recipe Builder
 
@@ -61,14 +65,14 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     output(Block)
     output(IBlockState)
     output(Block, Block)
-    output(IBlockState, IBlockState)
+    output(IBlockState, IBlockState) // output, altOutput
     ```
 
 - `IBlockState`. Sets the shift output blockstate.
 
     ```groovy:no-line-numbers
     output(Block, Block)
-    output(IBlockState, IBlockState)
+    output(IBlockState, IBlockState) // output, altOutput
     altOutput(Block)
     altOutput(IBlockState)
     ```

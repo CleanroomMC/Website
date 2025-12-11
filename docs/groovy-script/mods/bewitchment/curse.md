@@ -13,13 +13,18 @@ Allows applying curses to a player to cause unique effects in the Brazier with a
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bewitchment.curse` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.bewitchment.curse/* Used as page default */ // [!code focus]
 mods.bewitchment.Curse
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -29,13 +34,12 @@ mods.bewitchment.Curse
     mods.bewitchment.curse.add(Curse)
     ```
 
-
 ## Removing Entries
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.curse.remove(ResourceLocation)
+    mods.bewitchment.curse.remove(Curse)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -44,10 +48,10 @@ mods.bewitchment.Curse
     mods.bewitchment.curse.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.curse.remove(Curse)
+    mods.bewitchment.curse.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

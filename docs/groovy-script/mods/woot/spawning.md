@@ -13,21 +13,20 @@ Controls item/fluid costs of a given mob or the default cost.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.woot.spawning` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.woot.spawning/* Used as page default */ // [!code focus]
 mods.woot.Spawning
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds a default fluid requirement to mobs without a specific spawning recipe:
-
-    ```groovy:no-line-numbers
-    mods.woot.spawning.addDefaultFluid(FluidStack)
-    ```
 
 - Adds a default item requirement to mobs without a specific spawning recipe:
 
@@ -35,6 +34,11 @@ mods.woot.Spawning
     mods.woot.spawning.addDefaultItem(ItemStack)
     ```
 
+- Adds a default fluid requirement to mobs without a specific spawning recipe:
+
+    ```groovy:no-line-numbers
+    mods.woot.spawning.addDefaultFluid(FluidStack)
+    ```
 
 ### Recipe Builder
 
@@ -124,25 +128,25 @@ mods.woot.spawning.recipeBuilder()
 - Removes the recipe for the given entity:
 
     ```groovy:no-line-numbers
-    mods.woot.spawning.removeByEntity(EntityEntry)
-    ```
-
-- Removes the recipe for the given entity:
-
-    ```groovy:no-line-numbers
     mods.woot.spawning.removeByEntity(String)
     ```
 
 - Removes the recipe for the given entity:
 
     ```groovy:no-line-numbers
-    mods.woot.spawning.removeByEntity(String, String)
+    mods.woot.spawning.removeByEntity(EntityEntry)
     ```
 
 - Removes the recipe for the given entity:
 
     ```groovy:no-line-numbers
     mods.woot.spawning.removeByEntity(WootMobName)
+    ```
+
+- Removes the recipe for the given entity:
+
+    ```groovy:no-line-numbers
+    mods.woot.spawning.removeByEntity(String, String)
     ```
 
 - Removes all registered recipes:
@@ -154,10 +158,10 @@ mods.woot.spawning.recipeBuilder()
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.woot.spawning.remove(new WootMobName('minecraft:ender_dragon'))
-mods.woot.spawning.removeByEntity(entity('minecraft:ender_dragon'))
 mods.woot.spawning.removeByEntity('minecraft:ender_dragon')
-mods.woot.spawning.removeByEntity('minecraft:ender_dragon', '')
+mods.woot.spawning.removeByEntity(entity('minecraft:ender_dragon'))
 mods.woot.spawning.removeByEntity(new WootMobName('minecraft:ender_dragon'))
+mods.woot.spawning.removeByEntity('minecraft:ender_dragon', '')
 mods.woot.spawning.removeAll()
 ```
 

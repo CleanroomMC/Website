@@ -13,19 +13,24 @@ Transforms various items using ESPE.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.essentialcraft.wind_rune` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.ec4.wind_rune
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.ec4.windrune
 mods.ec4.windRune
 mods.ec4.WindRune
-mods.essentialcraft.wind_rune/* Used as page default */ // [!code focus]
+mods.ec4.wind_rune
 mods.essentialcraft.windrune
 mods.essentialcraft.windRune
 mods.essentialcraft.WindRune
+mods.essentialcraft.wind_rune/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.essentialcraft.WindRune
     ```groovy:no-line-numbers
     mods.essentialcraft.wind_rune.add(WindImbueRecipe)
     ```
-
 
 ### Recipe Builder
 

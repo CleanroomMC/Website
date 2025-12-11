@@ -13,7 +13,11 @@ Turns 5 input items into an output item at the cost of power and time. Has a con
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.actuallyadditions.empowerer` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.aa.empowerer
@@ -22,6 +26,7 @@ mods.actuallyadditions.empowerer/* Used as page default */ // [!code focus]
 mods.actuallyadditions.Empowerer
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.actuallyadditions.Empowerer
     ```groovy:no-line-numbers
     mods.actuallyadditions.empowerer.add(EmpowererRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -70,20 +74,20 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 
     ```groovy:no-line-numbers
     red(float)
-    color(int)
-    color(float...)
-    particleColor(int)
-    particleColor(float...)
+    color(int) // Sets the color via standardized hex code
+    color(float, float, float) // red, green, blue
+    particleColor(int) // Sets the color via standardized hex code
+    particleColor(float, float, float) // red, green, blue
     ```
 
 - `float`. Sets the blue color. Requires greater than or equal to 0 and less than or equal to 1. (Default `0.0f`).
 
     ```groovy:no-line-numbers
     blue(float)
-    color(int)
-    color(float...)
-    particleColor(int)
-    particleColor(float...)
+    color(int) // Sets the color via standardized hex code
+    color(float, float, float) // red, green, blue
+    particleColor(int) // Sets the color via standardized hex code
+    particleColor(float, float, float) // red, green, blue
     ```
 
 - `int`. Sets the amount of time the recipe takes to complete. Requires greater than 0. (Default `0`).
@@ -96,10 +100,10 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
 
     ```groovy:no-line-numbers
     green(float)
-    color(int)
-    color(float...)
-    particleColor(int)
-    particleColor(float...)
+    color(int) // Sets the color via standardized hex code
+    color(float, float, float) // red, green, blue
+    particleColor(int) // Sets the color via standardized hex code
+    particleColor(float, float, float) // red, green, blue
     ```
 
 - `IIngredient`. Sets the center IIngredient if the input only has 4 entries.

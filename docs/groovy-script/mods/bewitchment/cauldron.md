@@ -21,13 +21,18 @@ Magic Power is consumed at a rate of `16 * {itemCount - 1}` every second and eac
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bewitchment.cauldron` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.bewitchment.cauldron/* Used as page default */ // [!code focus]
 mods.bewitchment.Cauldron
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -36,7 +41,6 @@ mods.bewitchment.Cauldron
     ```groovy:no-line-numbers
     mods.bewitchment.cauldron.add(CauldronRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -105,10 +109,10 @@ mods.bewitchment.cauldron.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.cauldron.remove(ResourceLocation)
+    mods.bewitchment.cauldron.remove(CauldronRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -117,10 +121,10 @@ mods.bewitchment.cauldron.recipeBuilder()
     mods.bewitchment.cauldron.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.cauldron.remove(CauldronRecipe)
+    mods.bewitchment.cauldron.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

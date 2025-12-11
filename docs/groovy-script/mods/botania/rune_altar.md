@@ -13,15 +13,20 @@ Converts a items inputs into an item output at the cost of mana when a Livingroc
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.botania.rune_altar` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.botania.rune_altar/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.botania.runealtar
 mods.botania.runeAltar
 mods.botania.RuneAltar
+mods.botania.rune_altar/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -36,7 +41,6 @@ mods.botania.RuneAltar
     ```groovy:no-line-numbers
     mods.botania.rune_altar.add(ItemStack, int, IIngredient...)
     ```
-
 
 ### Recipe Builder
 

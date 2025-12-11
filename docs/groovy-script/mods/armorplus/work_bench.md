@@ -13,15 +13,20 @@ A normal crafting recipe, but with a 3x3 grid and in the WorkBench.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.armorplus.work_bench` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.armorplus.work_bench/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.armorplus.workbench
 mods.armorplus.workBench
 mods.armorplus.WorkBench
+mods.armorplus.work_bench/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.armorplus.WorkBench
     ```groovy:no-line-numbers
     mods.armorplus.work_bench.add(R)
     ```
-
 
 ### Recipe Builder
 

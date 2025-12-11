@@ -13,15 +13,20 @@ Converts two itemstack inputs into an itemstack output after a given process tim
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.techreborn.chemical_reactor` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.techreborn.chemical_reactor/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.techreborn.chemicalreactor
 mods.techreborn.chemicalReactor
 mods.techreborn.ChemicalReactor
+mods.techreborn.chemical_reactor/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.techreborn.ChemicalReactor
     ```groovy:no-line-numbers
     mods.techreborn.chemical_reactor.add(R)
     ```
-
 
 ### Recipe Builder
 

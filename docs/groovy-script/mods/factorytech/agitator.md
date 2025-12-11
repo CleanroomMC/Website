@@ -13,13 +13,18 @@ Converts either one or two input fluidstacks and up to one input itemstack into 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.factorytech.agitator` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.factorytech.agitator/* Used as page default */ // [!code focus]
 mods.factorytech.Agitator
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.factorytech.Agitator
     ```groovy:no-line-numbers
     mods.factorytech.agitator.add(TileEntityAgitator.AgitatorRecipe)
     ```
-
 
 ### Recipe Builder
 

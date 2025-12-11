@@ -13,15 +13,20 @@ Converts an input itemstack into an output itemstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.cyclicmagic.dehydrator` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.cyclicmagic.dehydrator/* Used as page default */ // [!code focus]
-mods.cyclicmagic.Dehydrator
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
 mods.cyclic.dehydrator
 mods.cyclic.Dehydrator
+mods.cyclicmagic.dehydrator/* Used as page default */ // [!code focus]
+mods.cyclicmagic.Dehydrator
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.cyclic.Dehydrator
     ```groovy:no-line-numbers
     mods.cyclicmagic.dehydrator.add(RecipeDeHydrate)
     ```
-
 
 ### Recipe Builder
 

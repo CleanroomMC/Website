@@ -13,13 +13,18 @@ Performs recipes using Gold Dust, has a recipe catalyst, and uses up Circuit Boa
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.prodigytech.solderer` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.prodigytech.solderer/* Used as page default */ // [!code focus]
 mods.prodigytech.Solderer
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -108,12 +113,6 @@ mods.prodigytech.solderer.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipes using the given additive:
-
-    ```groovy:no-line-numbers
-    mods.prodigytech.solderer.removeByAdditive(IIngredient)
-    ```
-
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers
@@ -124,6 +123,12 @@ mods.prodigytech.solderer.recipeBuilder()
 
     ```groovy:no-line-numbers
     mods.prodigytech.solderer.removeByPattern(IIngredient)
+    ```
+
+- Removes the recipes using the given additive:
+
+    ```groovy:no-line-numbers
+    mods.prodigytech.solderer.removeByAdditive(IIngredient)
     ```
 
 - Removes all registered recipes:
@@ -140,9 +145,9 @@ mods.prodigytech.solderer.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.prodigytech.solderer.removeByAdditive(item('minecraft:iron_ingot'))
 mods.prodigytech.solderer.removeByOutput(item('prodigytech:circuit_refined'))
 mods.prodigytech.solderer.removeByPattern(item('prodigytech:pattern_circuit_refined'))
+mods.prodigytech.solderer.removeByAdditive(item('minecraft:iron_ingot'))
 mods.prodigytech.solderer.removeAll()
 mods.prodigytech.solderer.removeWithoutAdditive()
 ```

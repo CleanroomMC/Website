@@ -21,19 +21,24 @@ JEI incorrectly represents the chance to obtain an output. 6% is actually 2%, 0.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.calculator.analysing_chamber` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.calculator.analysing_chamber/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {7}
 mods.calculator.analysingchamber
 mods.calculator.analysingChamber
 mods.calculator.AnalysingChamber
-mods.calculator.analyzing_chamber
 mods.calculator.analyzingchamber
 mods.calculator.analyzingChamber
 mods.calculator.AnalyzingChamber
+mods.calculator.analysing_chamber/* Used as page default */ // [!code focus]
+mods.calculator.analyzing_chamber
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -42,7 +47,6 @@ mods.calculator.AnalyzingChamber
     ```groovy:no-line-numbers
     mods.calculator.analysing_chamber.add(CalculatorRecipe)
     ```
-
 
 ### Recipe Builder
 

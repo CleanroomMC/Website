@@ -17,7 +17,11 @@ The Bio Fuel registry has no function in default Thermal Expansion.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.refinery` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.thermal.refinery
@@ -26,6 +30,7 @@ mods.thermalexpansion.refinery/* Used as page default */ // [!code focus]
 mods.thermalexpansion.Refinery
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -44,13 +49,13 @@ mods.thermalexpansion.Refinery
 - Adds a fluid to the Bio Fuel list, which currently does nothing:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.refinery.addBioFuel(FluidStack)
+    mods.thermalexpansion.refinery.addBioFuel(String)
     ```
 
 - Adds a fluid to the Bio Fuel list, which currently does nothing:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.refinery.addBioFuel(String)
+    mods.thermalexpansion.refinery.addBioFuel(FluidStack)
     ```
 
 - Adds a fluid to the Fossil Fuel list, which causes it to have increased output when processed with the Reflux Column augment installed:
@@ -62,13 +67,13 @@ mods.thermalexpansion.Refinery
 - Adds a fluid to the Fossil Fuel list, which causes it to have increased output when processed with the Reflux Column augment installed:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.refinery.addFossilFuel(FluidStack)
+    mods.thermalexpansion.refinery.addFossilFuel(String)
     ```
 
 - Adds a fluid to the Fossil Fuel list, which causes it to have increased output when processed with the Reflux Column augment installed:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.refinery.addFossilFuel(String)
+    mods.thermalexpansion.refinery.addFossilFuel(FluidStack)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -175,13 +180,13 @@ mods.thermalexpansion.refinery.recipeBuilder()
 - Removes a fluid to the Bio Fuel list, which currently does nothing:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.refinery.removeBioFuel(FluidStack)
+    mods.thermalexpansion.refinery.removeBioFuel(String)
     ```
 
 - Removes a fluid to the Bio Fuel list, which currently does nothing:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.refinery.removeBioFuel(String)
+    mods.thermalexpansion.refinery.removeBioFuel(FluidStack)
     ```
 
 - Removes all recipes that match the given input:
@@ -205,13 +210,13 @@ mods.thermalexpansion.refinery.recipeBuilder()
 - Removes a fluid to the Fossil Fuel list, which causes it to have increased output when processed with the Reflux Column augment installed:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.refinery.removeFossilFuel(FluidStack)
+    mods.thermalexpansion.refinery.removeFossilFuel(String)
     ```
 
 - Removes a fluid to the Fossil Fuel list, which causes it to have increased output when processed with the Reflux Column augment installed:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.refinery.removeFossilFuel(String)
+    mods.thermalexpansion.refinery.removeFossilFuel(FluidStack)
     ```
 
 - Removes all registered recipes:

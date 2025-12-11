@@ -21,17 +21,22 @@ While more than 6 items can function as the input of a Stygian Iron Anvil recipe
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.woot.stygian_iron_anvil` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.woot.stygian_iron_anvil/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {6}
+mods.woot.anvil
+mods.woot.Anvil
 mods.woot.stygianironanvil
 mods.woot.stygianIronAnvil
 mods.woot.StygianIronAnvil
-mods.woot.anvil
-mods.woot.Anvil
+mods.woot.stygian_iron_anvil/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -40,7 +45,6 @@ mods.woot.Anvil
     ```groovy:no-line-numbers
     mods.woot.stygian_iron_anvil.add(IAnvilRecipe)
     ```
-
 
 ### Recipe Builder
 

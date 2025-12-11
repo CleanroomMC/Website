@@ -13,23 +13,28 @@ Modifies what fluids are accepted as fuels for the Smeltery and how long each fu
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.tconstruct.smeltery_fuel` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.tconstruct.smeltery_fuel/* Used as page default */ // [!code focus]
-mods.tconstruct.smelteryfuel
-mods.tconstruct.smelteryFuel
-mods.tconstruct.SmelteryFuel
-mods.tinkersconstruct.smeltery_fuel
-mods.tinkersconstruct.smelteryfuel
-mods.tinkersconstruct.smelteryFuel
-mods.tinkersconstruct.SmelteryFuel
-mods.ticon.smeltery_fuel
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.ticon.smelteryfuel
 mods.ticon.smelteryFuel
 mods.ticon.SmelteryFuel
+mods.ticon.smeltery_fuel
+mods.tconstruct.smelteryfuel
+mods.tconstruct.smelteryFuel
+mods.tconstruct.SmelteryFuel
+mods.tconstruct.smeltery_fuel/* Used as page default */ // [!code focus]
+mods.tinkersconstruct.smelteryfuel
+mods.tinkersconstruct.smelteryFuel
+mods.tinkersconstruct.SmelteryFuel
+mods.tinkersconstruct.smeltery_fuel
 ```
 
+::::::::::
 
 ## Adding Entries
 

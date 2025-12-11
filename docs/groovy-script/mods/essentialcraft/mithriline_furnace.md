@@ -13,19 +13,24 @@ Converts various items into other items using ESPE.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.essentialcraft.mithriline_furnace` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.ec4.mithriline_furnace
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.ec4.mithrilinefurnace
 mods.ec4.mithrilineFurnace
 mods.ec4.MithrilineFurnace
-mods.essentialcraft.mithriline_furnace/* Used as page default */ // [!code focus]
+mods.ec4.mithriline_furnace
 mods.essentialcraft.mithrilinefurnace
 mods.essentialcraft.mithrilineFurnace
 mods.essentialcraft.MithrilineFurnace
+mods.essentialcraft.mithriline_furnace/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

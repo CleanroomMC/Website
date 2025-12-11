@@ -13,13 +13,18 @@ Converts an input item into an output itemstack if placed within the appropriate
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithaddons.tatara` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.betterwithaddons.tatara/* Used as page default */ // [!code focus]
 mods.betterwithaddons.Tatara
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.betterwithaddons.Tatara
     ```groovy:no-line-numbers
     mods.betterwithaddons.tatara.add(SmeltingRecipe)
     ```
-
 
 ### Recipe Builder
 

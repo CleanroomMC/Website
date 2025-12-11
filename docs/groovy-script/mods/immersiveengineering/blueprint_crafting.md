@@ -13,23 +13,28 @@ Converts any number of input itemstacks into an output itemstack, using a bluepr
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersiveengineering.blueprint_crafting` will be used as the default on this page.
 
-```groovy:no-line-numbers {7}
-mods.ie.blueprint_crafting
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {12}
+mods.ie.blueprint
+mods.ie.Blueprint
 mods.ie.blueprintcrafting
 mods.ie.blueprintCrafting
 mods.ie.BlueprintCrafting
-mods.ie.blueprint
-mods.ie.Blueprint
-mods.immersiveengineering.blueprint_crafting/* Used as page default */ // [!code focus]
+mods.ie.blueprint_crafting
+mods.immersiveengineering.blueprint
+mods.immersiveengineering.Blueprint
 mods.immersiveengineering.blueprintcrafting
 mods.immersiveengineering.blueprintCrafting
 mods.immersiveengineering.BlueprintCrafting
-mods.immersiveengineering.blueprint
-mods.immersiveengineering.Blueprint
+mods.immersiveengineering.blueprint_crafting/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -38,7 +43,6 @@ mods.immersiveengineering.Blueprint
     ```groovy:no-line-numbers
     mods.immersiveengineering.blueprint_crafting.add(String, ItemStack, List<IIngredient>)
     ```
-
 
 ### Recipe Builder
 
@@ -105,12 +109,6 @@ mods.immersiveengineering.blueprint_crafting.recipeBuilder()
 
 ## Removing Recipes
 
-- Default blueprint categories are `components`, `molds`, `bullet`, `specialBullet`, and `electrode`:
-
-    ```groovy:no-line-numbers
-    mods.immersiveengineering.blueprint_crafting.removeByCategory(String)
-    ```
-
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
@@ -123,6 +121,12 @@ mods.immersiveengineering.blueprint_crafting.recipeBuilder()
     mods.immersiveengineering.blueprint_crafting.removeByOutput(String, ItemStack)
     ```
 
+- Default blueprint categories are `components`, `molds`, `bullet`, `specialBullet`, and `electrode`:
+
+    ```groovy:no-line-numbers
+    mods.immersiveengineering.blueprint_crafting.removeByCategory(String)
+    ```
+
 - Removes all registered recipes:
 
     ```groovy:no-line-numbers
@@ -131,9 +135,9 @@ mods.immersiveengineering.blueprint_crafting.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.immersiveengineering.blueprint_crafting.removeByCategory('electrode')
 mods.immersiveengineering.blueprint_crafting.removeByInput('components', item('immersiveengineering:metal:38'), item('immersiveengineering:metal:38'), item('immersiveengineering:metal'))
 mods.immersiveengineering.blueprint_crafting.removeByOutput('components', item('immersiveengineering:material:8'))
+mods.immersiveengineering.blueprint_crafting.removeByCategory('electrode')
 mods.immersiveengineering.blueprint_crafting.removeAll()
 ```
 

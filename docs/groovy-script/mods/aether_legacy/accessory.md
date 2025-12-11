@@ -13,23 +13,22 @@ The Aether Accessory system.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.aether_legacy.accessory` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.aether_legacy.accessory/* Used as page default */ // [!code focus]
-mods.aether_legacy.Accessory
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
 mods.aether.accessory
 mods.aether.Accessory
+mods.aether_legacy.accessory/* Used as page default */ // [!code focus]
+mods.aether_legacy.Accessory
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds an Accessory in the format `item`, `type`, where type is one of the following: "Ring", "Pendant", "Cape", "Shield", "Glove", or "Misc":
-
-    ```groovy:no-line-numbers
-    mods.aether_legacy.accessory.add(ItemStack, String)
-    ```
 
 - Adds the recipe:
 
@@ -37,6 +36,11 @@ mods.aether.Accessory
     mods.aether_legacy.accessory.add(AetherAccessory)
     ```
 
+- Adds an Accessory in the format `item`, `type`, where type is one of the following: "Ring", "Pendant", "Cape", "Shield", "Glove", or "Misc":
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.accessory.add(ItemStack, String)
+    ```
 
 ### Recipe Builder
 
@@ -95,10 +99,10 @@ mods.aether_legacy.accessory.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.aether_legacy.accessory.remove(ResourceLocation)
+    mods.aether_legacy.accessory.remove(AetherAccessory)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -107,10 +111,10 @@ mods.aether_legacy.accessory.recipeBuilder()
     mods.aether_legacy.accessory.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.aether_legacy.accessory.remove(AetherAccessory)
+    mods.aether_legacy.accessory.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

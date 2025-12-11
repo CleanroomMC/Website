@@ -13,7 +13,11 @@ Converts up to 3 input itemstacks into an output itemstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.threng.aggregator` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.threng.aggregator/* Used as page default */ // [!code focus]
@@ -22,6 +26,7 @@ mods.lazyae2.aggregator
 mods.lazyae2.Aggregator
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.lazyae2.Aggregator
     ```groovy:no-line-numbers
     mods.threng.aggregator.add(AggRecipe)
     ```
-
 
 ### Recipe Builder
 

@@ -1,7 +1,7 @@
 ---
 title: "Animator"
 titleTemplate: "The Betweenlands | CleanroomMC"
-description: "Converts an input item, Life amount from Life Crystals, and Fuel from Sulfur into an output itemstack, summoning an entity, a random item from a loottable, or summoning an entity and outputting an itemstack."
+description: "Converts an input item, Life amount from Life Crystals, and Fuel from Sulfur into an output itemstack, summoning an entity, or a random item from a loottable."
 source_code_link: "https://github.com/CleanroomMC/GroovyScript/blob/master/src/main/java/com/cleanroommc/groovyscript/compat/mods/betweenlands/Animator.java"
 ---
 
@@ -9,11 +9,15 @@ source_code_link: "https://github.com/CleanroomMC/GroovyScript/blob/master/src/m
 
 ## Description
 
-Converts an input item, Life amount from Life Crystals, and Fuel from Sulfur into an output itemstack, summoning an entity, a random item from a loottable, or summoning an entity and outputting an itemstack.
+Converts an input item, Life amount from Life Crystals, and Fuel from Sulfur into an output itemstack, summoning an entity, or a random item from a loottable.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thebetweenlands.animator` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.betweenlands.animator
@@ -22,6 +26,7 @@ mods.thebetweenlands.animator/* Used as page default */ // [!code focus]
 mods.thebetweenlands.Animator
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.thebetweenlands.Animator
     ```groovy:no-line-numbers
     mods.thebetweenlands.animator.add(IAnimatorRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -58,7 +62,7 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     input(Collection<IIngredient>)
     ```
 
-- `ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
+- `ItemStackList`. Sets the item outputs of the recipe. Requires greater than or equal to 0, less than or equal to 1, and Only one of output, entity, or lootTable can be set.
 
     ```groovy:no-line-numbers
     output(ItemStack)
@@ -78,7 +82,7 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     life(int)
     ```
 
-- `Class<? extends Entity>`. Sets the entity being spawned.
+- `Class<? extends Entity>`. Sets the entity being spawned. Requires Only one of output, entity, or lootTable can be set.
 
     ```groovy:no-line-numbers
     entity(EntityEntry)
@@ -91,7 +95,7 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
     render(ResourceLocation)
     ```
 
-- `ResourceLocation`. Sets the LootTable used to generate outputs.
+- `ResourceLocation`. Sets the LootTable used to generate outputs. Requires Only one of output, entity, or lootTable can be set.
 
     ```groovy:no-line-numbers
     lootTable(ResourceLocation)
@@ -129,14 +133,6 @@ mods.thebetweenlands.animator.recipeBuilder()
     .life(1)
     .fuel(5)
     .register()
-
-mods.thebetweenlands.animator.recipeBuilder()
-    .input(item('minecraft:diamond'))
-    .entity(entity('minecraft:enderman'))
-    .output(item('minecraft:clay'))
-    .life(3)
-    .fuel(10)
-    .register()
 ```
 
 :::::::::
@@ -151,10 +147,10 @@ mods.thebetweenlands.animator.recipeBuilder()
     mods.thebetweenlands.animator.remove(IAnimatorRecipe)
     ```
 
-- Removes all entries that match the given entity:
+- Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.thebetweenlands.animator.removeByEntity(Class<? extends Entity>)
+    mods.thebetweenlands.animator.removeByInput(IIngredient)
     ```
 
 - Removes all entries that match the given entity:
@@ -163,22 +159,22 @@ mods.thebetweenlands.animator.recipeBuilder()
     mods.thebetweenlands.animator.removeByEntity(EntityEntry)
     ```
 
-- Removes all recipes that match the given input:
+- Removes all entries that match the given entity:
 
     ```groovy:no-line-numbers
-    mods.thebetweenlands.animator.removeByInput(IIngredient)
-    ```
-
-- Removes all entries that output the given Loot Table:
-
-    ```groovy:no-line-numbers
-    mods.thebetweenlands.animator.removeByLootTable(ResourceLocation)
+    mods.thebetweenlands.animator.removeByEntity(Class<? extends Entity>)
     ```
 
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers
     mods.thebetweenlands.animator.removeByOutput(IIngredient)
+    ```
+
+- Removes all entries that output the given Loot Table:
+
+    ```groovy:no-line-numbers
+    mods.thebetweenlands.animator.removeByLootTable(ResourceLocation)
     ```
 
 - Removes all registered recipes:
@@ -189,10 +185,10 @@ mods.thebetweenlands.animator.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.thebetweenlands.animator.removeByEntity(entity('thebetweenlands:sporeling'))
 mods.thebetweenlands.animator.removeByInput(item('thebetweenlands:bone_leggings'))
-mods.thebetweenlands.animator.removeByLootTable(resource('thebetweenlands:animator/scroll'))
+mods.thebetweenlands.animator.removeByEntity(entity('thebetweenlands:sporeling'))
 mods.thebetweenlands.animator.removeByOutput(item('thebetweenlands:items_misc:46'))
+mods.thebetweenlands.animator.removeByLootTable(resource('thebetweenlands:animator/scroll'))
 mods.thebetweenlands.animator.removeAll()
 ```
 

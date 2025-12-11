@@ -13,15 +13,20 @@ Ore processing machine with 1 input, 2 outputs and an optional chance for the 2n
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.prodigytech.ore_refinery` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.prodigytech.ore_refinery/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.prodigytech.orerefinery
 mods.prodigytech.oreRefinery
 mods.prodigytech.OreRefinery
+mods.prodigytech.ore_refinery/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

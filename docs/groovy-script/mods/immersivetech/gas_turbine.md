@@ -13,15 +13,20 @@ Converts an input fluidstack into an output fluidstack after a given amount of t
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersivetech.gas_turbine` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.immersivetech.gas_turbine/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.immersivetech.gasturbine
 mods.immersivetech.gasTurbine
 mods.immersivetech.GasTurbine
+mods.immersivetech.gas_turbine/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.immersivetech.GasTurbine
     ```groovy:no-line-numbers
     mods.immersivetech.gas_turbine.add(GasTurbineRecipe)
     ```
-
 
 ### Recipe Builder
 

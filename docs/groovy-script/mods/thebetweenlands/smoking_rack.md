@@ -13,19 +13,24 @@ Converts an input item into an output itemstack over a configurable period of ti
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thebetweenlands.smoking_rack` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.betweenlands.smoking_rack
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.betweenlands.smokingrack
 mods.betweenlands.smokingRack
 mods.betweenlands.SmokingRack
-mods.thebetweenlands.smoking_rack/* Used as page default */ // [!code focus]
+mods.betweenlands.smoking_rack
 mods.thebetweenlands.smokingrack
 mods.thebetweenlands.smokingRack
 mods.thebetweenlands.SmokingRack
+mods.thebetweenlands.smoking_rack/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.thebetweenlands.SmokingRack
     ```groovy:no-line-numbers
     mods.thebetweenlands.smoking_rack.add(ISmokingRackRecipe)
     ```
-
 
 ### Recipe Builder
 

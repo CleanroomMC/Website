@@ -13,15 +13,20 @@ Converts an input item into any number of output itemstacks if placed within the
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithaddons.sand_net` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.betterwithaddons.sand_net/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.betterwithaddons.sandnet
 mods.betterwithaddons.sandNet
 mods.betterwithaddons.SandNet
+mods.betterwithaddons.sand_net/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.betterwithaddons.SandNet
     ```groovy:no-line-numbers
     mods.betterwithaddons.sand_net.add(NetRecipe)
     ```
-
 
 ### Recipe Builder
 

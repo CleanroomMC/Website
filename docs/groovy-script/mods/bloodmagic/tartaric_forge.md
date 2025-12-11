@@ -17,19 +17,24 @@ Tartaric Forge can properly execute recipes that only have 1 input, but they're 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bloodmagic.tartaric_forge` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.bm.tartaric_forge
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.bm.tartaricforge
 mods.bm.tartaricForge
 mods.bm.TartaricForge
-mods.bloodmagic.tartaric_forge/* Used as page default */ // [!code focus]
+mods.bm.tartaric_forge
 mods.bloodmagic.tartaricforge
 mods.bloodmagic.tartaricForge
 mods.bloodmagic.TartaricForge
+mods.bloodmagic.tartaric_forge/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -44,7 +49,6 @@ mods.bloodmagic.TartaricForge
     ```groovy:no-line-numbers
     mods.bloodmagic.tartaric_forge.add(Collection<IIngredient>, ItemStack, double, double)
     ```
-
 
 ### Recipe Builder
 

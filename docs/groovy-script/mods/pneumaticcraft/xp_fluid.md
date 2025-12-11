@@ -13,15 +13,20 @@ Controls what fluids are considered XP Fluids and how much experience they provi
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pneumaticcraft.xp_fluid` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.pneumaticcraft.xp_fluid/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.pneumaticcraft.xpfluid
 mods.pneumaticcraft.xpFluid
 mods.pneumaticcraft.XpFluid
+mods.pneumaticcraft.xp_fluid/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -36,7 +41,6 @@ mods.pneumaticcraft.XpFluid
     ```groovy:no-line-numbers
     mods.pneumaticcraft.xp_fluid.add(FluidStack, int)
     ```
-
 
 ### Recipe Builder
 

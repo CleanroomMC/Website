@@ -13,23 +13,22 @@ Create a custom Constellation.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.astralsorcery.constellation` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.astralsorcery.constellation/* Used as page default */ // [!code focus]
-mods.astralsorcery.Constellation
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
 mods.astral.constellation
 mods.astral.Constellation
+mods.astralsorcery.constellation/* Used as page default */ // [!code focus]
+mods.astralsorcery.Constellation
 ```
 
+::::::::::
 
 ## Adding Entries
-
-- Adds to the constellations signature items, which control the Constellation Paper and Mantle of Stars recipes. Only the first 4 will be used:
-
-    ```groovy:no-line-numbers
-    mods.astralsorcery.constellation.addSignatureItem(IConstellation, Collection<IIngredient>)
-    ```
 
 - Adds to the constellations signature items, which control the Constellation Paper and Mantle of Stars recipes. Only the first 4 will be used:
 
@@ -43,12 +42,72 @@ mods.astral.Constellation
     mods.astralsorcery.constellation.addSignatureItem(IConstellation, IIngredient...)
     ```
 
+- Adds to the constellations signature items, which control the Constellation Paper and Mantle of Stars recipes. Only the first 4 will be used:
+
+    ```groovy:no-line-numbers
+    mods.astralsorcery.constellation.addSignatureItem(IConstellation, Collection<IIngredient>)
+    ```
 
 ### Recipe Builder
 
 Just like other recipe types, the Constellation also uses a recipe builder.
 
 Don't know what a builder is? Check [the builder info page](../../getting_started/builder.md) out.
+
+:::::::::: details Signature Items Builder {open id="abstract"}
+
+---
+
+- Create a builder to control the Signature Items used for the Constellation Paper and Mantle of Stars recipes.
+
+    ```groovy:no-line-numbers
+    mods.astralsorcery.constellation.signatureItems()
+    ```
+
+---
+
+- `List<IIngredient>`. Sets the signature items of the Constellation.
+
+    ```groovy:no-line-numbers
+    addItem(IIngredient)
+    ```
+
+- `boolean`. Sets if the default signature items of the Constellation will be removed before adding new ones. (Default `false`).
+
+    ```groovy:no-line-numbers
+    stripItems()
+    ```
+
+- `IConstellation`. Sets the Constellation being modified. Requires not null.
+
+    ```groovy:no-line-numbers
+    constellation(IConstellation)
+    ```
+
+---
+
+- First validates the builder, outputting errors to the log file if the validation failed, then registers the builder.
+
+    ```groovy:no-line-numbers
+    register()
+    ```
+
+---
+
+::::::::: details Example {open id="example"}
+```groovy:no-line-numbers
+mods.astralsorcery.constellation.signatureItems()
+    .constellation(constellation('square'))
+    .addItem(ore('gemDiamond'))
+    .addItem(item('minecraft:water_bucket'))
+    .addItem(item('minecraft:rabbit_foot'))
+    .addItem(item('minecraft:fish'))
+    .register()
+```
+
+:::::::::
+
+::::::::::
 
 :::::::::: details Constellation Builder {open id="abstract"}
 
@@ -185,61 +244,6 @@ mods.astralsorcery.constellation.constellationMapEffectBuilder()
 
 ::::::::::
 
-:::::::::: details Signature Items Builder {open id="abstract"}
-
----
-
-- Create a builder to control the Signature Items used for the Constellation Paper and Mantle of Stars recipes.
-
-    ```groovy:no-line-numbers
-    mods.astralsorcery.constellation.signatureItems()
-    ```
-
----
-
-- `List<IIngredient>`. Sets the signature items of the Constellation.
-
-    ```groovy:no-line-numbers
-    addItem(IIngredient)
-    ```
-
-- `boolean`. Sets if the default signature items of the Constellation will be removed before adding new ones. (Default `false`).
-
-    ```groovy:no-line-numbers
-    stripItems()
-    ```
-
-- `IConstellation`. Sets the Constellation being modified. Requires not null.
-
-    ```groovy:no-line-numbers
-    constellation(IConstellation)
-    ```
-
----
-
-- First validates the builder, outputting errors to the log file if the validation failed, then registers the builder.
-
-    ```groovy:no-line-numbers
-    register()
-    ```
-
----
-
-::::::::: details Example {open id="example"}
-```groovy:no-line-numbers
-mods.astralsorcery.constellation.signatureItems()
-    .constellation(constellation('square'))
-    .addItem(ore('gemDiamond'))
-    .addItem(item('minecraft:water_bucket'))
-    .addItem(item('minecraft:rabbit_foot'))
-    .addItem(item('minecraft:fish'))
-    .register()
-```
-
-:::::::::
-
-::::::::::
-
 ## Removing Entries
 
 - Removes the given Constellation and all associated attributes:
@@ -248,16 +252,16 @@ mods.astralsorcery.constellation.signatureItems()
     mods.astralsorcery.constellation.remove(IConstellation)
     ```
 
-- Removes a Constellation's potion and enchantment effects applied via the Stellar Refraction Table:
-
-    ```groovy:no-line-numbers
-    mods.astralsorcery.constellation.removeConstellationMapEffect(IConstellation)
-    ```
-
 - Removes a Constellation's signature items, to be re-added via `addSignatureItem`:
 
     ```groovy:no-line-numbers
     mods.astralsorcery.constellation.removeSignatureItems(IConstellation)
+    ```
+
+- Removes a Constellation's potion and enchantment effects applied via the Stellar Refraction Table:
+
+    ```groovy:no-line-numbers
+    mods.astralsorcery.constellation.removeConstellationMapEffect(IConstellation)
     ```
 
 - Removes all Constellations:
@@ -266,26 +270,26 @@ mods.astralsorcery.constellation.signatureItems()
     mods.astralsorcery.constellation.removeAll()
     ```
 
-- Removes all potion and enchantment effects applied via the Stellar Refraction Table for all Constellations:
-
-    ```groovy:no-line-numbers
-    mods.astralsorcery.constellation.removeAllConstellationMapEffect()
-    ```
-
 - Removes all signature items for all Constellations, to be re-added via `addSignatureItem`:
 
     ```groovy:no-line-numbers
     mods.astralsorcery.constellation.removeAllSignatureItems()
     ```
 
+- Removes all potion and enchantment effects applied via the Stellar Refraction Table for all Constellations:
+
+    ```groovy:no-line-numbers
+    mods.astralsorcery.constellation.removeAllConstellationMapEffect()
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.astralsorcery.constellation.remove(constellation('bootes'))
-mods.astralsorcery.constellation.removeConstellationMapEffect(constellation('discidia'))
 mods.astralsorcery.constellation.removeSignatureItems(constellation('discidia'))
+mods.astralsorcery.constellation.removeConstellationMapEffect(constellation('discidia'))
 mods.astralsorcery.constellation.removeAll()
-mods.astralsorcery.constellation.removeAllConstellationMapEffect()
 mods.astralsorcery.constellation.removeAllSignatureItems()
+mods.astralsorcery.constellation.removeAllConstellationMapEffect()
 ```
 
 ::::::::::

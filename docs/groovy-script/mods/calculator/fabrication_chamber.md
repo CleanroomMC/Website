@@ -13,15 +13,20 @@ Converts Stable and Analysed Circuits into output itemstacks.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.calculator.fabrication_chamber` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.calculator.fabrication_chamber/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.calculator.fabricationchamber
 mods.calculator.fabricationChamber
 mods.calculator.FabricationChamber
+mods.calculator.fabrication_chamber/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.calculator.FabricationChamber
     ```groovy:no-line-numbers
     mods.calculator.fabrication_chamber.add(FabricationSonarRecipe)
     ```
-
 
 ### Recipe Builder
 

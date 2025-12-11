@@ -13,13 +13,18 @@ Converts an input fluidstack into any number of output fluidstacks and any numbe
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersivepetroleum.distillation` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.immersivepetroleum.distillation/* Used as page default */ // [!code focus]
 mods.immersivepetroleum.Distillation
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.immersivepetroleum.Distillation
     ```groovy:no-line-numbers
     mods.immersivepetroleum.distillation.add(DistillationRecipe)
     ```
-
 
 ### Recipe Builder
 

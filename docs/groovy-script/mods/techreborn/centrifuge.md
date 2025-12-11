@@ -13,13 +13,18 @@ Converts one or two itemstack inputs into up to four an itemstack output after a
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.techreborn.centrifuge` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.techreborn.centrifuge/* Used as page default */ // [!code focus]
 mods.techreborn.Centrifuge
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.techreborn.Centrifuge
     ```groovy:no-line-numbers
     mods.techreborn.centrifuge.add(R)
     ```
-
 
 ### Recipe Builder
 

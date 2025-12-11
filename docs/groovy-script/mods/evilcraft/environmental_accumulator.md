@@ -13,15 +13,20 @@ Consumes an item to give an output, possibly changing the weather. Has a cooldow
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.evilcraft.environmental_accumulator` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.evilcraft.environmental_accumulator/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.evilcraft.environmentalaccumulator
 mods.evilcraft.environmentalAccumulator
 mods.evilcraft.EnvironmentalAccumulator
+mods.evilcraft.environmental_accumulator/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.evilcraft.EnvironmentalAccumulator
     ```groovy:no-line-numbers
     mods.evilcraft.environmental_accumulator.add(IRecipe<EnvironmentalAccumulatorRecipeComponent, EnvironmentalAccumulatorRecipeComponent, EnvironmentalAccumulatorRecipeProperties>)
     ```
-
 
 ### Recipe Builder
 

@@ -13,19 +13,24 @@ Converts fluids into itemstacks over time.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.rustic.evaporating_basin` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.rustic.evaporating_basin/* Used as page default */ // [!code focus]
-mods.rustic.evaporatingbasin
-mods.rustic.evaporatingBasin
-mods.rustic.EvaporatingBasin
-mods.rustic.drying_basin
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.rustic.dryingbasin
 mods.rustic.dryingBasin
 mods.rustic.DryingBasin
+mods.rustic.drying_basin
+mods.rustic.evaporatingbasin
+mods.rustic.evaporatingBasin
+mods.rustic.EvaporatingBasin
+mods.rustic.evaporating_basin/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.rustic.DryingBasin
     ```groovy:no-line-numbers
     mods.rustic.evaporating_basin.add(IEvaporatingBasinRecipe)
     ```
-
 
 ### Recipe Builder
 

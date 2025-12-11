@@ -13,15 +13,20 @@ Converts an input itemstack into an output itemstack, typically a Dirty or Damag
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.calculator.processing_chamber` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.calculator.processing_chamber/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.calculator.processingchamber
 mods.calculator.processingChamber
 mods.calculator.ProcessingChamber
+mods.calculator.processing_chamber/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.calculator.ProcessingChamber
     ```groovy:no-line-numbers
     mods.calculator.processing_chamber.add(CalculatorRecipe)
     ```
-
 
 ### Recipe Builder
 

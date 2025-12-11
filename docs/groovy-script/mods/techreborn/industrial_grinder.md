@@ -13,15 +13,20 @@ Converts an itemstack input and fluidstack input into up to four itemstack outpu
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.techreborn.industrial_grinder` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.techreborn.industrial_grinder/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.techreborn.industrialgrinder
 mods.techreborn.industrialGrinder
 mods.techreborn.IndustrialGrinder
+mods.techreborn.industrial_grinder/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.techreborn.IndustrialGrinder
     ```groovy:no-line-numbers
     mods.techreborn.industrial_grinder.add(R)
     ```
-
 
 ### Recipe Builder
 

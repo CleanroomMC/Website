@@ -13,15 +13,20 @@ Converts an item into an itemstack with a chance of getting twice the amount aft
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.astralsorcery.grindstone` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.astralsorcery.grindstone/* Used as page default */ // [!code focus]
-mods.astralsorcery.Grindstone
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
 mods.astral.grindstone
 mods.astral.Grindstone
+mods.astralsorcery.grindstone/* Used as page default */ // [!code focus]
+mods.astralsorcery.Grindstone
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -42,7 +47,6 @@ mods.astral.Grindstone
     ```groovy:no-line-numbers
     mods.astralsorcery.grindstone.add(ItemHandle, ItemStack, int, float)
     ```
-
 
 ### Recipe Builder
 

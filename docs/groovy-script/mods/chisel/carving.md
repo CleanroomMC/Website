@@ -25,31 +25,15 @@ Some mods use "registry replacement" to change a preexisting entry in a registry
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.chisel.carving` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.chisel.carving/* Used as page default */ // [!code focus]
 mods.chisel.Carving
-```
-
-
-## Editing Values
-
-- Sets the sound of the Chisel Group:
-
-    ```groovy:no-line-numbers
-    mods.chisel.carving.setSound(ICarvingGroup, SoundEvent)
-    ```
-
-- Sets the sound of the Chisel Group:
-
-    ```groovy:no-line-numbers
-    mods.chisel.carving.setSound(String, SoundEvent)
-    ```
-
-:::::::::: details Example {open id="example"}
-```groovy:no-line-numbers
-mods.chisel.carving.setSound('demo', sound('minecraft:block.glass.break'))
 ```
 
 ::::::::::
@@ -62,6 +46,18 @@ mods.chisel.carving.setSound('demo', sound('minecraft:block.glass.break'))
     mods.chisel.carving.addGroup(String)
     ```
 
+- Sets the sound of the Chisel Group:
+
+    ```groovy:no-line-numbers
+    mods.chisel.carving.setSound(String, SoundEvent)
+    ```
+
+- Sets the sound of the Chisel Group:
+
+    ```groovy:no-line-numbers
+    mods.chisel.carving.setSound(ICarvingGroup, SoundEvent)
+    ```
+
 - Adds a new Item Variation to the Chisel Group:
 
     ```groovy:no-line-numbers
@@ -71,6 +67,7 @@ mods.chisel.carving.setSound('demo', sound('minecraft:block.glass.break'))
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.chisel.carving.addGroup('demo')
+mods.chisel.carving.setSound('demo', sound('minecraft:block.glass.break'))
 mods.chisel.carving.addVariation('demo', item('minecraft:diamond_block'))
 mods.chisel.carving.addVariation('demo', item('chisel:antiblock:3'))
 mods.chisel.carving.addVariation('demo', item('minecraft:sea_lantern'))

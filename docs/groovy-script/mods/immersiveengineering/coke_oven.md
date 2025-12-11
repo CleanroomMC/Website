@@ -13,19 +13,24 @@ Converts an input itemstack into an output itemstack over time, producing a give
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersiveengineering.coke_oven` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.ie.coke_oven
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.ie.cokeoven
 mods.ie.cokeOven
 mods.ie.CokeOven
-mods.immersiveengineering.coke_oven/* Used as page default */ // [!code focus]
+mods.ie.coke_oven
 mods.immersiveengineering.cokeoven
 mods.immersiveengineering.cokeOven
 mods.immersiveengineering.CokeOven
+mods.immersiveengineering.coke_oven/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -40,7 +45,6 @@ mods.immersiveengineering.CokeOven
     ```groovy:no-line-numbers
     mods.immersiveengineering.coke_oven.add(ItemStack, IIngredient, int, int)
     ```
-
 
 ### Recipe Builder
 

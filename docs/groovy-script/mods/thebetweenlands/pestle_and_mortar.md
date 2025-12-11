@@ -13,19 +13,24 @@ Converts an input item into an output itemstack in a Pestle and Mortar by using 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thebetweenlands.pestle_and_mortar` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.betweenlands.pestle_and_mortar
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.betweenlands.pestleandmortar
 mods.betweenlands.pestleAndMortar
 mods.betweenlands.PestleAndMortar
-mods.thebetweenlands.pestle_and_mortar/* Used as page default */ // [!code focus]
+mods.betweenlands.pestle_and_mortar
 mods.thebetweenlands.pestleandmortar
 mods.thebetweenlands.pestleAndMortar
 mods.thebetweenlands.PestleAndMortar
+mods.thebetweenlands.pestle_and_mortar/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.thebetweenlands.PestleAndMortar
     ```groovy:no-line-numbers
     mods.thebetweenlands.pestle_and_mortar.add(IPestleAndMortarRecipe)
     ```
-
 
 ### Recipe Builder
 

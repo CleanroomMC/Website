@@ -13,15 +13,20 @@ Converts power into ores, with a given weight, between a minimum and maximum Y v
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.industrialforegoing.laser_drill` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.industrialforegoing.laser_drill/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.industrialforegoing.laserdrill
 mods.industrialforegoing.laserDrill
 mods.industrialforegoing.LaserDrill
+mods.industrialforegoing.laser_drill/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -116,12 +121,6 @@ mods.industrialforegoing.laser_drill.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes all ores with the given biome blacklisted:
-
-    ```groovy:no-line-numbers
-    mods.industrialforegoing.laser_drill.removeByBlacklist(Biome)
-    ```
-
 - Removes all ores with the given lens meta:
 
     ```groovy:no-line-numbers
@@ -140,6 +139,12 @@ mods.industrialforegoing.laser_drill.recipeBuilder()
     mods.industrialforegoing.laser_drill.removeByOutput(IIngredient)
     ```
 
+- Removes all ores with the given biome blacklisted:
+
+    ```groovy:no-line-numbers
+    mods.industrialforegoing.laser_drill.removeByBlacklist(Biome)
+    ```
+
 - Removes all ores with the given biome whitelisted:
 
     ```groovy:no-line-numbers
@@ -154,10 +159,10 @@ mods.industrialforegoing.laser_drill.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.industrialforegoing.laser_drill.removeByBlacklist(biome('minecraft:sky'))
 mods.industrialforegoing.laser_drill.removeByLens(5)
 mods.industrialforegoing.laser_drill.removeByLens(item('industrialforegoing:laser_lens:5'))
 mods.industrialforegoing.laser_drill.removeByOutput(item('minecraft:coal_ore'))
+mods.industrialforegoing.laser_drill.removeByBlacklist(biome('minecraft:sky'))
 mods.industrialforegoing.laser_drill.removeByWhitelist(biome('minecraft:hell'))
 mods.industrialforegoing.laser_drill.removeAll()
 ```

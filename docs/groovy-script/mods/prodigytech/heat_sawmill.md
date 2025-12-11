@@ -13,15 +13,20 @@ Wood processing machine with 1 input, 2 outputs and an optional chance for the 2
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.prodigytech.heat_sawmill` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.prodigytech.heat_sawmill/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.prodigytech.heatsawmill
 mods.prodigytech.heatSawmill
 mods.prodigytech.HeatSawmill
+mods.prodigytech.heat_sawmill/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

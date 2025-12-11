@@ -13,19 +13,24 @@ Converts a 1,000mb of fluid into either 1,000mb of a fluid, an output itemstack,
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thebetweenlands.steeping_pot` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.betweenlands.steeping_pot
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.betweenlands.steepingpot
 mods.betweenlands.steepingPot
 mods.betweenlands.SteepingPot
-mods.thebetweenlands.steeping_pot/* Used as page default */ // [!code focus]
+mods.betweenlands.steeping_pot
 mods.thebetweenlands.steepingpot
 mods.thebetweenlands.steepingPot
 mods.thebetweenlands.SteepingPot
+mods.thebetweenlands.steeping_pot/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

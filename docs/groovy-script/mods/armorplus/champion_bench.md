@@ -13,15 +13,20 @@ A normal crafting recipe, but with a 9x9 grid and in the Champion Bench.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.armorplus.champion_bench` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.armorplus.champion_bench/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.armorplus.championbench
 mods.armorplus.championBench
 mods.armorplus.ChampionBench
+mods.armorplus.champion_bench/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.armorplus.ChampionBench
     ```groovy:no-line-numbers
     mods.armorplus.champion_bench.add(R)
     ```
-
 
 ### Recipe Builder
 

@@ -13,22 +13,51 @@ When killing a mob with the Athame in the main hand, drops a random amount betwe
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bewitchment.athame_loot` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.bewitchment.athame_loot/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.bewitchment.athameloot
 mods.bewitchment.athameLoot
 mods.bewitchment.AthameLoot
+mods.bewitchment.athame_loot/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 
 - Register a new Athame Loot entry in the format `entity`, `stacks`:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.athame_loot.add(Class<? extends EntityLivingBase>, Collection<ItemStack>)
+    mods.bewitchment.athame_loot.add(EntityEntry, ItemStack)
+    ```
+
+- Register a new Athame Loot entry in the format `entity`, `stacks`:
+
+    ```groovy:no-line-numbers
+    mods.bewitchment.athame_loot.add(EntityEntry, ItemStack...)
+    ```
+
+- Register a new Athame Loot entry in the format `entity`, `stacks`:
+
+    ```groovy:no-line-numbers
+    mods.bewitchment.athame_loot.add(EntityEntry, Collection<ItemStack>)
+    ```
+
+- Register a new Athame Loot entry in the format `entity`, `stacks`:
+
+    ```groovy:no-line-numbers
+    mods.bewitchment.athame_loot.add(Predicate<EntityLivingBase>, ItemStack)
+    ```
+
+- Register a new Athame Loot entry in the format `entity`, `stacks`:
+
+    ```groovy:no-line-numbers
+    mods.bewitchment.athame_loot.add(Predicate<EntityLivingBase>, ItemStack...)
     ```
 
 - Register a new Athame Loot entry in the format `entity`, `stacks`:
@@ -46,37 +75,13 @@ mods.bewitchment.AthameLoot
 - Register a new Athame Loot entry in the format `entity`, `stacks`:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.athame_loot.add(EntityEntry, Collection<ItemStack>)
-    ```
-
-- Register a new Athame Loot entry in the format `entity`, `stacks`:
-
-    ```groovy:no-line-numbers
-    mods.bewitchment.athame_loot.add(EntityEntry, ItemStack)
-    ```
-
-- Register a new Athame Loot entry in the format `entity`, `stacks`:
-
-    ```groovy:no-line-numbers
-    mods.bewitchment.athame_loot.add(EntityEntry, ItemStack...)
-    ```
-
-- Register a new Athame Loot entry in the format `entity`, `stacks`:
-
-    ```groovy:no-line-numbers
     mods.bewitchment.athame_loot.add(Predicate<EntityLivingBase>, Collection<ItemStack>)
     ```
 
 - Register a new Athame Loot entry in the format `entity`, `stacks`:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.athame_loot.add(Predicate<EntityLivingBase>, ItemStack)
-    ```
-
-- Register a new Athame Loot entry in the format `entity`, `stacks`:
-
-    ```groovy:no-line-numbers
-    mods.bewitchment.athame_loot.add(Predicate<EntityLivingBase>, ItemStack...)
+    mods.bewitchment.athame_loot.add(Class<? extends EntityLivingBase>, Collection<ItemStack>)
     ```
 
 :::::::::: details Example {open id="example"}

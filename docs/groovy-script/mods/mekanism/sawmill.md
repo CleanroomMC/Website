@@ -13,13 +13,18 @@ Converts an input itemstack into an output itemstack, with an optional additiona
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.mekanism.sawmill` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.mekanism.sawmill/* Used as page default */ // [!code focus]
 mods.mekanism.Sawmill
 ```
 
+::::::::::
 
 ## Adding Recipes
 

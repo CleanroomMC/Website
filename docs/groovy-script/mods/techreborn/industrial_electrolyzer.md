@@ -13,15 +13,20 @@ Converts up to two itemstack inputs into up to four itemstack outputs after a gi
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.techreborn.industrial_electrolyzer` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.techreborn.industrial_electrolyzer/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.techreborn.industrialelectrolyzer
 mods.techreborn.industrialElectrolyzer
 mods.techreborn.IndustrialElectrolyzer
+mods.techreborn.industrial_electrolyzer/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.techreborn.IndustrialElectrolyzer
     ```groovy:no-line-numbers
     mods.techreborn.industrial_electrolyzer.add(R)
     ```
-
 
 ### Recipe Builder
 

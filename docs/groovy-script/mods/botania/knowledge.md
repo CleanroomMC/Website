@@ -13,13 +13,18 @@ Creates a new type of knowledge that Lexica Botania entries may be gated with. C
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.botania.knowledge` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.botania.knowledge/* Used as page default */ // [!code focus]
 mods.botania.Knowledge
 ```
 
+::::::::::
 
 ## Adding Entries
 

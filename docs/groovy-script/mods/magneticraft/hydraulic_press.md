@@ -13,15 +13,20 @@ Converts an input itemstack into an output itemstack when set to a given mode in
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.magneticraft.hydraulic_press` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.magneticraft.hydraulic_press/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.magneticraft.hydraulicpress
 mods.magneticraft.hydraulicPress
 mods.magneticraft.HydraulicPress
+mods.magneticraft.hydraulic_press/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.magneticraft.HydraulicPress
     ```groovy:no-line-numbers
     mods.magneticraft.hydraulic_press.add(IHydraulicPressRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -126,16 +130,16 @@ mods.magneticraft.hydraulic_press.recipeBuilder()
     mods.magneticraft.hydraulic_press.remove(IHydraulicPressRecipe)
     ```
 
-- Removes all recipes that match the given input:
-
-    ```groovy:no-line-numbers
-    mods.magneticraft.hydraulic_press.removeByInput(IIngredient)
-    ```
-
 - Removes all entries with the given mode:
 
     ```groovy:no-line-numbers
     mods.magneticraft.hydraulic_press.removeByMode(HydraulicPressMode)
+    ```
+
+- Removes all recipes that match the given input:
+
+    ```groovy:no-line-numbers
+    mods.magneticraft.hydraulic_press.removeByInput(IIngredient)
     ```
 
 - Removes all recipes that match the given output:
@@ -152,8 +156,8 @@ mods.magneticraft.hydraulic_press.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.magneticraft.hydraulic_press.removeByInput(item('minecraft:iron_ingot'))
 mods.magneticraft.hydraulic_press.removeByMode(HydraulicPressMode.MEDIUM)
+mods.magneticraft.hydraulic_press.removeByInput(item('minecraft:iron_ingot'))
 mods.magneticraft.hydraulic_press.removeByOutput(item('minecraft:cobblestone'))
 mods.magneticraft.hydraulic_press.removeAll()
 ```

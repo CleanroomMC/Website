@@ -13,17 +13,22 @@ Determines if holding an item or equipping a piece of armor or a bauble gives wa
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thaumcraft.warp` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.thaumcraft.warp/* Used as page default */ // [!code focus]
-mods.thaumcraft.Warp
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {5}
 mods.tc.warp
 mods.tc.Warp
 mods.thaum.warp
 mods.thaum.Warp
+mods.thaumcraft.warp/* Used as page default */ // [!code focus]
+mods.thaumcraft.Warp
 ```
 
+::::::::::
 
 ## Adding Recipes
 

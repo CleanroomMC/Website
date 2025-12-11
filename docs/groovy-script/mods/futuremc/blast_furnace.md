@@ -13,15 +13,20 @@ Converts an input itemstack into an output itemstack at the cost of burnable fue
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.futuremc.blast_furnace` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.futuremc.blast_furnace/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.futuremc.blastfurnace
 mods.futuremc.blastFurnace
 mods.futuremc.BlastFurnace
+mods.futuremc.blast_furnace/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.futuremc.BlastFurnace
     ```groovy:no-line-numbers
     mods.futuremc.blast_furnace.add(SimpleRecipe)
     ```
-
 
 ### Recipe Builder
 

@@ -13,19 +13,24 @@ Converts an input itemstack into an output itemstack and creosote amount, costin
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.furnace_pyrolysis` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.thermal.furnace_pyrolysis
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.thermal.furnacepyrolysis
 mods.thermal.furnacePyrolysis
 mods.thermal.FurnacePyrolysis
-mods.thermalexpansion.furnace_pyrolysis/* Used as page default */ // [!code focus]
+mods.thermal.furnace_pyrolysis
 mods.thermalexpansion.furnacepyrolysis
 mods.thermalexpansion.furnacePyrolysis
 mods.thermalexpansion.FurnacePyrolysis
+mods.thermalexpansion.furnace_pyrolysis/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

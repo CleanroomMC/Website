@@ -13,31 +13,30 @@ Controls what Aspects are attached to entities or items.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thaumcraft.aspect_helper` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.thaumcraft.aspect_helper/* Used as page default */ // [!code focus]
-mods.thaumcraft.aspecthelper
-mods.thaumcraft.aspectHelper
-mods.thaumcraft.AspectHelper
-mods.tc.aspect_helper
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {12}
 mods.tc.aspecthelper
 mods.tc.aspectHelper
 mods.tc.AspectHelper
-mods.thaum.aspect_helper
+mods.tc.aspect_helper
 mods.thaum.aspecthelper
 mods.thaum.aspectHelper
 mods.thaum.AspectHelper
+mods.thaum.aspect_helper
+mods.thaumcraft.aspecthelper
+mods.thaumcraft.aspectHelper
+mods.thaumcraft.AspectHelper
+mods.thaumcraft.aspect_helper/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds an Aspect to the given entity in the format `entity`, `aspect`:
-
-    ```groovy:no-line-numbers
-    mods.thaumcraft.aspect_helper.add(EntityEntry, AspectStack)
-    ```
 
 - Adds an Aspect to the given itemstack in the format `item`, `aspect`:
 
@@ -45,12 +44,17 @@ mods.thaum.AspectHelper
     mods.thaumcraft.aspect_helper.add(ItemStack, AspectStack)
     ```
 
+- Adds an Aspect to the given entity in the format `entity`, `aspect`:
+
+    ```groovy:no-line-numbers
+    mods.thaumcraft.aspect_helper.add(EntityEntry, AspectStack)
+    ```
+
 - Adds an Aspect to the given oredict in the format `oreDict`, `aspect`:
 
     ```groovy:no-line-numbers
     mods.thaumcraft.aspect_helper.add(OreDictIngredient, AspectStack)
     ```
-
 
 ### Recipe Builder
 
@@ -133,16 +137,16 @@ mods.thaumcraft.aspect_helper.aspectBuilder()
 
 ## Removing Recipes
 
-- Removes an Aspect from the given entity in the format `entity`, `aspect`:
-
-    ```groovy:no-line-numbers
-    mods.thaumcraft.aspect_helper.remove(EntityEntry, AspectStack)
-    ```
-
 - Removes an Aspect from the given itemstack in the format `item`, `aspect`:
 
     ```groovy:no-line-numbers
     mods.thaumcraft.aspect_helper.remove(ItemStack, AspectStack)
+    ```
+
+- Removes an Aspect from the given entity in the format `entity`, `aspect`:
+
+    ```groovy:no-line-numbers
+    mods.thaumcraft.aspect_helper.remove(EntityEntry, AspectStack)
     ```
 
 - Removes an Aspect from the given oredict in the format `oreDict`, `aspect`:
@@ -151,16 +155,16 @@ mods.thaumcraft.aspect_helper.aspectBuilder()
     mods.thaumcraft.aspect_helper.remove(OreDictIngredient, AspectStack)
     ```
 
-- Removes all Aspects from the given entity:
-
-    ```groovy:no-line-numbers
-    mods.thaumcraft.aspect_helper.removeAll(EntityEntry)
-    ```
-
 - Removes all Aspects from the given itemstack:
 
     ```groovy:no-line-numbers
     mods.thaumcraft.aspect_helper.removeAll(ItemStack)
+    ```
+
+- Removes all Aspects from the given entity:
+
+    ```groovy:no-line-numbers
+    mods.thaumcraft.aspect_helper.removeAll(EntityEntry)
     ```
 
 - Removes all Aspects from the given oredict:

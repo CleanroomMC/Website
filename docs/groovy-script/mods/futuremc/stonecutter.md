@@ -13,13 +13,18 @@ Converts an input itemstack into an output itemstack via selecting the desired o
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.futuremc.stonecutter` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.futuremc.stonecutter/* Used as page default */ // [!code focus]
 mods.futuremc.Stonecutter
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.futuremc.Stonecutter
     ```groovy:no-line-numbers
     mods.futuremc.stonecutter.add(SimpleRecipe)
     ```
-
 
 ### Recipe Builder
 

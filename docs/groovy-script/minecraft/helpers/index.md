@@ -1,14 +1,19 @@
 ---
 aside: false
-order: 700
 ---
 
 
-# Registries
+# Vanilla Minecraft Registries
+
+This is where GroovyScript handles compatibility with Vanilla Minecraft.
+
+Some documentation is not complete - particularly loot compat. To learn more, view the [example page](https://github.com/CleanroomMC/GroovyScript/blob/master/examples/postInit/custom/loottables.groovy).
 
 ## Categories
 
-Has 7 subcategories.
+Has 8 subcategories.
+
+* [Vanilla Content Creation](./content.md)
 
 * [Custom Commands](./command.md)
 

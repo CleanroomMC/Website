@@ -13,15 +13,20 @@ Turns organic matter into Primordium.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.prodigytech.primordialis_reactor` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.prodigytech.primordialis_reactor/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.prodigytech.primordialisreactor
 mods.prodigytech.primordialisReactor
 mods.prodigytech.PrimordialisReactor
+mods.prodigytech.primordialis_reactor/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 

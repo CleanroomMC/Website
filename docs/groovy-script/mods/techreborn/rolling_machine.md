@@ -13,15 +13,20 @@ Converts a custom crafting recipe into an output itemstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.techreborn.rolling_machine` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.techreborn.rolling_machine/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.techreborn.rollingmachine
 mods.techreborn.rollingMachine
 mods.techreborn.RollingMachine
+mods.techreborn.rolling_machine/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -36,7 +41,6 @@ mods.techreborn.RollingMachine
     ```groovy:no-line-numbers
     mods.techreborn.rolling_machine.addShapeless(ItemStack, List<IIngredient>)
     ```
-
 
 ### Recipe Builder
 
@@ -135,8 +139,8 @@ mods.techreborn.rolling_machine.shapedBuilder()
 mods.techreborn.rolling_machine.shapedBuilder()
     .output(item('minecraft:diamond') * 32)
     .matrix([[item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
-            [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
-            [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')]])
+             [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
+             [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')]])
     .register()
 ```
 

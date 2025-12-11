@@ -13,7 +13,11 @@ Converts any number of input itemstacks and a fluidstack into an output fluidsta
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersiveengineering.mixer` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.ie.mixer
@@ -22,6 +26,7 @@ mods.immersiveengineering.mixer/* Used as page default */ // [!code focus]
 mods.immersiveengineering.Mixer
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -36,7 +41,6 @@ mods.immersiveengineering.Mixer
     ```groovy:no-line-numbers
     mods.immersiveengineering.mixer.add(FluidStack, FluidStack, int, List<IIngredient>)
     ```
-
 
 ### Recipe Builder
 
@@ -129,13 +133,13 @@ mods.immersiveengineering.mixer.recipeBuilder()
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.immersiveengineering.mixer.removeByInput(FluidStack, IIngredient...)
+    mods.immersiveengineering.mixer.removeByInput(IIngredient...)
     ```
 
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.immersiveengineering.mixer.removeByInput(IIngredient...)
+    mods.immersiveengineering.mixer.removeByInput(FluidStack, IIngredient...)
     ```
 
 - Removes all recipes that match the given output:
@@ -152,8 +156,8 @@ mods.immersiveengineering.mixer.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.immersiveengineering.mixer.removeByInput(fluid('water'), item('minecraft:speckled_melon'))
 mods.immersiveengineering.mixer.removeByInput(item('minecraft:sand'), item('minecraft:sand'), item('minecraft:clay_ball'), item('minecraft:gravel'))
+mods.immersiveengineering.mixer.removeByInput(fluid('water'), item('minecraft:speckled_melon'))
 mods.immersiveengineering.mixer.removeByOutput(fluid('potion').withNbt([Potion:'minecraft:night_vision']))
 mods.immersiveengineering.mixer.removeAll()
 ```

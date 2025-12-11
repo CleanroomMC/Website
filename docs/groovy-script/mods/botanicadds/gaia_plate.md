@@ -13,15 +13,20 @@ Converts an number of input items into an output itemstack, consuming a given am
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.botanicadds.gaia_plate` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.botanicadds.gaia_plate/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.botanicadds.gaiaplate
 mods.botanicadds.gaiaPlate
 mods.botanicadds.GaiaPlate
+mods.botanicadds.gaia_plate/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.botanicadds.GaiaPlate
     ```groovy:no-line-numbers
     mods.botanicadds.gaia_plate.add(GaiaPlateRecipes.RecipeGaiaPlate)
     ```
-
 
 ### Recipe Builder
 

@@ -13,19 +13,24 @@ A multiblock with 8 tiers for storing large amounts of energy.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.draconicevolution.energy_core` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.de.energy_core
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.de.energycore
 mods.de.energyCore
 mods.de.EnergyCore
-mods.draconicevolution.energy_core/* Used as page default */ // [!code focus]
+mods.de.energy_core
 mods.draconicevolution.energycore
 mods.draconicevolution.energyCore
 mods.draconicevolution.EnergyCore
+mods.draconicevolution.energy_core/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Editing Values
 

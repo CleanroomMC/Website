@@ -17,15 +17,20 @@ The creature spawned will be a passive animal, and undesirable animals can be bl
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithaddons.lure_tree` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.betterwithaddons.lure_tree/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.betterwithaddons.luretree
 mods.betterwithaddons.lureTree
 mods.betterwithaddons.LureTree
+mods.betterwithaddons.lure_tree/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -38,13 +43,13 @@ mods.betterwithaddons.LureTree
 - Adds the given Entity to the blacklist:
 
     ```groovy:no-line-numbers
-    mods.betterwithaddons.lure_tree.addBlacklist(Class<? extends Entity>)
+    mods.betterwithaddons.lure_tree.addBlacklist(EntityEntry)
     ```
 
 - Adds the given Entity to the blacklist:
 
     ```groovy:no-line-numbers
-    mods.betterwithaddons.lure_tree.addBlacklist(EntityEntry)
+    mods.betterwithaddons.lure_tree.addBlacklist(Class<? extends Entity>)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -121,10 +126,10 @@ mods.betterwithaddons.lure_tree.recipeBuilder()
     mods.betterwithaddons.lure_tree.remove(TileEntityLureTree.TreeFood)
     ```
 
-- Removes the given Entity from the blacklist:
+- Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.betterwithaddons.lure_tree.removeBlacklist(Class<? extends Entity>)
+    mods.betterwithaddons.lure_tree.removeByInput(IIngredient)
     ```
 
 - Removes the given Entity from the blacklist:
@@ -133,10 +138,10 @@ mods.betterwithaddons.lure_tree.recipeBuilder()
     mods.betterwithaddons.lure_tree.removeBlacklist(EntityEntry)
     ```
 
-- Removes all recipes that match the given input:
+- Removes the given Entity from the blacklist:
 
     ```groovy:no-line-numbers
-    mods.betterwithaddons.lure_tree.removeByInput(IIngredient)
+    mods.betterwithaddons.lure_tree.removeBlacklist(Class<? extends Entity>)
     ```
 
 - Removes all registered recipes:

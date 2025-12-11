@@ -13,26 +13,31 @@ When powered by burning logs can convert items.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pyrotech.campfire` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.pyrotech.campfire/* Used as page default */ // [!code focus]
 mods.pyrotech.Campfire
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds recipes in the format `name`, `input`, `output`, `duration`:
-
-    ```groovy:no-line-numbers
-    mods.pyrotech.campfire.add(String, IIngredient, ItemStack, int)
-    ```
 
 - Adds the recipe:
 
     ```groovy:no-line-numbers
     mods.pyrotech.campfire.add(CampfireRecipe)
+    ```
+
+- Adds recipes in the format `name`, `input`, `output`, `duration`:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.campfire.add(String, IIngredient, ItemStack, int)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -115,10 +120,10 @@ mods.pyrotech.campfire.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.campfire.remove(ResourceLocation)
+    mods.pyrotech.campfire.remove(CampfireRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -127,10 +132,10 @@ mods.pyrotech.campfire.recipeBuilder()
     mods.pyrotech.campfire.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.campfire.remove(CampfireRecipe)
+    mods.pyrotech.campfire.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

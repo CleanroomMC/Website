@@ -13,23 +13,22 @@ Converts fluid into Pressure in a Liquid Compressor.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pneumaticcraft.liquid_fuel` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.pneumaticcraft.liquid_fuel/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.pneumaticcraft.liquidfuel
 mods.pneumaticcraft.liquidFuel
 mods.pneumaticcraft.LiquidFuel
+mods.pneumaticcraft.liquid_fuel/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
-
-- Adds entries in the format `fluid`, `pressure`:
-
-    ```groovy:no-line-numbers
-    mods.pneumaticcraft.liquid_fuel.add(FluidStack, int)
-    ```
 
 - Adds entries in the format `fluid`, `pressure`:
 
@@ -37,6 +36,11 @@ mods.pneumaticcraft.LiquidFuel
     mods.pneumaticcraft.liquid_fuel.add(String, int)
     ```
 
+- Adds entries in the format `fluid`, `pressure`:
+
+    ```groovy:no-line-numbers
+    mods.pneumaticcraft.liquid_fuel.add(FluidStack, int)
+    ```
 
 ### Recipe Builder
 
@@ -97,13 +101,13 @@ mods.pneumaticcraft.liquid_fuel.recipeBuilder()
 - Removes entries with the given `fluid`:
 
     ```groovy:no-line-numbers
-    mods.pneumaticcraft.liquid_fuel.remove(FluidStack)
+    mods.pneumaticcraft.liquid_fuel.remove(String)
     ```
 
 - Removes entries with the given `fluid`:
 
     ```groovy:no-line-numbers
-    mods.pneumaticcraft.liquid_fuel.remove(String)
+    mods.pneumaticcraft.liquid_fuel.remove(FluidStack)
     ```
 
 - Removes all registered recipes:

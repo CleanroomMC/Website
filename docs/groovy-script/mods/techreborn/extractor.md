@@ -13,13 +13,18 @@ Converts an itemstack input into an itemstack output after a given process time,
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.techreborn.extractor` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.techreborn.extractor/* Used as page default */ // [!code focus]
 mods.techreborn.Extractor
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.techreborn.Extractor
     ```groovy:no-line-numbers
     mods.techreborn.extractor.add(R)
     ```
-
 
 ### Recipe Builder
 

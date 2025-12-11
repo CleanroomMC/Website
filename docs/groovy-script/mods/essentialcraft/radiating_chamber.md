@@ -13,19 +13,24 @@ Combines two items together using MRU to obtain a third item. Can optionally req
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.essentialcraft.radiating_chamber` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.ec4.radiating_chamber
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.ec4.radiatingchamber
 mods.ec4.radiatingChamber
 mods.ec4.RadiatingChamber
-mods.essentialcraft.radiating_chamber/* Used as page default */ // [!code focus]
+mods.ec4.radiating_chamber
 mods.essentialcraft.radiatingchamber
 mods.essentialcraft.radiatingChamber
 mods.essentialcraft.RadiatingChamber
+mods.essentialcraft.radiating_chamber/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.essentialcraft.RadiatingChamber
     ```groovy:no-line-numbers
     mods.essentialcraft.radiating_chamber.add(RadiatingChamberRecipe)
     ```
-
 
 ### Recipe Builder
 

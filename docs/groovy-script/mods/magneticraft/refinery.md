@@ -13,13 +13,18 @@ Converts an input fluidstack into up to three output fluidstacks in a Refinery M
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.magneticraft.refinery` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.magneticraft.refinery/* Used as page default */ // [!code focus]
 mods.magneticraft.Refinery
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.magneticraft.Refinery
     ```groovy:no-line-numbers
     mods.magneticraft.refinery.add(IRefineryRecipe)
     ```
-
 
 ### Recipe Builder
 

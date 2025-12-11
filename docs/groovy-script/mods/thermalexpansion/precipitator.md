@@ -13,7 +13,11 @@ Converts an amount of water into a specific output itemstack, costing power and 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.precipitator` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.thermal.precipitator
@@ -22,6 +26,7 @@ mods.thermalexpansion.precipitator/* Used as page default */ // [!code focus]
 mods.thermalexpansion.Precipitator
 ```
 
+::::::::::
 
 ## Adding Recipes
 

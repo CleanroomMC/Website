@@ -23,6 +23,8 @@ The keybinds on this page only represent the default if debug is enabled.
 When `CTRL+R` is pressed, all GroovyScripts that can be reloaded will be reloaded -
 see [reloading](../getting_started/reloading.md) for more information!
 
+There is also a "Quick Reload" keybind that is unbound by default that will
+only reload scripts, skipping reloading JEI.
 
 
 ## Copying

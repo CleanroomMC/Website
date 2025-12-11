@@ -13,15 +13,20 @@ Converts an itemstack input into an itemstack output after a given process time,
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.techreborn.vacuum_freezer` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.techreborn.vacuum_freezer/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.techreborn.vacuumfreezer
 mods.techreborn.vacuumFreezer
 mods.techreborn.VacuumFreezer
+mods.techreborn.vacuum_freezer/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.techreborn.VacuumFreezer
     ```groovy:no-line-numbers
     mods.techreborn.vacuum_freezer.add(R)
     ```
-
 
 ### Recipe Builder
 

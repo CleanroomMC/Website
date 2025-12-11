@@ -13,15 +13,20 @@ Converts a fluidstack input into power, at a given rate per tick.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.techreborn.semi_fluid_generator` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.techreborn.semi_fluid_generator/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.techreborn.semifluidgenerator
 mods.techreborn.semiFluidGenerator
 mods.techreborn.SemiFluidGenerator
+mods.techreborn.semi_fluid_generator/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.techreborn.SemiFluidGenerator
     ```groovy:no-line-numbers
     mods.techreborn.semi_fluid_generator.add(R)
     ```
-
 
 ### Recipe Builder
 

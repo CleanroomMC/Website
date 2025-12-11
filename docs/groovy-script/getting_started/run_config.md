@@ -49,7 +49,7 @@ Let's go through it bit by bit:
 
 The name of the pack.
 The pack name can be anything. It's the name that will show up in JEI in tooltips on items you created.
-Important for [content](../content/index.md).
+Important for [content](../minecraft/helpers/content.md).
 - Can be accessed in a script via `getPackName()`.
 
 ## `packId`
@@ -57,8 +57,8 @@ Important for [content](../content/index.md).
 The id of the pack.
 - Can be accessed in a script via `getPackId()`.
 The pack id is very important.
-It must only consist of lower case letters and `_`.
-It is required for most forms of adding recipes and all forms of creating new [content](../content/index.md).
+It must only consist of lower case letters, numbers, and `_`.
+It is required for most forms of adding recipes and all forms of creating new [content](../minecraft/helpers/content.md).
 
 ::: info Failure {id="failure"}
 If some mod tries to use the pack id internally and the pack id is not specified a fatal message will logged.

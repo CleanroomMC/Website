@@ -13,21 +13,20 @@ Converts input items into a chance to get a layer of compost, with 8 layers prov
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.futuremc.composter` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.futuremc.composter/* Used as page default */ // [!code focus]
 mods.futuremc.Composter
 ```
 
+::::::::::
 
 ## Adding Entries
-
-- Adds entries in the format `ingredient`, `chance`:
-
-    ```groovy:no-line-numbers
-    mods.futuremc.composter.add(IIngredient, byte)
-    ```
 
 - Adds entries in the format `ingredient`, `chance`:
 
@@ -35,6 +34,11 @@ mods.futuremc.Composter
     mods.futuremc.composter.add(Ingredient, byte)
     ```
 
+- Adds entries in the format `ingredient`, `chance`:
+
+    ```groovy:no-line-numbers
+    mods.futuremc.composter.add(IIngredient, byte)
+    ```
 
 ### Recipe Builder
 
@@ -100,13 +104,13 @@ mods.futuremc.composter.recipeBuilder()
 - Removes an entry with the same Ingredient:
 
     ```groovy:no-line-numbers
-    mods.futuremc.composter.remove(IIngredient)
+    mods.futuremc.composter.remove(Ingredient)
     ```
 
 - Removes an entry with the same Ingredient:
 
     ```groovy:no-line-numbers
-    mods.futuremc.composter.remove(Ingredient)
+    mods.futuremc.composter.remove(IIngredient)
     ```
 
 - Removes all recipes that match the given input:

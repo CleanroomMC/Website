@@ -13,17 +13,22 @@ Modifies what fluids can be mixed together in the Smeltery.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.tconstruct.alloying` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
+mods.ticon.alloying
+mods.ticon.Alloying
 mods.tconstruct.alloying/* Used as page default */ // [!code focus]
 mods.tconstruct.Alloying
 mods.tinkersconstruct.alloying
 mods.tinkersconstruct.Alloying
-mods.ticon.alloying
-mods.ticon.Alloying
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -116,16 +121,16 @@ mods.tconstruct.alloying.recipeBuilder()
     mods.tconstruct.alloying.removeByInputs(FluidStack...)
     ```
 
-- Removes all recipes that match the given output and the given inputs:
-
-    ```groovy:no-line-numbers
-    mods.tconstruct.alloying.removeByInputsAndOutput(FluidStack, FluidStack...)
-    ```
-
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers
     mods.tconstruct.alloying.removeByOutput(FluidStack)
+    ```
+
+- Removes all recipes that match the given output and the given inputs:
+
+    ```groovy:no-line-numbers
+    mods.tconstruct.alloying.removeByInputsAndOutput(FluidStack, FluidStack...)
     ```
 
 - Removes all registered recipes:
@@ -137,8 +142,8 @@ mods.tconstruct.alloying.recipeBuilder()
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.tconstruct.alloying.removeByInputs(fluid('cobalt')*2,fluid('ardite')*2)
-mods.tconstruct.alloying.removeByInputsAndOutput(fluid('knightslime')*72,fluid('iron')*72,fluid('stone')*144,fluid('purpleslime')*125)
 mods.tconstruct.alloying.removeByOutput(fluid('pigiron'))
+mods.tconstruct.alloying.removeByInputsAndOutput(fluid('knightslime')*72,fluid('iron')*72,fluid('stone')*144,fluid('purpleslime')*125)
 mods.tconstruct.alloying.removeAll()
 ```
 

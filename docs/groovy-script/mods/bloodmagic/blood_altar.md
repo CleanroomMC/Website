@@ -21,19 +21,24 @@ Tier 6 must be enabled in the config to use a Blood Altar of that tier.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bloodmagic.blood_altar` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.bm.blood_altar
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.bm.bloodaltar
 mods.bm.bloodAltar
 mods.bm.BloodAltar
-mods.bloodmagic.blood_altar/* Used as page default */ // [!code focus]
+mods.bm.blood_altar
 mods.bloodmagic.bloodaltar
 mods.bloodmagic.bloodAltar
 mods.bloodmagic.BloodAltar
+mods.bloodmagic.blood_altar/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -48,7 +53,6 @@ mods.bloodmagic.BloodAltar
     ```groovy:no-line-numbers
     mods.bloodmagic.blood_altar.add(IIngredient, ItemStack, int, int, int, int)
     ```
-
 
 ### Recipe Builder
 

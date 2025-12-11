@@ -17,17 +17,22 @@ By default, there are no Combination recipes.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.extendedcrafting.combination_crafting` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.extendedcrafting.combination_crafting/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {6}
+mods.extendedcrafting.combination
+mods.extendedcrafting.Combination
 mods.extendedcrafting.combinationcrafting
 mods.extendedcrafting.combinationCrafting
 mods.extendedcrafting.CombinationCrafting
-mods.extendedcrafting.combination
-mods.extendedcrafting.Combination
+mods.extendedcrafting.combination_crafting/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -48,7 +53,6 @@ mods.extendedcrafting.Combination
     ```groovy:no-line-numbers
     mods.extendedcrafting.combination_crafting.add(ItemStack, long, int, Ingredient, NonNullList<Ingredient>)
     ```
-
 
 ### Recipe Builder
 
@@ -149,13 +153,13 @@ mods.extendedcrafting.combination_crafting.recipeBuilder()
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.extendedcrafting.combination_crafting.removeByInput(IIngredient)
+    mods.extendedcrafting.combination_crafting.removeByInput(ItemStack)
     ```
 
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.extendedcrafting.combination_crafting.removeByInput(ItemStack)
+    mods.extendedcrafting.combination_crafting.removeByInput(IIngredient)
     ```
 
 - Removes all recipes that match the given output:

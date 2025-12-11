@@ -13,15 +13,20 @@ Consumes a 3d structure in-world based on keys when an item is thrown into the f
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.compactmachines3.miniaturization` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.compactmachines3.miniaturization/* Used as page default */ // [!code focus]
-mods.compactmachines3.Miniaturization
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
 mods.compactmachines.miniaturization
 mods.compactmachines.Miniaturization
+mods.compactmachines3.miniaturization/* Used as page default */ // [!code focus]
+mods.compactmachines3.Miniaturization
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.compactmachines.Miniaturization
     ```groovy:no-line-numbers
     mods.compactmachines3.miniaturization.add(MultiblockRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -243,12 +247,6 @@ mods.compactmachines3.miniaturization.recipeBuilder()
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.compactmachines3.miniaturization.removeByCatalyst(ItemStack)
-    ```
-
-- Removes all recipes that match the given input:
-
-    ```groovy:no-line-numbers
     mods.compactmachines3.miniaturization.removeByInput(ItemStack)
     ```
 
@@ -256,6 +254,12 @@ mods.compactmachines3.miniaturization.recipeBuilder()
 
     ```groovy:no-line-numbers
     mods.compactmachines3.miniaturization.removeByOutput(ItemStack)
+    ```
+
+- Removes all recipes that match the given input:
+
+    ```groovy:no-line-numbers
+    mods.compactmachines3.miniaturization.removeByCatalyst(ItemStack)
     ```
 
 - Removes all registered recipes:
@@ -266,9 +270,9 @@ mods.compactmachines3.miniaturization.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.compactmachines3.miniaturization.removeByCatalyst(item('minecraft:redstone'))
 mods.compactmachines3.miniaturization.removeByInput(item('minecraft:ender_pearl'))
 mods.compactmachines3.miniaturization.removeByOutput(item('compactmachines3:machine:3'))
+mods.compactmachines3.miniaturization.removeByCatalyst(item('minecraft:redstone'))
 mods.compactmachines3.miniaturization.removeAll()
 ```
 

@@ -17,19 +17,24 @@ Does not alter fill/empty container recipes.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.transposer_fill` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.thermal.transposer_fill
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.thermal.transposerfill
 mods.thermal.transposerFill
 mods.thermal.TransposerFill
-mods.thermalexpansion.transposer_fill/* Used as page default */ // [!code focus]
+mods.thermal.transposer_fill
 mods.thermalexpansion.transposerfill
 mods.thermalexpansion.transposerFill
 mods.thermalexpansion.TransposerFill
+mods.thermalexpansion.transposer_fill/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

@@ -13,13 +13,18 @@ Converts a block into up to three output itemstacks, with the ability to require
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithmods.kiln` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.betterwithmods.kiln/* Used as page default */ // [!code focus]
 mods.betterwithmods.Kiln
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.betterwithmods.Kiln
     ```groovy:no-line-numbers
     mods.betterwithmods.kiln.add(KilnRecipe)
     ```
-
 
 ### Recipe Builder
 

@@ -13,15 +13,20 @@ Converts up to 4 input itemstacks into an output itemstack, while being placed a
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.cyclicmagic.melter` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.cyclicmagic.melter/* Used as page default */ // [!code focus]
-mods.cyclicmagic.Melter
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
 mods.cyclic.melter
 mods.cyclic.Melter
+mods.cyclicmagic.melter/* Used as page default */ // [!code focus]
+mods.cyclicmagic.Melter
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.cyclic.Melter
     ```groovy:no-line-numbers
     mods.cyclicmagic.melter.add(RecipeMelter)
     ```
-
 
 ### Recipe Builder
 

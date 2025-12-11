@@ -13,15 +13,20 @@ Converts any number of input itemstacks into any number of output itemstacks, ei
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pneumaticcraft.pressure_chamber` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.pneumaticcraft.pressure_chamber/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.pneumaticcraft.pressurechamber
 mods.pneumaticcraft.pressureChamber
 mods.pneumaticcraft.PressureChamber
+mods.pneumaticcraft.pressure_chamber/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.pneumaticcraft.PressureChamber
     ```groovy:no-line-numbers
     mods.pneumaticcraft.pressure_chamber.add(IPressureChamberRecipe)
     ```
-
 
 ### Recipe Builder
 

@@ -13,7 +13,11 @@ Converts an item into one item, with up to two additional items as chance byprod
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.appliedenergistics2.grinder` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.ae2.grinder
@@ -22,6 +26,7 @@ mods.appliedenergistics2.grinder/* Used as page default */ // [!code focus]
 mods.appliedenergistics2.Grinder
 ```
 
+::::::::::
 
 ## Adding Recipes
 

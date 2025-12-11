@@ -13,13 +13,18 @@ Converts an input fluidstack into up to 4 output itemstacks, with the 3rd and 4t
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.alchemistry.electrolyzer` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.alchemistry.electrolyzer/* Used as page default */ // [!code focus]
 mods.alchemistry.Electrolyzer
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.alchemistry.Electrolyzer
     ```groovy:no-line-numbers
     mods.alchemistry.electrolyzer.add(ElectrolyzerRecipe)
     ```
-
 
 ### Recipe Builder
 

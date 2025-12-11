@@ -13,19 +13,24 @@ Converts an input itemstack into an output itemstack, requiring one of several e
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.enderio.soul_binder` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.enderio.soul_binder/* Used as page default */ // [!code focus]
-mods.enderio.soulbinder
-mods.enderio.soulBinder
-mods.enderio.SoulBinder
-mods.eio.soul_binder
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.eio.soulbinder
 mods.eio.soulBinder
 mods.eio.SoulBinder
+mods.eio.soul_binder
+mods.enderio.soulbinder
+mods.enderio.soulBinder
+mods.enderio.SoulBinder
+mods.enderio.soul_binder/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

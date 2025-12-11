@@ -17,13 +17,18 @@ Crafting with stackable items may require picking up and placing an input to all
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.futuremc.smithing` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.futuremc.smithing/* Used as page default */ // [!code focus]
 mods.futuremc.Smithing
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -32,7 +37,6 @@ mods.futuremc.Smithing
     ```groovy:no-line-numbers
     mods.futuremc.smithing.add(SmithingRecipe)
     ```
-
 
 ### Recipe Builder
 

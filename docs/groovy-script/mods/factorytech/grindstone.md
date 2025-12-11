@@ -13,13 +13,18 @@ Converts an input itemstack into an output itemstack, with the ability to contro
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.factorytech.grindstone` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.factorytech.grindstone/* Used as page default */ // [!code focus]
 mods.factorytech.Grindstone
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.factorytech.Grindstone
     ```groovy:no-line-numbers
     mods.factorytech.grindstone.add(MachineRecipes.MachineRecipe<ItemStack, ItemStack>)
     ```
-
 
 ### Recipe Builder
 

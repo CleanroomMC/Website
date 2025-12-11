@@ -17,17 +17,22 @@ While more than 8 items can function as the input of a Stygian Iron Anvil recipe
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.arcanearchives.gem_cutting_table` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.arcanearchives.gem_cutting_table/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {6}
+mods.arcanearchives.GCT
+mods.arcanearchives.gct
 mods.arcanearchives.gemcuttingtable
 mods.arcanearchives.gemCuttingTable
 mods.arcanearchives.GemCuttingTable
-mods.arcanearchives.GCT
-mods.arcanearchives.gct
+mods.arcanearchives.gem_cutting_table/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

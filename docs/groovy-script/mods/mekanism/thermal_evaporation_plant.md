@@ -13,21 +13,26 @@ Converts an input fluidstack into an output fluidstack over time based on multib
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.mekanism.thermal_evaporation_plant` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.mekanism.thermal_evaporation_plant/* Used as page default */ // [!code focus]
-mods.mekanism.thermalevaporationplant
-mods.mekanism.thermalEvaporationPlant
-mods.mekanism.ThermalEvaporationPlant
-mods.mekanism.thermal_evaporation
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {10}
+mods.mekanism.TEP
+mods.mekanism.tep
 mods.mekanism.thermalevaporation
 mods.mekanism.thermalEvaporation
 mods.mekanism.ThermalEvaporation
-mods.mekanism.TEP
-mods.mekanism.tep
+mods.mekanism.thermal_evaporation
+mods.mekanism.thermalevaporationplant
+mods.mekanism.thermalEvaporationPlant
+mods.mekanism.ThermalEvaporationPlant
+mods.mekanism.thermal_evaporation_plant/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

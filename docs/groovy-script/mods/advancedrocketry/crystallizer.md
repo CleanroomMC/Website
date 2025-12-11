@@ -17,13 +17,18 @@ The 'chances' used with the recipe outputs are actually output weights. For exam
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.advancedrocketry.crystallizer` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.advancedrocketry.crystallizer/* Used as page default */ // [!code focus]
 mods.advancedrocketry.Crystallizer
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -32,7 +37,6 @@ mods.advancedrocketry.Crystallizer
     ```groovy:no-line-numbers
     mods.advancedrocketry.crystallizer.add(R)
     ```
-
 
 ### Recipe Builder
 

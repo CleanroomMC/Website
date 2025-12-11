@@ -13,13 +13,18 @@ Chrysopoeia is a spell that transmutes items held in the main hand.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.roots.chrysopoeia` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.roots.chrysopoeia/* Used as page default */ // [!code focus]
 mods.roots.Chrysopoeia
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -94,16 +99,16 @@ mods.roots.chrysopoeia.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the Chrysopoeia recipe with the given input itemstack:
-
-    ```groovy:no-line-numbers
-    mods.roots.chrysopoeia.removeByInput(ItemStack)
-    ```
-
 - Removes the Chrysopoeia recipe with the given name:
 
     ```groovy:no-line-numbers
     mods.roots.chrysopoeia.removeByName(ResourceLocation)
+    ```
+
+- Removes the Chrysopoeia recipe with the given input itemstack:
+
+    ```groovy:no-line-numbers
+    mods.roots.chrysopoeia.removeByInput(ItemStack)
     ```
 
 - Removes the Chrysopoeia recipe with the given output itemstack:
@@ -120,8 +125,8 @@ mods.roots.chrysopoeia.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.roots.chrysopoeia.removeByInput(item('minecraft:rotten_flesh'))
 mods.roots.chrysopoeia.removeByName(resource('roots:gold_from_silver'))
+mods.roots.chrysopoeia.removeByInput(item('minecraft:rotten_flesh'))
 mods.roots.chrysopoeia.removeByOutput(item('minecraft:iron_nugget'))
 mods.roots.chrysopoeia.removeAll()
 ```

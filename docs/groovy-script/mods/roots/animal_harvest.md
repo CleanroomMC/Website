@@ -13,15 +13,20 @@ Animal Harvest is a ritual that drops items from nearby mob's based on that mobs
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.roots.animal_harvest` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.roots.animal_harvest/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.roots.animalharvest
 mods.roots.animalHarvest
 mods.roots.AnimalHarvest
+mods.roots.animal_harvest/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -84,16 +89,16 @@ mods.roots.animal_harvest.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes any Animal Harvest recipe with the given entity:
-
-    ```groovy:no-line-numbers
-    mods.roots.animal_harvest.removeByEntity(EntityEntry)
-    ```
-
 - Removes the Animal Harvest recipe with the given name:
 
     ```groovy:no-line-numbers
     mods.roots.animal_harvest.removeByName(ResourceLocation)
+    ```
+
+- Removes any Animal Harvest recipe with the given entity:
+
+    ```groovy:no-line-numbers
+    mods.roots.animal_harvest.removeByEntity(EntityEntry)
     ```
 
 - Removes all registered recipes:
@@ -104,8 +109,8 @@ mods.roots.animal_harvest.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.roots.animal_harvest.removeByEntity(entity('minecraft:pig'))
 mods.roots.animal_harvest.removeByName(resource('roots:chicken'))
+mods.roots.animal_harvest.removeByEntity(entity('minecraft:pig'))
 mods.roots.animal_harvest.removeAll()
 ```
 

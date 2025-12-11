@@ -13,7 +13,11 @@ Converts an input fluidstack into power, taking time based on the power.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.compression` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.thermal.compression
@@ -22,6 +26,7 @@ mods.thermalexpansion.compression/* Used as page default */ // [!code focus]
 mods.thermalexpansion.Compression
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -43,13 +48,13 @@ mods.thermalexpansion.compression.add(fluid('steam'), 100)
 - Removes all recipes with given FluidStack:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.compression.removeByInput(FluidStack)
+    mods.thermalexpansion.compression.removeByInput(String)
     ```
 
 - Removes all recipes with given FluidStack:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.compression.removeByInput(String)
+    mods.thermalexpansion.compression.removeByInput(FluidStack)
     ```
 
 - Removes all registered recipes:

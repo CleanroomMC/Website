@@ -13,17 +13,22 @@ Converts an input fluidstack into an output fluidstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.industrialforegoing.ore_fermenter` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.industrialforegoing.ore_fermenter/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {6}
+mods.industrialforegoing.fermentation
+mods.industrialforegoing.Fermentation
 mods.industrialforegoing.orefermenter
 mods.industrialforegoing.oreFermenter
 mods.industrialforegoing.OreFermenter
-mods.industrialforegoing.fermentation
-mods.industrialforegoing.Fermentation
+mods.industrialforegoing.ore_fermenter/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

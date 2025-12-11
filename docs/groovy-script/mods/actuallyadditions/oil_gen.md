@@ -13,19 +13,24 @@ Turns a fluid into power at a rate.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.actuallyadditions.oil_gen` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.aa.oil_gen
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.aa.oilgen
 mods.aa.oilGen
 mods.aa.OilGen
-mods.actuallyadditions.oil_gen/* Used as page default */ // [!code focus]
+mods.aa.oil_gen
 mods.actuallyadditions.oilgen
 mods.actuallyadditions.oilGen
 mods.actuallyadditions.OilGen
+mods.actuallyadditions.oil_gen/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.actuallyadditions.OilGen
     ```groovy:no-line-numbers
     mods.actuallyadditions.oil_gen.add(OilGenRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -120,13 +124,13 @@ mods.actuallyadditions.oil_gen.recipeBuilder()
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.actuallyadditions.oil_gen.removeByInput(FluidStack)
+    mods.actuallyadditions.oil_gen.removeByInput(String)
     ```
 
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.actuallyadditions.oil_gen.removeByInput(String)
+    mods.actuallyadditions.oil_gen.removeByInput(FluidStack)
     ```
 
 - Removes all registered recipes:
@@ -138,8 +142,8 @@ mods.actuallyadditions.oil_gen.recipeBuilder()
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.actuallyadditions.oil_gen.removeByInput(fluid('canolaoil').getFluid())
-mods.actuallyadditions.oil_gen.removeByInput(fluid('canolaoil'))
 mods.actuallyadditions.oil_gen.removeByInput('refinedcanolaoil')
+mods.actuallyadditions.oil_gen.removeByInput(fluid('canolaoil'))
 mods.actuallyadditions.oil_gen.removeAll()
 ```
 

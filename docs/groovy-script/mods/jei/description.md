@@ -13,7 +13,11 @@ Modify the description of the input items, where the description is a unique JEI
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.jei.description` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.hei.description
@@ -22,14 +26,9 @@ mods.jei.description/* Used as page default */ // [!code focus]
 mods.jei.Description
 ```
 
+::::::::::
 
 ## Adding Entries
-
-- Adds the given description to the given ingredients, translating the description lines as needed:
-
-    ```groovy:no-line-numbers
-    mods.jei.description.add(IIngredient, List<String>)
-    ```
 
 - Adds the given description to the given ingredients, translating the description lines as needed:
 
@@ -40,7 +39,7 @@ mods.jei.Description
 - Adds the given description to the given ingredients, translating the description lines as needed:
 
     ```groovy:no-line-numbers
-    mods.jei.description.add(List<IIngredient>, List<String>)
+    mods.jei.description.add(IIngredient, List<String>)
     ```
 
 - Adds the given description to the given ingredients, translating the description lines as needed:
@@ -49,10 +48,16 @@ mods.jei.Description
     mods.jei.description.add(List<IIngredient>, String...)
     ```
 
+- Adds the given description to the given ingredients, translating the description lines as needed:
+
+    ```groovy:no-line-numbers
+    mods.jei.description.add(List<IIngredient>, List<String>)
+    ```
+
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.jei.description.add(item('minecraft:clay'), ['wow', 'this', 'is', 'neat'])
 mods.jei.description.add(item('minecraft:gold_ingot'), 'groovyscript.recipe.fluid_recipe')
+mods.jei.description.add(item('minecraft:clay'), ['wow', 'this', 'is', 'neat'])
 ```
 
 ::::::::::

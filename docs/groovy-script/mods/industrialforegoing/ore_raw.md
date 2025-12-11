@@ -13,17 +13,22 @@ Converts an input itemstack and input fluidstack into an output fluidstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.industrialforegoing.ore_raw` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.industrialforegoing.ore_raw/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.industrialforegoing.oreraw
 mods.industrialforegoing.oreRaw
 mods.industrialforegoing.OreRaw
+mods.industrialforegoing.ore_raw/* Used as page default */ // [!code focus]
 mods.industrialforegoing.washing
 mods.industrialforegoing.Washing
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -36,13 +41,13 @@ mods.industrialforegoing.Washing
 - Adds a Washing Factory recipe in the format `ore`, `input`, `output`:
 
     ```groovy:no-line-numbers
-    mods.industrialforegoing.ore_raw.add(OreDictIngredient, FluidStack, FluidStack)
+    mods.industrialforegoing.ore_raw.add(String, FluidStack, FluidStack)
     ```
 
 - Adds a Washing Factory recipe in the format `ore`, `input`, `output`:
 
     ```groovy:no-line-numbers
-    mods.industrialforegoing.ore_raw.add(String, FluidStack, FluidStack)
+    mods.industrialforegoing.ore_raw.add(OreDictIngredient, FluidStack, FluidStack)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -61,10 +66,10 @@ mods.industrialforegoing.ore_raw.add(ore('stone'), fluid('water') * 1000, fluid(
     mods.industrialforegoing.ore_raw.remove(OreFluidEntryRaw)
     ```
 
-- Removes all recipes that match the given input:
+- Removes all recipes that match the given ore:
 
     ```groovy:no-line-numbers
-    mods.industrialforegoing.ore_raw.removeByInput(IIngredient)
+    mods.industrialforegoing.ore_raw.removeByOre(String)
     ```
 
 - Removes all recipes that match the given ore:
@@ -73,10 +78,10 @@ mods.industrialforegoing.ore_raw.add(ore('stone'), fluid('water') * 1000, fluid(
     mods.industrialforegoing.ore_raw.removeByOre(OreDictIngredient)
     ```
 
-- Removes all recipes that match the given ore:
+- Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.industrialforegoing.ore_raw.removeByOre(String)
+    mods.industrialforegoing.ore_raw.removeByInput(IIngredient)
     ```
 
 - Removes all recipes that match the given output:
@@ -93,9 +98,9 @@ mods.industrialforegoing.ore_raw.add(ore('stone'), fluid('water') * 1000, fluid(
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.industrialforegoing.ore_raw.removeByInput(fluid('meat'))
-mods.industrialforegoing.ore_raw.removeByOre(ore('oreRedstone'))
 mods.industrialforegoing.ore_raw.removeByOre('oreRedstone')
+mods.industrialforegoing.ore_raw.removeByOre(ore('oreRedstone'))
+mods.industrialforegoing.ore_raw.removeByInput(fluid('meat'))
 mods.industrialforegoing.ore_raw.removeByOutput(fluid('if.ore_fluid_raw').withNbt(['Ore': 'oreRedstone']),)
 mods.industrialforegoing.ore_raw.removeAll()
 ```

@@ -13,13 +13,18 @@ Converts any number of a single item into an output itemstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.avaritia.compressor` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.avaritia.compressor/* Used as page default */ // [!code focus]
 mods.avaritia.Compressor
 ```
 
+::::::::::
 
 ## Adding Recipes
 

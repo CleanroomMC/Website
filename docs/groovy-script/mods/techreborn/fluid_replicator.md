@@ -13,15 +13,20 @@ Converts a configurable amount of UU-Matter into a output fluidstack of 1000mb a
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.techreborn.fluid_replicator` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.techreborn.fluid_replicator/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.techreborn.fluidreplicator
 mods.techreborn.fluidReplicator
 mods.techreborn.FluidReplicator
+mods.techreborn.fluid_replicator/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

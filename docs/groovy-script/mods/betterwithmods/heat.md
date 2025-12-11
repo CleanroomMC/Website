@@ -17,26 +17,25 @@ Anything using heat levels will create a new JEI tab for each heat level it has 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithmods.heat` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.betterwithmods.heat/* Used as page default */ // [!code focus]
 mods.betterwithmods.Heat
 ```
 
+::::::::::
 
 ## Editing Values
 
 - Adds new heat levels in the format `heat`, `ingredient`:
 
     ```groovy:no-line-numbers
-    mods.betterwithmods.heat.add(int, BlockIngredient)
-    ```
-
-- Adds new heat levels in the format `heat`, `ingredient`:
-
-    ```groovy:no-line-numbers
-    mods.betterwithmods.heat.add(int, IIngredient)
+    mods.betterwithmods.heat.add(int, String)
     ```
 
 - Adds new heat levels in the format `heat`, `ingredient`:
@@ -48,19 +47,25 @@ mods.betterwithmods.Heat
 - Adds new heat levels in the format `heat`, `ingredient`:
 
     ```groovy:no-line-numbers
-    mods.betterwithmods.heat.add(int, List<ItemStack>)
+    mods.betterwithmods.heat.add(int, IIngredient)
     ```
 
 - Adds new heat levels in the format `heat`, `ingredient`:
 
     ```groovy:no-line-numbers
-    mods.betterwithmods.heat.add(int, String)
+    mods.betterwithmods.heat.add(int, BlockIngredient)
+    ```
+
+- Adds new heat levels in the format `heat`, `ingredient`:
+
+    ```groovy:no-line-numbers
+    mods.betterwithmods.heat.add(int, List<ItemStack>)
     ```
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.betterwithmods.heat.add(4, item('minecraft:redstone_block'), item('minecraft:redstone_torch'))
 mods.betterwithmods.heat.add(3, 'torch')
+mods.betterwithmods.heat.add(4, item('minecraft:redstone_block'), item('minecraft:redstone_torch'))
 ```
 
 ::::::::::
@@ -72,7 +77,6 @@ mods.betterwithmods.heat.add(3, 'torch')
     ```groovy:no-line-numbers
     mods.betterwithmods.heat.add(BWMHeatRegistry.HeatSource)
     ```
-
 
 ## Removing Entries
 

@@ -21,7 +21,11 @@ Use the command `/gs jeiCategories` to log the UIDs of all JEI Categories to the
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.jei.category` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.hei.category
@@ -30,19 +34,20 @@ mods.jei.category/* Used as page default */ // [!code focus]
 mods.jei.Category
 ```
 
+::::::::::
 
 ## Editing Values
 
 - Sets the order of categories in JEI. Categories not included in the list will be placed at the end according to their normal order:
 
     ```groovy:no-line-numbers
-    mods.jei.category.setOrder(List<String>)
+    mods.jei.category.setOrder(String...)
     ```
 
 - Sets the order of categories in JEI. Categories not included in the list will be placed at the end according to their normal order:
 
     ```groovy:no-line-numbers
-    mods.jei.category.setOrder(String...)
+    mods.jei.category.setOrder(List<String>)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -130,25 +135,25 @@ mods.jei.category.categoryBuilder()
 - Adds a new Category to JEI in the format `id`, `category`, `catalsyts`, `wrappers`:
 
     ```groovy:no-line-numbers
-    mods.jei.category.add(Category.CustomCategory)
+    mods.jei.category.add(String, Function<IGuiHelper, ? extends IRecipeCategory<? extends IRecipeWrapper>>, List<?>, List<? extends IRecipeWrapper>)
     ```
 
 - Adds a new Category to JEI in the format `id`, `category`, `catalsyts`, `wrappers`:
 
     ```groovy:no-line-numbers
-    mods.jei.category.add(String, Function<IGuiHelper, ? extends IRecipeCategory<? extends IRecipeWrapper>>, List<?>, List<? extends IRecipeWrapper>)
-    ```
-
-- Hides the given category from JEI:
-
-    ```groovy:no-line-numbers
-    mods.jei.category.hideCategory(String)
+    mods.jei.category.add(Category.CustomCategory)
     ```
 
 - Hides the given category from JEI:
 
     ```groovy:no-line-numbers
     mods.jei.category.remove(String)
+    ```
+
+- Hides the given category from JEI:
+
+    ```groovy:no-line-numbers
+    mods.jei.category.hideCategory(String)
     ```
 
 - Hides all categories from JEI:

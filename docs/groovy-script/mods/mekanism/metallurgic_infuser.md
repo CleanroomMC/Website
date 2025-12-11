@@ -13,28 +13,33 @@ Converts and input itemstack and a variable amount of an infusion type into an o
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.mekanism.metallurgic_infuser` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.mekanism.metallurgic_infuser/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.mekanism.metallurgicinfuser
 mods.mekanism.metallurgicInfuser
 mods.mekanism.MetallurgicInfuser
+mods.mekanism.metallurgic_infuser/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
 - Adds recipes in the format `ingredient`, `infuseType`, `infuseAmount`, `output`:
 
     ```groovy:no-line-numbers
-    mods.mekanism.metallurgic_infuser.add(IIngredient, InfuseType, int, ItemStack)
+    mods.mekanism.metallurgic_infuser.add(IIngredient, String, int, ItemStack)
     ```
 
 - Adds recipes in the format `ingredient`, `infuseType`, `infuseAmount`, `output`:
 
     ```groovy:no-line-numbers
-    mods.mekanism.metallurgic_infuser.add(IIngredient, String, int, ItemStack)
+    mods.mekanism.metallurgic_infuser.add(IIngredient, InfuseType, int, ItemStack)
     ```
 
 :::::::::: details Example {open id="example"}

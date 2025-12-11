@@ -13,13 +13,18 @@ Converts an input fluidstack into between 2 and 4 fluidstacks, consuming Tempera
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pneumaticcraft.refinery` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.pneumaticcraft.refinery/* Used as page default */ // [!code focus]
 mods.pneumaticcraft.Refinery
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.pneumaticcraft.Refinery
     ```groovy:no-line-numbers
     mods.pneumaticcraft.refinery.add(RefineryRecipe)
     ```
-
 
 ### Recipe Builder
 

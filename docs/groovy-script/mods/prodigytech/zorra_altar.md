@@ -13,15 +13,20 @@ Allows over-enchanting Zorrasteel equipment.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.prodigytech.zorra_altar` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.prodigytech.zorra_altar/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.prodigytech.zorraaltar
 mods.prodigytech.zorraAltar
 mods.prodigytech.ZorraAltar
+mods.prodigytech.zorra_altar/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Removing Recipes
 

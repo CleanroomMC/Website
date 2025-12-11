@@ -13,15 +13,20 @@ Converts an input itemstack into an output itemstack, with the ability to contro
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.factorytech.ore_drill` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.factorytech.ore_drill/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.factorytech.oredrill
 mods.factorytech.oreDrill
 mods.factorytech.OreDrill
+mods.factorytech.ore_drill/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.factorytech.OreDrill
     ```groovy:no-line-numbers
     mods.factorytech.ore_drill.add(MachineRecipes.MachineRecipe<ItemStack, ItemStack>)
     ```
-
 
 ### Recipe Builder
 

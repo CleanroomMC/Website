@@ -17,31 +17,42 @@ The default rarities are Common (White), Uncommon (Yellow), Rare (Aqua), and Epi
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `minecraft.rarity` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-minecraft.rarity/* Used as page default */ // [!code focus]
-minecraft.Rarity
-Minecraft.rarity
-Minecraft.Rarity
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {9}
+mc.rarity
+mc.Rarity
+MC.rarity
+MC.Rarity
 vanilla.rarity
 vanilla.Rarity
 Vanilla.rarity
 Vanilla.Rarity
+minecraft.rarity/* Used as page default */ // [!code focus]
+minecraft.Rarity
+Minecraft.rarity
+Minecraft.Rarity
 mods.mc.rarity
 mods.mc.Rarity
+mods.MC.rarity
+mods.MC.Rarity
+mods.vanilla.rarity
+mods.vanilla.Rarity
+mods.Vanilla.rarity
+mods.Vanilla.Rarity
 mods.minecraft.rarity
 mods.minecraft.Rarity
+mods.Minecraft.rarity
+mods.Minecraft.Rarity
 ```
 
+::::::::::
 
 ## Adding Entries
-
-- Sets the color of the given itemstack in the format `rarity`, `item`:
-
-    ```groovy:no-line-numbers
-    minecraft.rarity.set(IRarity, Closure<Boolean>)
-    ```
 
 - Sets the color of the given itemstack in the format `rarity`, `item`:
 
@@ -49,10 +60,10 @@ mods.minecraft.Rarity
     minecraft.rarity.set(IRarity, ItemStack)
     ```
 
-- Sets the color of the given itemstack in the format `color`, `item`:
+- Sets the color of the given itemstack in the format `rarity`, `item`:
 
     ```groovy:no-line-numbers
-    minecraft.rarity.set(TextFormatting, Closure<Boolean>)
+    minecraft.rarity.set(IRarity, Closure<Boolean>)
     ```
 
 - Sets the color of the given itemstack in the format `color`, `item`:
@@ -61,16 +72,22 @@ mods.minecraft.Rarity
     minecraft.rarity.set(TextFormatting, ItemStack)
     ```
 
-- Sets the color of the given itemstack in the format `color`, `rarityName`, `item`:
+- Sets the color of the given itemstack in the format `color`, `item`:
 
     ```groovy:no-line-numbers
-    minecraft.rarity.set(TextFormatting, String, Closure<Boolean>)
+    minecraft.rarity.set(TextFormatting, Closure<Boolean>)
     ```
 
 - Sets the color of the given itemstack in the format `color`, `rarityName`, `item`:
 
     ```groovy:no-line-numbers
     minecraft.rarity.set(TextFormatting, String, ItemStack)
+    ```
+
+- Sets the color of the given itemstack in the format `color`, `rarityName`, `item`:
+
+    ```groovy:no-line-numbers
+    minecraft.rarity.set(TextFormatting, String, Closure<Boolean>)
     ```
 
 :::::::::: details Example {open id="example"}

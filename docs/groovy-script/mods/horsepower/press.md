@@ -13,13 +13,18 @@ Converts an itemstack into another itemstack or a fluidstack by a horse running 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.horsepower.press` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.horsepower.press/* Used as page default */ // [!code focus]
 mods.horsepower.Press
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -32,15 +37,14 @@ mods.horsepower.Press
 - Adds recipes in the format `input`, `output`:
 
     ```groovy:no-line-numbers
-    mods.horsepower.press.add(IIngredient, FluidStack)
+    mods.horsepower.press.add(IIngredient, ItemStack)
     ```
 
 - Adds recipes in the format `input`, `output`:
 
     ```groovy:no-line-numbers
-    mods.horsepower.press.add(IIngredient, ItemStack)
+    mods.horsepower.press.add(IIngredient, FluidStack)
     ```
-
 
 ### Recipe Builder
 

@@ -13,15 +13,20 @@ Converts three input items into an output itemstack after a given number of rota
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.atum.spinning_wheel` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.atum.spinning_wheel/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.atum.spinningwheel
 mods.atum.spinningWheel
 mods.atum.SpinningWheel
+mods.atum.spinning_wheel/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.atum.SpinningWheel
     ```groovy:no-line-numbers
     mods.atum.spinning_wheel.add(ISpinningWheelRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -110,10 +114,10 @@ mods.atum.spinning_wheel.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.atum.spinning_wheel.remove(ResourceLocation)
+    mods.atum.spinning_wheel.remove(ISpinningWheelRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -122,10 +126,10 @@ mods.atum.spinning_wheel.recipeBuilder()
     mods.atum.spinning_wheel.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.atum.spinning_wheel.remove(ISpinningWheelRecipe)
+    mods.atum.spinning_wheel.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

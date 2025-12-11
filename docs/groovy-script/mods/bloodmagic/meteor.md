@@ -13,7 +13,11 @@ Throwing an input catalyst atop an activated Mark of the Falling Tower Ritual wi
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bloodmagic.meteor` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.bm.meteor
@@ -22,6 +26,7 @@ mods.bloodmagic.meteor/* Used as page default */ // [!code focus]
 mods.bloodmagic.Meteor
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.bloodmagic.Meteor
     ```groovy:no-line-numbers
     mods.bloodmagic.meteor.add(ItemStack, List<MeteorComponent>, float, int, int)
     ```
-
 
 ### Recipe Builder
 
@@ -129,13 +133,13 @@ mods.bloodmagic.meteor.recipeBuilder()
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.bloodmagic.meteor.removeByCatalyst(ItemStack)
+    mods.bloodmagic.meteor.removeByInput(ItemStack)
     ```
 
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.bloodmagic.meteor.removeByInput(ItemStack)
+    mods.bloodmagic.meteor.removeByCatalyst(ItemStack)
     ```
 
 - Removes all registered recipes:
@@ -147,8 +151,8 @@ mods.bloodmagic.meteor.recipeBuilder()
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
 mods.bloodmagic.meteor.remove(item('minecraft:diamond_block'))
-mods.bloodmagic.meteor.removeByCatalyst(item('minecraft:iron_block'))
 mods.bloodmagic.meteor.removeByInput(item('minecraft:gold_block'))
+mods.bloodmagic.meteor.removeByCatalyst(item('minecraft:iron_block'))
 mods.bloodmagic.meteor.removeAll()
 ```
 

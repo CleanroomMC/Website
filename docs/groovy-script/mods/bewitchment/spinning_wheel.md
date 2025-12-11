@@ -13,15 +13,20 @@ Converts up to 4 itemstacks into up to 2 output itemstacks in the Spinning Wheel
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bewitchment.spinning_wheel` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.bewitchment.spinning_wheel/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.bewitchment.spinningwheel
 mods.bewitchment.spinningWheel
 mods.bewitchment.SpinningWheel
+mods.bewitchment.spinning_wheel/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.bewitchment.SpinningWheel
     ```groovy:no-line-numbers
     mods.bewitchment.spinning_wheel.add(SpinningWheelRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -97,10 +101,10 @@ mods.bewitchment.spinning_wheel.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.spinning_wheel.remove(ResourceLocation)
+    mods.bewitchment.spinning_wheel.remove(SpinningWheelRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -109,10 +113,10 @@ mods.bewitchment.spinning_wheel.recipeBuilder()
     mods.bewitchment.spinning_wheel.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.spinning_wheel.remove(SpinningWheelRecipe)
+    mods.bewitchment.spinning_wheel.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

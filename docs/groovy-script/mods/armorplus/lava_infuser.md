@@ -17,15 +17,20 @@ Experience provided is based on the output itemstack. Experience is a fallback v
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.armorplus.lava_infuser` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.armorplus.lava_infuser/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.armorplus.lavainfuser
 mods.armorplus.lavaInfuser
 mods.armorplus.LavaInfuser
+mods.armorplus.lava_infuser/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.armorplus.LavaInfuser
     ```groovy:no-line-numbers
     mods.armorplus.lava_infuser.add(LavaInfuserRecipe)
     ```
-
 
 ### Recipe Builder
 

@@ -13,7 +13,11 @@ Converts an input fluidstack into power, taking time based on the power.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.magmatic` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.thermal.magmatic
@@ -22,6 +26,7 @@ mods.thermalexpansion.magmatic/* Used as page default */ // [!code focus]
 mods.thermalexpansion.Magmatic
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -43,13 +48,13 @@ mods.thermalexpansion.magmatic.add(fluid('steam'), 100)
 - Removes all recipes with given FluidStack:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.magmatic.removeByInput(FluidStack)
+    mods.thermalexpansion.magmatic.removeByInput(String)
     ```
 
 - Removes all recipes with given FluidStack:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.magmatic.removeByInput(String)
+    mods.thermalexpansion.magmatic.removeByInput(FluidStack)
     ```
 
 - Removes all registered recipes:

@@ -13,15 +13,20 @@ Converts an input itemstack into two output itemstacks.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.calculator.precision_chamber` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.calculator.precision_chamber/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.calculator.precisionchamber
 mods.calculator.precisionChamber
 mods.calculator.PrecisionChamber
+mods.calculator.precision_chamber/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.calculator.PrecisionChamber
     ```groovy:no-line-numbers
     mods.calculator.precision_chamber.add(CalculatorRecipe)
     ```
-
 
 ### Recipe Builder
 

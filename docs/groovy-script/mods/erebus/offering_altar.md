@@ -13,15 +13,20 @@ Converts up to 3 input itemstacks into an output itemstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.erebus.offering_altar` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.erebus.offering_altar/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.erebus.offeringaltar
 mods.erebus.offeringAltar
 mods.erebus.OfferingAltar
+mods.erebus.offering_altar/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.erebus.OfferingAltar
     ```groovy:no-line-numbers
     mods.erebus.offering_altar.add(OfferingAltarRecipe)
     ```
-
 
 ### Recipe Builder
 

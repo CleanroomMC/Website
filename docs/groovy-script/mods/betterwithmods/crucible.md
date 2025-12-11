@@ -13,13 +13,18 @@ Converts a large number of items into other items, with the ability to require s
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithmods.crucible` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.betterwithmods.crucible/* Used as page default */ // [!code focus]
 mods.betterwithmods.Crucible
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.betterwithmods.Crucible
     ```groovy:no-line-numbers
     mods.betterwithmods.crucible.add(CookingPotRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -123,13 +127,13 @@ mods.betterwithmods.crucible.recipeBuilder()
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.betterwithmods.crucible.removeByInput(IIngredient)
+    mods.betterwithmods.crucible.removeByInput(ItemStack)
     ```
 
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.betterwithmods.crucible.removeByInput(ItemStack)
+    mods.betterwithmods.crucible.removeByInput(IIngredient)
     ```
 
 - Removes all recipes that match the given output:

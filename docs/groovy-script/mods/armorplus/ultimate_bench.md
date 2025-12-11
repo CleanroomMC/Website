@@ -13,15 +13,20 @@ A normal crafting recipe, but with a 7x7 grid and in the Ultimate Bench.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.armorplus.ultimate_bench` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.armorplus.ultimate_bench/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.armorplus.ultimatebench
 mods.armorplus.ultimateBench
 mods.armorplus.UltimateBench
+mods.armorplus.ultimate_bench/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.armorplus.UltimateBench
     ```groovy:no-line-numbers
     mods.armorplus.ultimate_bench.add(R)
     ```
-
 
 ### Recipe Builder
 

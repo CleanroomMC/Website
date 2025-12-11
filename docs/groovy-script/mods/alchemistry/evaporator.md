@@ -13,13 +13,18 @@ Converts an input fluidstack into an output fluidstack, taking a set amount of t
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.alchemistry.evaporator` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.alchemistry.evaporator/* Used as page default */ // [!code focus]
 mods.alchemistry.Evaporator
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.alchemistry.Evaporator
     ```groovy:no-line-numbers
     mods.alchemistry.evaporator.add(FluidStack, ItemStack)
     ```
-
 
 ### Recipe Builder
 

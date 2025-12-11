@@ -13,13 +13,18 @@ Convert input items into an output item on a Exchange Tablet.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.embers.alchemy` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.embers.alchemy/* Used as page default */ // [!code focus]
 mods.embers.Alchemy
 ```
 
+::::::::::
 
 ## Editing Values
 

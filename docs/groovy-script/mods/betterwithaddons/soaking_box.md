@@ -13,15 +13,20 @@ Converts an input item into an output itemstack if placed within the appropriate
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithaddons.soaking_box` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.betterwithaddons.soaking_box/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.betterwithaddons.soakingbox
 mods.betterwithaddons.soakingBox
 mods.betterwithaddons.SoakingBox
+mods.betterwithaddons.soaking_box/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.betterwithaddons.SoakingBox
     ```groovy:no-line-numbers
     mods.betterwithaddons.soaking_box.add(CherryBoxRecipe)
     ```
-
 
 ### Recipe Builder
 

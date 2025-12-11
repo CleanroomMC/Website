@@ -13,17 +13,22 @@ Bark Carving is a special set of alternate drops for blocks when broken with an 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.roots.bark_carving` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.roots.bark_carving/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {6}
+mods.roots.bark
+mods.roots.Bark
 mods.roots.barkcarving
 mods.roots.barkCarving
 mods.roots.BarkCarving
-mods.roots.bark
-mods.roots.Bark
+mods.roots.bark_carving/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -105,6 +110,12 @@ mods.roots.bark_carving.recipeBuilder()
 
 ## Removing Recipes
 
+- Removes the Bark Carving recipe with the given name:
+
+    ```groovy:no-line-numbers
+    mods.roots.bark_carving.removeByName(ResourceLocation)
+    ```
+
 - Removes the Bark Carving recipe with the given input itemstack:
 
     ```groovy:no-line-numbers
@@ -115,12 +126,6 @@ mods.roots.bark_carving.recipeBuilder()
 
     ```groovy:no-line-numbers
     mods.roots.bark_carving.removeByInput(ItemStack)
-    ```
-
-- Removes the Bark Carving recipe with the given name:
-
-    ```groovy:no-line-numbers
-    mods.roots.bark_carving.removeByName(ResourceLocation)
     ```
 
 - Removes the Bark Carving recipe with the given output itemstack:
@@ -137,9 +142,9 @@ mods.roots.bark_carving.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
+mods.roots.bark_carving.removeByName(resource('roots:wildwood'))
 mods.roots.bark_carving.removeByBlock(item('minecraft:log:1'))
 mods.roots.bark_carving.removeByInput(item('minecraft:log'))
-mods.roots.bark_carving.removeByName(resource('roots:wildwood'))
 mods.roots.bark_carving.removeByOutput(item('roots:bark_dark_oak'))
 mods.roots.bark_carving.removeAll()
 ```

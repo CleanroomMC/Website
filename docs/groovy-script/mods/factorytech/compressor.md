@@ -13,13 +13,18 @@ Converts an input itemstack and input fluidstack into an output itemstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.factorytech.compressor` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.factorytech.compressor/* Used as page default */ // [!code focus]
 mods.factorytech.Compressor
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.factorytech.Compressor
     ```groovy:no-line-numbers
     mods.factorytech.compressor.add(TileEntityCompressionChamber.CompressorRecipe)
     ```
-
 
 ### Recipe Builder
 

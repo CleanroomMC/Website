@@ -13,28 +13,33 @@ Converts an item over time into a new one.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.pyrotech.drying_rack` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.pyrotech.drying_rack/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.pyrotech.dryingrack
 mods.pyrotech.dryingRack
 mods.pyrotech.DryingRack
+mods.pyrotech.drying_rack/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds recipes in the format `name`, `input`, `output`, `dryTime`:
-
-    ```groovy:no-line-numbers
-    mods.pyrotech.drying_rack.add(String, IIngredient, ItemStack, int)
-    ```
 
 - Adds the recipe:
 
     ```groovy:no-line-numbers
     mods.pyrotech.drying_rack.add(DryingRackRecipe)
+    ```
+
+- Adds recipes in the format `name`, `input`, `output`, `dryTime`:
+
+    ```groovy:no-line-numbers
+    mods.pyrotech.drying_rack.add(String, IIngredient, ItemStack, int)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -117,10 +122,10 @@ mods.pyrotech.drying_rack.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.drying_rack.remove(ResourceLocation)
+    mods.pyrotech.drying_rack.remove(DryingRackRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -129,10 +134,10 @@ mods.pyrotech.drying_rack.recipeBuilder()
     mods.pyrotech.drying_rack.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.pyrotech.drying_rack.remove(DryingRackRecipe)
+    mods.pyrotech.drying_rack.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

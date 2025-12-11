@@ -13,7 +13,11 @@ How much Life Essence is gained when using the Sacrificial Dagger on a mob.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bloodmagic.sacrificial` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.bm.sacrificial
@@ -22,6 +26,7 @@ mods.bloodmagic.sacrificial/* Used as page default */ // [!code focus]
 mods.bloodmagic.Sacrificial
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,15 +39,14 @@ mods.bloodmagic.Sacrificial
 - Adds recipes in the format `entity`, `value`:
 
     ```groovy:no-line-numbers
-    mods.bloodmagic.sacrificial.add(ResourceLocation, int)
+    mods.bloodmagic.sacrificial.add(String, int)
     ```
 
 - Adds recipes in the format `entity`, `value`:
 
     ```groovy:no-line-numbers
-    mods.bloodmagic.sacrificial.add(String, int)
+    mods.bloodmagic.sacrificial.add(ResourceLocation, int)
     ```
-
 
 ### Recipe Builder
 
@@ -106,6 +110,12 @@ mods.bloodmagic.sacrificial.recipeBuilder()
     mods.bloodmagic.sacrificial.remove(Entity)
     ```
 
+- Removes any Sacrificial values entry with the given String as a ResourceLocation:
+
+    ```groovy:no-line-numbers
+    mods.bloodmagic.sacrificial.remove(String)
+    ```
+
 - Removes any Sacrificial values entry with the given EntityEntry as a ResourceLocation:
 
     ```groovy:no-line-numbers
@@ -118,12 +128,6 @@ mods.bloodmagic.sacrificial.recipeBuilder()
     mods.bloodmagic.sacrificial.remove(ResourceLocation)
     ```
 
-- Removes any Sacrificial values entry with the given String as a ResourceLocation:
-
-    ```groovy:no-line-numbers
-    mods.bloodmagic.sacrificial.remove(String)
-    ```
-
 - Removes all registered recipes:
 
     ```groovy:no-line-numbers
@@ -132,9 +136,9 @@ mods.bloodmagic.sacrificial.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
+mods.bloodmagic.sacrificial.remove('minecraft:villager')
 mods.bloodmagic.sacrificial.remove(entity('minecraft:villager'))
 mods.bloodmagic.sacrificial.remove(resource('minecraft:villager'))
-mods.bloodmagic.sacrificial.remove('minecraft:villager')
 mods.bloodmagic.sacrificial.removeAll()
 ```
 

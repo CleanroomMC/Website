@@ -13,13 +13,18 @@ Category creates a new entry on the front page of the Lexica Botania.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.botania.category` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.botania.category/* Used as page default */ // [!code focus]
 mods.botania.Category
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -89,11 +94,11 @@ mods.botania.category.removeAll()
 - Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
 
     ```groovy:no-line-numbers
-    mods.botania.category.streamCategories()
+    mods.botania.category.streamRecipes()
     ```
 
 - Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
 
     ```groovy:no-line-numbers
-    mods.botania.category.streamRecipes()
+    mods.botania.category.streamCategories()
     ```

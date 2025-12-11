@@ -13,13 +13,18 @@ Converts a non-element into its component elements.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.alchemistry.atomizer` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.alchemistry.atomizer/* Used as page default */ // [!code focus]
 mods.alchemistry.Atomizer
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.alchemistry.Atomizer
     ```groovy:no-line-numbers
     mods.alchemistry.atomizer.add(FluidStack, ItemStack)
     ```
-
 
 ### Recipe Builder
 

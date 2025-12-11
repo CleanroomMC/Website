@@ -13,17 +13,22 @@ Create or modify existing research entries, which contain helpful information an
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thaumcraft.research` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.thaumcraft.research/* Used as page default */ // [!code focus]
-mods.thaumcraft.Research
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {5}
 mods.tc.research
 mods.tc.Research
 mods.thaum.research
 mods.thaum.Research
+mods.thaumcraft.research/* Used as page default */ // [!code focus]
+mods.thaumcraft.Research
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -39,40 +44,10 @@ mods.thaum.Research
     mods.thaumcraft.research.addCategory(String, String, AspectList, String, String, String)
     ```
 
-- Adds a new location to check for research:
-
-    ```groovy:no-line-numbers
-    mods.thaumcraft.research.addResearchLocation(ResourceLocation)
-    ```
-
-- Adds a new location to check for research:
-
-    ```groovy:no-line-numbers
-    mods.thaumcraft.research.addResearchLocation(String)
-    ```
-
-- Adds a new location to check for research:
-
-    ```groovy:no-line-numbers
-    mods.thaumcraft.research.addResearchLocation(String, String)
-    ```
-
 - Adds a new scannable block:
 
     ```groovy:no-line-numbers
     mods.thaumcraft.research.addScannable(Block)
-    ```
-
-- Adds a new scannable enchantment:
-
-    ```groovy:no-line-numbers
-    mods.thaumcraft.research.addScannable(Enchantment)
-    ```
-
-- Adds a new scannable material:
-
-    ```groovy:no-line-numbers
-    mods.thaumcraft.research.addScannable(Material)
     ```
 
 - Adds a new scannable potion:
@@ -81,10 +56,34 @@ mods.thaum.Research
     mods.thaumcraft.research.addScannable(Potion)
     ```
 
+- Adds a new scannable material:
+
+    ```groovy:no-line-numbers
+    mods.thaumcraft.research.addScannable(Material)
+    ```
+
+- Adds a new scannable enchantment:
+
+    ```groovy:no-line-numbers
+    mods.thaumcraft.research.addScannable(Enchantment)
+    ```
+
 - Adds a new scannable block in the format `researchKey`, `block`:
 
     ```groovy:no-line-numbers
     mods.thaumcraft.research.addScannable(String, Block)
+    ```
+
+- Adds a new scannable material in the format `researchKey`, `material`:
+
+    ```groovy:no-line-numbers
+    mods.thaumcraft.research.addScannable(String, Material)
+    ```
+
+- Adds a new scannable item in the format `researchKey`, `item`:
+
+    ```groovy:no-line-numbers
+    mods.thaumcraft.research.addScannable(String, ItemStack)
     ```
 
 - Adds a new scannable entity in the format `researchKey`, `entityClass`, `inheritedClasses`:
@@ -99,22 +98,28 @@ mods.thaum.Research
     mods.thaumcraft.research.addScannable(String, Class<?>, boolean, ThaumcraftApi.EntityTagsNBT)
     ```
 
-- Adds a new scannable item in the format `researchKey`, `item`:
+- Adds a new location to check for research:
 
     ```groovy:no-line-numbers
-    mods.thaumcraft.research.addScannable(String, ItemStack)
+    mods.thaumcraft.research.addResearchLocation(String)
     ```
 
-- Adds a new scannable material in the format `researchKey`, `material`:
+- Adds a new location to check for research:
 
     ```groovy:no-line-numbers
-    mods.thaumcraft.research.addScannable(String, Material)
+    mods.thaumcraft.research.addResearchLocation(String, String)
+    ```
+
+- Adds a new location to check for research:
+
+    ```groovy:no-line-numbers
+    mods.thaumcraft.research.addResearchLocation(ResourceLocation)
     ```
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.thaumcraft.research.addResearchLocation(resource('thaumcraft:research/new.json'))
 mods.thaumcraft.research.addScannable('KNOWLEDGETYPEHUMOR', item('minecraft:pumpkin'))
+mods.thaumcraft.research.addResearchLocation(resource('thaumcraft:research/new.json'))
 ```
 
 ::::::::::

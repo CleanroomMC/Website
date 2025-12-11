@@ -13,19 +13,24 @@ Allows an item to be used in the Blast Furnace as a fuel for the given number of
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersiveengineering.blast_furnace_fuel` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.ie.blast_furnace_fuel
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.ie.blastfurnacefuel
 mods.ie.blastFurnaceFuel
 mods.ie.BlastFurnaceFuel
-mods.immersiveengineering.blast_furnace_fuel/* Used as page default */ // [!code focus]
+mods.ie.blast_furnace_fuel
 mods.immersiveengineering.blastfurnacefuel
 mods.immersiveengineering.blastFurnaceFuel
 mods.immersiveengineering.BlastFurnaceFuel
+mods.immersiveengineering.blast_furnace_fuel/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -40,7 +45,6 @@ mods.immersiveengineering.BlastFurnaceFuel
     ```groovy:no-line-numbers
     mods.immersiveengineering.blast_furnace_fuel.add(IIngredient, int)
     ```
-
 
 ### Recipe Builder
 

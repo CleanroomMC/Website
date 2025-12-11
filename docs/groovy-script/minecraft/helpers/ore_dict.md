@@ -13,80 +13,133 @@ Manipulate the Ore Dictionary and what itemstacks are part of what oredicts.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `ore_dict` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-ore_dict/* Used as page default */ // [!code focus]
-oredict
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 oreDict
+oredict
 OreDict
-ore_dictionary
+ore_dict/* Used as page default */ // [!code focus]
 oredictionary
-oreDictionary
 OreDictionary
-minecraft.ore_dict
-minecraft.oredict
-minecraft.oreDict
-minecraft.OreDict
-minecraft.ore_dictionary
-minecraft.oredictionary
-minecraft.oreDictionary
-minecraft.OreDictionary
-Minecraft.ore_dict
-Minecraft.oredict
-Minecraft.oreDict
-Minecraft.OreDict
-Minecraft.ore_dictionary
-Minecraft.oredictionary
-Minecraft.oreDictionary
-Minecraft.OreDictionary
-vanilla.ore_dict
+oreDictionary
+ore_dictionary
+mc.oredict
+mc.oreDict
+mc.OreDict
+MC.oredict
+MC.oreDict
+MC.OreDict
+mc.ore_dict
+MC.ore_dict
+mc.oredictionary
+mc.oreDictionary
+mc.OreDictionary
+MC.oredictionary
+MC.oreDictionary
+MC.OreDictionary
+mc.ore_dictionary
+MC.ore_dictionary
 vanilla.oredict
 vanilla.oreDict
 vanilla.OreDict
-vanilla.ore_dictionary
-vanilla.oredictionary
-vanilla.oreDictionary
-vanilla.OreDictionary
-Vanilla.ore_dict
 Vanilla.oredict
 Vanilla.oreDict
 Vanilla.OreDict
-Vanilla.ore_dictionary
+vanilla.ore_dict
+Vanilla.ore_dict
+vanilla.oredictionary
+vanilla.oreDictionary
+vanilla.OreDictionary
 Vanilla.oredictionary
 Vanilla.oreDictionary
 Vanilla.OreDictionary
-mods.mc.ore_dict
+vanilla.ore_dictionary
+Vanilla.ore_dictionary
+minecraft.oredict
+minecraft.oreDict
+minecraft.OreDict
+Minecraft.oredict
+Minecraft.oreDict
+Minecraft.OreDict
+minecraft.ore_dict
+Minecraft.ore_dict
+minecraft.oredictionary
+minecraft.oreDictionary
+minecraft.OreDictionary
+Minecraft.oredictionary
+Minecraft.oreDictionary
+Minecraft.OreDictionary
+minecraft.ore_dictionary
+Minecraft.ore_dictionary
 mods.mc.oredict
 mods.mc.oreDict
 mods.mc.OreDict
-mods.mc.ore_dictionary
+mods.MC.oredict
+mods.MC.oreDict
+mods.MC.OreDict
+mods.mc.ore_dict
+mods.MC.ore_dict
 mods.mc.oredictionary
 mods.mc.oreDictionary
 mods.mc.OreDictionary
-mods.minecraft.ore_dict
+mods.MC.oredictionary
+mods.MC.oreDictionary
+mods.MC.OreDictionary
+mods.mc.ore_dictionary
+mods.MC.ore_dictionary
+mods.vanilla.oredict
+mods.vanilla.oreDict
+mods.vanilla.OreDict
+mods.Vanilla.oredict
+mods.Vanilla.oreDict
+mods.Vanilla.OreDict
+mods.vanilla.ore_dict
+mods.Vanilla.ore_dict
+mods.vanilla.oredictionary
+mods.vanilla.oreDictionary
+mods.vanilla.OreDictionary
+mods.Vanilla.oredictionary
+mods.Vanilla.oreDictionary
+mods.Vanilla.OreDictionary
+mods.vanilla.ore_dictionary
+mods.Vanilla.ore_dictionary
 mods.minecraft.oredict
 mods.minecraft.oreDict
 mods.minecraft.OreDict
-mods.minecraft.ore_dictionary
+mods.Minecraft.oredict
+mods.Minecraft.oreDict
+mods.Minecraft.OreDict
+mods.minecraft.ore_dict
+mods.Minecraft.ore_dict
 mods.minecraft.oredictionary
 mods.minecraft.oreDictionary
 mods.minecraft.OreDictionary
+mods.Minecraft.oredictionary
+mods.Minecraft.oreDictionary
+mods.Minecraft.OreDictionary
+mods.minecraft.ore_dictionary
+mods.Minecraft.ore_dictionary
 ```
 
+::::::::::
 
 ## Adding Entries
 
 - Adds the given itemstack to the given oredict:
 
     ```groovy:no-line-numbers
-    ore_dict.add(String, Block)
+    ore_dict.add(String, Item)
     ```
 
 - Adds the given itemstack to the given oredict:
 
     ```groovy:no-line-numbers
-    ore_dict.add(String, Item)
+    ore_dict.add(String, Block)
     ```
 
 - Adds the given itemstack to the given oredict:
@@ -147,8 +200,26 @@ ore_dict.removeAll()
     ore_dict.exists(String)
     ```
 
+- Returns an IIngredient containing all items for all matching oredicts at the time it is called:
+
+    ```groovy:no-line-numbers
+    ore_dict.getOres(String)
+    ```
+
+- Returns an IIngredient containing all items for all matching oredicts at the time it is called:
+
+    ```groovy:no-line-numbers
+    ore_dict.getOres(Pattern)
+    ```
+
 - Returns a list of all itemstacks in the given oredict:
 
     ```groovy:no-line-numbers
     ore_dict.getItems(String)
+    ```
+
+- Iterates through every registered oredict, with the ability to clear all items from each one:
+
+    ```groovy:no-line-numbers
+    ore_dict.streamOreNames()
     ```

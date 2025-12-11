@@ -13,32 +13,37 @@ By default, the Enchanter (Altar) takes Ambrosium Shards as fuel. Using GroovySc
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.aether_legacy.enchanter_fuel` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.aether_legacy.enchanter_fuel/* Used as page default */ // [!code focus]
-mods.aether_legacy.enchanterfuel
-mods.aether_legacy.enchanterFuel
-mods.aether_legacy.EnchanterFuel
-mods.aether.enchanter_fuel
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.aether.enchanterfuel
 mods.aether.enchanterFuel
 mods.aether.EnchanterFuel
+mods.aether.enchanter_fuel
+mods.aether_legacy.enchanterfuel
+mods.aether_legacy.enchanterFuel
+mods.aether_legacy.EnchanterFuel
+mods.aether_legacy.enchanter_fuel/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds an Enchanting fuel in the format `item`, `timeGiven`:
-
-    ```groovy:no-line-numbers
-    mods.aether_legacy.enchanter_fuel.add(ItemStack, int)
-    ```
 
 - Adds the recipe:
 
     ```groovy:no-line-numbers
     mods.aether_legacy.enchanter_fuel.add(AetherEnchantmentFuel)
+    ```
+
+- Adds an Enchanting fuel in the format `item`, `timeGiven`:
+
+    ```groovy:no-line-numbers
+    mods.aether_legacy.enchanter_fuel.add(ItemStack, int)
     ```
 
 :::::::::: details Example {open id="example"}
@@ -50,10 +55,10 @@ mods.aether_legacy.enchanter_fuel.add(item('minecraft:blaze_rod'), 1000)
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.aether_legacy.enchanter_fuel.remove(ResourceLocation)
+    mods.aether_legacy.enchanter_fuel.remove(AetherEnchantmentFuel)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -62,10 +67,10 @@ mods.aether_legacy.enchanter_fuel.add(item('minecraft:blaze_rod'), 1000)
     mods.aether_legacy.enchanter_fuel.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.aether_legacy.enchanter_fuel.remove(AetherEnchantmentFuel)
+    mods.aether_legacy.enchanter_fuel.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

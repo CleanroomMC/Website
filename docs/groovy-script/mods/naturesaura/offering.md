@@ -17,13 +17,18 @@ The Offering Table can hold up to 16 items, and will try to run the recipe as ma
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.naturesaura.offering` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.naturesaura.offering/* Used as page default */ // [!code focus]
 mods.naturesaura.Offering
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -106,10 +111,10 @@ mods.naturesaura.offering.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes all recipes that match the given catalyst:
+- Removes the Offering to the Gods recipe with the given name:
 
     ```groovy:no-line-numbers
-    mods.naturesaura.offering.removeByCatalyst(IIngredient)
+    mods.naturesaura.offering.removeByName(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:
@@ -118,16 +123,16 @@ mods.naturesaura.offering.recipeBuilder()
     mods.naturesaura.offering.removeByInput(IIngredient)
     ```
 
-- Removes the Offering to the Gods recipe with the given name:
-
-    ```groovy:no-line-numbers
-    mods.naturesaura.offering.removeByName(ResourceLocation)
-    ```
-
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers
     mods.naturesaura.offering.removeByOutput(IIngredient)
+    ```
+
+- Removes all recipes that match the given catalyst:
+
+    ```groovy:no-line-numbers
+    mods.naturesaura.offering.removeByCatalyst(IIngredient)
     ```
 
 - Removes all registered recipes:
@@ -138,10 +143,10 @@ mods.naturesaura.offering.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.naturesaura.offering.removeByCatalyst(item('naturesaura:calling_spirit'))
-mods.naturesaura.offering.removeByInput(item('minecraft:nether_star'))
 mods.naturesaura.offering.removeByName(resource('naturesaura:token_euphoria'))
+mods.naturesaura.offering.removeByInput(item('minecraft:nether_star'))
 mods.naturesaura.offering.removeByOutput(item('naturesaura:sky_ingot'))
+mods.naturesaura.offering.removeByCatalyst(item('naturesaura:calling_spirit'))
 mods.naturesaura.offering.removeAll()
 ```
 

@@ -13,13 +13,18 @@ Recipes for the Filtered Hopper to process. The filter targeted must allow the i
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithmods.hopper` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.betterwithmods.hopper/* Used as page default */ // [!code focus]
 mods.betterwithmods.Hopper
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.betterwithmods.Hopper
     ```groovy:no-line-numbers
     mods.betterwithmods.hopper.add(HopperInteractions.HopperRecipe)
     ```
-
 
 ### Recipe Builder
 

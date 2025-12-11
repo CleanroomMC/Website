@@ -23,6 +23,7 @@ import groovy.util.*
 GroovyScript adds the following additional imports:
 
 ```groovy:no-line-numbers
+import com.cleanroommc.groovyscript.api.IIngredient
 import net.minecraft.world.World
 import net.minecraft.block.state.IBlockState
 import net.minecraft.block.Block

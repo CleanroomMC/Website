@@ -13,19 +13,24 @@ A weighted itemstack output for using a Ball of Fur, dropped by a cat.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.actuallyadditions.ball_of_fur` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.aa.ball_of_fur
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.aa.balloffur
 mods.aa.ballOfFur
 mods.aa.BallOfFur
-mods.actuallyadditions.ball_of_fur/* Used as page default */ // [!code focus]
+mods.aa.ball_of_fur
 mods.actuallyadditions.balloffur
 mods.actuallyadditions.ballOfFur
 mods.actuallyadditions.BallOfFur
+mods.actuallyadditions.ball_of_fur/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.actuallyadditions.BallOfFur
     ```groovy:no-line-numbers
     mods.actuallyadditions.ball_of_fur.add(BallOfFurReturn)
     ```
-
 
 ### Recipe Builder
 

@@ -13,7 +13,11 @@ Consumes items and power from up to 54 pedestals of at least a given tier pointi
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.draconicevolution.fusion` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.de.fusion
@@ -22,6 +26,7 @@ mods.draconicevolution.fusion/* Used as page default */ // [!code focus]
 mods.draconicevolution.Fusion
 ```
 
+::::::::::
 
 ## Adding Recipes
 

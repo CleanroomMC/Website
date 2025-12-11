@@ -13,7 +13,11 @@ Converts a variable amount of lava and water into a specific output itemstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.extruder` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.thermal.extruder
@@ -22,6 +26,7 @@ mods.thermalexpansion.extruder/* Used as page default */ // [!code focus]
 mods.thermalexpansion.Extruder
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -122,10 +127,10 @@ mods.thermalexpansion.extruder.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the given IIngredient input from the given Igneous Extruder mode, with `true` indicating sedimentary, and `false` indicating the normal recipe map:
+- Removes all recipes for the given type, with `true` indicating sedimentary, and `false` indicating the normal recipe map:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.extruder.removeByInput(boolean, IIngredient)
+    mods.thermalexpansion.extruder.removeByType(boolean)
     ```
 
 - Removes the given IIngredient input from the given Igneous Extruder mode, with `true` indicating sedimentary, and `false` indicating the normal recipe map:
@@ -134,10 +139,10 @@ mods.thermalexpansion.extruder.recipeBuilder()
     mods.thermalexpansion.extruder.removeByInput(IIngredient)
     ```
 
-- Removes the given IIngredient output from the given Igneous Extruder mode, with `true` indicating sedimentary, and `false` indicating the normal recipe map:
+- Removes the given IIngredient input from the given Igneous Extruder mode, with `true` indicating sedimentary, and `false` indicating the normal recipe map:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.extruder.removeByOutput(boolean, IIngredient)
+    mods.thermalexpansion.extruder.removeByInput(boolean, IIngredient)
     ```
 
 - Removes the given IIngredient output from the given Igneous Extruder mode, with `true` indicating sedimentary, and `false` indicating the normal recipe map:
@@ -146,10 +151,10 @@ mods.thermalexpansion.extruder.recipeBuilder()
     mods.thermalexpansion.extruder.removeByOutput(IIngredient)
     ```
 
-- Removes all recipes for the given type, with `true` indicating sedimentary, and `false` indicating the normal recipe map:
+- Removes the given IIngredient output from the given Igneous Extruder mode, with `true` indicating sedimentary, and `false` indicating the normal recipe map:
 
     ```groovy:no-line-numbers
-    mods.thermalexpansion.extruder.removeByType(boolean)
+    mods.thermalexpansion.extruder.removeByOutput(boolean, IIngredient)
     ```
 
 - Removes all registered recipes:
@@ -160,11 +165,11 @@ mods.thermalexpansion.extruder.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.thermalexpansion.extruder.removeByInput(false, fluid('lava'))
-mods.thermalexpansion.extruder.removeByInput(fluid('water'))
-mods.thermalexpansion.extruder.removeByOutput(true, item('minecraft:gravel'))
-mods.thermalexpansion.extruder.removeByOutput(item('minecraft:obsidian'))
 mods.thermalexpansion.extruder.removeByType(true)
+mods.thermalexpansion.extruder.removeByInput(fluid('water'))
+mods.thermalexpansion.extruder.removeByInput(false, fluid('lava'))
+mods.thermalexpansion.extruder.removeByOutput(item('minecraft:obsidian'))
+mods.thermalexpansion.extruder.removeByOutput(true, item('minecraft:gravel'))
 mods.thermalexpansion.extruder.removeAll()
 ```
 

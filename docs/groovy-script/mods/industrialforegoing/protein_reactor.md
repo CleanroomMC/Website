@@ -13,15 +13,20 @@ Converts an input item into Protein, with the amount of Protein generated being 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.industrialforegoing.protein_reactor` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.industrialforegoing.protein_reactor/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.industrialforegoing.proteinreactor
 mods.industrialforegoing.proteinReactor
 mods.industrialforegoing.ProteinReactor
+mods.industrialforegoing.protein_reactor/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

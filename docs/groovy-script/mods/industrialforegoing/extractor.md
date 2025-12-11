@@ -13,17 +13,22 @@ Converts an input block in-world into a fluidstack over time, eventually breakin
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.industrialforegoing.extractor` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.industrialforegoing.extractor/* Used as page default */ // [!code focus]
 mods.industrialforegoing.Extractor
-mods.industrialforegoing.tree_fluid_extractor
 mods.industrialforegoing.treefluidextractor
 mods.industrialforegoing.treeFluidExtractor
 mods.industrialforegoing.TreeFluidExtractor
+mods.industrialforegoing.tree_fluid_extractor
 ```
 
+::::::::::
 
 ## Adding Recipes
 

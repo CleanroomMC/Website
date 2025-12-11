@@ -13,15 +13,20 @@ Items placed in the middle slot of the Filtered Hopper to restrict what is capab
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithmods.hopper_filters` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.betterwithmods.hopper_filters/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.betterwithmods.hopperfilters
 mods.betterwithmods.hopperFilters
 mods.betterwithmods.HopperFilters
+mods.betterwithmods.hopper_filters/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -87,6 +92,12 @@ mods.betterwithmods.hopper_filters.recipeBuilder()
 
 ## Removing Recipes
 
+- Removes the filter with the given name:
+
+    ```groovy:no-line-numbers
+    mods.betterwithmods.hopper_filters.removeByName(String)
+    ```
+
 - Removes all filters with the given filter item:
 
     ```groovy:no-line-numbers
@@ -99,12 +110,6 @@ mods.betterwithmods.hopper_filters.recipeBuilder()
     mods.betterwithmods.hopper_filters.removeByFiltered(IIngredient)
     ```
 
-- Removes the filter with the given name:
-
-    ```groovy:no-line-numbers
-    mods.betterwithmods.hopper_filters.removeByName(String)
-    ```
-
 - Removes all registered recipes:
 
     ```groovy:no-line-numbers
@@ -113,8 +118,8 @@ mods.betterwithmods.hopper_filters.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.betterwithmods.hopper_filters.removeByFilter(item('minecraft:trapdoor'))
 mods.betterwithmods.hopper_filters.removeByName('betterwithmods:ladder')
+mods.betterwithmods.hopper_filters.removeByFilter(item('minecraft:trapdoor'))
 mods.betterwithmods.hopper_filters.removeAll()
 ```
 

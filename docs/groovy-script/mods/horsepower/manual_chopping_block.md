@@ -13,15 +13,20 @@ Converts an itemstack input into an itemstack output after a configurable amount
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.horsepower.manual_chopping_block` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.horsepower.manual_chopping_block/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.horsepower.manualchoppingblock
 mods.horsepower.manualChoppingBlock
 mods.horsepower.ManualChoppingBlock
+mods.horsepower.manual_chopping_block/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -36,7 +41,6 @@ mods.horsepower.ManualChoppingBlock
     ```groovy:no-line-numbers
     mods.horsepower.manual_chopping_block.add(IIngredient, ItemStack, int)
     ```
-
 
 ### Recipe Builder
 

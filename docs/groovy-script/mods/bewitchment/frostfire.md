@@ -13,13 +13,18 @@ Converts an input ingredient into an output itemstack once a second while inside
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bewitchment.frostfire` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.bewitchment.frostfire/* Used as page default */ // [!code focus]
 mods.bewitchment.Frostfire
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.bewitchment.Frostfire
     ```groovy:no-line-numbers
     mods.bewitchment.frostfire.add(FrostfireRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -95,10 +99,10 @@ mods.bewitchment.frostfire.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes the recipe with the given Resource Location:
+- Removes the recipe:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.frostfire.remove(ResourceLocation)
+    mods.bewitchment.frostfire.remove(FrostfireRecipe)
     ```
 
 - Removes the recipe with the given String as its Resource Location:
@@ -107,10 +111,10 @@ mods.bewitchment.frostfire.recipeBuilder()
     mods.bewitchment.frostfire.remove(String)
     ```
 
-- Removes the recipe:
+- Removes the recipe with the given Resource Location:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.frostfire.remove(FrostfireRecipe)
+    mods.bewitchment.frostfire.remove(ResourceLocation)
     ```
 
 - Removes all recipes that match the given input:

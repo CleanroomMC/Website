@@ -21,15 +21,20 @@ The Max Magic Power increase provided by wands is multiplied by 64.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bewitchment.altar_upgrade` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.bewitchment.altar_upgrade/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.bewitchment.altarupgrade
 mods.bewitchment.altarUpgrade
 mods.bewitchment.AltarUpgrade
+mods.bewitchment.altar_upgrade/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -57,22 +62,22 @@ mods.bewitchment.AltarUpgrade
     mods.bewitchment.altar_upgrade.addCup(Predicate<BlockWorldState>, int, double)
     ```
 
-- Adds the given entry as a pentacle upgrade in the format `condition`, `gain`:
+- Adds the given entry as a wand upgrade in the format `condition`, `multiplier`:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.altar_upgrade.addPentacle(IBlockState, int)
+    mods.bewitchment.altar_upgrade.addWand(IBlockState, double)
     ```
 
-- Adds the given entry as a pentacle upgrade in the format `condition`, `gain`:
+- Adds the given entry as a wand upgrade in the format `condition`, `multiplier`:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.altar_upgrade.addPentacle(IIngredient, int)
+    mods.bewitchment.altar_upgrade.addWand(IIngredient, double)
     ```
 
-- Adds the given entry as a pentacle upgrade in the format `condition`, `gain`:
+- Adds the given entry as a wand upgrade in the format `condition`, `multiplier`:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.altar_upgrade.addPentacle(Predicate<BlockWorldState>, int)
+    mods.bewitchment.altar_upgrade.addWand(Predicate<BlockWorldState>, double)
     ```
 
 - Adds the given entry as a sword upgrade in the format `condition`, `multiplier`:
@@ -93,24 +98,23 @@ mods.bewitchment.AltarUpgrade
     mods.bewitchment.altar_upgrade.addSword(Predicate<BlockWorldState>, double)
     ```
 
-- Adds the given entry as a wand upgrade in the format `condition`, `multiplier`:
+- Adds the given entry as a pentacle upgrade in the format `condition`, `gain`:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.altar_upgrade.addWand(IBlockState, double)
+    mods.bewitchment.altar_upgrade.addPentacle(IBlockState, int)
     ```
 
-- Adds the given entry as a wand upgrade in the format `condition`, `multiplier`:
+- Adds the given entry as a pentacle upgrade in the format `condition`, `gain`:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.altar_upgrade.addWand(IIngredient, double)
+    mods.bewitchment.altar_upgrade.addPentacle(IIngredient, int)
     ```
 
-- Adds the given entry as a wand upgrade in the format `condition`, `multiplier`:
+- Adds the given entry as a pentacle upgrade in the format `condition`, `gain`:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.altar_upgrade.addWand(Predicate<BlockWorldState>, double)
+    mods.bewitchment.altar_upgrade.addPentacle(Predicate<BlockWorldState>, int)
     ```
-
 
 ### Recipe Builder
 
@@ -208,7 +212,7 @@ mods.bewitchment.altar_upgrade.recipeBuilder()
 - Removes the given Altar Upgrade entry:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.altar_upgrade.remove(BlockWorldState)
+    mods.bewitchment.altar_upgrade.remove(ItemStack)
     ```
 
 - Removes the given Altar Upgrade entry:
@@ -220,7 +224,7 @@ mods.bewitchment.altar_upgrade.recipeBuilder()
 - Removes the given Altar Upgrade entry:
 
     ```groovy:no-line-numbers
-    mods.bewitchment.altar_upgrade.remove(ItemStack)
+    mods.bewitchment.altar_upgrade.remove(BlockWorldState)
     ```
 
 - Removes all Altar Upgrades of the given type:
@@ -237,8 +241,8 @@ mods.bewitchment.altar_upgrade.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.bewitchment.altar_upgrade.remove(blockstate('bewitchment:goblet'))
 mods.bewitchment.altar_upgrade.remove(item('bewitchment:garnet'))
+mods.bewitchment.altar_upgrade.remove(blockstate('bewitchment:goblet'))
 mods.bewitchment.altar_upgrade.removeByType(com.bewitchment.api.registry.AltarUpgrade.Type.WAND)
 mods.bewitchment.altar_upgrade.removeAll()
 ```

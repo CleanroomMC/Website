@@ -13,13 +13,18 @@ Converts a custom crafting recipe an output itemstack, consuming Spirits from th
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithaddons.infuser` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.betterwithaddons.infuser/* Used as page default */ // [!code focus]
 mods.betterwithaddons.Infuser
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.betterwithaddons.Infuser
     ```groovy:no-line-numbers
     mods.betterwithaddons.infuser.add(InfuserRecipe)
     ```
-
 
 ### Recipe Builder
 
@@ -134,8 +138,8 @@ mods.betterwithaddons.infuser.shapedBuilder()
 mods.betterwithaddons.infuser.shapedBuilder()
     .output(item('minecraft:diamond') * 32)
     .matrix([[item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
-            [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
-            [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')]])
+             [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
+             [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')]])
     .spirits(6)
     .register()
 ```

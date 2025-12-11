@@ -13,15 +13,20 @@ Converts an input item into any number of output itemstacks if placed within the
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.betterwithaddons.water_net` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.betterwithaddons.water_net/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.betterwithaddons.waternet
 mods.betterwithaddons.waterNet
 mods.betterwithaddons.WaterNet
+mods.betterwithaddons.water_net/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.betterwithaddons.WaterNet
     ```groovy:no-line-numbers
     mods.betterwithaddons.water_net.add(NetRecipe)
     ```
-
 
 ### Recipe Builder
 

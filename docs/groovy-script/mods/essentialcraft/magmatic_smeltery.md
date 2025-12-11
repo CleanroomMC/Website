@@ -17,19 +17,24 @@ Magmatic Smeltery does not have a JEI handler. This means its recipes will not b
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.essentialcraft.magmatic_smeltery` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.ec4.magmatic_smeltery
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.ec4.magmaticsmeltery
 mods.ec4.magmaticSmeltery
 mods.ec4.MagmaticSmeltery
-mods.essentialcraft.magmatic_smeltery/* Used as page default */ // [!code focus]
+mods.ec4.magmatic_smeltery
 mods.essentialcraft.magmaticsmeltery
 mods.essentialcraft.magmaticSmeltery
 mods.essentialcraft.MagmaticSmeltery
+mods.essentialcraft.magmatic_smeltery/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -106,13 +111,13 @@ mods.essentialcraft.magmatic_smeltery.recipeBuilder()
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.essentialcraft.magmatic_smeltery.removeByInput(OreDictIngredient)
+    mods.essentialcraft.magmatic_smeltery.removeByInput(String)
     ```
 
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
-    mods.essentialcraft.magmatic_smeltery.removeByInput(String)
+    mods.essentialcraft.magmatic_smeltery.removeByInput(OreDictIngredient)
     ```
 
 - Removes all registered recipes:
@@ -123,8 +128,8 @@ mods.essentialcraft.magmatic_smeltery.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.essentialcraft.magmatic_smeltery.removeByInput(ore('oreIron'))
 mods.essentialcraft.magmatic_smeltery.removeByInput('oreDiamond')
+mods.essentialcraft.magmatic_smeltery.removeByInput(ore('oreIron'))
 mods.essentialcraft.magmatic_smeltery.removeAll()
 ```
 

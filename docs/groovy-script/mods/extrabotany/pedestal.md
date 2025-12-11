@@ -13,13 +13,18 @@ Converts an input item into an output itemstack when placed inside a Livingrock 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.extrabotany.pedestal` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.extrabotany.pedestal/* Used as page default */ // [!code focus]
 mods.extrabotany.Pedestal
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.extrabotany.Pedestal
     ```groovy:no-line-numbers
     mods.extrabotany.pedestal.add(IIngredient, ItemStack)
     ```
-
 
 ### Recipe Builder
 

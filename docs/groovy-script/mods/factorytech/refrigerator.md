@@ -13,13 +13,18 @@ Converts an input fluidstack into an output itemstack.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.factorytech.refrigerator` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.factorytech.refrigerator/* Used as page default */ // [!code focus]
 mods.factorytech.Refrigerator
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.factorytech.Refrigerator
     ```groovy:no-line-numbers
     mods.factorytech.refrigerator.add(MachineRecipes.MachineRecipe<FluidStack, ItemStack>)
     ```
-
 
 ### Recipe Builder
 

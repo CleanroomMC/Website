@@ -13,15 +13,20 @@ Uses Hot Air and Primordium to convert items. Can have a weighted random based o
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.prodigytech.atomic_reshaper` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.prodigytech.atomic_reshaper/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.prodigytech.atomicreshaper
 mods.prodigytech.atomicReshaper
 mods.prodigytech.AtomicReshaper
+mods.prodigytech.atomic_reshaper/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 

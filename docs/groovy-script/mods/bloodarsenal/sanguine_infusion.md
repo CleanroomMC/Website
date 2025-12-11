@@ -17,17 +17,22 @@ Blacklisting classes only have effect in conjunction with a recipe using a `filt
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.bloodarsenal.sanguine_infusion` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.bloodarsenal.sanguine_infusion/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {6}
+mods.bloodarsenal.infusion
+mods.bloodarsenal.Infusion
 mods.bloodarsenal.sanguineinfusion
 mods.bloodarsenal.sanguineInfusion
 mods.bloodarsenal.SanguineInfusion
-mods.bloodarsenal.infusion
-mods.bloodarsenal.Infusion
+mods.bloodarsenal.sanguine_infusion/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -166,28 +171,28 @@ mods.bloodarsenal.sanguine_infusion.recipeBuilder()
     mods.bloodarsenal.sanguine_infusion.remove(RecipeSanguineInfusion)
     ```
 
-- Add the given class to the blacklist:
-
-    ```groovy:no-line-numbers
-    mods.bloodarsenal.sanguine_infusion.removeBlacklist(Class)
-    ```
-
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
     mods.bloodarsenal.sanguine_infusion.removeByInput(IIngredient)
     ```
 
-- Removes all recipes with the given modifier key:
-
-    ```groovy:no-line-numbers
-    mods.bloodarsenal.sanguine_infusion.removeByModifierKey(String)
-    ```
-
 - Removes all recipes that match the given output:
 
     ```groovy:no-line-numbers
     mods.bloodarsenal.sanguine_infusion.removeByOutput(IIngredient)
+    ```
+
+- Add the given class to the blacklist:
+
+    ```groovy:no-line-numbers
+    mods.bloodarsenal.sanguine_infusion.removeBlacklist(Class)
+    ```
+
+- Removes all recipes with the given modifier key:
+
+    ```groovy:no-line-numbers
+    mods.bloodarsenal.sanguine_infusion.removeByModifierKey(String)
     ```
 
 - Removes all registered recipes:
@@ -204,11 +209,11 @@ mods.bloodarsenal.sanguine_infusion.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.bloodarsenal.sanguine_infusion.removeBlacklist(WayofTime.bloodmagic.iface.ISigil.class)
 mods.bloodarsenal.sanguine_infusion.removeByInput(item('minecraft:feather'))
 mods.bloodarsenal.sanguine_infusion.removeByInput(item('bloodmagic:bound_axe'))
-mods.bloodarsenal.sanguine_infusion.removeByModifierKey('beneficial_potion')
 mods.bloodarsenal.sanguine_infusion.removeByOutput(item('bloodarsenal:stasis_pickaxe'))
+mods.bloodarsenal.sanguine_infusion.removeBlacklist(WayofTime.bloodmagic.iface.ISigil.class)
+mods.bloodarsenal.sanguine_infusion.removeByModifierKey('beneficial_potion')
 mods.bloodarsenal.sanguine_infusion.removeAll()
 mods.bloodarsenal.sanguine_infusion.removeAllBlacklist()
 ```

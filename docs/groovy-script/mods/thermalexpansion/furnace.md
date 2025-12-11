@@ -13,7 +13,11 @@ Converts an input itemstack into an output itemstack, costing power and taking t
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.furnace` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.thermal.furnace
@@ -22,6 +26,7 @@ mods.thermalexpansion.furnace/* Used as page default */ // [!code focus]
 mods.thermalexpansion.Furnace
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -115,6 +120,12 @@ mods.thermalexpansion.furnace.recipeBuilder()
 
 ## Removing Recipes
 
+- Removes the given ItemStack from the food list, which allows it to have doubled output if the Trivection Chamber augment is installed:
+
+    ```groovy:no-line-numbers
+    mods.thermalexpansion.furnace.removeFood(ItemStack)
+    ```
+
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
@@ -125,12 +136,6 @@ mods.thermalexpansion.furnace.recipeBuilder()
 
     ```groovy:no-line-numbers
     mods.thermalexpansion.furnace.removeByOutput(IIngredient)
-    ```
-
-- Removes the given ItemStack from the food list, which allows it to have doubled output if the Trivection Chamber augment is installed:
-
-    ```groovy:no-line-numbers
-    mods.thermalexpansion.furnace.removeFood(ItemStack)
     ```
 
 - Removes all registered recipes:
@@ -147,9 +152,9 @@ mods.thermalexpansion.furnace.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
+mods.thermalexpansion.furnace.removeFood(item('minecraft:rabbit:*'))
 mods.thermalexpansion.furnace.removeByInput(item('minecraft:cactus:*'))
 mods.thermalexpansion.furnace.removeByOutput(item('minecraft:cooked_porkchop'))
-mods.thermalexpansion.furnace.removeFood(item('minecraft:rabbit:*'))
 mods.thermalexpansion.furnace.removeAll()
 mods.thermalexpansion.furnace.removeAllFood()
 ```

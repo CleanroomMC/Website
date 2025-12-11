@@ -17,15 +17,20 @@ If no catalyst is required by the recipe, the Chaos Altar must have no item in t
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.silentgems.chaos_altar` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.silentgems.chaos_altar/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.silentgems.chaosaltar
 mods.silentgems.chaosAltar
 mods.silentgems.ChaosAltar
+mods.silentgems.chaos_altar/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.silentgems.ChaosAltar
     ```groovy:no-line-numbers
     mods.silentgems.chaos_altar.add(RecipeChaosAltar)
     ```
-
 
 ### Recipe Builder
 
@@ -120,12 +124,6 @@ mods.silentgems.chaos_altar.recipeBuilder()
     mods.silentgems.chaos_altar.remove(RecipeChaosAltar)
     ```
 
-- Removes all recipes that match the given catalyst:
-
-    ```groovy:no-line-numbers
-    mods.silentgems.chaos_altar.removeByCatalyst(IIngredient)
-    ```
-
 - Removes all recipes that match the given input:
 
     ```groovy:no-line-numbers
@@ -138,6 +136,12 @@ mods.silentgems.chaos_altar.recipeBuilder()
     mods.silentgems.chaos_altar.removeByOutput(IIngredient)
     ```
 
+- Removes all recipes that match the given catalyst:
+
+    ```groovy:no-line-numbers
+    mods.silentgems.chaos_altar.removeByCatalyst(IIngredient)
+    ```
+
 - Removes all registered recipes:
 
     ```groovy:no-line-numbers
@@ -146,9 +150,9 @@ mods.silentgems.chaos_altar.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.silentgems.chaos_altar.removeByCatalyst(item('minecraft:slime_ball'))
 mods.silentgems.chaos_altar.removeByInput(item('silentgems:gem'))
 mods.silentgems.chaos_altar.removeByOutput(item('silentgems:craftingmaterial'))
+mods.silentgems.chaos_altar.removeByCatalyst(item('minecraft:slime_ball'))
 mods.silentgems.chaos_altar.removeAll()
 ```
 

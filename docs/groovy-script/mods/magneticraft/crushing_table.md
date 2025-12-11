@@ -13,15 +13,20 @@ Converts an input itemstack into an output itemstack when placed on top of the C
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.magneticraft.crushing_table` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.magneticraft.crushing_table/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.magneticraft.crushingtable
 mods.magneticraft.crushingTable
 mods.magneticraft.CrushingTable
+mods.magneticraft.crushing_table/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.magneticraft.CrushingTable
     ```groovy:no-line-numbers
     mods.magneticraft.crushing_table.add(ICrushingTableRecipe)
     ```
-
 
 ### Recipe Builder
 

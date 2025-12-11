@@ -13,15 +13,20 @@ Converts two itemstack inputs into an itemstack output after a given process tim
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.techreborn.assembling_machine` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.techreborn.assembling_machine/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.techreborn.assemblingmachine
 mods.techreborn.assemblingMachine
 mods.techreborn.AssemblingMachine
+mods.techreborn.assembling_machine/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.techreborn.AssemblingMachine
     ```groovy:no-line-numbers
     mods.techreborn.assembling_machine.add(R)
     ```
-
 
 ### Recipe Builder
 

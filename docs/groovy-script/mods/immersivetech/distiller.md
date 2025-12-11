@@ -13,13 +13,18 @@ Converts an input fluidstack into an output fluidstack and has a chance to outpu
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersivetech.distiller` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {1}
 mods.immersivetech.distiller/* Used as page default */ // [!code focus]
 mods.immersivetech.Distiller
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -28,7 +33,6 @@ mods.immersivetech.Distiller
     ```groovy:no-line-numbers
     mods.immersivetech.distiller.add(DistillerRecipe)
     ```
-
 
 ### Recipe Builder
 

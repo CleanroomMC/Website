@@ -13,15 +13,20 @@ Converts an input fluidstack into an output fluidstack in a Oil Heater Multibloc
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.magneticraft.oil_heater` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.magneticraft.oil_heater/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.magneticraft.oilheater
 mods.magneticraft.oilHeater
 mods.magneticraft.OilHeater
+mods.magneticraft.oil_heater/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.magneticraft.OilHeater
     ```groovy:no-line-numbers
     mods.magneticraft.oil_heater.add(IOilHeaterRecipe)
     ```
-
 
 ### Recipe Builder
 

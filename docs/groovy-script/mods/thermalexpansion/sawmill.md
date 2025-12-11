@@ -17,7 +17,11 @@ The valid items and fluid output while the Resin Funnel Augment is installed is 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.sawmill` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.thermal.sawmill
@@ -26,6 +30,7 @@ mods.thermalexpansion.sawmill/* Used as page default */ // [!code focus]
 mods.thermalexpansion.Sawmill
 ```
 
+::::::::::
 
 ## Adding Recipes
 

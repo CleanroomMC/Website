@@ -13,23 +13,28 @@ Item and weight, where weight is a factor in how much damage is dealt.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.appliedenergistics2.cannon_ammo` will be used as the default on this page.
 
-```groovy:no-line-numbers {7}
-mods.ae2.cannon_ammo
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {12}
+mods.ae2.cannon
+mods.ae2.Cannon
 mods.ae2.cannonammo
 mods.ae2.cannonAmmo
 mods.ae2.CannonAmmo
-mods.ae2.cannon
-mods.ae2.Cannon
-mods.appliedenergistics2.cannon_ammo/* Used as page default */ // [!code focus]
+mods.ae2.cannon_ammo
+mods.appliedenergistics2.cannon
+mods.appliedenergistics2.Cannon
 mods.appliedenergistics2.cannonammo
 mods.appliedenergistics2.cannonAmmo
 mods.appliedenergistics2.CannonAmmo
-mods.appliedenergistics2.cannon
-mods.appliedenergistics2.Cannon
+mods.appliedenergistics2.cannon_ammo/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 

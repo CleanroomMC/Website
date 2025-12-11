@@ -13,19 +13,24 @@ Combines two items to get a third item. Only works at night, and works faster th
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.theaurorian.moonlight_forge` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.aurorian.moonlight_forge
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.aurorian.moonlightforge
 mods.aurorian.moonlightForge
 mods.aurorian.MoonlightForge
-mods.theaurorian.moonlight_forge/* Used as page default */ // [!code focus]
+mods.aurorian.moonlight_forge
 mods.theaurorian.moonlightforge
 mods.theaurorian.moonlightForge
 mods.theaurorian.MoonlightForge
+mods.theaurorian.moonlight_forge/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -34,7 +39,6 @@ mods.theaurorian.MoonlightForge
     ```groovy:no-line-numbers
     mods.theaurorian.moonlight_forge.add(MoonlightForgeRecipe)
     ```
-
 
 ### Recipe Builder
 

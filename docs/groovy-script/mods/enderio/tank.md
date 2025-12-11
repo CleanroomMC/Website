@@ -13,29 +13,22 @@ Converts an input itemstack into an output fluidstack with an optional output it
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.enderio.tank` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.enderio.tank/* Used as page default */ // [!code focus]
-mods.enderio.Tank
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {3}
 mods.eio.tank
 mods.eio.Tank
+mods.enderio.tank/* Used as page default */ // [!code focus]
+mods.enderio.Tank
 ```
 
+::::::::::
 
 ## Adding Recipes
-
-- Adds drain recipes in the format `input`, `outputFluid`, `output`, and autogenerates a recipe name:
-
-    ```groovy:no-line-numbers
-    mods.enderio.tank.addDrain(IIngredient, FluidStack, ItemStack)
-    ```
-
-- Adds drain recipes in the format `recipeName`, `input`, `outputFluid`, `output`:
-
-    ```groovy:no-line-numbers
-    mods.enderio.tank.addDrain(String, IIngredient, FluidStack, ItemStack)
-    ```
 
 - Adds fill recipes in the format `input`, `inputFluid`, `output`, and autogenerates a recipe name:
 
@@ -49,6 +42,17 @@ mods.eio.Tank
     mods.enderio.tank.addFill(String, IIngredient, FluidStack, ItemStack)
     ```
 
+- Adds drain recipes in the format `input`, `outputFluid`, `output`, and autogenerates a recipe name:
+
+    ```groovy:no-line-numbers
+    mods.enderio.tank.addDrain(IIngredient, FluidStack, ItemStack)
+    ```
+
+- Adds drain recipes in the format `recipeName`, `input`, `outputFluid`, `output`:
+
+    ```groovy:no-line-numbers
+    mods.enderio.tank.addDrain(String, IIngredient, FluidStack, ItemStack)
+    ```
 
 ### Recipe Builder
 
@@ -152,18 +156,6 @@ mods.enderio.tank.recipeBuilder()
 
 ## Removing Recipes
 
-- Removes drain recipe by `fluid`, `output`:
-
-    ```groovy:no-line-numbers
-    mods.enderio.tank.removeDrain(FluidStack, ItemStack)
-    ```
-
-- Removes drain recipe by `input`, `fluid`:
-
-    ```groovy:no-line-numbers
-    mods.enderio.tank.removeDrain(ItemStack, FluidStack)
-    ```
-
 - Removes fill recipe by `fluid`, `output`:
 
     ```groovy:no-line-numbers
@@ -176,6 +168,18 @@ mods.enderio.tank.recipeBuilder()
     mods.enderio.tank.removeFill(ItemStack, FluidStack)
     ```
 
+- Removes drain recipe by `fluid`, `output`:
+
+    ```groovy:no-line-numbers
+    mods.enderio.tank.removeDrain(FluidStack, ItemStack)
+    ```
+
+- Removes drain recipe by `input`, `fluid`:
+
+    ```groovy:no-line-numbers
+    mods.enderio.tank.removeDrain(ItemStack, FluidStack)
+    ```
+
 - Removes all registered recipes:
 
     ```groovy:no-line-numbers
@@ -184,8 +188,8 @@ mods.enderio.tank.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
-mods.enderio.tank.removeDrain(item('minecraft:experience_bottle'), fluid('xpjuice'))
 mods.enderio.tank.removeFill(item('minecraft:glass_bottle'), fluid('xpjuice'))
+mods.enderio.tank.removeDrain(item('minecraft:experience_bottle'), fluid('xpjuice'))
 mods.enderio.tank.removeAll()
 ```
 

@@ -13,19 +13,24 @@ Collects experience orbs nearby, with the ability to increase the XP gained via 
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.thermalexpansion.xp_collector` will be used as the default on this page.
 
-```groovy:no-line-numbers {5}
-mods.thermal.xp_collector
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {8}
 mods.thermal.xpcollector
 mods.thermal.xpCollector
 mods.thermal.XpCollector
-mods.thermalexpansion.xp_collector/* Used as page default */ // [!code focus]
+mods.thermal.xp_collector
 mods.thermalexpansion.xpcollector
 mods.thermalexpansion.xpCollector
 mods.thermalexpansion.XpCollector
+mods.thermalexpansion.xp_collector/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 

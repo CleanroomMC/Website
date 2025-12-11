@@ -13,15 +13,20 @@ When running the Flower Growth Ritual, allowed flowers will generate in the area
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.roots.flower_generation` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.roots.flower_generation/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.roots.flowergeneration
 mods.roots.flowerGeneration
 mods.roots.FlowerGeneration
+mods.roots.flower_generation/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Entries
 
@@ -94,10 +99,22 @@ mods.roots.flower_generation.recipeBuilder()
 
 ## Removing Entries
 
+- Removes the Flower Generation entry with the given name:
+
+    ```groovy:no-line-numbers
+    mods.roots.flower_generation.removeByName(ResourceLocation)
+    ```
+
 - Removes all Flower Generation entries with the given Block:
 
     ```groovy:no-line-numbers
     mods.roots.flower_generation.removeByFlower(Block)
+    ```
+
+- Removes the Flower Generation entry with the given ItemStack converted into an IBlockState:
+
+    ```groovy:no-line-numbers
+    mods.roots.flower_generation.removeByFlower(ItemStack)
     ```
 
 - Removes the Flower Generation entry with the given Block and int metadata:
@@ -112,18 +129,6 @@ mods.roots.flower_generation.recipeBuilder()
     mods.roots.flower_generation.removeByFlower(IBlockState)
     ```
 
-- Removes the Flower Generation entry with the given ItemStack converted into an IBlockState:
-
-    ```groovy:no-line-numbers
-    mods.roots.flower_generation.removeByFlower(ItemStack)
-    ```
-
-- Removes the Flower Generation entry with the given name:
-
-    ```groovy:no-line-numbers
-    mods.roots.flower_generation.removeByName(ResourceLocation)
-    ```
-
 - Removes all registered recipes:
 
     ```groovy:no-line-numbers
@@ -132,11 +137,11 @@ mods.roots.flower_generation.recipeBuilder()
 
 :::::::::: details Example {open id="example"}
 ```groovy:no-line-numbers
+mods.roots.flower_generation.removeByName(resource('roots:dandelion'))
 mods.roots.flower_generation.removeByFlower(block('minecraft:red_flower'))
+mods.roots.flower_generation.removeByFlower(item('minecraft:red_flower:3'))
 mods.roots.flower_generation.removeByFlower(block('minecraft:red_flower'), 1)
 mods.roots.flower_generation.removeByFlower(blockstate('minecraft:red_flower:2'))
-mods.roots.flower_generation.removeByFlower(item('minecraft:red_flower:3'))
-mods.roots.flower_generation.removeByName(resource('roots:dandelion'))
 mods.roots.flower_generation.removeAll()
 ```
 

@@ -17,25 +17,30 @@ EnderIO executes recipes using both its input and its grinding ball slot as inpu
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.enderio.sag_mill` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.enderio.sag_mill/* Used as page default */ // [!code focus]
-mods.enderio.sagmill
-mods.enderio.sagMill
-mods.enderio.SagMill
-mods.enderio.sag
-mods.enderio.Sag
-mods.enderio.SAGMill
-mods.eio.sag_mill
+:::::::::: details All Identifiers {id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {14}
+mods.eio.sag
+mods.eio.Sag
 mods.eio.sagmill
 mods.eio.sagMill
 mods.eio.SagMill
-mods.eio.sag
-mods.eio.Sag
 mods.eio.SAGMill
+mods.eio.sag_mill
+mods.enderio.sag
+mods.enderio.Sag
+mods.enderio.sagmill
+mods.enderio.sagMill
+mods.enderio.SagMill
+mods.enderio.SAGMill
+mods.enderio.sag_mill/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -44,7 +49,6 @@ mods.eio.SAGMill
     ```groovy:no-line-numbers
     mods.enderio.sag_mill.add(Recipe)
     ```
-
 
 ### Recipe Builder
 

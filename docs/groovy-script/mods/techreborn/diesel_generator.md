@@ -13,15 +13,20 @@ Converts a fluidstack input into power, at a given rate per tick.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.techreborn.diesel_generator` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.techreborn.diesel_generator/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.techreborn.dieselgenerator
 mods.techreborn.dieselGenerator
 mods.techreborn.DieselGenerator
+mods.techreborn.diesel_generator/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.techreborn.DieselGenerator
     ```groovy:no-line-numbers
     mods.techreborn.diesel_generator.add(R)
     ```
-
 
 ### Recipe Builder
 

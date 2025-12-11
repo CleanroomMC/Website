@@ -13,7 +13,11 @@ Converts 2 input fluidstacks into an output fluidstack, consuming power.
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.immersiveengineering.refinery` will be used as the default on this page.
+
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
 
 ```groovy:no-line-numbers {3}
 mods.ie.refinery
@@ -22,6 +26,7 @@ mods.immersiveengineering.refinery/* Used as page default */ // [!code focus]
 mods.immersiveengineering.Refinery
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -36,7 +41,6 @@ mods.immersiveengineering.Refinery
     ```groovy:no-line-numbers
     mods.immersiveengineering.refinery.add(FluidStack, FluidStack, FluidStack, int)
     ```
-
 
 ### Recipe Builder
 

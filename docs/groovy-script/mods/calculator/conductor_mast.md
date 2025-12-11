@@ -13,15 +13,20 @@ Converts an input itemstack into an output itemstack, costing a configurable amo
 
 ## Identifier
 
-Refer to this via any of the following:
+The identifier `mods.calculator.conductor_mast` will be used as the default on this page.
 
-```groovy:no-line-numbers {1}
-mods.calculator.conductor_mast/* Used as page default */ // [!code focus]
+:::::::::: details All Identifiers {open id="quote"}
+
+Any of these can be used to refer to this compat:
+
+```groovy:no-line-numbers {4}
 mods.calculator.conductormast
 mods.calculator.conductorMast
 mods.calculator.ConductorMast
+mods.calculator.conductor_mast/* Used as page default */ // [!code focus]
 ```
 
+::::::::::
 
 ## Adding Recipes
 
@@ -30,7 +35,6 @@ mods.calculator.ConductorMast
     ```groovy:no-line-numbers
     mods.calculator.conductor_mast.add(DefaultSonarRecipe.Value)
     ```
-
 
 ### Recipe Builder
 
