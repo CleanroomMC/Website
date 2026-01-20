@@ -17,9 +17,9 @@ const sourceLinkOptions = computed(() => ({
 }))
 
 const editLinkOptions = computed(() => ({
-    url: getPageLink().replace("com", "dev"), // use the github.dev site for editing
+    url: getPageLink().replace("github.com", "github.dev"), // use the github.dev site for editing
     show: theme.value.editLink && frontmatter.value.editLink !== false,
-    title: theme.value.viewLinkText,
+    title: theme.value.editLinkText,
 }))
 
 const viewLinkOptions = computed(() => ({
