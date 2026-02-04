@@ -81,15 +81,14 @@ Old and new 1.12.2 mods made with MCreator are highly not recommended for use no
 Mods that were created entirely using generated code from AI (rather than as a learning tool) are also highly not recommended, the mod's code will be highly varied in quality (often poor), it can also be either prone to crashes or downright placebos, especially if it is a performance related mod. <br> <br>
 
 ::: info Note {id="note"}
-If you're new to mod creation and want to start making a mod, we highly recommend creating the mod from scratch instead to avoid complications with learning.
+If you're new to mod creation and want to start making a mod, we highly recommend creating the mod from scratch instead to avoid complications with learning.<br>You can join our discord server to receive support when starting your modding journey. 
 :::
 
 
 ## Superseded mods
 
 ::: info Note {id="note"}
-These mods are not necessarily incompatible with Cleanroom loader, but have been superseded by newer forks and mods or do not present any benefit, so we recommend the following actions. <br> <br>
-
+These mods are not necessarily incompatible with Cleanroom loader, but have been superseded by newer forks and mods or do not present any benefit, so we recommend the following actions.<br>
 For forks not listed below, keep in mind that not all of them are beneficial. Some forks introduce extra bugs that were not in the original mod, some were forked mostly for a specific modpack's benefit and some were forked due to internal conflicts with the original mod's developers. Use those forks at your own discretion.
 :::
 
