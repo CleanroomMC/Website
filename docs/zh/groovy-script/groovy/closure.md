@@ -26,7 +26,7 @@ print_numbers(5)
 
 This will now output
 
-```:no-line-numbers
+```txt:no-line-numbers
 0
 1
 2
