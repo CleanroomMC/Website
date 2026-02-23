@@ -6,6 +6,10 @@ title: Introduction
 
 ## 总览
 
+:::warning {id="warning"}
+如果你在寻找groovy-script的文档。请前往[这里](/groovy-script/)。该文档大部分内容为自动生成，没有中文版本。
+:::
+
 一般而言，如果你的模组能够在正常地在 Forge 上运行，那么你不必特意将模组迁移至 Cleanroom 上，除非你：
 
 - 希望使用 Java 21 的语言特性
