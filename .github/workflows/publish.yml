@@ -32,15 +32,15 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build
-        run: pnpm run build
-
       - name: Cache OG assets
         id: hit-cache
         uses: actions/cache@v4
         with:
           path: docs/public/og
           key: og-${{ hashFiles('docs/.vitepress/plugins/satori-og.ts') }}
+
+      - name: Build
+        run: pnpm run build
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
