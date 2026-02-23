@@ -182,7 +182,7 @@ export const shared = defineConfigWithTheme<CleanRoomConfig>({
     const rel = context.pageData?.relativePath ?? "";
     const base = rel.replace(/\\/g, "/");
     const slug = base.replace(/\.md$/, "").replace(/(^|\/)index$/, "$1");
-    const ogPath = `/og/${slug}.jpg`;
+    const ogPath = `/og/${slug}.webp`;
 
     let haveOg = true;
     let og = "https://cleanroommc.com/cleanroom-og.png";

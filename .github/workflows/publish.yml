@@ -1,6 +1,6 @@
 on:
   push:
-   branches:
+    branches:
       - main
   workflow_dispatch:
 
@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with: 
+        with:
           fetch-depth: 0
 
       - uses: pnpm/action-setup@v4
@@ -27,7 +27,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: Install dependencies
         run: pnpm install
@@ -36,7 +36,9 @@ jobs:
         id: hit-cache
         uses: actions/cache@v4
         with:
-          path: docs/public/og
+          path: |
+            docs/public/og
+            docs/.vitepress/plugins/data/og-satori
           key: og-${{ hashFiles('docs/.vitepress/plugins/satori-og.ts') }}
 
       - name: Build
@@ -57,4 +59,4 @@ jobs:
           # Optional: Change the working directory
           workingDirectory: ./
           # Optional: Change the Wrangler version, allows you to point to a specific version or a tag such as `beta`
-          wranglerVersion: '3'
+          wranglerVersion: "3"

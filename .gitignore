@@ -10,3 +10,4 @@ temp
 pnpm-global
 bun.lockb
 docs/public/og/
+docs/.vitepress/plugins/data/og-satori/
