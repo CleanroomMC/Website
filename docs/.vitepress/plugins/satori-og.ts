@@ -119,11 +119,12 @@ export default function SatoriOg() {
 
   async function isUpToDate(meta: PageMeta) {
     try {
+      await Promise.all([ensureFont(), ensureBgBase64()]);
       const src = await fs.stat(path.resolve(root, meta.file));
       const out = await fs.stat(
         path.resolve(root, OUT_DIR, (meta.slug || "index") + ".jpg"),
       );
-      const latestInput = Math.max(src.mtimeMs, bgMtime, fontMtime);
+      const latestInput = Math.max(src.mtimeMs, bgMtime, fontMtime, fontMtime2);
       return out.mtimeMs >= latestInput;
     } catch {
       return false;
