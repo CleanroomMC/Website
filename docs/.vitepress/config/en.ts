@@ -94,7 +94,7 @@ function wikiSidebar(): DefaultTheme.SidebarItem[] {
       text: "Cleanroom Mod Development",
       collapsed: false,
       base: "/wiki/cleanroom-mod-development/",
-      items: [{ text: "Introduction", link: "introduction" }],
+      items: [{ text: "Porting Your Mod to Cleanroom", link: "porting" }],
     },
     {
       text: "Forge Mod Development",
