@@ -9,7 +9,7 @@ title: Porting Your Mod to Cleanroom
 3. Update your template class path (check [blossom](https://github.com/KyoriPowered/blossom) readme).
 4. Check following notable changes compare with Forge.
 
-# Things that may need to be fixed
+## Things that may need to be fixed
 
 - Don't try to add URL to AppClassLoader by casting it, just call `Launch.classLoader.addURL();`
 - Many `javax` classes are now moved to `jakarta`. If you can't find an old class, try to write it another way first before contact us.
@@ -23,7 +23,7 @@ title: Porting Your Mod to Cleanroom
 - Guava changed some methods, you may need to add an extra `Runnable::run` as parameter
 - Don't set your Fastutil set's load factor to 1, or it will crash
 
-# Port a 2.11 Scala mods to 3
+## Port a 2.11 Scala mods to 3
 
 1. Use scala branch of the template.
 2. Check [this page](https://docs.scala-lang.org/overviews/jdk-compatibility/overview.html) and set your Scala version to latest 2.12.x
@@ -31,6 +31,6 @@ title: Porting Your Mod to Cleanroom
 4. Switch to latest 2.13.x, also make sure it compiles.
 5. Now you can switch to latest 3.x and use rewrite flags to update whole code base. Check [this](https://docs.scala-lang.org/scala3/guides/migration/tooling-migration-mode.html#) and [this](https://github.com/kappa-maintainer/MrTJPCore/blob/1.12.x/build.gradle#L161) for example.
 
-### Port Kotlin mods
+## Port Kotlin mods
 
 Just use new [Forgelin](https://github.com/ChAoSUnItY/Forgelin-Continuous) instead of the old one. Kotlin is more friendly in cross-version source code compatibility.
