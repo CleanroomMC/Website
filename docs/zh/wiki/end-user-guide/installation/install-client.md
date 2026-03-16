@@ -26,12 +26,12 @@ Cleanroom 对 macOS 的支持尚不完善，可能无法在您的设备上正常
 2. 将 [Scalar Legacy](https://www.curseforge.com/minecraft/mc-mods/scalar-legacy  ) 添加到您的模组文件夹中<br>
    *(它不会在 Forge 环境中加载)*
 3. :warning: **警告：** 确保您的实例不包含有问题或已弃用的模组。<br>
-   详见 [整合包迁移指南](/wiki/end-user-guide/preparing-your-modpack) 以获取更多详情。
+   详见 [整合包迁移指南](/zh/wiki/end-user-guide/preparing-your-modpack) 以获取更多详情。
 4. 从 [发布页面](https://github.com/CleanroomMC/Cleanroom/releases  ) 下载 `Cleanroom-MMC-instance` 压缩包。
 5. 将其导入到您的启动器中。<br>
    *(或者，将补丁文件和 JSON 文件解压到现有的 1.12 实例中。)*
 6. 在启动器中，选择您安装的 **Java 25** 的 `javaw.exe` 路径。（`javaw.exe` 不会产生任何命令行输出，是正常情况下应使用的版本；而 `java.exe` 会产生命令行输出）
-7. *(可选)* 按照 [JVM 参数](/wiki/end-user-guide/args) 部分所述添加 JVM 参数。
+7. *(可选)* 按照 [JVM 参数](/zh/wiki/end-user-guide/args) 部分所述添加 JVM 参数。
 8. 将您整合包中的 `/.minecraft` 文件夹（也可以命名为 `/minecraft` 文件夹）复制到您的 Cleanroom 实例中。
 
 ### Cleanroom Relauncher
@@ -45,10 +45,10 @@ Cleanroom 对 macOS 的支持尚不完善，可能无法在您的设备上正常
 2. 将 [Scalar Legacy](https://www.curseforge.com/minecraft/mc-mods/scalar-legacy  ) 添加到您的模组列表中<br>  
    *(它无法在 Forge 环境中加载)*
 3. :warning: **警告：** 确保您的实例不包含有问题或已弃用的模组。<br>  
-   详见 [准备您的整合包](/wiki/end-user-guide/preparing-your-modpack) 以获取详情。
+   详见 [准备您的整合包](/zh/wiki/end-user-guide/preparing-your-modpack) 以获取详情。
 4. 将 [Cleanroom Relauncher](https://www.curseforge.com/minecraft/mc-mods/cleanroom-relauncher  ) 模组添加到您的模组列表中，并使用 **Java 8** 启动游戏。
 5. 在 Cleanroom Relauncher 图形界面中，选择您安装的 **Java 25** 的 `javaw.exe` 路径。（`javaw.exe` 不会产生任何命令行输出，是正常情况下应使用的版本；而 `java.exe` 会产生命令行输出）
-6. *(可选)* 从 [JVM 参数](/wiki/end-user-guide/args) 部分添加 JVM 参数。
+6. *(可选)* 从 [JVM 参数](/zh/wiki/end-user-guide/args) 部分添加 JVM 参数。
 7. 点击 **Relaunch**（重新启动）。
 
 ## 注意事项
