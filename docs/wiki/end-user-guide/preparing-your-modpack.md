@@ -51,7 +51,7 @@ Universal Tweaks supersedes a lot of mods which will be mostly not mentioned her
 The most prominent Render optimization mods for **Minecraft 1.12.2** are:
 
 - **[Optifine](https://optifine.net/adloadx?f=preview_OptiFine_1.12.2_HD_U_G6_pre1.jar&x=c2f6)**
-- **[Celeritas](https://github.com/kappa-maintainer/Celeritas-auto-build/releases)** (Requires **_Cleanroom Loader_**, if used with LoliASM, use LoliASM 5.30+)
+- **[Celeritas](https://github.com/kappa-maintainer/Celeritas-auto-build/releases)** (Requires **_Cleanroom Loader_**, if used with CensoredASM, use CensoredASM 5.30+)
 - **[Nothirium](https://www.curseforge.com/minecraft/mc-mods/nothirium)** (Also requires **[Naughthirium](https://www.curseforge.com/minecraft/mc-mods/naughthirium)**)
 
 ::: info Note {id="note"}
