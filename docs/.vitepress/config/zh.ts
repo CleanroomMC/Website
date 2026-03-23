@@ -59,6 +59,32 @@ function nav(): DefaultTheme.NavItem[] {
 function wikiSidebar(): DefaultTheme.SidebarItem[] {
   return [
     {
+      text: "用户指南",
+      collapsed: false,
+      base: "/zh/wiki/end-user-guide/",
+      items: [
+        {
+          text: "引言",
+          link: "introduction"
+        },
+        {
+          text: "整合包迁移指南",
+          link: "preparing-your-modpack"
+        },
+        {
+          text: "安装教程",
+          collapsed: true,
+          base: "/zh/wiki/end-user-guide//installation/",
+          items: [
+            { text: "客户端", link: "install-client" },
+            { text: "服务端", link: "install-server" }]
+        },
+        {
+          text: "JVM 参数",
+          link: "args"
+        }]
+    },
+    {
       text: "Cleanroom 模组开发",
       collapsed: false,
       base: "/zh/wiki/cleanroom-mod-development/",
