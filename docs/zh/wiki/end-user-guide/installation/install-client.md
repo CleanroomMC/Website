@@ -21,6 +21,7 @@ Cleanroom 对 macOS 的支持尚不完善，可能无法在您的设备上正常
 导入 Cleanroom Loader 实例仅支持基于 MultiMC 的启动器。对于其他启动器，请使用installer jar 文件。
 :::
 步骤：
+
 1. 将 [Fugue](https://www.curseforge.com/minecraft/mc-mods/fugue  ) 添加到您的模组文件夹中<br>
    *(它不会在 Forge 环境中加载)*
 2. 将 [Scalar Legacy](https://www.curseforge.com/minecraft/mc-mods/scalar-legacy  ) 添加到您的模组文件夹中<br>
@@ -40,24 +41,26 @@ Cleanroom 对 macOS 的支持尚不完善，可能无法在您的设备上正常
 这对于希望分发既兼容 Forge 又能运行于 Cleanroom 的整合包的 **整合包作者** 特别有用。<br>
 它在基于 MultiMC 的启动器和标准启动器中均受支持。<br>
 步骤：
+
 1. 将 [Fugue](https://www.curseforge.com/minecraft/mc-mods/fugue  ) 添加到您的模组列表中<br>  
-   *(它无法在 Forge 环境中加载)*
+   *(它不会在 Forge 环境中加载)*
 2. 将 [Scalar Legacy](https://www.curseforge.com/minecraft/mc-mods/scalar-legacy  ) 添加到您的模组列表中<br>  
-   *(它无法在 Forge 环境中加载)*
+   *(它不会在 Forge 环境中加载)*
 3. :warning: **警告：** 确保您的实例不包含有问题或已弃用的模组。<br>  
-   详见 [准备您的整合包](/zh/wiki/end-user-guide/preparing-your-modpack) 以获取详情。
+   详见 [整合包迁移指南](/zh/wiki/end-user-guide/preparing-your-modpack) 以获取详情。
 4. 将 [Cleanroom Relauncher](https://www.curseforge.com/minecraft/mc-mods/cleanroom-relauncher  ) 模组添加到您的模组列表中，并使用 **Java 8** 启动游戏。
 5. 在 Cleanroom Relauncher 图形界面中，选择您安装的 **Java 25** 的 `javaw.exe` 路径。（`javaw.exe` 不会产生任何命令行输出，是正常情况下应使用的版本；而 `java.exe` 会产生命令行输出）
 6. *(可选)* 从 [JVM 参数](/zh/wiki/end-user-guide/args) 部分添加 JVM 参数。
 7. 点击 **Relaunch**（重新启动）。
 
 ## 注意事项
+
 - 当使用新的 Java 程序时，笔记本电脑用户可能会遇到性能不佳的情况，这是因为 Windows 未将独立显卡分配给该 Java 程序。请确保将 Java 程序 (javaw.exe) 设置为高性能模式。
-- Cleanroom Relauncher 的配置文件位于 `config/relauncher.cfg`。<br> 删除此文件将在下次启动时提示设置图形界面。<br>
+- Cleanroom Relauncher 的配置文件位于 `config/relauncher.cfg`。<br> 删除此文件将在下次启动时重新显示 GUI。<br>
   ::: info 注意 {id="note"}
-  Cleanroom Relauncher 会检查 Cleanroom 更新。因此，当有更新发布时，图形界面将启动。
+  Cleanroom Relauncher 会检查 Cleanroom 更新。因此，当有更新发布时会再次显示 GUI。
   :::
 - :warning: **警告：** 并非所有启动器都与 Cleanroom Loader 兼容。<br> 支持的启动器：
-    - :white_check_mark: 基于 MultiMC 的启动器 (**Prism Launcher, PolyMC 等**)
-    - :warning: CurseForge 启动器 *(有限支持)*
-    - :warning: 官方 Minecraft 启动器 *(有限支持)*
+  - :white_check_mark: 基于 MultiMC 的启动器 (**Prism Launcher, PolyMC 等**)
+  - :warning: CurseForge 启动器 *(有限支持)*
+  - :warning: 官方 Minecraft 启动器 *(有限支持)*

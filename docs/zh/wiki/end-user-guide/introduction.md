@@ -17,4 +17,4 @@ title: 简介
 ### 计划中的特性
 
 - **模块化渲染系统** – 对渲染管线进行彻底重构。[查看 Kirino 讨论区](https://github.com/CleanroomMC/Cleanroom/discussions/405  )。
-- **改进的 API** – 正在积极开发中，提供实用且对开发者友好的 API。[查看项目看板](https://github.com/orgs/CleanroomMC/projects/4/  )。
+- **改进的 API** – 正在积极开发中，提供实用且对开发者友好的 API。[查看项目看板](https://github.com/orgs/CleanroomMC/projects/4/)。

@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /zh/wiki/cleanroom-mod-development/introduction
+      link: /zh/wiki/end-user-guide/introduction
     - theme: alt
       text: 下载
       link: https://download.cleanroommc.com/

@@ -16,9 +16,9 @@ title: Server
    ::: info 注意 {id="note"}
    或者，您可以在 bat 或 sh 脚本文件中运行 `java -jar installerName.jar --installServer`。
    :::
-5. 将 [Fugue](https://www.curseforge.com/minecraft/mc-mods/fugue  ) 添加到您的模组文件夹中<br>
+5. 将 [Fugue](https://www.curseforge.com/minecraft/mc-mods/fugue) 添加到您的模组文件夹中<br>
    *(它不会在 Forge 环境中加载)*
-6. 将 [Scalar Legacy](https://www.curseforge.com/minecraft/mc-mods/scalar-legacy  ) 添加到您的模组文件夹中<br>
+6. 将 [Scalar Legacy](https://www.curseforge.com/minecraft/mc-mods/scalar-legacy) 添加到您的模组文件夹中<br>
    *(它不会在 Forge 环境中加载)*
 7. *(可选)* 按照 [JVM 参数](/wiki/end-user-guide/args) 部分所述，将 JVM 参数添加到服务器的启动文件中。
 
