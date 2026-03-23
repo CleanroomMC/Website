@@ -1,11 +1,13 @@
 // https://vitepress.dev/guide/custom-theme
-import { render, h } from "vue";
-import type { Theme } from "vitepress";
+import { defineComponent, render, h, watch } from "vue";
+import { type Theme, useData, useRoute } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import BackToTop from "../../../components/internal/BackToTop.vue";
 import "./style.css";
+import "overlayscrollbars/overlayscrollbars.css";
 
 import { handleDetailsAnimation } from "./composables/details";
+import { useOverlayScrollbars } from "./composables/overlayScrollbars";
 import { NolebaseGitChangelogPlugin } from "@nolebase/vitepress-plugin-git-changelog/client";
 import "@nolebase/vitepress-plugin-git-changelog/client/style.css";
 
@@ -39,18 +41,36 @@ function addDetailsAnimation() {
     .forEach((details) => handleDetailsAnimation(details));
 }
 
+const Layout = defineComponent({
+  name: "ThemeLayout",
+  setup() {
+    const { isDark } = useData();
+    const route = useRoute();
+    const { syncOverlayScrollbars } = useOverlayScrollbars(isDark);
+
+    watch(
+      () => route.path,
+      () => {
+        void syncOverlayScrollbars();
+      },
+      { flush: "post" },
+    );
+
+    return () =>
+      h(DefaultTheme.Layout, null, {
+        // https://vitepress.dev/guide/extending-default-theme#layout-slots
+        "nav-bar-content-after": () => h(NolebaseEnhancedReadabilitiesMenu),
+        // 为较窄的屏幕（通常是小于 iPad Mini）添加阅读增强菜单
+        "nav-screen-content-after": () =>
+          h(NolebaseEnhancedReadabilitiesScreenMenu),
+        "layout-top": () => [h(NolebaseHighlightTargetedHeading)],
+      });
+  },
+});
+
 export default {
   extends: DefaultTheme,
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      "nav-bar-content-after": () => h(NolebaseEnhancedReadabilitiesMenu),
-      // 为较窄的屏幕（通常是小于 iPad Mini）添加阅读增强菜单
-      "nav-screen-content-after": () =>
-        h(NolebaseEnhancedReadabilitiesScreenMenu),
-      "layout-top": () => [h(NolebaseHighlightTargetedHeading)],
-    });
-  },
+  Layout,
   enhanceApp({ app, router, siteData }) {
     if (typeof window !== "undefined") {
       window.addEventListener("load", () => {
