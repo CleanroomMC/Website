@@ -89,6 +89,30 @@ export const shared = defineConfigWithTheme<CleanRoomConfig>({
             username: "AnasDevO",
             name: "Thermonuclear_Minecraft_Engineer",
           },
+          {
+            avatar:
+              "https://avatars.githubusercontent.com/u/191591196?v=4",
+            username: "柒梦染星河",
+            name: "qiMengStars",
+          },
+          {
+            avatar:
+              "https://avatars.githubusercontent.com/u/11038263?v=4",
+            username: "arcade_kappa",
+            name: "kappa-maintainer",
+          },
+          {
+            avatar:
+              "https://avatars.githubusercontent.com/u/76536452?v=4",
+            username: "Vojtěch Šokala",
+            name: "Vojtěch Šokala",
+          },
+          {
+            avatar:
+              "https://avatars.githubusercontent.com/u/10137?v=4",
+            username: "Radk6",
+            name: "Rad",
+          },
         ],
       }),
       GitChangelogMarkdownSection(),
