@@ -1,29 +1,30 @@
-import { type DefaultTheme, defineConfigWithTheme } from "vitepress";
+import { type DefaultTheme, defineConfig } from "vitepress";
 import { generateSidebar } from "vitepress-sidebar";
 import { CleanRoomConfig } from "./customConfig";
 
-const sidebar = generateSidebar([
-  {
-    // GroovyScript:
-    documentRootPath: "docs",
-    scanStartPath: "groovy-script",
-    resolvePath: "/groovy-script/",
-    hyphenToSpace: true,
-    underscoreToSpace: true,
-    useFolderTitleFromIndexFile: true,
-    keepMarkdownSyntaxFromTitle: true,
-    useTitleFromFrontmatter: true,
-    useTitleFromFileHeading: true,
-    sortMenusByName: true,
-    collapseDepth: 2,
-    folderLinkNotIncludesFileName: true,
-    useFolderLinkFromIndexFile: true,
-  },
-]);
+const sidebar: DefaultTheme.SidebarMulti = {
+  ...(generateSidebar([
+    {
+      // GroovyScript:
+      documentRootPath: "docs",
+      scanStartPath: "groovy-script",
+      resolvePath: "/groovy-script/",
+      hyphenToSpace: true,
+      underscoreToSpace: true,
+      useFolderTitleFromIndexFile: true,
+      keepMarkdownSyntaxFromTitle: true,
+      useTitleFromFrontmatter: true,
+      useTitleFromFileHeading: true,
+      sortMenusByName: true,
+      collapseDepth: 2,
+      folderLinkNotIncludesFileName: true,
+      useFolderLinkFromIndexFile: true,
+    },
+  ]) as DefaultTheme.SidebarMulti),
+  "/zh/wiki/": wikiSidebar(),
+};
 
-sidebar["/zh/wiki/"] = wikiSidebar();
-
-export const zh = defineConfigWithTheme<CleanRoomConfig>({
+export const zh = defineConfig<CleanRoomConfig>({
   lang: "zh",
   description: "CleanroomMC",
   themeConfig: {
@@ -56,7 +57,7 @@ function nav(): DefaultTheme.NavItem[] {
   ];
 }
 
-function wikiSidebar(): DefaultTheme.SidebarItem[] {
+function wikiSidebar(): DefaultTheme.SidebarMulti[string] {
   return [
     {
       text: "用户指南",
@@ -74,7 +75,7 @@ function wikiSidebar(): DefaultTheme.SidebarItem[] {
         {
           text: "安装教程",
           collapsed: true,
-          base: "/zh/wiki/end-user-guide//installation/",
+          base: "/zh/wiki/end-user-guide/installation/",
           items: [
             { text: "客户端", link: "install-client" },
             { text: "服务端", link: "install-server" }]

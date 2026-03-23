@@ -1,33 +1,35 @@
-import { type DefaultTheme, defineConfigWithTheme } from "vitepress";
+import { type DefaultTheme, defineConfig } from "vitepress";
 import { generateSidebar } from "vitepress-sidebar";
 import { CleanRoomConfig } from "./customConfig";
 
-const sidebar = generateSidebar([
-  { // GroovyScript:
-    documentRootPath: "docs",
-    scanStartPath: "groovy-script",
-    resolvePath: "/groovy-script/",
-    hyphenToSpace: true,
-    underscoreToSpace: true,
-    useFolderTitleFromIndexFile: true,
-    keepMarkdownSyntaxFromTitle: true,
-    useTitleFromFrontmatter: true,
-    useTitleFromFileHeading: true,
-    sortMenusByFrontmatterOrder: true,
-    sortMenusOrderByDescending: true,
-    collapsed: true,
-    collapseDepth: 2,
-    folderLinkNotIncludesFileName: true,
-    useFolderLinkFromIndexFile: true,
-    rootGroupText: 'GroovyScript',
-    rootGroupLink: '.',
-    rootGroupCollapsed: false,
-  }
-]);
+const sidebar: DefaultTheme.SidebarMulti = {
+  ...(generateSidebar([
+    {
+      // GroovyScript:
+      documentRootPath: "docs",
+      scanStartPath: "groovy-script",
+      resolvePath: "/groovy-script/",
+      hyphenToSpace: true,
+      underscoreToSpace: true,
+      useFolderTitleFromIndexFile: true,
+      keepMarkdownSyntaxFromTitle: true,
+      useTitleFromFrontmatter: true,
+      useTitleFromFileHeading: true,
+      sortMenusByFrontmatterOrder: true,
+      sortMenusOrderByDescending: true,
+      collapsed: true,
+      collapseDepth: 2,
+      folderLinkNotIncludesFileName: true,
+      useFolderLinkFromIndexFile: true,
+      rootGroupText: "GroovyScript",
+      rootGroupLink: ".",
+      rootGroupCollapsed: false,
+    },
+  ]) as DefaultTheme.SidebarMulti),
+  "/wiki/": wikiSidebar(),
+};
 
-sidebar["/wiki/"] = wikiSidebar();
-
-export const en = defineConfigWithTheme<CleanRoomConfig>({
+export const en = defineConfig<CleanRoomConfig>({
   lang: "en",
   description: "CleanroomMC",
   themeConfig: {
@@ -62,7 +64,7 @@ function nav(): DefaultTheme.NavItem[] {
   return nav;
 }
 
-function wikiSidebar(): DefaultTheme.SidebarItem[] {
+function wikiSidebar(): DefaultTheme.SidebarMulti[string] {
   return [
     {
       text: "End User Guide",
