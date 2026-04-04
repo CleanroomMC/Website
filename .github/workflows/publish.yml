@@ -34,7 +34,7 @@ jobs:
 
       - name: Restore OG assets cache
         id: og-cache-restore
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v5
         with:
           path: |
             docs/public/og
@@ -47,7 +47,7 @@ jobs:
         run: pnpm run build
 
       - name: Save OG assets cache
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v5
         with:
           path: |
             docs/public/og
