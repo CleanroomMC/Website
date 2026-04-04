@@ -1,4 +1,8 @@
-## VAO Reference Behavior
+---
+title: "VAO Reference Behavior"
+---
+
+# VAO Reference Behavior
 
 - VAO keeps references to all the vertex attribute configurations set while it is bound.
 - You can link multiple VBOs to a VAO using different attribute indices.

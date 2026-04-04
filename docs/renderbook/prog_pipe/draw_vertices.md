@@ -1,4 +1,9 @@
-## EG1
+---
+title: "Draw vertices"
+---
+
+# E.g.1: draw vertices
+
 Draw a triangle using vertices and indices (requires at least GL30 support OR arb/ext support)
 
 ```java

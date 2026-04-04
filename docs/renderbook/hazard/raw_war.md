@@ -1,7 +1,11 @@
+---
+title: WAR & RAW Hazard
+---
 
-## WAR Hazard From GPU's POV
+# WAR Hazard From GPU's POV
 
 Consider the scenario
+
 ```java
 bufferData(data);
 draw();
@@ -20,16 +24,19 @@ However, this is less elegant and more fragile. `Draw 1` may be running (or not 
 Passing data to a slice of memory that is _currently_/_to be_ accessed by a draw command is known as a write-after-read hazard.
 
 Nevertheless, drivers will most likely fix this issue for you (drivers guarantee correctness but not performance). Still:
+
 - Driver behavior is implicit and unpredictable
 - You may experience different behaviors on different platforms/drivers
 - You may experience fluctuations
 
 Most importantly, the consequence of a WAR hazard is that read action will be waited by write action, breaking parallelism.
 Or in short:
+
 - Stalling the pipeline
 - Slowing down
 
-### Orphaning
+## Orphaning
+
 One strategy is to orphan the old underlying storage that is "locked" by the draw command and allocate
 a new underlying storage, but we still use the same buffer object namely (GL/CPU side).
 
@@ -41,27 +48,32 @@ bufferSubData(data2);
 draw();
 ```
 
-`bufferData(null)` will most likely trigger orphaning, but it's not guaranteed. 
+`bufferData(null)` will most likely trigger orphaning, but it's not guaranteed.
 Orphaning is widely used but still relies on driver heuristics.
 
 **Level of predictability**:
+
 - No guard : LOW
 - Orphaning : ABOVE AVERAGE ~ HIGH
 
 > **Notice**:<br>
 > An intuitive way to visualize WAR hazard is to imagine a lock.
+>
 > ```java
 > draw() { lock.tryLock(); }
 > ```
+>
 > ```java
 > bufferData() { lock.tryLock(); }
 > ```
+>
 > But `draw` right after `upload` is totally fine, causes no stall, and is recommended.
 > Even though `upload` is not an immediate action too.<br>
 > A lock is not 100% accurate here since the actual reason behind the stall is related
 > to the GPU command queue.
 
 ### Buffering
+
 Another strategy is to have multiple buffers explicitly, so we don't have to rely on
 so-called underlying behaviors.
 
@@ -72,7 +84,7 @@ b2.bufferData(data2);
 draw();
 ```
 
-Having two buffer objects totally fix the hazard for a two-draw-call scenario, but we don't 
+Having two buffer objects totally fix the hazard for a two-draw-call scenario, but we don't
 want _n_ buffers for _n_ draw calls anyway.
 
 ```java
@@ -101,7 +113,9 @@ Moreover, as you can see, the pseudocode can't really demonstrate the situation 
 we must introduce timing/lifecycle as a new dimension.
 
 ## RAW Hazard From GPU's POV
+
 Consider the scenario
+
 ```java
 compute();
 drawUsingComputeResult();

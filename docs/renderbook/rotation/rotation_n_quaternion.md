@@ -1,4 +1,8 @@
-## Rotate a plane
+---
+title: "Rotation and Quaternion"
+---
+
+# Rotate a plane
 
 > **Notice**: all GL states are being handled implicitly.
 
@@ -18,11 +22,13 @@ GlStateManager.rotate(45f, 1, 1, 0);
 tessellator.draw();
 GlStateManager.popMatrix();
 ```
+
 ![Snipaste_2025-01-18_22-54-53](img/404630805-d7b40cca-580b-45f2-b3c9-f8c15b3b4687.png)
 
 - A transformed plane is being rendered
 
 When it comes to quaternion, it's actually equivalent to do so
+
 ```java
 GlStateManager.rotate(new Quaternion(
                 (float)Math.sin(Math.PI / 4d / 2d) / (float)Math.sqrt(2),
@@ -30,6 +36,7 @@ GlStateManager.rotate(new Quaternion(
                 0f,
                 (float)Math.cos(Math.PI / 4d / 4d)));
 ```
+
 <br>
 
 ### Intro to Quaternion
@@ -112,15 +119,14 @@ and yeah _u_ = (_a_, _b_, _c_)^T
 
 When _u_ is our rotation axis and _θ_ is our rotation angle (in radian), we write that quaternion _q_ = [_cos θ/2_, _normalized u_ * _sin θ/2_]
 
-
 ### How It Works
 
 Let's say we have a point _p_ = (x0, y0, z0)^T and define _q_ = [_cos θ/2_, _normalized u_ * _sin θ/2_]
 
 Consider _P_ = [0, _p_]
 
-Then _P'_ = [0，_p'_] = _q_ * _P_ * _q^-1_ = _q_ * _P_ * _q*_ where _p'_ is the rotated point
+Then _P'_ = [0，_p'_] = _q_ **P** _q^-1_ = _q_ **P** _q*_ where _p'_ is the rotated point
 
-= [_cos θ/2_, _normalized u_ * _sin θ/2_] * [0, _p_] * [_cos θ/2_, - _normalized u_ * _sin θ/2_]
+= [_cos θ/2_, _normalized u_ __sin θ/2_]_ [0, _p_] _[_cos θ/2_, - _normalized u__ _sin θ/2_]
 
 We can treat them as imaginary numbers and do the multiplication, or use Hamilton product.

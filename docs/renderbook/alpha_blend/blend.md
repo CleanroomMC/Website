@@ -1,31 +1,44 @@
+---
+title: Blend
+---
+
+# Blend
+
 In the fixed-function pipeline, we use blending to combine the color of a fragment (pixel) with the color already in the framebuffer.
 
 For RGB channel:
+
 ```java
 finalColor_RGB = (sourceColor_RGB * sourceColorFactor) + (destColor_RGB * destColorFactor)
 ```
+
 - `sourceColor_RGB`: the color output of the fragment
 - `destColor_RGB`: the existing color already stored in the framebuffer
 - `sourceColorFactor` and `destColorFactor`: values that control how much each color contributes to the final result
 
 For alpha channel:
+
 ```java
 finalAlpha = (sourceAlpha * sourceAlphaFactor) + (destAlpha * destAlphaFactor)
 ```
+
 - `sourceAlpha` is the alpha component of the source color
 - `destAlpha` is the alpha component of the destination color
 - `sourceAlphaFactor` and `destAlphaFactor`: similar to factors like `sourceColorFactor` and `destColorFactor`, but we usually use `GL_ONE` or `GL_ZERO` here
 
 You can do
+
 ```java
 // usually tweaking sourceColorFactor and destColorFactor is enough
 GlStateManager.blendFunc(
         sourceColorFactor, 
         destColorFactor);
 ```
+
 which is basically playing with `sourceColorFactor` and `destColorFactor`.
 
 Use the code below if you want to set `sourceAlphaFactor` and `destAlphaFactor` altogether.
+
 ```java
 GlStateManager.tryBlendFuncSeparate(
         sourceColorFactor, 
@@ -46,11 +59,13 @@ Here are some common values you’ll use for `sourceFactor` and `destFactor`:
 | `GL_ONE_MINUS_DST_ALPHA` | `1.0 -` Destination alpha value       |
 
 Here's a common blending example:
+
 ```java
 GlStateManager.blendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
 ```
 
 Don't forget to restore states if needed, but be aware of the trade-offs.
+
 ```java
 boolean blend = GL11.glIsEnabled(GL11.GL_BLEND);
 GL11.glGetInteger(GL14.GL_BLEND_SRC_RGB, intBuffer);

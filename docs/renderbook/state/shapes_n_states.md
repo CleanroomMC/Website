@@ -1,4 +1,11 @@
+---
+title: "Shapes and GL states"
+---
+
+# Shapes and GL states
+
 ## EG1
+
 Draw a white square
 
 > **Notice**: GL state leakage is being handled implicitly.
@@ -20,6 +27,7 @@ GL11.glVertex2f(x + width, y + height);
 GL11.glVertex2f(x, y + height);
 GL11.glEnd();
 ```
+
 ![Snipaste_2025-01-18_21-18-35](img/404617985-e72764ad-bdc4-44ec-b2ed-8d2c01409ae5.png)
 
 - A white square is being drawn
@@ -27,6 +35,7 @@ GL11.glEnd();
 ***
 
 ## EG2
+
 An alternative way
 
 ```java
@@ -56,6 +65,7 @@ tessellator.draw();
 ***
 
 ## EG3
+
 Without `disableTexture2D`
 
 ```java
@@ -69,6 +79,7 @@ GlStateManager.color(1, 1, 1, 1);
 // draw that square
 // code from EG2
 ```
+
 ![Snipaste_2025-01-18_21-36-16](img/404619173-70af7017-fd74-49d7-863b-d0151f530d67.png)
 
 - Our square becomes unexpected without `disableTexture2D`
@@ -77,6 +88,7 @@ GlStateManager.color(1, 1, 1, 1);
 ***
 
 ## EG4
+
 Without `enableBlend`
 
 ```java
@@ -98,6 +110,7 @@ GlStateManager.color(1, 1, 1, 1);
 ***
 
 ## EG5
+
 Without `disableAlpha`
 
 ```java
@@ -120,6 +133,7 @@ GlStateManager.color(1, 1, 1, 1);
 ***
 
 ## EG6
+
 Without `tryBlendFuncSeparate`
 
 ```java
@@ -140,6 +154,7 @@ GlStateManager.color(1, 1, 1, 1);
 ***
 
 ## EG7
+
 Without `disableCull`
 
 ```java
@@ -161,6 +176,7 @@ bufferbuilder.pos(x + width, y + height, 0).endVertex();
 bufferbuilder.pos(x, y + height, 0).endVertex();
 tessellator.draw();
 ```
+
 ![Snipaste_2025-01-18_21-56-32](img/404622840-2cbc56af-b0bb-417d-b91b-e131581256e9.png)
 
 - Nothing is being rendered
@@ -170,6 +186,7 @@ tessellator.draw();
 ***
 
 ## EG8
+
 Still without `disableCull`, but now it's a different story
 
 ```java
@@ -191,6 +208,7 @@ bufferbuilder.pos(x + width, y + height, 0).endVertex();
 bufferbuilder.pos(x + width, y, 0).endVertex();
 tessellator.draw();
 ```
+
 ![Snipaste_2025-01-18_22-01-26](img/404623588-46af479b-663a-4ba9-82ba-3585343309e6.png)
 
 - Square is being rendered correctly without `disableCull`

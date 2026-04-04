@@ -1,19 +1,26 @@
+---
+title: Buffer Objects
+---
+
+# Buffer Objects
+
 There are many kinds of OpenGL buffer objects. Here's an intro.
 
-| **Buffer**                       | **GL Constant**            | 
+| **Buffer**                       | **GL Constant**            |
 |----------------------------------|----------------------------|
-| **Vertex Buffer Object (VBO)**   | `GL_ARRAY_BUFFER`          | 
-| **Element Buffer Object (EBO)**  | `GL_ELEMENT_ARRAY_BUFFER`  | 
-| **Pixel Pack Buffer (PBO)**      | `GL_PIXEL_PACK_BUFFER`     | 
-| **Pixel Unpack Buffer (PBO)**    | `GL_PIXEL_UNPACK_BUFFER`   | 
-| **Shader Storage Buffer (SSBO)** | `GL_SHADER_STORAGE_BUFFER` | 
+| **Vertex Buffer Object (VBO)**   | `GL_ARRAY_BUFFER`          |
+| **Element Buffer Object (EBO)**  | `GL_ELEMENT_ARRAY_BUFFER`  |
+| **Pixel Pack Buffer (PBO)**      | `GL_PIXEL_PACK_BUFFER`     |
+| **Pixel Unpack Buffer (PBO)**    | `GL_PIXEL_UNPACK_BUFFER`   |
+| **Shader Storage Buffer (SSBO)** | `GL_SHADER_STORAGE_BUFFER` |
 
 ## Typical Pairing
+
 - VBO + EBO + VAO → Core rendering pipeline (vertices and indices)
 - PBOs → Efficient texture or framebuffer data transfer
 - SSBO → General GPU compute tasks and advanced rendering workflows
 
-By reading through [Drawing Tris Using Vertices and Indices Via The Modern Pipeline](draw_vertices.md), 
+By reading through [Drawing Tris Using Vertices and Indices Via The Modern Pipeline](draw_vertices.md),
 you should already be pretty familiar with a typical VAO setup.
 
 ## Common Usage Patterns
@@ -99,6 +106,7 @@ GL15.glBufferData(GL21.GL_PIXEL_UNPACK_BUFFER, 4, GL15.GL_STREAM_DRAW);
 ```
 
 Usage hints:
+
 - `GL_STATIC_DRAW`: rarely updated, frequently used
 - `GL_DYNAMIC_DRAW`: frequently updated, frequently used
 - `GL_STREAM_DRAW`: updated every frame or very frequently

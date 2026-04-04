@@ -1,10 +1,17 @@
+---
+title: "Typical Shader Setup"
+---
+
+# Typical Shader Setup
+
 Here's a typical terrain rendering shader setup for Minecraft.
 
-> **Notice**: 
+> **Notice**:
 > `viewRot` is essentially a `modelView` matrix but Minecraft implements the position offset via `position - camPos`
 > and `modelView` is merely used to express the camera rotation.
 
 **VS**
+
 ```glsl
 #version 330 core
 
@@ -33,6 +40,7 @@ void main()
 ```
 
 **FS**
+
 ```glsl
 #version 330 core
 
@@ -54,6 +62,7 @@ void main(void)
 ```
 
 **Render Setup**
+
 ```java
 // pseudocode
 program.use();
@@ -77,6 +86,7 @@ program.unuse();
 > They are like slots and every slot can have a bounded texture.
 
 **Vertex Attribute**
+
 ```java
 // pseudocode
 BLOCK_ATTRIBUTE_LAYOUT.push(new Stride(28)
@@ -87,6 +97,7 @@ BLOCK_ATTRIBUTE_LAYOUT.push(new Stride(28)
 ```
 
 **Camera Info Fetching**
+
 ```java
 public Vector3f getWorldOffset()
 {
@@ -100,6 +111,7 @@ public Vector3f getWorldOffset()
     return new Vector3f((float)camX, (float)camY, (float)camZ);
 }
 ```
+
 ```java
 // this code snippet is from Minecraft class ActiveRenderInfo
 // all you need to do is accessing MODELVIEW and PROJECTION via reflection

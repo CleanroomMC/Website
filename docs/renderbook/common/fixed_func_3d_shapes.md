@@ -1,4 +1,9 @@
-## EG1
+---
+title: "Fixed-function 3D shapes"
+---
+
+# E.g.1: fixed-function 3D shapes
+
 Render a wired cube
 
 ```java
@@ -77,6 +82,7 @@ public static void onRenderWorldLast(RenderWorldLastEvent event)
     restoreCommonGlStates();
 }
 ```
+
 ![Snipaste_2025-02-02_13-58-02](img/408892486-8bed7621-b541-4d47-9c02-afed672dd829.png)
 
 > Try toggle off/on each state and see how things change.
@@ -86,10 +92,12 @@ less powerful, less streamlined, and _boring_.
 
 Here are the issues of the code snippet above.<br><br>
 **GL Level**:
+
 - Pipeline stall due to state fetching (read "_GL States Related Concerns_" for details)
 - Potential write-after-read hazard
 
 **Design Level**:
+
 - Global singleton `Tessellator` access which blurs phase restrictions
 - Redundant buffer building in every frame while the geometry is fixed
 - Render code can't be reordered/composed

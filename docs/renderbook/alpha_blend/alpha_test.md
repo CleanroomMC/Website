@@ -1,3 +1,8 @@
+---
+title: Alpha Test
+---
+# Alpha Test
+
 In the fixed-function pipeline, we use alpha testing to discard pixels.
 ```java
 GlStateManager.alphaFunc(alphaFunc, alphaRef);

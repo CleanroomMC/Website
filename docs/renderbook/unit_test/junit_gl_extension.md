@@ -1,23 +1,35 @@
+---
+title: "JUnit GL Extension"
+---
+
+# JUnit GL Extension
+
 ## `GLTestExtension`
+
 This is an extension class for JUnit to enable OpenGL unit tests.
 The implementation is from an all-right-reserved project but this class is authored by me (tttsaurus);
 I thereby grant the free usage of this class.
 
 > **Note:**<br>
+>
 > - A new OpenGL context will be created and disposed for every test class (not test method!)
-> - Usage: annotate the test class with `@ExtendWith(GLTestExtension.class)` and wrap your test logic with 
+> - Usage: annotate the test class with `@ExtendWith(GLTestExtension.class)` and wrap your test logic with
+>
 >   ```
 >   GLTestExtension.submit(() -> { 
 >       ... 
 >   }).join();
 >   ```
->   and preferably 
+>
+>   and preferably
+>
 >   ```
 >   GLTestExtension.submit(() -> { 
 >       GLTestExtension.assumeGL46(); 
 >       ... 
 >   }).join();
 >   ```
+>
 > - You might want to order your test methods due to GL state changes
 
 ```java

@@ -1,4 +1,11 @@
+---
+title: "GL states"
+---
+
+# GL states
+
 Usually, you do the rendering stuff like this.
+
 ```java
 // you want to use textures so you enableTexture2D
 GlStateManager.enableTexture2D();
@@ -12,6 +19,7 @@ GlStateManager.disableTexture2D();
 ```
 
 In some scenarios, we store and then restore the states.
+
 ```java
 boolean texture2D = GL11.glIsEnabled(GL11.GL_TEXTURE_2D);
 
@@ -25,10 +33,11 @@ else
     GlStateManager.disableTexture2D();
 ```
 
-Use `GlStateManager` instead of direct GL calls because Minecraft may need to track state changes. 
+Use `GlStateManager` instead of direct GL calls because Minecraft may need to track state changes.
 `GlStateManager` is a wrapper class in Minecraft for GL calls.
 
 Here are some examples you might find useful.
+
 ```java
 GL11.glGetInteger(GL11.GL_TEXTURE_BINDING_2D, intBuffer);
 textureID = intBuffer.get(0);
