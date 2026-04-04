@@ -26,6 +26,28 @@ const sidebar: DefaultTheme.SidebarMulti = {
       rootGroupCollapsed: false,
     },
   ]) as DefaultTheme.SidebarMulti),
+  ...(generateSidebar([
+    {
+      documentRootPath: "docs",
+      scanStartPath: "renderbook",
+      resolvePath: "/renderbook/",
+      hyphenToSpace: true,
+      underscoreToSpace: true,
+      useFolderTitleFromIndexFile: true,
+      keepMarkdownSyntaxFromTitle: true,
+      useTitleFromFrontmatter: true,
+      useTitleFromFileHeading: true,
+      sortMenusByFrontmatterOrder: true,
+      sortMenusOrderByDescending: true,
+      collapsed: true,
+      collapseDepth: 2,
+      folderLinkNotIncludesFileName: true,
+      useFolderLinkFromIndexFile: true,
+      rootGroupText: "RenderBook",
+      rootGroupLink: ".",
+      rootGroupCollapsed: false,
+    },
+  ]) as DefaultTheme.SidebarMulti),
   "/wiki/": wikiSidebar(),
 };
 
@@ -50,7 +72,7 @@ export const en = defineConfig<CleanRoomConfig>({
       month: "about a month",
       months: "%d months",
       year: "about a year",
-      years: "%d years"
+      years: "%d years",
     },
   },
 });
@@ -59,8 +81,10 @@ function nav(): DefaultTheme.NavItem[] {
   let nav: DefaultTheme.NavItem[] = [];
   nav.push({ text: "Home", link: "/" });
   nav.push({ text: "Wiki", link: "/wiki/" });
-  if(process.env.ENVIRONMENT === 'development') nav.push({ text: "Guide", link: "/guide/" });
+  if (process.env.ENVIRONMENT === "development")
+    nav.push({ text: "Guide", link: "/guide/" });
   nav.push({ text: "GroovyScript", link: "/groovy-script/" });
+  nav.push({ text: "RenderBook", link: "/renderbook/" });
   return nav;
 }
 
@@ -73,11 +97,11 @@ function wikiSidebar(): DefaultTheme.SidebarMulti[string] {
       items: [
         {
           text: "Introduction",
-          link: "introduction"
+          link: "introduction",
         },
         {
           text: "Preparing your modpack",
-          link: "preparing-your-modpack"
+          link: "preparing-your-modpack",
         },
         {
           text: "How To install",
@@ -85,12 +109,14 @@ function wikiSidebar(): DefaultTheme.SidebarMulti[string] {
           base: "/wiki/end-user-guide//installation/",
           items: [
             { text: "Client", link: "install-client" },
-            { text: "Server", link: "install-server" }]
+            { text: "Server", link: "install-server" },
+          ],
         },
         {
           text: "JVM Arguments",
-          link: "args"
-        }]
+          link: "args",
+        },
+      ],
     },
     {
       text: "Cleanroom Mod Development",
@@ -137,9 +163,9 @@ function wikiSidebar(): DefaultTheme.SidebarMulti[string] {
               link: "colouring-blocks-and-items",
             },
             {
-                text: "Render Documentation",
-                link: "render-documentation",
-            }
+              text: "Render Documentation",
+              link: "render-documentation",
+            },
           ],
         },
         { text: "Behaviour", link: "behaviour" },
@@ -174,7 +200,7 @@ function wikiSidebar(): DefaultTheme.SidebarMulti[string] {
             { text: "Color", link: "color" },
             { text: "Drawable", link: "drawable" },
             { text: "Theme", link: "theme" },
-            { text: "Widget Theme Reference", link: "theme_ref" }
+            { text: "Widget Theme Reference", link: "theme_ref" },
           ],
         },
       ],
