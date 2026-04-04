@@ -33,7 +33,7 @@
     "satori-html": "^0.3.2",
     "sharp": "^0.34.5",
     "taze": "^19.10.0",
-    "vitepress": "2.0.0-alpha.16",
+    "vitepress": "2.0.0-alpha.17",
     "vitepress-sidebar": "^1.33.1",
     "vue-eslint-parser": "^10.4.0"
   },
