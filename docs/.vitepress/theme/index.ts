@@ -1,5 +1,5 @@
 // https://vitepress.dev/guide/custom-theme
-import { defineComponent, render, h, watch } from "vue";
+import { defineComponent, render, h, watch, nextTick } from "vue";
 import { type Theme, useData, useRoute } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import BackToTop from "../../../components/internal/BackToTop.vue";
@@ -26,6 +26,8 @@ import "@nolebase/vitepress-plugin-inline-link-preview/client/style.css";
 import "@nolebase/vitepress-plugin-highlight-targeted-heading/client/style.css";
 import "@nolebase/vitepress-plugin-enhanced-mark/client/style.css";
 
+import { createMermaidRenderer } from "vitepress-mermaid-renderer";
+
 function addBackTotop() {
   render(
     h(BackToTop, {
@@ -48,12 +50,29 @@ const Layout = defineComponent({
     const route = useRoute();
     const { syncOverlayScrollbars } = useOverlayScrollbars(isDark);
 
+    const initMermaid = () => {
+      const mermaidRenderer = createMermaidRenderer({
+        theme: isDark.value ? "dark" : "forest",
+      });
+    };
+
+    nextTick(() => initMermaid()).catch(() => {
+      console.error("cannot init mermaid");
+    });
+
     watch(
       () => route.path,
       () => {
         void syncOverlayScrollbars();
       },
       { flush: "post" },
+    );
+
+    watch(
+      () => isDark.value,
+      () => {
+        initMermaid();
+      },
     );
 
     return () =>
