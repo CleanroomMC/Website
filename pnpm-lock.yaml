@@ -29,25 +29,25 @@ importers:
     devDependencies:
       '@nolebase/vitepress-plugin-enhanced-mark':
         specifier: ^2.18.2
-        version: 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))
+        version: 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))
       '@nolebase/vitepress-plugin-enhanced-readabilities':
         specifier: ^2.18.2
-        version: 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))
+        version: 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))
       '@nolebase/vitepress-plugin-git-changelog':
         specifier: ^2.18.2
-        version: 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))
+        version: 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))
       '@nolebase/vitepress-plugin-highlight-targeted-heading':
         specifier: ^2.18.2
-        version: 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))
+        version: 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))
       '@nolebase/vitepress-plugin-inline-link-preview':
         specifier: ^2.18.2
-        version: 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))
+        version: 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))
       '@nolebase/vitepress-plugin-meta':
         specifier: ^2.18.2
-        version: 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))
+        version: 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))
       '@nolebase/vitepress-plugin-page-properties':
         specifier: ^2.18.2
-        version: 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))
+        version: 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))
       '@resvg/resvg-js':
         specifier: ^2.6.2
         version: 2.6.2
@@ -67,8 +67,8 @@ importers:
         specifier: ^4.0.3
         version: 4.0.3
       markdown-it-mathjax3:
-        specifier: ^4.3.2
-        version: 4.3.2
+        specifier: ^5.0.0
+        version: 5.2.0
       oxfmt:
         specifier: ^0.43.0
         version: 0.43.0
@@ -95,7 +95,7 @@ importers:
         version: 19.11.0
       vitepress:
         specifier: 2.0.0-alpha.17
-        version: 2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3)
+        version: 2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3)
       vitepress-sidebar:
         specifier: ^1.33.1
         version: 1.33.1
@@ -1096,6 +1096,62 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@se-oss/deasync-darwin-arm64@1.0.1':
+    resolution: {integrity: sha512-0YWmIDEGQfW3GGopmZHhfA6mamsG0HFKZhmBzHVyFiMKkJts8kpQwGbGrWlK8eOAoPCihOsG6tCotYR3p7HZaQ==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@se-oss/deasync-darwin-x64@1.0.1':
+    resolution: {integrity: sha512-r3FRTLIXqGqOb1DjTLW3YhO/Dd1vA2qRLP0Ym3Wmk3yMv6c/nm15zg6UVoXbgBu8cjbvcsI/OfbHPdErmjMWsw==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@se-oss/deasync-linux-arm64-gnu@1.0.1':
+    resolution: {integrity: sha512-657uRew7fZAx663Li03ilLV2lN09Dqb/NxawlDu8kKmboK1BLitHJRS+taiT5oFZqyIDrU45tlQKfCrW0p0sYA==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@se-oss/deasync-linux-arm64-musl@1.0.1':
+    resolution: {integrity: sha512-IE3fIQPIJtko4lx9sRam+Zz0P4xbpAPJgDCHaz6k9cP1yUvVI179B4IZRnFx0GyjyQpm0KhHoIGHJc4KUmA81Q==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
+  '@se-oss/deasync-linux-x64-gnu@1.0.1':
+    resolution: {integrity: sha512-XQl7etZESGIjIraCyxfAey8ZTIJUB4dUFU3rPR/xLVn9bKpZGlJLIms0z3hoHX9mipO+Cqo53vK4IVm6A7U/ww==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@se-oss/deasync-linux-x64-musl@1.0.1':
+    resolution: {integrity: sha512-vWgFAZlqImqMV6jhCWV7C9wcCS1eb1ajhlKduBRPfyUxxkoObe+EqTG2BKJAuafxp3/KS1aUsIMJma9mhwFvow==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  '@se-oss/deasync-win32-arm64-msvc@1.0.1':
+    resolution: {integrity: sha512-yk7lEE7Zd8GX7o6CuUbg3HnnmUhBx4tgfn5ff3eoq05CgBO6Z3ZtL4l+utAe1cxcFaXPhyvcgnHYyA4OF544tg==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@se-oss/deasync-win32-x64-msvc@1.0.1':
+    resolution: {integrity: sha512-ixizmuLGRPGyAesWUNWVzVOsvuunNb/qMqU8SmjfLR/vVgzdQEkSHFf+fkX9GXPN6FDv+DAz5uskTzhjUyCXFA==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [win32]
+
+  '@se-oss/deasync@1.0.1':
+    resolution: {integrity: sha512-Ha7P/xCNxOuH72BNdLRWs4TT8rsMMrERnHtfKWBeTWu+UFW9OBTrRgfZJOlbAAQFR0l4Q30cpAn8CuR7PXWcPg==}
+    engines: {node: '>= 10'}
+
   '@sec-ant/readable-stream@0.4.1':
     resolution: {integrity: sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg==}
 
@@ -1425,11 +1481,6 @@ packages:
     peerDependencies:
       vue: ^3.5.0
 
-  '@xmldom/xmldom@0.9.8':
-    resolution: {integrity: sha512-p96FSY54r+WJ50FIOsCOjyj/wavs8921hG5+kVMmZgKcvIKxMXHTrjNJvRgWa/zuX3B6t2lijLNFaOyuxUH+2A==}
-    engines: {node: '>=14.6'}
-    deprecated: this version has critical issues, please update to the latest version
-
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
@@ -1442,10 +1493,6 @@ packages:
 
   ajv@6.14.0:
     resolution: {integrity: sha512-IWrosm/yrn43eiKqkfkHis7QioDleaXQHdDVPKg0FSwwd/DuvyX79TZnFOnYpB7dcsFAMmtFztZuXPDvSePkFw==}
-
-  ansi-colors@4.1.3:
-    resolution: {integrity: sha512-/6w/C21Pm1A7aZitlI5Ni/2J6FFQN8i1Cvz3kHABAAbw93v/NlvKdVOqz7CCWz/3iv/JplRSEEZ83XION15ovw==}
-    engines: {node: '>=6'}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -1523,13 +1570,6 @@ packages:
   character-entities-legacy@3.0.0:
     resolution: {integrity: sha512-RpPp0asT/6ufRm//AJVwpViZbGM/MkjQFxJccQRHmISF/22NBtsHqAWmL+/pmkPWoIUJdWyeVleTl1wydHATVQ==}
 
-  cheerio-select@1.6.0:
-    resolution: {integrity: sha512-eq0GdBvxVFbqWgmCm7M3XGs1I8oLy/nExUnh6oLqmBditPO9AqQJrkslDpMun/hZ0yyTs8L0m85OHp4ho6Qm9g==}
-
-  cheerio@1.0.0-rc.10:
-    resolution: {integrity: sha512-g0J0q/O6mW8z5zxQ3A8E8J1hUgp4SMOvEoW/x84OwyHKe/Zccz83PVT4y5Crcr530FV6NgmKI1qvGTKVl9XXVw==}
-    engines: {node: '>= 6'}
-
   chevrotain-allstar@0.3.1:
     resolution: {integrity: sha512-b7g+y9A0v4mxCW1qUhf3BSVPg+/NvGErk/dOkrDaHA0nQIQGAtrOjlX//9OQtRlSCy+x9rfB5N8yC71lH1nvMw==}
     peerDependencies:
@@ -1550,14 +1590,6 @@ packages:
 
   comma-separated-tokens@2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
-
-  commander@13.1.0:
-    resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
-    engines: {node: '>=18'}
-
-  commander@6.2.1:
-    resolution: {integrity: sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==}
-    engines: {node: '>= 6'}
 
   commander@7.2.0:
     resolution: {integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==}
@@ -1606,18 +1638,11 @@ packages:
     resolution: {integrity: sha512-w2Xy9UMMwlKtou0vlRnXvWglPAceXCTtcmVSo8ZBUvqCV5aXEFP/PC6d+I464810I9FT++UACwTD5511bmGPUg==}
     engines: {node: '>=16'}
 
-  css-select@4.3.0:
-    resolution: {integrity: sha512-wPpOYtnsVontu2mODhA19JrqWxNsfdatRKd64kmpRbQgh1KtItko5sTnEpPdpSaJszTOhEMlF/RPz28qj4HqhQ==}
-
   css-selector-parser@3.3.0:
     resolution: {integrity: sha512-Y2asgMGFqJKF4fq4xHDSlFYIkeVfRsm69lQC1q9kbEsH5XtnINTMrweLkjYMeaUgiXBy/uvKeO/a1JHTNnmB2g==}
 
   css-to-react-native@3.2.0:
     resolution: {integrity: sha512-e8RKaLXMOFii+02mOlqwjbD00KSEKqblnpO9e++1aXS1fPQOpS1YoqdVHBqPjHNoxeF2mimzVqawm2KCbEdtHQ==}
-
-  css-what@6.2.2:
-    resolution: {integrity: sha512-u/O3vwbptzhMs3L1fQE82ZSLHQQfto5gyZzwteVIEyeaY5Fc7R4dapF/BvRoSYFeqfBk4m0V1Vafq5Pjv25wvA==}
-    engines: {node: '>= 6'}
 
   csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
@@ -1827,32 +1852,12 @@ packages:
     resolution: {integrity: sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==}
     engines: {node: '>=6.0.0'}
 
-  dom-serializer@1.4.1:
-    resolution: {integrity: sha512-VHwB3KfrcOOkelEG2ZOfxqLZdfkil8PtJi4P8N2MMXucZq2yLp75ClViUlOVwyoHEDjYU433Aq+5zWP61+RGag==}
-
-  domelementtype@2.3.0:
-    resolution: {integrity: sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw==}
-
-  domhandler@3.3.0:
-    resolution: {integrity: sha512-J1C5rIANUbuYK+FuFL98650rihynUOEzRLxW+90bKZRWB6A1X1Tf82GxR1qAWLyfNPRvjqfip3Q5tdYlmAa9lA==}
-    engines: {node: '>= 4'}
-
-  domhandler@4.3.1:
-    resolution: {integrity: sha512-GrwoxYN+uWlzO8uhUXRl0P+kHE4GtVPfYzVLcUxPL7KNdHKj66vvlhiweIHqYYXWlw+T8iLMp42Lm67ghw4WMQ==}
-    engines: {node: '>= 4'}
-
   dompurify@3.3.3:
     resolution: {integrity: sha512-Oj6pzI2+RqBfFG+qOaOLbFXLQ90ARpcGG6UePL82bJLtdsa6CYJD7nmiU8MW9nQNOtCHV3lZ/Bzq1X0QYbBZCA==}
-
-  domutils@2.8.0:
-    resolution: {integrity: sha512-w96Cjofp72M5IIhpjgobBimYEfoPjx1Vx0BSX9P30WBdZW2WIKU0T1Bd0kz2eNZ9ikjKgHbEyKx8BB6H1L3h3A==}
 
   emoji-regex-xs@2.0.1:
     resolution: {integrity: sha512-1QFuh8l7LqUcKe24LsPUNzjrzJQ7pgRwp1QMcZ5MX6mFplk2zQ08NVCM84++1cveaUUYtcCYHmeFEuNg16sU4g==}
     engines: {node: '>=10.0.0'}
-
-  entities@2.2.0:
-    resolution: {integrity: sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==}
 
   entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
@@ -1877,10 +1882,6 @@ packages:
     resolution: {integrity: sha512-8VwMnyGCONIs6cWue2IdpHxHnAjzxnw2Zr7MkVxB2vjmQ2ivqGFb4LEG3SMnv0Gb2F/G/2yA8zUaiL1gywDCCg==}
     engines: {node: '>=18'}
     hasBin: true
-
-  escape-goat@3.0.0:
-    resolution: {integrity: sha512-w3PwNZJwRxlp47QGzhuEBldEqVHHhh8/tIPcl6ecf2Bou99cdAt0knihBV0Ecc7CGxYduXVBDheH1K2oADRlvw==}
-    engines: {node: '>=10'}
 
   escape-html@1.0.3:
     resolution: {integrity: sha512-NiSupZ4OeuGwr68lGIeym/ksIZMJodUGOSCZ/FSnTxcrekbvqrgdUxlJOMpijaKZVjAJrWrGs/6Jy8OMuyj9ow==}
@@ -1910,10 +1911,6 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
-
-  esm@3.2.25:
-    resolution: {integrity: sha512-U1suiZ2oDVWv4zPO56S0NcR5QriEahGtdN2OR6FiOG4WJvcjBVFB0qI4+eKoWFH483PKGuLuu6V8Z4T5g63UVA==}
-    engines: {node: '>=6'}
 
   espree@11.2.0:
     resolution: {integrity: sha512-7p3DrVEIopW1B1avAGLuCSh1jubc01H2JHc8B4qqGblmg5gI9yumBgACjWo4JlIc04ufug4xJ3SQI8HkS/Rgzw==}
@@ -2121,12 +2118,6 @@ packages:
   html-void-elements@3.0.0:
     resolution: {integrity: sha512-bEqo66MRXsUGxWHV5IP0PUiAWwoEjba4VCzg0LjFJBpchPaTfyfCKTG6bc5F8ucKec3q5y6qOdGyYTSBEvhCrg==}
 
-  htmlparser2@5.0.1:
-    resolution: {integrity: sha512-vKZZra6CSe9qsJzh0BjBGXo8dvzNsq/oGvsjfRdOrrryfeD9UOBEEQdeoqCRmKZchF5h2zOBMQ6YuQ0uRUmdbQ==}
-
-  htmlparser2@6.1.0:
-    resolution: {integrity: sha512-gyyPk6rgonLFEDGoeRgQNaEUvdJ4ktTmmUh/h2t7s+M8oPpIPxgNACWa+6ESR57kXstwqPiCut0V8NRpcwgU7A==}
-
   human-signals@8.0.1:
     resolution: {integrity: sha512-eKCa6bwnJhvxj14kZk5NCPc6Hb6BdsU9DZcOnmQKSnO1VKrfV0zCvtttPZUsBvjmNDn8rpcJfpwSYnHBjc95MQ==}
     engines: {node: '>=18.18.0'}
@@ -2233,11 +2224,6 @@ packages:
 
   json-stable-stringify-without-jsonify@1.0.1:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
-
-  juice@8.1.0:
-    resolution: {integrity: sha512-FLzurJrx5Iv1e7CfBSZH68dC04EEvXvvVvPYB7Vx1WAuhCp1ZPIMtqxc+WTWxVkpTIC2Ach/GAv0rQbtGf6YMA==}
-    engines: {node: '>=10.0.0'}
-    hasBin: true
 
   katex@0.16.44:
     resolution: {integrity: sha512-EkxoDTk8ufHqHlf9QxGwcxeLkWRR3iOuYfRpfORgYfqc8s13bgb+YtRY59NK5ZpRaCwq1kqA6a5lpX8C/eLphQ==}
@@ -2379,8 +2365,8 @@ packages:
     peerDependencies:
       markdown-it: '>= 9.0.0'
 
-  markdown-it-mathjax3@4.3.2:
-    resolution: {integrity: sha512-TX3GW5NjmupgFtMJGRauioMbbkGsOXAAt1DZ/rzzYmTHqzkO1rNAdiMD4NiruurToPApn2kYy76x02QN26qr2w==}
+  markdown-it-mathjax3@5.2.0:
+    resolution: {integrity: sha512-R+XAy5/7vSGuhG9Z0/cJm6zKxOzStcScfSKVwoarh4nBra+v1KClvbALr/xFTEe9iQhwfQM4SJnO68LXL+btMA==}
 
   markdown-it@14.1.1:
     resolution: {integrity: sha512-BuU2qnTti9YKgK5N+IeMubp14ZUKUUw7yeJbkjtosvHiP0AZ5c8IAgEMk79D0eC8F23r4Ac/q8cAIFdm2FtyoA==}
@@ -2391,9 +2377,8 @@ packages:
     engines: {node: '>= 20'}
     hasBin: true
 
-  mathjax-full@3.2.2:
-    resolution: {integrity: sha512-+LfG9Fik+OuI8SLwsiR02IVdjcnRCy5MufYLi0C3TdMT56L/pjB0alMVGgoWJF8pN9Rc7FESycZB9BMNWIid5w==}
-    deprecated: Version 4 replaces this package with the scoped package @mathjax/src
+  mathxyjax3@0.8.3:
+    resolution: {integrity: sha512-eXjFaiyQsTdVOeTFoFaFJ/r1FITpB1f9c5MW4FETfcoVV/+xa5SD9pS05AwugzL/gNuDtWXrTOSmoD2e0Du+UA==}
 
   mdast-util-to-hast@13.2.1:
     resolution: {integrity: sha512-cctsq2wp5vTsLIcaymblUriiTcZd0CwWtCbLvrOzYCDZoWyMNV8sZ7krj09FSnsiJi3WVsHLM4k6Dq/yaPyCXA==}
@@ -2401,18 +2386,12 @@ packages:
   mdurl@2.0.0:
     resolution: {integrity: sha512-Lf+9+2r+Tdp5wXDXC4PcIBjTDtq4UKjCPMQhKIuzpJNW0b96kVqSwW0bT7FhRSfmAiFYgP+SCRvdrDozfh0U5w==}
 
-  mensch@0.3.4:
-    resolution: {integrity: sha512-IAeFvcOnV9V0Yk+bFhYR07O3yNina9ANIN5MoXBKYJ/RLYPurd2d0yw14MDhpr9/momp0WofT1bPUh3hkzdi/g==}
-
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
   mermaid@11.14.0:
     resolution: {integrity: sha512-GSGloRsBs+JINmmhl0JDwjpuezCsHB4WGI4NASHxL3fHo3o/BRXTxhDLKnln8/Q0lRFRyDdEjmk1/d5Sn1Xz8g==}
-
-  mhchemparser@4.2.1:
-    resolution: {integrity: sha512-kYmyrCirqJf3zZ9t/0wGgRZ4/ZJw//VwaRVGA75C4nhE60vtnIzhl9J9ndkX/h6hxSN7pjg/cE0VxbnNM+bnDQ==}
 
   micromark-util-character@2.1.1:
     resolution: {integrity: sha512-wv8tdUTJ3thSFFFJKtpYKOYiGP2+v96Hvk4Tu8KpCAsTMs6yi+nVmGh1syvSCsaxz45J6Jbw+9DD6g97+NV67Q==}
@@ -2438,11 +2417,6 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  mime@2.6.0:
-    resolution: {integrity: sha512-USPkMeET31rOMiarsBNIHZKLGgvKc/LrjofAnBlOttf5ajRvqiRA8QsenbcooctK6d6Ts6aqZXBA+XbkKthiQg==}
-    engines: {node: '>=4.0.0'}
-    hasBin: true
-
   mimic-function@5.0.1:
     resolution: {integrity: sha512-VP79XUPxV2CigYP3jWwAUFSku2aKqBH7uTAapFWCBqutsbmDo96KY5o8uh6U+/YSIn5OxJnXp73beVkpqMIGhA==}
     engines: {node: '>=18'}
@@ -2464,9 +2438,6 @@ packages:
 
   minisearch@7.2.0:
     resolution: {integrity: sha512-dqT2XBYUOZOiC5t2HRnwADjhNS2cecp9u+TJRiJ1Qp/f5qjkeT5APcGPjHw+bz89Ms8Jp+cG4AlE+QZ/QnDglg==}
-
-  mj-context-menu@0.6.1:
-    resolution: {integrity: sha512-7NO5s6n10TIV96d4g2uDpG7ZDpIhMh0QNfGdJw/W47JswFcosz457wqz/b5sAKvl12sxINGFCn80NZHKwxQEXA==}
 
   mlly@1.8.2:
     resolution: {integrity: sha512-d+ObxMQFmbt10sretNDytwt85VrbkhhUA/JBGm1MPaWJ65Cl4wOgLaB1NYvJSZ0Ef03MMEU/0xpPMXUIQ29UfA==}
@@ -2492,15 +2463,6 @@ packages:
 
   node-fetch-native@1.6.7:
     resolution: {integrity: sha512-g9yhqoedzIUm0nTnTqAQvueMPVOuIY16bqgAJJC8XOOubYFNwz6IER9qs0Gq2Xd0+CecCKFjtdDTMA4u4xG06Q==}
-
-  node-fetch@2.7.0:
-    resolution: {integrity: sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==}
-    engines: {node: 4.x || >=6.0.0}
-    peerDependencies:
-      encoding: ^0.1.0
-    peerDependenciesMeta:
-      encoding:
-        optional: true
 
   npm-run-path@6.0.0:
     resolution: {integrity: sha512-9qny7Z9DsQU8Ou39ERsPU4OZQlSTP47ShQzuKZ6PRXpYLtIFgl/DEBYEXKlvcEa+9tHVcK8CF81Y2V72qaZhWA==}
@@ -2586,12 +2548,6 @@ packages:
   parse-node-version@1.0.1:
     resolution: {integrity: sha512-3YHlOa/JgH6Mnpr05jP9eDG254US9ek25LyIxZlDItp2iJtwyaXQb57lBYLdT3MowkUFYEV2XXNAYIPlESvJlA==}
     engines: {node: '>= 0.10'}
-
-  parse5-htmlparser2-tree-adapter@6.0.1:
-    resolution: {integrity: sha512-qPuWvbLgvDGilKc5BoicRovlT4MtYT6JfJyBOMDsKoiT+GiuP5qyrPCnR9HcPECIJJmZh5jRndyNThnhhb/vlA==}
-
-  parse5@6.0.1:
-    resolution: {integrity: sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw==}
 
   parse5@7.3.0:
     resolution: {integrity: sha512-IInvU7fabl34qmi9gY8XOVxhYyMyuH2xUNpb2q8/Y+7552KlejkRvqvD19nMoUW/uQGGbqNpA6Tufu5FL5BZgw==}
@@ -2800,9 +2756,6 @@ packages:
     resolution: {integrity: sha512-ZA6oR3T/pEyuqwMgAKT0/hAv8oAXckzbkmR0UkUosQ+Mc4RxGoJkRmwHgHufaenlyAgE1Mxgpdcrf75y6XcnDg==}
     engines: {node: '>=14.16'}
 
-  slick@1.12.2:
-    resolution: {integrity: sha512-4qdtOGcBjral6YIBCWJ0ljFSKNLz9KkhbWtuGvUyRowl1kxfuE1x/Z/aJcaiilpb3do9bl5K7/1h9XC5wWpY/A==}
-
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
@@ -2813,10 +2766,6 @@ packages:
 
   space-separated-tokens@2.0.2:
     resolution: {integrity: sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==}
-
-  speech-rule-engine@4.1.2:
-    resolution: {integrity: sha512-S6ji+flMEga+1QU79NDbwZ8Ivf0S/MpupQQiIC0rTpU/ZTKgcajijJJb1OcByBQDjrXCN1/DJtGz4ZJeBMPGJw==}
-    hasBin: true
 
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
@@ -2879,9 +2828,6 @@ packages:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
 
-  tr46@0.0.3:
-    resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
-
   trim-lines@3.0.1:
     resolution: {integrity: sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==}
 
@@ -2908,6 +2854,10 @@ packages:
   type-fest@0.20.2:
     resolution: {integrity: sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==}
     engines: {node: '>=10'}
+
+  type-fest@4.41.0:
+    resolution: {integrity: sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==}
+    engines: {node: '>=16'}
 
   typescript@5.4.3:
     resolution: {integrity: sha512-KrPd3PKaCLr78MalgiwJnA25Nm8HAmdwN3mYUYZgG/wizIo9EainNVQI9/yDavtVFRN2h3k8uf3GLHuhDMgEHg==}
@@ -2975,10 +2925,6 @@ packages:
   uuid@11.1.0:
     resolution: {integrity: sha512-0/A9rDy9P7cJ+8w1c9WD9V//9Wj15Ce2MPz8Ri6032usz+NfePxx5AcN3bN+r6ZL6jEo066/yNYB3tn4pQEx+A==}
     hasBin: true
-
-  valid-data-url@3.0.1:
-    resolution: {integrity: sha512-jOWVmzVceKlVVdwjNSenT4PbGghU0SBIizAev8ofZVgivk/TVHXSbNL8LP6M3spZvkR9/QolkyJavGSX5Cs0UA==}
-    engines: {node: '>=10'}
 
   vfile-location@5.0.3:
     resolution: {integrity: sha512-5yXvWDEgqeiYiBe1lbxYF7UMAIm/IcopxMHrMQDq3nvKcjPKIhZklUKL+AE7J7uApI4kwe2snsK+eI6UTj9EHg==}
@@ -3092,23 +3038,10 @@ packages:
   web-namespaces@2.0.1:
     resolution: {integrity: sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==}
 
-  web-resource-inliner@6.0.1:
-    resolution: {integrity: sha512-kfqDxt5dTB1JhqsCUQVFDj0rmY+4HLwGQIsLPbyrsN9y9WV/1oFDSx3BQ4GfCv9X+jVeQ7rouTqwK53rA/7t8A==}
-    engines: {node: '>=10.0.0'}
-
-  webidl-conversions@3.0.1:
-    resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
-
-  whatwg-url@5.0.0:
-    resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
-
   which@2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
     engines: {node: '>= 8'}
     hasBin: true
-
-  wicked-good-xpath@1.3.0:
-    resolution: {integrity: sha512-Gd9+TUn5nXdwj/hFsPVx5cuHHiF5Bwuc30jZ4+ronF1qHK5O7HD0sgmXWSEgwKquT3ClLoKPVbO6qGwVwLzvAw==}
 
   word-wrap@1.2.5:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
@@ -3464,32 +3397,32 @@ snapshots:
     dependencies:
       markdown-it: 14.1.1
 
-  '@nolebase/ui@2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))':
+  '@nolebase/ui@2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))':
     dependencies:
       '@iconify-json/octicon': 1.2.21
       less: 4.6.2
-      vitepress: 2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3)
+      vitepress: 2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3)
       vue: 3.5.32(typescript@5.4.3)
 
-  '@nolebase/vitepress-plugin-enhanced-mark@2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))':
+  '@nolebase/vitepress-plugin-enhanced-mark@2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))':
     dependencies:
       less: 4.6.2
-      vitepress: 2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3)
+      vitepress: 2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3)
 
-  '@nolebase/vitepress-plugin-enhanced-readabilities@2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))':
+  '@nolebase/vitepress-plugin-enhanced-readabilities@2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))':
     dependencies:
       '@iconify-json/carbon': 1.2.19
       '@iconify-json/icon-park-outline': 1.2.4
-      '@nolebase/ui': 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))
+      '@nolebase/ui': 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))
       less: 4.6.2
-      vitepress: 2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3)
+      vitepress: 2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3)
     transitivePeerDependencies:
       - vue
 
-  '@nolebase/vitepress-plugin-git-changelog@2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))':
+  '@nolebase/vitepress-plugin-git-changelog@2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))':
     dependencies:
       '@iconify-json/octicon': 1.2.21
-      '@nolebase/ui': 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))
+      '@nolebase/ui': 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))
       colorette: 2.0.20
       date-fns: 4.1.0
       defu: 6.1.4
@@ -3499,30 +3432,30 @@ snapshots:
       gray-matter: 4.0.3
       less: 4.6.2
       uncrypto: 0.1.3
-      vitepress: 2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3)
+      vitepress: 2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3)
     transitivePeerDependencies:
       - vue
 
-  '@nolebase/vitepress-plugin-highlight-targeted-heading@2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))':
+  '@nolebase/vitepress-plugin-highlight-targeted-heading@2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))':
     dependencies:
       less: 4.6.2
-      vitepress: 2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3)
+      vitepress: 2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3)
 
-  '@nolebase/vitepress-plugin-inline-link-preview@2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))':
+  '@nolebase/vitepress-plugin-inline-link-preview@2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))':
     dependencies:
       '@iconify-json/icon-park-outline': 1.2.4
       '@iconify-json/octicon': 1.2.21
       '@iconify-json/svg-spinners': 1.2.4
       '@nolebase/markdown-it-element-transform': 2.18.2(markdown-it@14.1.1)
-      '@nolebase/ui': 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))
+      '@nolebase/ui': 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))
       less: 4.6.2
       markdown-it: 14.1.1
       markdown-it-attrs: 4.3.1(markdown-it@14.1.1)
-      vitepress: 2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3)
+      vitepress: 2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3)
     transitivePeerDependencies:
       - vue
 
-  '@nolebase/vitepress-plugin-meta@2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))':
+  '@nolebase/vitepress-plugin-meta@2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))':
     dependencies:
       defu: 6.1.4
       hast-util-select: 6.0.4
@@ -3533,18 +3466,18 @@ snapshots:
       unified: 11.0.5
       unist-util-remove: 4.0.0
       unist-util-remove-position: 5.0.0
-      vitepress: 2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3)
+      vitepress: 2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3)
 
-  '@nolebase/vitepress-plugin-page-properties@2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))':
+  '@nolebase/vitepress-plugin-page-properties@2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))':
     dependencies:
       '@iconify-json/icon-park-outline': 1.2.4
       '@iconify-json/octicon': 1.2.21
-      '@nolebase/ui': 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))
+      '@nolebase/ui': 2.18.2(vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3))(vue@3.5.32(typescript@5.4.3))
       date-fns: 4.1.0
       gray-matter: 4.0.3
       less: 4.6.2
       uuid: 11.1.0
-      vitepress: 2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3)
+      vitepress: 2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3)
     transitivePeerDependencies:
       - vue
 
@@ -3811,6 +3744,43 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.59.0':
     optional: true
+
+  '@se-oss/deasync-darwin-arm64@1.0.1':
+    optional: true
+
+  '@se-oss/deasync-darwin-x64@1.0.1':
+    optional: true
+
+  '@se-oss/deasync-linux-arm64-gnu@1.0.1':
+    optional: true
+
+  '@se-oss/deasync-linux-arm64-musl@1.0.1':
+    optional: true
+
+  '@se-oss/deasync-linux-x64-gnu@1.0.1':
+    optional: true
+
+  '@se-oss/deasync-linux-x64-musl@1.0.1':
+    optional: true
+
+  '@se-oss/deasync-win32-arm64-msvc@1.0.1':
+    optional: true
+
+  '@se-oss/deasync-win32-x64-msvc@1.0.1':
+    optional: true
+
+  '@se-oss/deasync@1.0.1':
+    dependencies:
+      type-fest: 4.41.0
+    optionalDependencies:
+      '@se-oss/deasync-darwin-arm64': 1.0.1
+      '@se-oss/deasync-darwin-x64': 1.0.1
+      '@se-oss/deasync-linux-arm64-gnu': 1.0.1
+      '@se-oss/deasync-linux-arm64-musl': 1.0.1
+      '@se-oss/deasync-linux-x64-gnu': 1.0.1
+      '@se-oss/deasync-linux-x64-musl': 1.0.1
+      '@se-oss/deasync-win32-arm64-msvc': 1.0.1
+      '@se-oss/deasync-win32-x64-msvc': 1.0.1
 
   '@sec-ant/readable-stream@0.4.1': {}
 
@@ -4176,8 +4146,6 @@ snapshots:
     dependencies:
       vue: 3.5.32(typescript@5.4.3)
 
-  '@xmldom/xmldom@0.9.8': {}
-
   acorn-jsx@5.3.2(acorn@8.16.0):
     dependencies:
       acorn: 8.16.0
@@ -4190,8 +4158,6 @@ snapshots:
       fast-json-stable-stringify: 2.1.0
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
-
-  ansi-colors@4.1.3: {}
 
   ansi-regex@5.0.1: {}
 
@@ -4253,24 +4219,6 @@ snapshots:
 
   character-entities-legacy@3.0.0: {}
 
-  cheerio-select@1.6.0:
-    dependencies:
-      css-select: 4.3.0
-      css-what: 6.2.2
-      domelementtype: 2.3.0
-      domhandler: 4.3.1
-      domutils: 2.8.0
-
-  cheerio@1.0.0-rc.10:
-    dependencies:
-      cheerio-select: 1.6.0
-      dom-serializer: 1.4.1
-      domhandler: 4.3.1
-      htmlparser2: 6.1.0
-      parse5: 6.0.1
-      parse5-htmlparser2-tree-adapter: 6.0.1
-      tslib: 2.8.1
-
   chevrotain-allstar@0.3.1(chevrotain@11.1.2):
     dependencies:
       chevrotain: 11.1.2
@@ -4294,10 +4242,6 @@ snapshots:
   colorette@2.0.20: {}
 
   comma-separated-tokens@2.0.3: {}
-
-  commander@13.1.0: {}
-
-  commander@6.2.1: {}
 
   commander@7.2.0: {}
 
@@ -4338,14 +4282,6 @@ snapshots:
 
   css-gradient-parser@0.0.17: {}
 
-  css-select@4.3.0:
-    dependencies:
-      boolbase: 1.0.0
-      css-what: 6.2.2
-      domhandler: 4.3.1
-      domutils: 2.8.0
-      nth-check: 2.1.1
-
   css-selector-parser@3.3.0: {}
 
   css-to-react-native@3.2.0:
@@ -4353,8 +4289,6 @@ snapshots:
       camelize: 1.0.1
       css-color-keywords: 1.0.0
       postcss-value-parser: 4.2.0
-
-  css-what@6.2.2: {}
 
   csstype@3.2.3: {}
 
@@ -4576,35 +4510,11 @@ snapshots:
     dependencies:
       esutils: 2.0.3
 
-  dom-serializer@1.4.1:
-    dependencies:
-      domelementtype: 2.3.0
-      domhandler: 4.3.1
-      entities: 2.2.0
-
-  domelementtype@2.3.0: {}
-
-  domhandler@3.3.0:
-    dependencies:
-      domelementtype: 2.3.0
-
-  domhandler@4.3.1:
-    dependencies:
-      domelementtype: 2.3.0
-
   dompurify@3.3.3:
     optionalDependencies:
       '@types/trusted-types': 2.0.7
 
-  domutils@2.8.0:
-    dependencies:
-      dom-serializer: 1.4.1
-      domelementtype: 2.3.0
-      domhandler: 4.3.1
-
   emoji-regex-xs@2.0.1: {}
-
-  entities@2.2.0: {}
 
   entities@4.5.0: {}
 
@@ -4647,8 +4557,6 @@ snapshots:
       '@esbuild/win32-arm64': 0.27.3
       '@esbuild/win32-ia32': 0.27.3
       '@esbuild/win32-x64': 0.27.3
-
-  escape-goat@3.0.0: {}
 
   escape-html@1.0.3: {}
 
@@ -4712,8 +4620,6 @@ snapshots:
       text-table: 0.2.0
     transitivePeerDependencies:
       - supports-color
-
-  esm@3.2.25: {}
 
   espree@11.2.0:
     dependencies:
@@ -4984,20 +4890,6 @@ snapshots:
 
   html-void-elements@3.0.0: {}
 
-  htmlparser2@5.0.1:
-    dependencies:
-      domelementtype: 2.3.0
-      domhandler: 3.3.0
-      domutils: 2.8.0
-      entities: 2.2.0
-
-  htmlparser2@6.1.0:
-    dependencies:
-      domelementtype: 2.3.0
-      domhandler: 4.3.1
-      domutils: 2.8.0
-      entities: 2.2.0
-
   human-signals@8.0.1: {}
 
   iconv-lite@0.6.3:
@@ -5071,16 +4963,6 @@ snapshots:
   json-schema-traverse@0.4.1: {}
 
   json-stable-stringify-without-jsonify@1.0.1: {}
-
-  juice@8.1.0:
-    dependencies:
-      cheerio: 1.0.0-rc.10
-      commander: 6.2.1
-      mensch: 0.3.4
-      slick: 1.12.2
-      web-resource-inliner: 6.0.1
-    transitivePeerDependencies:
-      - encoding
 
   katex@0.16.44:
     dependencies:
@@ -5207,12 +5089,10 @@ snapshots:
     dependencies:
       markdown-it: 14.1.1
 
-  markdown-it-mathjax3@4.3.2:
+  markdown-it-mathjax3@5.2.0:
     dependencies:
-      juice: 8.1.0
-      mathjax-full: 3.2.2
-    transitivePeerDependencies:
-      - encoding
+      '@se-oss/deasync': 1.0.1
+      mathxyjax3: 0.8.3
 
   markdown-it@14.1.1:
     dependencies:
@@ -5225,12 +5105,7 @@ snapshots:
 
   marked@16.4.2: {}
 
-  mathjax-full@3.2.2:
-    dependencies:
-      esm: 3.2.25
-      mhchemparser: 4.2.1
-      mj-context-menu: 0.6.1
-      speech-rule-engine: 4.1.2
+  mathxyjax3@0.8.3: {}
 
   mdast-util-to-hast@13.2.1:
     dependencies:
@@ -5245,8 +5120,6 @@ snapshots:
       vfile: 6.0.3
 
   mdurl@2.0.0: {}
-
-  mensch@0.3.4: {}
 
   merge2@1.4.1: {}
 
@@ -5274,8 +5147,6 @@ snapshots:
       ts-dedent: 2.2.0
       uuid: 11.1.0
 
-  mhchemparser@4.2.1: {}
-
   micromark-util-character@2.1.1:
     dependencies:
       micromark-util-symbol: 2.0.1
@@ -5301,8 +5172,6 @@ snapshots:
   mime@1.6.0:
     optional: true
 
-  mime@2.6.0: {}
-
   mimic-function@5.0.1: {}
 
   minimatch@10.2.4:
@@ -5320,8 +5189,6 @@ snapshots:
   minipass@7.1.3: {}
 
   minisearch@7.2.0: {}
-
-  mj-context-menu@0.6.1: {}
 
   mlly@1.8.2:
     dependencies:
@@ -5347,10 +5214,6 @@ snapshots:
       '@types/nlcst': 2.0.3
 
   node-fetch-native@1.6.7: {}
-
-  node-fetch@2.7.0:
-    dependencies:
-      whatwg-url: 5.0.0
 
   npm-run-path@6.0.0:
     dependencies:
@@ -5480,12 +5343,6 @@ snapshots:
   parse-ms@4.0.0: {}
 
   parse-node-version@1.0.1: {}
-
-  parse5-htmlparser2-tree-adapter@6.0.1:
-    dependencies:
-      parse5: 6.0.1
-
-  parse5@6.0.1: {}
 
   parse5@7.3.0:
     dependencies:
@@ -5746,20 +5603,12 @@ snapshots:
 
   slash@5.1.0: {}
 
-  slick@1.12.2: {}
-
   source-map-js@1.2.1: {}
 
   source-map@0.6.1:
     optional: true
 
   space-separated-tokens@2.0.2: {}
-
-  speech-rule-engine@4.1.2:
-    dependencies:
-      '@xmldom/xmldom': 0.9.8
-      commander: 13.1.0
-      wicked-good-xpath: 1.3.0
 
   sprintf-js@1.0.3: {}
 
@@ -5821,8 +5670,6 @@ snapshots:
     dependencies:
       is-number: 7.0.0
 
-  tr46@0.0.3: {}
-
   trim-lines@3.0.1: {}
 
   trough@2.2.0: {}
@@ -5833,13 +5680,16 @@ snapshots:
 
   ts-dedent@2.2.0: {}
 
-  tslib@2.8.1: {}
+  tslib@2.8.1:
+    optional: true
 
   type-check@0.4.0:
     dependencies:
       prelude-ls: 1.2.1
 
   type-fest@0.20.2: {}
+
+  type-fest@4.41.0: {}
 
   typescript@5.4.3: {}
 
@@ -5928,8 +5778,6 @@ snapshots:
 
   uuid@11.1.0: {}
 
-  valid-data-url@3.0.1: {}
-
   vfile-location@5.0.3:
     dependencies:
       '@types/unist': 3.0.3
@@ -5972,7 +5820,7 @@ snapshots:
       gray-matter: 4.0.3
       qsu: 1.11.1
 
-  vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@4.3.2)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3):
+  vitepress@2.0.0-alpha.17(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.8)(typescript@5.4.3)(yaml@2.8.3):
     dependencies:
       '@docsearch/css': 4.6.0
       '@docsearch/js': 4.6.0
@@ -5994,7 +5842,7 @@ snapshots:
       vite: 7.3.1(@types/node@25.5.2)(jiti@2.6.1)(less@4.6.2)(lightningcss@1.30.1)(yaml@2.8.3)
       vue: 3.5.32(typescript@5.4.3)
     optionalDependencies:
-      markdown-it-mathjax3: 4.3.2
+      markdown-it-mathjax3: 5.2.0
       postcss: 8.5.8
     transitivePeerDependencies:
       - '@types/node'
@@ -6062,29 +5910,9 @@ snapshots:
 
   web-namespaces@2.0.1: {}
 
-  web-resource-inliner@6.0.1:
-    dependencies:
-      ansi-colors: 4.1.3
-      escape-goat: 3.0.0
-      htmlparser2: 5.0.1
-      mime: 2.6.0
-      node-fetch: 2.7.0
-      valid-data-url: 3.0.1
-    transitivePeerDependencies:
-      - encoding
-
-  webidl-conversions@3.0.1: {}
-
-  whatwg-url@5.0.0:
-    dependencies:
-      tr46: 0.0.3
-      webidl-conversions: 3.0.1
-
   which@2.0.2:
     dependencies:
       isexe: 2.0.0
-
-  wicked-good-xpath@1.3.0: {}
 
   word-wrap@1.2.5: {}
 
