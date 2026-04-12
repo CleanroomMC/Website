@@ -84,7 +84,7 @@ Don't know what a builder is? Check [the builder info page](../../getting_starte
   mana(int)
   ```
 
-- `IBlockState[]`. Blocks required underneath the plate, or blocks that will be created under the plate when the recipe is done. The replacement blocks may be `null`, which makes the recipe keep that block intact.
+- `IBlockState[]`. Blocks required underneath the plate, or blocks that will be created under the plate when the recipe is done. The replacement blocks may be `null`, which makes the recipe keep that block intact. Uses the layout for the vanilla Terrasteel recipe (Livingrock in the center and on the corners, Lapis blocks on the edges) by default.
 
   ```groovy:no-line-numbers
   edgeBlock(IBlockState)
