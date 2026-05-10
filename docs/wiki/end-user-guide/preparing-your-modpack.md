@@ -10,6 +10,9 @@ Cleanroom Loader is compatible with the vast majority of Forge mods and will usu
 However, some mods remain **deprecated, redundant, or outright incompatible**—either because they’ve been superseded by better alternatives or because they introduce critical problems.<br>
 To prepare your modpack for Cleanroom Loader, review the lists below and make replacements where necessary.<br>
 
+::: info Note {id="note"}
+Pro tip: if you seek to automate this process, you can build/update your pack using the [Barebones Template](https://www.curseforge.com/minecraft/modpacks/barebones-template-cleanroom), which is a minimalist optimization template. It includes PackCompanion, a runtime analysis tool that scans your actual modlist and generates a personalized report flagging problematic or deprecated mods, complete with custom scripts to cleanly remove them from your instance.
+:::
 ## Incompatible / Problematic Mods on Cleanroom Launcher
 
 | Mod                       | Reason                                                      | Action                                                                                                                                                                                                      |
@@ -23,8 +26,8 @@ To prepare your modpack for Cleanroom Loader, review the lists below and make re
 | **Raw Input**             | Already included in Cleanroom.                              | :no_entry_sign: Remove                                                                                                                                                                                      |
 | **Secret Rooms**          | Has an issue with updater                                   | :no_entry_sign: Disable the update checker in config file                                                                                                                                                   |
 | **SerializationIsBad**    | Redundant. Modern Java versions fix the issue this solves   | :no_entry_sign: Remove                                                                                                                                                                                      |
-| **TexFix**                | Merged and rewritten in CensoredASM                         | :white_check_mark: Use **[CensoredASM](https://www.curseforge.com/minecraft/mc-mods/chibi)**                                                                                                               |
-| **VanillaFix**            | Merged and improved in CensoredASM                          | :white_check_mark: Use **[CensoredASM](https://www.curseforge.com/minecraft/mc-mods/chibi)**                                                                                                               |
+| **TexFix**                | Merged and rewritten in CensoredASM                         | :white_check_mark: Use **[CensoredASM](https://www.curseforge.com/minecraft/mc-mods/chibi)**                                                                                                                |
+| **VanillaFix**            | Merged and improved in CensoredASM                          | :white_check_mark: Use **[CensoredASM](https://www.curseforge.com/minecraft/mc-mods/chibi)**                                                                                                                |
 | **Sound Physics**         | ASM incompat                                                | :white_check_mark: Use **[Sound Physics Remixin](https://www.curseforge.com/minecraft/mc-mods/sound-physics-remixin)**                                                                                      |
 | **Custom Loading Screen** | Incompat with new GSON                                      | :white_check_mark: Use the build from **[this issue page](https://github.com/AlexIIL/CustomLoadingScreen/issues/84)**                                                                                       |
 | **UltimateStack**         | ASM incompat                                                | :white_check_mark: **[StackUp!](https://www.curseforge.com/minecraft/mc-mods/stackup)** should replace it in most cases.                                                                                    |
@@ -39,13 +42,13 @@ If your modpack uses **Bansoukou 4**, make sure to **run the instance at least o
 ## Performance / Memory optimization mods
 
 The most important optimization mods for **Minecraft 1.12.2** can be summed up to the following list:
-- **[CensoredASM](https://www.curseforge.com/minecraft/mc-mods/lolasm)** : Huge optimizations that are targeted at Minecraft 1.12.2.
-- **[VintageFix](https://www.curseforge.com/minecraft/mc-mods/vintagefix)** : Load time and RAM use improvements for Minecraft 1.12.2.
-- **[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)** : A community project to consolidate various bugfixes and tweaks into a single solution for Minecraft 1.12.2.
-- **[Stellar Core](https://www.curseforge.com/minecraft/mc-mods/stellarcore)** : Provides extensive bug fixes, performance improvements, and additional features across a wide range of mods.
-- **[Gnetum](https://www.curseforge.com/minecraft/mc-mods/gnetum)** : Improves performance by distributing HUD updates over multiple frames. <br/>(May experience a few bugs, please report them [Here](https://github.com/decce6/Gnetum/issues).)
-- **[Fixeroo](https://www.curseforge.com/minecraft/mc-mods/xp-orb-clump)** : Bundles bugfixes and XP orb optimizations.
-- **[Alfheim Lighting Engine](https://www.curseforge.com/minecraft/mc-mods/alfheim-lighting-engine)** : Lighting engine replacement for Minecraft, optimized for performance and fixing many bugs.
+- **[CensoredASM](https://www.curseforge.com/minecraft/mc-mods/lolasm)**: Huge optimizations that are targeted at Minecraft 1.12.2.
+- **[VintageFix](https://www.curseforge.com/minecraft/mc-mods/vintagefix)**: Load time and RAM use improvements for Minecraft 1.12.2.
+- **[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)**: A community project to consolidate various bugfixes and tweaks into a single solution for Minecraft 1.12.2.
+- **[Stellar Core](https://www.curseforge.com/minecraft/mc-mods/stellarcore)**: Provides extensive bug fixes, performance improvements, and additional features across a wide range of mods.
+- **[Gnetum](https://www.curseforge.com/minecraft/mc-mods/gnetum)**: Improves performance by distributing HUD updates over multiple frames. <br/>(May experience a few bugs, please report them [Here](https://github.com/decce6/Gnetum/issues).)
+- **[Fixeroo](https://www.curseforge.com/minecraft/mc-mods/xp-orb-clump)**: Bundles bugfixes and XP orb optimizations.
+- **[Alfheim Lighting Engine](https://www.curseforge.com/minecraft/mc-mods/alfheim-lighting-engine)**: Lighting engine replacement for Minecraft, optimized for performance and fixing many bugs.
 
 ::: info Note {id="note"}
 Universal Tweaks supersedes a lot of mods which will be mostly not mentioned here. This can be observed via an in-game warning or by looking at the incompatible mods list [**Here**](https://legacy.curseforge.com/minecraft/mc-mods/universal-tweaks/files/6953147).
@@ -81,7 +84,7 @@ Old and new 1.12.2 mods made with MCreator are highly not recommended for use no
 Mods that were created entirely using generated code from AI (rather than as a learning tool) are also highly not recommended, the mod's code will be highly varied in quality (often poor), it can also be either prone to crashes or downright placebos, especially if it is a performance related mod. <br> <br>
 
 ::: info Note {id="note"}
-If you're new to mod creation and want to start making a mod, we highly recommend creating the mod from scratch instead to avoid complications with learning.<br>You can join our discord server to receive support when starting your modding journey. 
+If you're new to mod creation and want to start making a mod, we highly recommend creating the mod from scratch instead to avoid complications with learning.<br>You can join our [discord server](https://discord.gg/f2K4aSpG4F) to receive support when starting your modding journey. 
 :::
 
 
