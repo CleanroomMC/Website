@@ -8,7 +8,7 @@ title: Preparing your modpack
 
 Cleanroom Loader is compatible with the vast majority of Forge mods and will usually run them without issue.<br>
 However, some mods remain **deprecated, redundant, or outright incompatible**—either because they’ve been superseded by better alternatives or because they introduce critical problems.<br>
-To prepare your modpack for Cleanroom Loader, review the lists below and make replacements where necessary.<br>
+To prepare your modpack for Cleanroom Loader, review the lists below and make replacements where necessary.
 
 ::: info Note {id="note"}
 Pro tip: if you seek to automate this process, you can build/update your pack using the [Barebones Template](https://www.curseforge.com/minecraft/modpacks/barebones-template-cleanroom), which is a minimalist optimization template. It includes PackCompanion, a runtime analysis tool that scans your actual modlist and generates a personalized report flagging problematic or deprecated mods, complete with custom scripts to cleanly remove them from your instance.
@@ -68,20 +68,20 @@ The most prominent Render optimization mods for **Minecraft 1.12.2** are:
 
 ### Stress Test Results
 
-In a simulated heavy-base scenario, we benchmarked the aforementioned mods against each other, and therefore rank their performance according to which gpu is used: <br>
+In a simulated heavy-base scenario, we benchmarked the aforementioned mods against each other, and therefore rank their performance according to which gpu is used:
 - **NVIDIA GPUs** → `Nothirium > Optifine > Celeritas`
 - **AMD GPUs** → `Celeritas > Optifine > Nothirium`
-- **Intel Integrated Graphics** → `Nothirium > Optifine > Celeritas` <br> <br>
+- **Intel Integrated Graphics** → `Nothirium > Optifine > Celeritas`
 
 ::: info Note {id="note"}
-Performance varies depending on your hardware and drivers. Test all three mods to see which provides the best results for your system.<br>
+Performance varies depending on your hardware and drivers. Test all three mods to see which provides the best results for your system.
 :::
 
 ## MCreator and AI Generated Mods
 
-Old and new 1.12.2 mods made with MCreator are highly not recommended for use no matter what kind of mod it is. MCreator in 1.12.2 is no longer officially supported and mods created with it have significant issues that will impact your game, such as unoptimized code, hardcoded IDs, NBT data breakage, and difficulty to debug the generated code. You can use [Crash assistant](https://www.curseforge.com/minecraft/mc-mods/crash-assistant) or [MCreatorDetector](https://github.com/darklysteamgear/mcreatorDetector) if you want a quick way of finding out which mods are MCreator. <br> <br>
+Old and new 1.12.2 mods made with MCreator are highly not recommended for use no matter what kind of mod it is. MCreator in 1.12.2 is no longer officially supported and mods created with it have significant issues that will impact your game, such as unoptimized code, hardcoded IDs, NBT data breakage, and difficulty to debug the generated code. You can use [Crash assistant](https://www.curseforge.com/minecraft/mc-mods/crash-assistant) or [MCreatorDetector](https://github.com/darklysteamgear/mcreatorDetector) if you want a quick way of finding out which mods are MCreator.
 
-Mods that were created entirely using generated code from AI (rather than as a learning tool) are also highly not recommended, the mod's code will be highly varied in quality (often poor), it can also be either prone to crashes or downright placebos, especially if it is a performance related mod. <br> <br>
+Mods that were created entirely using generated code from AI (rather than as a learning tool) are also highly not recommended, the mod's code will be highly varied in quality (often poor), it can also be either prone to crashes or downright placebos, especially if it is a performance related mod.
 
 ::: info Note {id="note"}
 If you're new to mod creation and want to start making a mod, we highly recommend creating the mod from scratch instead to avoid complications with learning.<br>You can join our [discord server](https://discord.gg/f2K4aSpG4F) to receive support when starting your modding journey. 
@@ -91,7 +91,7 @@ If you're new to mod creation and want to start making a mod, we highly recommen
 ## Superseded mods
 
 ::: info Note {id="note"}
-These mods are not necessarily incompatible with Cleanroom loader, but have been superseded by newer forks and mods or do not present any benefit, so we recommend the following actions.<br>
+These mods are not necessarily incompatible with Cleanroom loader, but have been superseded by newer forks and mods or do not present any benefit, so we recommend the following actions.
 For forks not listed below, keep in mind that not all of them are beneficial. Some forks introduce extra bugs that were not in the original mod, some were forked mostly for a specific modpack's benefit and some were forked due to internal conflicts with the original mod's developers. Use those forks at your own discretion.
 :::
 
