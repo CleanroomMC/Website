@@ -151,7 +151,7 @@ This language support will work with any variation of Emacs, but will presume yo
 
 ## Vim/Neovim with coc.nvim
 
-[Vim](https://www.vim.org)/[Neovim](https://neovim.io/) are editors based off the Vi unix editor.
+[Vim](https://www.vim.org)/[Neovim](https://neovim.io/) are editors based off the Vi Unix editor.
 
 ### Installation
 
@@ -168,7 +168,10 @@ This language support will work with any variation of Emacs, but will presume yo
       "host": "127.0.0.1",
       "port": 25564,
       "filetypes": [
-        "groovy"
+        "groovy",
+        "gvy",
+        "gy",
+        "gsh"
       ]
     }
     ...
