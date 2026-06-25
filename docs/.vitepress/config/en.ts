@@ -85,6 +85,7 @@ function nav(): DefaultTheme.NavItem[] {
     nav.push({ text: "Guide", link: "/guide/" });
   nav.push({ text: "GroovyScript", link: "/groovy-script/" });
   nav.push({ text: "RenderBook", link: "/renderbook/" });
+  nav.push({ text: "CurseMaven", link: "/curse-maven" });
   return nav;
 }
 

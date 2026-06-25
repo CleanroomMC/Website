@@ -148,3 +148,39 @@ This language support will work with any variation of Emacs, but will presume yo
 3. [Start the Language Server](#start-the-language-server) via the instructions above
 4. The port in the `groovyscript.cfg` config file must match the port setting.
 5. Done
+
+## Vim/Neovim with coc.nvim
+
+[Vim](https://www.vim.org)/[Neovim](https://neovim.io/) are editors based off the Vi Unix editor.
+
+### Installation
+
+1. Open Vim/Neovim and install [coc.nvim](https://github.com/neoclide/coc.nvim/), and follow further installation instructions for lsp-mode.
+2. Run :CocConfig to open the configuration file, and edit the languageserver field as such:
+:::: details GroovyScript LSP {id="vim-example"}
+::: code-group
+```json [~/.vim/coc-settings.json]
+{
+  ...
+  "languageserver": {
+    ...
+    "groovyscript": {
+      "host": "127.0.0.1",
+      "port": 25564,
+      "filetypes": [
+        "groovy",
+        "gvy",
+        "gy",
+        "gsh"
+      ]
+    }
+    ...
+  }
+  ...
+}
+```
+:::
+::::
+3. [Start the Language Server](#start-the-language-server) via the instructions above
+4. The port in the `groovyscript.cfg` config file must match the port setting.
+5. Done

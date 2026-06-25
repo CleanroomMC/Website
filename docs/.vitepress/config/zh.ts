@@ -59,6 +59,7 @@ function nav(): DefaultTheme.NavItem[] {
     { text: "主页", link: "/zh/" },
     { text: "维基", link: "/zh/wiki/" },
     { text: "GroovyScript", link: "/groovy-script/" },
+    { text: "CurseMaven", link: "/curse-maven" },
   ];
 }
 
