@@ -113,6 +113,12 @@ export const shared = defineConfigWithTheme<CleanRoomConfig>({
             username: "Radk6",
             name: "Rad",
           },
+          {
+            avatar:
+              "https://avatars.githubusercontent.com/u/90279022?v=4",
+            username: "BriefMarigold4",
+            name: "Mari",
+          },
         ],
       }),
       GitChangelogMarkdownSection(),

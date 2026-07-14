@@ -107,10 +107,11 @@ function wikiSidebar(): DefaultTheme.SidebarMulti[string] {
         {
           text: "How To install",
           collapsed: true,
-          base: "/wiki/end-user-guide//installation/",
+          base: "/wiki/end-user-guide/installation/",
           items: [
             { text: "Client", link: "install-client" },
             { text: "Server", link: "install-server" },
+            { text: "Android", link: "install-android" },
           ],
         },
         {
