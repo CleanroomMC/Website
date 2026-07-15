@@ -6,9 +6,9 @@ title: MixinBooter
 
 ## Allows any mixins that work on mods to work effortlessly on 1.8 - 1.12.2
 
-- Current Mixin Version: [UniMix 0.12.2 forked by CleanroomMC, derived from 0.8.5 branch by LegacyModdingMC](https://github.com/CleanroomMC/UniMix)
+- Current Mixin Version: [CleanMix 0.2.9, forked by CleanroomMC, derived from SpongePowered/Fabric Mixin 0.8.7](https://github.com/CleanroomMC/CleanMix)
 
-- Current MixinExtra Version: [0.3.5](https://github.com/LlamaLad7/MixinExtras)
+- Current MixinExtra Version: [0.5.4](https://github.com/LlamaLad7/MixinExtras)
 
 ## For Developers
 
@@ -22,28 +22,51 @@ repositories {
 }
 
 dependencies {
+    def mixin = 'zone.rong:mixinbooter:11.0'
 
-    // Common:
-    annotationProcessor 'org.ow2.asm:asm-debug-all:5.2'
-    annotationProcessor 'com.google.guava:guava:32.1.2-jre'
-    annotationProcessor 'com.google.code.gson:gson:2.8.9'
+    implementation(mixin) { transitive = false }
+    annotationProcessor(mixin)
 
-    // ForgeGradle:
-    implementation ('zone.rong:mixinbooter:9.1') {
-        transitive = false
-    }
-    annotationProcessor ('zone.rong:mixinbooter:9.1') {
-        transitive = false
-    }
+    // RetroFuturaGradle-specific setup for refmap generation:
+    modUtils.enableMixins(mixin)
+    // modUtils.enableMixins(mixin, 'mod_id.mixins.refmap.json') // Optional: specify a custom refmap name
+}
+```
 
-    // RetroFuturaGradle:
-    String mixinBooter = modUtils.enableMixins('zone.rong:mixinbooter:9.1')
-    // modUtils.enableMixins('zone.rong:mixinbooter:9.1', 'mod_id.mixins.refmap.json') << add refmap name as 2nd arg (optional)
-    api (mixinBooter) {
-        transitive = false
+- Choose how to register your mixin configurations. Starting from 11.0, the early/late loader distinction is no longer used, so `IEarlyMixinLoader` / `ILateMixinLoader` are no longer the recommended approach.
+
+1. Use the `MixinConfigs` manifest attribute
+   Add a space-separated list of mixin configuration files to your jar manifest; MixinBooter will read and register them directly.
+
+```groovy
+jar {
+    manifest {
+        attributes(
+            'MixinConfigs': 'mixins.mymod.json'
+        )
     }
-    annotationProcessor (mixinBooter) {
-        transitive = false
+}
+```
+
+2. Use the `MixinConnector` manifest attribute
+   Point it to a class implementing `org.spongepowered.asm.mixin.connect.IMixinConnector`. In its `connect()` method, call `Mixins.addConfiguration(...)` to register your configs.
+
+```groovy
+jar {
+    manifest {
+        attributes(
+            'MixinConnector': 'com.example.mymod.MyMixinConnector'
+        )
+    }
+}
+```
+
+```java
+public class MyMixinConnector implements IMixinConnector {
+    @Override
+    public void connect() {
+        // You can check whether the mod is loaded with: zone.rong.mixinbooter.service.ModDiscoverer.isModPresent(String modId)
+        Mixins.addConfiguration("mixins.mymod.json");
     }
 }
 ```
@@ -58,7 +81,22 @@ dependencies {
 
 - As of 8.4, MixinBooter actively attempts to be compatible with [SpongeForge](https://github.com/SpongePowered/SpongeForge)
 
-## Tidbits
+- As of 9.2, MixinBooter reinstates the older `@MixinLoader` annotation for 1.8.x usages.
+
+- As of 10.0, MixinBooter follows Mixin 0.8.7.
+
+- As of 11.0, MixinBooter is built on top of CleanMix, as an effort to create an unified backend with Cleanroom:
+  - No extra `annotationProcessor` declarations are needed in the build script beyond MixinBooter itself
+  - Added `config/mixinbooter.cfg` for mixin config blacklist management and debug options
+  - Added `logs/mixinbooter.log`, with ability to trace class-loading for precise debugging
+  - Allows the classic `MixinConfigs` and `MixinConnector` manifest attribute entries to be fully involved in the ecosystem
+  - Improved mod discovery so mixin ownership is reported more accurately (instead of everything being `unknown-owner`), and better `isModLoaded` checks
+  - Suppresses Forge's _corrupt ZIP_ warnings;
+  - Phased out mixin "phases", so you no longer need to distinguish early/late mixins and handle them separately.
+
+## Before 11.0
+
+Before 11.0, if you wanted to mixin vanilla, Forge, or other classes that are loaded very early by the class loader (for example Guava), refer to the early loader guidance. Starting from 11.0, this is no longer necessary and the related interfaces are deprecated.
 
 - Consult `IEarlyMixinLoader` for mixins that affects vanilla, forge, or any classes that is passed to the classloader extremely early (e.g. Guava).
 - Consult `ILateMixinLoader` for mixins that affects mods.
