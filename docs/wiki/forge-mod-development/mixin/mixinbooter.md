@@ -35,7 +35,7 @@ dependencies {
 
 - Choose how to register your mixin configurations. Starting from 11.0, the early/late loader distinction is no longer used, so `IEarlyMixinLoader` / `ILateMixinLoader` are no longer the recommended approach.
 
-1. Use the `MixinConfigs` manifest attribute
+1. Use `MixinConfigs` manifest attribute
    Add a space-separated list of mixin configuration files to your jar manifest; MixinBooter will read and register them directly.
 
 ```groovy
@@ -48,7 +48,7 @@ jar {
 }
 ```
 
-2. Use the `MixinConnector` manifest attribute
+2. Use `MixinConnector` manifest attribute
    Point it to a class implementing `org.spongepowered.asm.mixin.connect.IMixinConnector`. In its `connect()` method, call `Mixins.addConfiguration(...)` to register your configs.
 
 ```groovy
@@ -90,9 +90,9 @@ public class MyMixinConnector implements IMixinConnector {
   - Added `config/mixinbooter.cfg` for mixin config blacklist management and debug options
   - Added `logs/mixinbooter.log`, with ability to trace class-loading for precise debugging
   - Allows the classic `MixinConfigs` and `MixinConnector` manifest attribute entries to be fully involved in the ecosystem
-  - Improved mod discovery so mixin ownership is reported more accurately (instead of everything being `unknown-owner`), and better `isModLoaded` checks
-  - Suppresses Forge's _corrupt ZIP_ warnings;
-  - Phased out mixin "phases", so you no longer need to distinguish early/late mixins and handle them separately.
+  - Improved mod discovery so mixin ownership is reported more accurately (instead of always `unknown-owner`), and better `isModLoaded` checks
+  - Suppresses Forge's _corrupt ZIP_ warnings
+  - Phased out mixin "phases", so you no longer need to distinguish early/late mixins and handle them separately
 
 ## Before 11.0
 
