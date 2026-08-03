@@ -27,7 +27,7 @@
     "markdown-it-mathjax3": "^5.2.0",
     "oxfmt": "^0.59.0",
     "oxlint": "^1.69.0",
-    "oxlint-tsgolint": "^0.24.0",
+    "oxlint-tsgolint": "^7.0.0",
     "p-limit": "^7.3.0",
     "satori": "^0.28.0",
     "satori-html": "^0.3.2",
