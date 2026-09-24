@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.10.0",
-    "@vueuse/core": "^14.4.0",
+    "@vueuse/core": "^15.0.0",
     "cross-env": "^10.1.0",
     "overlayscrollbars": "^2.16.0",
     "vitepress-mermaid-renderer": "^1.2.2",
