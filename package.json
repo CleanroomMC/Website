@@ -35,7 +35,8 @@
     "taze": "^19.17.2",
     "vitepress": "2.0.0-alpha.18",
     "vitepress-sidebar": "^1.40.0",
-    "vue-eslint-parser": "^10.4.1"
+    "vue-eslint-parser": "^10.4.1",
+    "wrangler": "^4.136.3"
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.10.0",
