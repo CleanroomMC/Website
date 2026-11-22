@@ -1,5 +1,0 @@
----
-aside: false
----
-
-# GL basics

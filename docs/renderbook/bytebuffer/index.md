@@ -1,5 +1,0 @@
----
-aside: false
----
-
-# Byte buffer
