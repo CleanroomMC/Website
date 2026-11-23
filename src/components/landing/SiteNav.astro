@@ -93,7 +93,8 @@ const languages = [
       ticking = false;
       const y = Math.max(0, scrollY);
       const delta = y - lastY;
-      nav.classList.toggle('is-floating', y > 8);
+      if (y > 8) nav.classList.add('is-floating');
+      else if (y < 2) nav.classList.remove('is-floating');
       if (y < 80 || isOpen() || nav.matches(':focus-within')) nav.classList.remove('is-hidden');
       else if (delta > 6) nav.classList.add('is-hidden');
       else if (delta < -6) nav.classList.remove('is-hidden');
