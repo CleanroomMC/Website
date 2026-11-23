@@ -1,0 +1,25 @@
+---
+const faqs = [
+  { q: 'Is Cleanroom a fork of Forge?', a: 'It started as one. Since then most of the work has moved out of Forge’s code: Cleanroom still includes Forge, keeps fixing its performance and bugs, and has grown into its own ecosystem with new APIs and frameworks.' },
+  { q: 'Will my Forge mods work?', a: 'Almost all of them, about 99%. A few known problem mods need removing or swapping first: the Preparing your modpack guide lists them.' },
+  { q: 'Which Java do I need?', a: 'Java 25 or newer. The Cleanroom Relauncher can download a compatible Java for you.' },
+  { q: 'Which launchers are supported?', a: 'MultiMC-based launchers (Prism, MultiMC) can import the instance zip. The official Minecraft Launcher uses the installer jar. On any other launcher, add the Cleanroom Relauncher mod to a Forge instance.' },
+  { q: 'Can I run it on a server?', a: 'Yes. Use the installer jar to set up a dedicated server, and follow the Server guide in the wiki.' },
+];
+---
+
+<section class="ls ls-faq" id="faq" aria-labelledby="faq-h">
+  <p class="ls-eyebrow">FAQ</p>
+  <h2 class="ls-h" id="faq-h">Questions people ask first.</h2>
+  <div class="ls-faq__list">
+    {
+      faqs.map((f, i) => (
+        <details class="ls-q" open={i === 0}>
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))
+    }
+  </div>
+  <p class="ls-faq__more">More in the <a href="/wiki/end-user-guide/introduction/">End User Guide</a> and <a href="/wiki/end-user-guide/preparing-your-modpack/">Preparing your modpack</a>.</p>
+</section>

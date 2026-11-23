@@ -1,0 +1,15 @@
+---
+import Icon from './Icon.astro';
+import { site } from '../../data/site';
+---
+
+<div class="as-intro" style="position: relative; z-index: 1; min-width: 0;">
+  <h1 class="big h-xl" style="margin: 0; font-size: 112px; font-weight: 800; letter-spacing: -0.05em;">Cleanroom</h1>
+  <p class="as-muted as-blurb">
+    Minecraft, made new.<br />Modern Java, modern rendering.<br />A brand-new way to play.
+  </p>
+  <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+    <a class="cr-btn cr-btn--primary cr-btn--lg" href={site.install}><Icon name="download" />Install now</a>
+    <a class="cr-btn cr-btn--lg" href={site.docs}><Icon name="book" />Read the wiki</a>
+  </div>
+</div>

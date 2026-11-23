@@ -1,0 +1,63 @@
+---
+import '../styles/tokens.css';
+import '../styles/cr-web.css';
+import '../styles/landing.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = 'Cleanroom - Minecraft, made new',
+  description = 'Cleanroom Minecraft: modern Java, modern rendering, and the Forge mods you already play.',
+} = Astro.props;
+const FONTS =
+  'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@200..800&family=Lexend:wght@300..900&family=JetBrains+Mono:wght@400..700&display=swap';
+---
+
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CleanroomMC" />
+    <meta property="og:url" content={new URL('/', Astro.site ?? Astro.url).href} />
+    <meta property="og:image" content={new URL('/og/home.jpg', Astro.site ?? Astro.url).href} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Cleanroom: Minecraft, made new." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={new URL('/og/home.jpg', Astro.site ?? Astro.url).href} />
+    <meta name="theme-color" content="#266ba2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href={FONTS} />
+    <!-- Same theme choice as the Starlight docs: "starlight-theme" in localStorage, else the system setting. -->
+    <script is:inline>
+      (() => {
+        const root = document.documentElement;
+        const media = matchMedia('(prefers-color-scheme: light)');
+        const stored = () => {
+          try { return localStorage.getItem('starlight-theme'); } catch { return null; }
+        };
+        const apply = () => {
+          const t = stored();
+          root.dataset.theme = t === 'light' || t === 'dark' ? t : media.matches ? 'light' : 'dark';
+        };
+        apply();
+        media.addEventListener('change', apply);
+      })();
+    </script>
+    <script is:inline src="/aero-details.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <slot />
+  </body>
+</html>

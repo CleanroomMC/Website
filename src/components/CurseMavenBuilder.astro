@@ -1,0 +1,205 @@
+---
+---
+
+<div class="cm" data-cm>
+  <div class="cm-anatomy not-content">
+    <span class="cm-group">curse.maven</span><span class="cm-punct">:</span><span class="cm-label">mouse-tweaks</span><span class="cm-punct">-</span><span class="cm-project">60089</span><span class="cm-punct">:</span><span class="cm-file">3359843</span><span class="cm-punct">+</span><span class="cm-source">3359844</span>
+  </div>
+
+  <ul class="cm-legend not-content">
+    <li><span class="cm-dot cm-bg-group"></span><span><code>curse.maven</code> - fixed group id. Always this, never changes.</span></li>
+    <li><span class="cm-dot cm-bg-label"></span><span><b>Label</b> - free-form readability tag. Use the mod's slug; it has no effect on resolution.</span></li>
+    <li><span class="cm-dot cm-bg-project"></span><span><b>Project ID</b> - numeric CurseForge project id, found on the mod page sidebar.</span></li>
+    <li><span class="cm-dot cm-bg-file"></span><span><b>File ID</b> - numeric id of the specific file, from its download/files URL.</span></li>
+    <li><span class="cm-dot cm-bg-source"></span><span><b>Source File ID</b> - optional <code>+suffix</code> pointing at the matching <em>sources</em> jar. Compatible with IntelliJ's <code>Download Sources</code> mechanic.</span></li>
+  </ul>
+
+  <div class="cm-builder not-content">
+    <label class="cm-field">
+      <span>CurseForge link</span>
+      <input data-f="link" type="text" placeholder="https://www.curseforge.com/minecraft/mc-mods/mouse-tweaks/files/3359843" />
+    </label>
+
+    <div class="cm-row">
+      <label class="cm-field">
+        <span>Label <em>(auto)</em></span>
+        <input data-f="label" type="text" placeholder="mouse-tweaks" />
+      </label>
+      <label class="cm-field">
+        <span>Project ID <em data-status>(auto)</em></span>
+        <input data-f="projectId" type="text" inputmode="numeric" placeholder="60089" />
+      </label>
+      <label class="cm-field">
+        <span>File ID <em>(auto)</em></span>
+        <input data-f="fileId" type="text" inputmode="numeric" placeholder="3359843" />
+      </label>
+      <label class="cm-field">
+        <span>Source File ID <em>(optional)</em></span>
+        <input data-f="sourceId" type="text" inputmode="numeric" placeholder="3359844" />
+      </label>
+    </div>
+
+    <div class="cm-result" data-result hidden>
+      <code class="cm-output" data-output></code>
+      <button class="cm-copy" type="button" data-copy>Copy</button>
+    </div>
+    <p class="cm-hint" data-hint>Fill in <b>label</b>, <b>Project ID</b> and <b>File ID</b> to generate a coordinate.</p>
+  </div>
+</div>
+
+<script>
+  // CurseMaven worker endpoint.
+  const RESOLVE_ENDPOINT = 'https://curse.cleanroommc.com/resolve';
+
+  function init(root: HTMLElement) {
+    const f = (name: string) => root.querySelector<HTMLInputElement>(`[data-f="${name}"]`)!;
+    const link = f('link'), label = f('label'), projectId = f('projectId'), fileId = f('fileId'), sourceId = f('sourceId');
+    const status = root.querySelector<HTMLElement>('[data-status]')!;
+    const result = root.querySelector<HTMLElement>('[data-result]')!;
+    const output = root.querySelector<HTMLElement>('[data-output]')!;
+    const hint = root.querySelector<HTMLElement>('[data-hint]')!;
+    const copyBtn = root.querySelector<HTMLButtonElement>('[data-copy]')!;
+    let lastSlug = '';
+    let debounce: ReturnType<typeof setTimeout> | undefined;
+
+    const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+    const coordinate = () => {
+      if (!label.value || !projectId.value || !fileId.value) return '';
+      let c = `curse.maven:${label.value}-${projectId.value}:${fileId.value}`;
+      if (sourceId.value) c += `+${sourceId.value}`;
+      return c;
+    };
+    function render() {
+      const c = coordinate();
+      result.hidden = !c;
+      hint.hidden = !!c;
+      if (!c) return;
+      output.innerHTML =
+        `<span class="cm-group">curse.maven</span><span class="cm-punct">:</span><span class="cm-label">${esc(label.value)}</span>` +
+        `<span class="cm-punct">-</span><span class="cm-project">${esc(projectId.value)}</span>` +
+        `<span class="cm-punct">:</span><span class="cm-file">${esc(fileId.value)}</span>` +
+        (sourceId.value ? `<span class="cm-punct">+</span><span class="cm-source">${esc(sourceId.value)}</span>` : '');
+    }
+    function setStatus(text: string, err = false) {
+      status.textContent = text;
+      status.classList.toggle('cm-err', err);
+    }
+    async function resolveSlug(slug: string) {
+      if (!slug || slug === lastSlug) return;
+      lastSlug = slug;
+      setStatus('(resolving…)');
+      try {
+        const r = await fetch(`${RESOLVE_ENDPOINT}?slug=${encodeURIComponent(slug)}`);
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        const d = await r.json();
+        if (d?.projectId) projectId.value = String(d.projectId);
+        if (!fileId.value && d?.latestFileId) fileId.value = String(d.latestFileId);
+        setStatus('(auto)');
+      } catch {
+        setStatus('auto-resolve failed — enter manually', true);
+      }
+      render();
+    }
+
+    link.addEventListener('input', () => {
+      const url = (link.value || '').trim();
+      if (!url) return;
+      const slug = url.match(/curseforge\.com\/[^/]+\/[^/]+\/([^/?#]+)/i);
+      if (slug) label.value = slug[1];
+      const file = url.match(/\/(?:files|download)\/(\d+)/i);
+      if (file) fileId.value = file[1];
+      render();
+      clearTimeout(debounce);
+      if (slug) {
+        const s = slug[1];
+        debounce = setTimeout(() => resolveSlug(s), 400);
+      }
+    });
+    [label, projectId, fileId, sourceId].forEach((el) => el.addEventListener('input', render));
+    copyBtn.addEventListener('click', () => {
+      const c = coordinate();
+      if (!c) return;
+      navigator.clipboard?.writeText(c);
+      copyBtn.textContent = 'Copied!';
+      setTimeout(() => (copyBtn.textContent = 'Copy'), 1500);
+    });
+    render();
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-cm]').forEach(init);
+</script>
+
+<style is:global>
+  .cm-group { color: var(--sl-color-gray-2); }
+  .cm-label { color: #3b82f6; }
+  .cm-project { color: #10b981; }
+  .cm-file { color: #f59e0b; }
+  .cm-source { color: #a855f7; }
+  .cm-punct { color: var(--sl-color-gray-4); }
+
+  .cm-anatomy {
+    font-family: var(--sl-font-mono);
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 16px;
+    margin: 16px 0;
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 8px;
+    background: var(--sl-color-gray-6);
+    overflow-x: auto;
+  }
+  .cm-legend { list-style: none; padding: 0; margin: 12px 0; }
+  .cm-legend li { display: flex; align-items: baseline; gap: 8px; margin: 6px 0; }
+  .cm-legend code { font-family: var(--sl-font-mono); font-size: 0.875em; background: var(--sl-color-gray-6); padding: 0.1em 0.3em; border-radius: 4px; }
+  .cm-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; flex: 0 0 auto; position: relative; top: 1px; }
+  .cm-bg-group { background: var(--sl-color-gray-2); }
+  .cm-bg-label { background: #3b82f6; }
+  .cm-bg-project { background: #10b981; }
+  .cm-bg-file { background: #f59e0b; }
+  .cm-bg-source { background: #a855f7; }
+
+  .cm-builder {
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 8px;
+    background: var(--sl-color-gray-6);
+    padding: 16px;
+    margin: 16px 0;
+  }
+  .cm-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 12px; }
+  .cm-field { display: flex; flex-direction: column; gap: 4px; }
+  .cm-field > span { font-size: 0.85rem; color: var(--sl-color-gray-2); }
+  .cm-field > span em { color: var(--sl-color-gray-3); font-style: normal; }
+  .cm-field > span em.cm-err { color: var(--sl-color-red); }
+  .cm-field input {
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 6px;
+    background: var(--sl-color-black);
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    color: var(--sl-color-white);
+    width: 100%;
+  }
+  .cm-field input:focus { outline: none; border-color: var(--sl-color-accent); }
+  .cm-result { display: flex; align-items: center; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+  .cm-result[hidden], .cm-hint[hidden] { display: none; }
+  .cm-output {
+    font-family: var(--sl-font-mono);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: var(--sl-color-black);
+    border: 1px solid var(--sl-color-hairline);
+  }
+  .cm-copy {
+    border: 1px solid var(--sl-color-accent);
+    color: var(--sl-color-accent-high);
+    background: transparent;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+  .cm-copy:hover { background: var(--sl-color-accent-low); }
+  .cm-hint { color: var(--sl-color-gray-3); margin-top: 16px; }
+</style>

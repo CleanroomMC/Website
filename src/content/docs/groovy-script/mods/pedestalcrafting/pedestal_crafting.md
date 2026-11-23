@@ -1,0 +1,204 @@
+---
+title: Pedestal Crafting (Pedestal Crafting)
+description: Converts a center item into a single output item. Additional inputs can be placed on pedestals around the core. The crafting time as well as the particles that show during or after finishing a recipe can be customized.
+sidebar:
+  label: Pedestal Crafting
+source_code_link: https://github.com/Ender-Development/PedestalCrafting-Patched/blob/master/src/main/java/me/axieum/mcmod/pedestalcrafting/compat/groovyscript/PedestalCrafting.java
+---
+
+## Description
+
+Converts a center item into a single output item. Additional inputs can be placed on pedestals around the core. The crafting time as well as the particles that show during or after finishing a recipe can be customized.
+
+## Identifier
+
+The identifier `mods.pedestalcrafting.pedestal_crafting` will be used as the default on this page.
+
+<details class="cr-block cr-quote" open>
+<summary>All Identifiers</summary>
+
+Any of these can be used to refer to this compat:
+
+```groovy {4}
+mods.pedestalcrafting.pedestalcrafting
+mods.pedestalcrafting.pedestalCrafting
+mods.pedestalcrafting.PedestalCrafting
+mods.pedestalcrafting.pedestal_crafting/* Used as page default */
+```
+
+</details>
+
+## Adding Recipes
+
+### Recipe Builder
+
+Just like other recipe types, the Pedestal Crafting also uses a recipe builder.
+
+Don't know what a builder is? Check [the builder info page](/groovy-script/getting_started/builder/) out.
+
+<details class="cr-block cr-abstract" open>
+<summary>Recipe Builder</summary>
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy
+    mods.pedestalcrafting.pedestal_crafting.recipeBuilder()
+    ```
+
+---
+
+- `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 0.
+
+    ```groovy
+    input(IIngredient)
+    input(IIngredient...)
+    input(Collection<IIngredient>)
+    ```
+
+- `ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
+
+    ```groovy
+    output(ItemStack)
+    output(ItemStack...)
+    output(Collection<ItemStack>)
+    ```
+
+- `int`. The number of ticks the recipe takes to complete. Requires greater than or equal to 0. (Default `0`).
+
+    ```groovy
+    ticks(int)
+    ```
+
+- `IIngredient`. The center item that is used in the crafting process. Requires not null.
+
+    ```groovy
+    center(IIngredient)
+    ```
+
+- `Map<EnumParticleTypes, Integer>`. Adds a particle effect to the crafting process. The first argument is the particle name, the second argument is the amount of the particles appearing. Names can be referenced from the [Minecraft Wiki](https://minecraft.wiki/w/Java_Edition_Flattening#Particle_IDs) or [DigMinecraft](https://www.digminecraft.com/lists/particle_list_pc_1_12.php).
+
+    ```groovy
+    addCraftingParticle(String, int)
+    addCraftingParticle(EnumParticleTypes, int)
+    ```
+
+- `Map<EnumParticleTypes, Integer>`. Adds a particle effect that appears above the core after the crafting process is completed. The first argument is the particle name, the second argument is the amount of the particles appearing. Names can be referenced from the [Minecraft Wiki](https://minecraft.wiki/w/Java_Edition_Flattening#Particle_IDs) or [DigMinecraft](https://www.digminecraft.com/lists/particle_list_pc_1_12.php).
+
+    ```groovy
+    addPostCraftCoreParticle(String, int)
+    addPostCraftCoreParticle(EnumParticleTypes, int)
+    ```
+
+- `Map<EnumParticleTypes, Integer>`. Adds a particle effect that appears above each pedestal after the crafting process is completed. The first argument is the particle name, the second argument is the amount of the particles appearing. Names can be referenced from the [Minecraft Wiki](https://minecraft.wiki/w/Java_Edition_Flattening#Particle_IDs) or [DigMinecraft](https://www.digminecraft.com/lists/particle_list_pc_1_12.php).
+
+    ```groovy
+    addPostCraftPedestalParticle(String, int)
+    addPostCraftPedestalParticle(EnumParticleTypes, int)
+    ```
+
+---
+
+- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `me.axieum.mcmod.pedestalcrafting.recipe.PedestalRecipe`).
+
+    ```groovy
+    register()
+    ```
+
+---
+
+<details class="cr-block cr-example" open>
+<summary>Example</summary>
+
+```groovy
+mods.pedestalcrafting.pedestal_crafting.recipeBuilder()
+    .center(item('minecraft:lava_bucket'))
+    .output(item('minecraft:obsidian'))
+    .ticks(100)
+    .register()
+
+mods.pedestalcrafting.pedestal_crafting.recipeBuilder()
+    .center(ore('plankWood'))
+    .input(ore('stickWood'),item('minecraft:water_bucket'),ore('logWood'))
+    .output(item('minecraft:diamond'))
+    .ticks(100)
+    .register()
+
+mods.pedestalcrafting.pedestal_crafting.recipeBuilder()
+    .center(ore('oreGold'))
+    .input(item('minecraft:chest'),item('minecraft:piston'))
+    .output(item('minecraft:emerald'))
+    .ticks(100)
+    .addCraftingParticle('fireworkSpark', 10)
+    .register()
+
+mods.pedestalcrafting.pedestal_crafting.recipeBuilder()
+    .center(ore('oreDiamond'))
+    .input(item('minecraft:hopper'),item('minecraft:chest'))
+    .output(item('minecraft:stone'))
+    .ticks(100)
+    .addCraftingParticle('bubble', 10)
+    .addPostCraftCoreParticle('suspended', 10)
+    .register()
+
+mods.pedestalcrafting.pedestal_crafting.recipeBuilder()
+    .center(ore('oreRedstone'))
+    .input(item('minecraft:cobblestone'), ore('ingotGold'))
+    .output(item('minecraft:redstone'))
+    .ticks(100)
+    .addCraftingParticle('instantSpell', 10)
+    .addPostCraftCoreParticle('dripLava', 10)
+    .addPostCraftPedestalParticle('portal', 10)
+    .register()
+```
+
+</details>
+
+</details>
+
+## Removing Recipes
+
+- Removes all recipes that match the given input:
+
+    ```groovy
+    mods.pedestalcrafting.pedestal_crafting.removeByInput(IIngredient)
+    ```
+
+- Removes all recipes where the center item matches the given input:
+
+    ```groovy
+    mods.pedestalcrafting.pedestal_crafting.removeByCenter(IIngredient)
+    ```
+
+- Removes all recipes that match the given output:
+
+    ```groovy
+    mods.pedestalcrafting.pedestal_crafting.removeByOutput(IIngredient)
+    ```
+
+- Removes all registered recipes:
+
+    ```groovy
+    mods.pedestalcrafting.pedestal_crafting.removeAll()
+    ```
+
+<details class="cr-block cr-example" open>
+<summary>Example</summary>
+
+```groovy
+mods.pedestalcrafting.pedestal_crafting.removeByInput(item('minecraft:redstone_block'))
+mods.pedestalcrafting.pedestal_crafting.removeByCenter(item('minecraft:wool'))
+mods.pedestalcrafting.pedestal_crafting.removeByOutput(item('minecraft:stick'))
+mods.pedestalcrafting.pedestal_crafting.removeAll()
+```
+
+</details>
+
+## Getting the value of recipes
+
+- Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
+
+    ```groovy
+    mods.pedestalcrafting.pedestal_crafting.streamRecipes()
+    ```

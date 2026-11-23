@@ -1,0 +1,174 @@
+---
+title: Rotting Food (Better With Addons)
+description: Converts an input item into an output itemstack after the given time has passed. Has the ability to customize the terminology used to indicate the age.
+sidebar:
+  label: Rotting Food
+source_code_link: https://github.com/CleanroomMC/GroovyScript/blob/master/src/main/java/com/cleanroommc/groovyscript/compat/mods/betterwithaddons/Rotting.java
+---
+
+## Description
+
+Converts an input item into an output itemstack after the given time has passed. Has the ability to customize the terminology used to indicate the age.
+
+<details class="cr-block cr-warning" open>
+<summary>Warning</summary>
+
+When an item (regardless of metadata) is the input of any entry in the Rotting map, all items will gain a new NBT tag with the day they were obtained. This may be them annoying to interact with.
+
+</details>
+
+## Identifier
+
+The identifier `mods.betterwithaddons.rotting` will be used as the default on this page.
+
+<details class="cr-block cr-quote" open>
+<summary>All Identifiers</summary>
+
+Any of these can be used to refer to this compat:
+
+```groovy {1}
+mods.betterwithaddons.rotting/* Used as page default */
+mods.betterwithaddons.Rotting
+```
+
+</details>
+
+## Adding Entries
+
+- Adds the given entry to the Rotting map:
+
+    ```groovy
+    mods.betterwithaddons.rotting.add(RotHandler.RotInfo)
+    ```
+
+### Recipe Builder
+
+Just like other recipe types, the Rotting Food also uses a recipe builder.
+
+Don't know what a builder is? Check [the builder info page](/groovy-script/getting_started/builder/) out.
+
+<details class="cr-block cr-abstract" open>
+<summary>Recipe Builder</summary>
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy
+    mods.betterwithaddons.rotting.recipeBuilder()
+    ```
+
+---
+
+- `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
+
+    ```groovy
+    input(IIngredient)
+    input(IIngredient...)
+    input(Collection<IIngredient>)
+    ```
+
+- `String`. Sets the base key for the lang keys used to localize the stage the rotting is at. Requires not null. (Default `food`).
+
+    ```groovy
+    key(String)
+    ```
+
+- `long`. Sets how long the item takes to rot. Requires greater than or equal to 1. (Default `InteractionBWA.MISC_ROT_TIME`).
+
+    ```groovy
+    time(long)
+    ```
+
+- `ItemStack`. Sets the item the rotted item turns into when the time has passed. Requires not empty. (Default `new ItemStack(ModItems.ROTTEN_FOOD)`).
+
+    ```groovy
+    rotted(ItemStack)
+    ```
+
+---
+
+- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `betterwithaddons.handler.RotHandler$RotInfo`).
+
+    ```groovy
+    register()
+    ```
+
+---
+
+<details class="cr-block cr-example" open>
+<summary>Example</summary>
+
+```groovy
+mods.betterwithaddons.rotting.recipeBuilder()
+    .input(item('minecraft:gold_ingot'))
+    .register()
+
+mods.betterwithaddons.rotting.recipeBuilder()
+    .input(item('minecraft:apple'))
+    .time(100)
+    .key('groovy_example')
+    .rotted(item('minecraft:clay') * 4)
+    .register()
+```
+
+</details>
+
+</details>
+
+## Removing Entries
+
+- Adds the given entry to the Rotting map:
+
+    ```groovy
+    mods.betterwithaddons.rotting.add(Map.Entry<Item, RotHandler.RotInfo>)
+    ```
+
+- Removes the given entry from the Rotting map:
+
+    ```groovy
+    mods.betterwithaddons.rotting.remove(RotHandler.RotInfo)
+    ```
+
+- Removes the given entry from the Rotting map:
+
+    ```groovy
+    mods.betterwithaddons.rotting.remove(Map.Entry<Item, RotHandler.RotInfo>)
+    ```
+
+- Removes all recipes that match the given input:
+
+    ```groovy
+    mods.betterwithaddons.rotting.removeByInput(IIngredient)
+    ```
+
+- Removes all recipes that match the given output:
+
+    ```groovy
+    mods.betterwithaddons.rotting.removeByOutput(IIngredient)
+    ```
+
+- Removes all registered recipes:
+
+    ```groovy
+    mods.betterwithaddons.rotting.removeAll()
+    ```
+
+<details class="cr-block cr-example" open>
+<summary>Example</summary>
+
+```groovy
+mods.betterwithaddons.rotting.removeByInput(item('betterwithaddons:food_cooked_rice'))
+mods.betterwithaddons.rotting.removeByOutput(item('minecraft:rotten_flesh'))
+mods.betterwithaddons.rotting.removeAll()
+```
+
+</details>
+
+## Getting the value of entries
+
+- Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
+
+    ```groovy
+    mods.betterwithaddons.rotting.streamRecipes()
+    ```

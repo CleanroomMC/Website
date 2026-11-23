@@ -1,0 +1,143 @@
+---
+import Icon from './Icon.astro';
+import BrandLogo from './BrandLogo.astro';
+import { site } from '../../data/site';
+
+const languages = [
+  { label: 'English', lang: 'en', href: '/' },
+  { label: '简体中文', lang: 'zh-CN', href: '/zh/' },
+];
+---
+
+<div class="as-nav-slot">
+<nav class="cr-nav as-nav" aria-label="Main" data-site-nav>
+  <div class="cr-nav__bar">
+    <a class="cr-nav__brand" href="/"><img src="/brand/cleanroom-aero.svg" alt="" width="32" height="32" />Cleanroom</a>
+    <ul class="cr-nav__links">
+      {site.nav.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+    </ul>
+    <span class="cr-nav__spacer"></span>
+    <div class="cr-nav__actions">
+      <a class="cr-btn cr-btn--sm cr-btn--fluxer as-nav__community" href={site.fluxer}>
+        <span class="cr-btn__mark"><BrandLogo name="fluxer" size={18} /></span>Fluxer
+      </a>
+      <a class="cr-btn cr-btn--icon cr-btn--ghost as-nav__community as-nav__discord" href={site.discord} aria-label="Cleanroom on Discord" title="Discord">
+        <BrandLogo name="discord" size={20} />
+      </a>
+      <a class="cr-btn cr-btn--icon cr-btn--ghost as-nav__community" href={site.github} aria-label="Cleanroom on GitHub" title="GitHub">
+        <Icon name="github" />
+      </a>
+      <span class="as-nav__sep" aria-hidden="true"></span>
+      <details class="as-lang">
+        <summary class="cr-btn cr-btn--icon cr-btn--ghost" aria-label="Language: English" title="Language">
+          <Icon name="globe" />
+        </summary>
+        <ul class="as-lang__menu" aria-label="Language">
+          {languages.map((l) => (
+            <li>
+              <a href={l.href} lang={l.lang} hreflang={l.lang} aria-current={l.lang === 'en' ? 'true' : undefined}>
+                {l.label}{l.lang === 'en' && <Icon name="check" size={16} />}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </details>
+      <button class="cr-btn cr-btn--icon cr-btn--ghost as-theme" type="button" data-theme-toggle aria-label="Theme: Auto">
+        <span class="as-theme__icon" data-for="auto"><Icon name="contrast" /></span>
+        <span class="as-theme__icon" data-for="light"><Icon name="sun" /></span>
+        <span class="as-theme__icon" data-for="dark"><Icon name="moon" /></span>
+      </button>
+      <a class="cr-btn cr-btn--primary cr-btn--sm as-nav__install" href={site.install}>Install now</a>
+      <button class="cr-burger" type="button" aria-expanded="false" aria-controls="site-drawer" aria-label="Open menu">
+        <span class="cr-burger__lines"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+  <div class="cr-drawer" id="site-drawer">
+    {site.nav.map((l) => <a href={l.href}>{l.label}</a>)}
+    <hr />
+    <a class="as-drawer__fluxer" href={site.fluxer}><BrandLogo name="fluxer" size={20} />Join us on Fluxer</a>
+    <a href={site.discord}><BrandLogo name="discord" size={20} />Discord</a>
+    <a href={site.github}><Icon name="github" />GitHub</a>
+    <a href="/zh/" lang="zh-CN" hreflang="zh-CN"><Icon name="globe" />简体中文</a>
+    <a href={site.install}><Icon name="download" />Install now</a>
+  </div>
+</nav>
+</div>
+
+<script>
+  const nav = document.querySelector<HTMLElement>('[data-site-nav]');
+  const button = nav?.querySelector<HTMLButtonElement>('.cr-burger');
+  const drawer = document.getElementById('site-drawer');
+  const isOpen = () => button?.getAttribute('aria-expanded') === 'true';
+
+  if (button && drawer) {
+    const set = (open: boolean) => {
+      button.setAttribute('aria-expanded', String(open));
+      button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      drawer.classList.toggle('is-open', open);
+    };
+    button.addEventListener('click', () => set(!isOpen()));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isOpen()) {
+        set(false);
+        button.focus();
+      }
+    });
+  }
+
+  if (nav) {
+    let lastY = scrollY;
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      const y = Math.max(0, scrollY);
+      const delta = y - lastY;
+      nav.classList.toggle('is-floating', y > 8);
+      if (y < 80 || isOpen() || nav.matches(':focus-within')) nav.classList.remove('is-hidden');
+      else if (delta > 6) nav.classList.add('is-hidden');
+      else if (delta < -6) nav.classList.remove('is-hidden');
+      if (Math.abs(delta) > 6) lastY = y;
+    };
+    addEventListener('scroll', () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    update();
+  }
+
+  const lang = nav?.querySelector<HTMLDetailsElement>('.as-lang');
+  if (lang) {
+    document.addEventListener('click', (e) => { if (lang.open && !lang.contains(e.target as Node)) lang.open = false; });
+    lang.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary')?.focus(); }
+    });
+  }
+
+  const toggle = nav?.querySelector<HTMLButtonElement>('[data-theme-toggle]');
+  if (toggle) {
+    type Choice = 'auto' | 'light' | 'dark';
+    const order: Choice[] = ['auto', 'light', 'dark'];
+    const names = { auto: 'Auto', light: 'Light', dark: 'Dark' };
+    const media = matchMedia('(prefers-color-scheme: light)');
+    const read = (): Choice => {
+      try {
+        const v = localStorage.getItem('starlight-theme');
+        return v === 'light' || v === 'dark' ? v : 'auto';
+      } catch { return 'auto'; }
+    };
+    const apply = (choice: Choice) => {
+      document.documentElement.dataset.theme = choice === 'auto' ? (media.matches ? 'light' : 'dark') : choice;
+      toggle.dataset.choice = choice;
+      const next = order[(order.indexOf(choice) + 1) % order.length];
+      toggle.setAttribute('aria-label', `Theme: ${names[choice]}. Switch to ${names[next]}`);
+      toggle.title = `Theme: ${names[choice]}`;
+    };
+    toggle.addEventListener('click', () => {
+      const next = order[(order.indexOf(read()) + 1) % order.length];
+      try { localStorage.setItem('starlight-theme', next === 'auto' ? '' : next); } catch {}
+      apply(next);
+    });
+    media.addEventListener('change', () => { if (read() === 'auto') apply('auto'); });
+    apply(read());
+  }
+</script>

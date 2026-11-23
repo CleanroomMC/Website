@@ -1,0 +1,22 @@
+---
+import Icon from './Icon.astro';
+
+const wiki = [
+  { label: 'End User Guide', href: '/wiki/end-user-guide/introduction/' },
+  { label: 'Cleanroom Mod Development', href: '/wiki/cleanroom-mod-development/porting/' },
+  { label: 'Forge Mod Development', href: '/wiki/forge-mod-development/mixin/preface/' },
+  { label: 'ModularUI', href: '/wiki/modularui/introduction/' },
+];
+---
+
+<section class="ls ls-overview" id="overview" aria-labelledby="overview-h">
+  <p class="ls-eyebrow">Overview</p>
+  <h2 class="ls-h" id="overview-h">Keep your 1.12.2 modpack. Leave the 2017 runtime behind.</h2>
+  <p class="ls-sub">
+    Cleanroom swaps the aging Forge base for a maintained loader, so the mods you already run keep working on a current JVM and a current graphics library.
+  </p>
+  <div class="ls-chips">
+    <span class="ls-chips__label"><Icon name="book" size={16} />In the wiki</span>
+    {wiki.map((w) => <a class="ls-chip" href={w.href}>{w.label}</a>)}
+  </div>
+</section>

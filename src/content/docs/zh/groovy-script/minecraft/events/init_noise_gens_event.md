@@ -1,0 +1,25 @@
+---
+title: Init Noise Gens Event
+---
+
+To use this event use the following import:
+```groovy
+import net.minecraftforge.event.terraingen.InitNoiseGensEvent
+```
+
+## Sub-Classes
+This event extends the following events and can use all their methods and fields: <br>
+[WorldEvent](/zh/groovy-script/minecraft/events/world_event/world_event/)
+
+## Methods
+```groovy
+net.minecraftforge.event.terraingen.InitNoiseGensEvent$Context getNewValues()
+```
+
+```groovy
+net.minecraftforge.event.terraingen.InitNoiseGensEvent$Context getOriginal()
+```
+
+```groovy
+java.util.Random getRandom()
+```

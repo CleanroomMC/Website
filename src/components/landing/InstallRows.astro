@@ -1,0 +1,32 @@
+---
+import Icon from './Icon.astro';
+
+const rows = [
+  { icon: 'monitor', title: 'Launcher instance', text: 'Play an existing 1.12.2 modpack on Cleanroom.', href: '/wiki/end-user-guide/installation/install-client/' },
+  { icon: 'server', title: 'Dedicated server', text: 'Run a Cleanroom server for your pack.', href: '/wiki/end-user-guide/installation/install-server/' },
+  { icon: 'phone', title: 'Android', text: 'Run Cleanroom in an Android launcher.', href: '/wiki/end-user-guide/installation/install-android/' },
+  { icon: 'code', title: 'Mod development', text: 'Port your mod and build against Cleanroom.', href: '/wiki/cleanroom-mod-development/porting/' },
+] as const;
+---
+
+<section class="ls ls-install" id="install" aria-labelledby="install-h">
+  <p class="ls-eyebrow">Install</p>
+  <h2 class="ls-h" id="install-h">Pick your setup.</h2>
+  <p class="ls-sub">Step-by-step guides live in the wiki.</p>
+
+  <ol class="ls-rows">
+    {
+      rows.map((r, i) => (
+        <li>
+          <a class="ls-row" href={r.href}>
+            <span class="ls-row__n">{String(i + 1).padStart(2, '0')}</span>
+            <span class="ls-row__icon"><Icon name={r.icon} size={22} /></span>
+            <span class="ls-row__title">{r.title}</span>
+            <span class="ls-row__text">{r.text}</span>
+            <span class="ls-row__go">Guide<Icon name="arrowRight" size={16} /></span>
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+</section>

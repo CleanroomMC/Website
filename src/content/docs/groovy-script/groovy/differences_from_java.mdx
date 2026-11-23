@@ -1,0 +1,527 @@
+---
+title: Differences from Java
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+Groovy language grammar is derived from Java grammar,
+with various enhancements in the form of specific constructs and allowing additional simplifications.
+
+In most cases, the difference is optional, and writing the code in the way one would write Java would have no issues.
+The main exception to this is [Strings](#strings).
+
+This page will illustrate some of the more significant differences in an easy to compare manner.
+
+You can read more about the differences on the [official documentation](https://groovy-lang.org/differences.html).
+
+## Semicolons
+
+Semicolons at the end of a line are optional.
+
+<Tabs>
+
+<TabItem label="java">
+
+```java
+Code.run();
+```
+
+</TabItem>
+
+<TabItem label="groovy">
+
+```groovy
+Code.run()
+```
+
+</TabItem>
+
+</Tabs>
+
+## Parentheses
+
+Parentheses around parameters are optional when there is no ambiguity.
+
+<Tabs>
+
+<TabItem label="java">
+
+```java
+Code.run("example");
+Code.run(Code.nested("example"));
+System.out.println("hello");
+```
+
+</TabItem>
+
+<TabItem label="groovy">
+
+```groovy
+Code.run 'example'
+Code.run Code.nested('example')
+println 'hello'
+```
+
+</TabItem>
+
+</Tabs>
+
+## Variable Declaration
+
+Prior to Java 10, you had to declare a variable using the variable type.
+After Java 10, using the keyword `var`, you could declare a variable using `var` without having to specify the type ahead of time.
+
+In Groovy, you can use `def` to accomplish the same thing.
+
+<Tabs>
+
+<TabItem label="java">
+
+```java
+String name = "hello";
+int num = 5;
+```
+
+</TabItem>
+
+<TabItem label="groovy">
+
+```groovy
+def name = "hello"
+def num = 5
+```
+
+</TabItem>
+
+</Tabs>
+
+## Arrays
+
+In Java, arrays are declared via curly braces `{}` surrounding the variable.
+
+In Groovy, you can use the explicit array creation syntax as normal,
+and can also declare an array via using square braces `[]` and explicitly declaring it as an array.
+If you do not explicitly declare it as an array, using square braces `[]` will create a [list](#lists) instead.
+
+<Tabs>
+
+<TabItem label="java">
+
+```java
+int[] array0 = new int[] {1, 2, 3};
+int[] array1 = {1, 2, 3};
+```
+
+</TabItem>
+
+<TabItem label="groovy">
+
+```groovy {4}
+def array0 = new int[] {1, 2, 3}
+def array1 = [1, 2, 3] as int[]
+int[] array2 = [1, 2, 3]
+def list = [1, 2, 3] // this creates a list, not an array!
+```
+
+</TabItem>
+
+</Tabs>
+
+## Lists
+
+In Java, there is no shorthand way to create a list.
+
+In Groovy, you can easily create a list using square braces `[]`, using commas `,` to separate the values.
+
+<Tabs>
+
+<TabItem label="java">
+
+```java
+List<String> list = new ArrayList<>();
+list.add("example");
+list.add("demo");
+```
+
+</TabItem>
+
+<TabItem label="groovy">
+
+```groovy
+def list = ["example", "demo"]
+```
+
+</TabItem>
+
+</Tabs>
+
+## Maps
+
+In Java, there is no shorthand way to create a map.
+
+In Groovy, you can easily combine the same square braces `[]` used to create lists with colons `:` to delineate a key-value entry.
+
+<Tabs>
+
+<TabItem label="java">
+
+```java
+Map<Integer, String> map = new HashMap<>();
+map.put(1, "example");
+map.put(3, "demo");
+```
+
+</TabItem>
+
+<TabItem label="groovy">
+
+```groovy
+def map0 = [:]
+map0[1] = "example"
+map0[3] = "demo"
+def map1 = [1: "example", 3: "demo"]     // shorthand
+def map2 = [(1): "example", (3): "demo"] // if the key is an expression, wrapping it in parentheses may be needed
+```
+
+</TabItem>
+
+</Tabs>
+
+## Equality
+
+In Java, you can compare two objects by reference equality using two equal signs.
+Objects can override `equals` to provide a custom equal check.
+
+In Groovy, comparing two objects by reference equality requires *three* equal signs,
+and using two defers to `equals` via [operator overloading](/groovy-script/groovy/operators/#operator-overloading).
+
+<Tabs>
+
+<TabItem label="java">
+
+```java
+a == b // reference equality
+a.equals(b) // requires that a is non-null
+a == null ? b == null : a.equals(b) // null-safe check
+```
+
+</TabItem>
+
+<TabItem label="groovy">
+
+```groovy
+a === b // reference equality
+a == b // shorthand for a.equals(b)
+a.equals(b) // null-safe check
+```
+
+</TabItem>
+
+</Tabs>
+
+## Visibility
+
+In Java, fields, classes, and methods that do not have an access specifier stated are `package-private` by default, meaning they are only visible to other classes inside the package.
+
+### Classes
+
+In Groovy, classes declared without an access specifier default to `public`.
+
+<Tabs>
+
+<TabItem label="java">
+
+```java
+public class DemoClass {}
+```
+
+</TabItem>
+
+<TabItem label="groovy">
+
+```groovy
+class DemoClass {}
+```
+
+</TabItem>
+
+</Tabs>
+
+### Fields
+
+In Groovy, fields declared without an access specifier are declared as a *property*, which creates a `private` field
+and an associated *getter* and *setter* method.
+If the field is final, only a *getter* method will be created.
+
+<Tabs>
+
+<TabItem label="java">
+
+```java
+public class DemoClass {
+    private final String internal = "internal";
+    private final String value = "value";
+    private String name = "example";
+
+    public getValue() {
+        return this.value;
+    }
+
+    public getName() {
+        return this.name;
+    }
+
+    public setName(String newName) {
+        this.name = newName;
+    }
+}
+```
+
+</TabItem>
+
+<TabItem label="groovy">
+
+```groovy
+class DemoClass {
+    private final def internal = 'internal'
+    final def value = 'value'
+    def name = 'example'
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+### Methods
+
+In Groovy, methods declared without an access specifier default to `public`.
+
+<Tabs>
+
+<TabItem label="java">
+
+```java
+public class DemoClass {
+    public void foo() {
+        // example
+    }
+}
+```
+
+</TabItem>
+
+<TabItem label="groovy">
+
+```groovy
+class DemoClass {
+    void foo() {
+        // example
+    }
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+## Return
+
+When a function expects to return a specific value, simply writing a value of that type at the end of the function will cause that to be returned.
+
+<Tabs>
+
+<TabItem label="java">
+
+```java
+public class DemoClass {
+    public DemoClass foo() {
+        return this;
+    }
+
+    public String hello() {
+        return "hello";
+    }
+
+    public String test(boolean test) {
+        if (test) {
+            return "Test is true";
+        } else {
+            return "Test is false";
+        }
+    }
+}
+```
+
+</TabItem>
+
+<TabItem label="groovy">
+
+```groovy
+class DemoClass {
+    def foo() {
+        this
+    }
+
+    def hello() {
+        'hello'
+    }
+
+    def test(test) {
+        if (test) {
+            'Test is true'
+        } else {
+            'Test is false'
+        }
+    }
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+## Strings
+
+In Java, declaring using single quotes `''` only accepts a single character and creates a `char`,
+and you must use double quotes `""` to create a normal `String`.
+
+In Groovy, there is no shorthand to declare a `char`,
+declaring using single quotes `''` creates a normal `String`,
+and using double quotes `""` creates a special object called a `GString`,
+which functions as a normal `String` object unless it contains a dollar sign `$`, in which case it has specific formatting rules.
+
+Learn more about this over on the specific [Strings](/groovy-script/groovy/strings/) page.
+
+<Tabs>
+
+<TabItem label="java">
+
+```java
+char character = 'a';
+String name = "example";
+```
+
+</TabItem>
+
+<TabItem label="groovy">
+
+```groovy {7}
+char character0 = 'a'
+def character1  = (char) 'a'
+def character2  = 'a' as char
+String name0    = "example"
+def name1       = 'example'
+def name2       = "example"
+def nameGString = "$name0" // will create a GString, not a String, and will replace with the variable referenced
+def nameInvalid = '$name0' // will have the raw text provided
+```
+
+</TabItem>
+
+</Tabs>
+
+## Omitting `.class`
+
+When you want to refer to a specific `class` object, you can omit the `.class` suffix.
+
+<Tabs>
+
+<TabItem label="java">
+
+```java
+public class DemoClass {
+    public Class<?> getClass() {
+        return DemoClass.class;
+    }
+}
+```
+
+</TabItem>
+
+<TabItem label="groovy">
+
+```groovy
+class DemoClass {
+    def getClass() {
+        DemoClass
+    }
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+## Repeating Variable Reference
+
+Groovy has multiple ways of simplifying interacting with multiple methods or fields of the same object.
+
+<Tabs>
+
+<TabItem label="java">
+
+```java
+DemoClass obj = new DemoClass();
+obj.sayHi();
+obj.value = 1;
+obj.name = "hello";
+obj.total = 100;
+obj.clay = "clay";
+obj.current = 5;
+obj.sayGoodbye();
+```
+
+</TabItem>
+
+<TabItem label="groovy with">
+
+```groovy title="groovy with"
+DemoClass obj = new DemoClass()
+obj.with {
+    sayHi()
+    value = 1
+    name = 'hello'
+    total = 100
+    clay = 'clay'
+    current = 5
+    sayGoodbye() // returns the value of sayGoodbye()
+}
+```
+
+</TabItem>
+
+<TabItem label="groovy inbuilt with">
+
+```groovy title="groovy inbuilt with"
+DemoClass obj = new DemoClass().with {
+    sayHi()
+    value = 1
+    name = 'hello'
+    total = 100
+    clay = 'clay'
+    current = 5
+    sayGoodbye()
+    it // returns 'it', with 'it' being declared via the creation of the closure
+}
+```
+
+</TabItem>
+
+<TabItem label="groovy tap">
+
+```groovy title="groovy tap"
+DemoClass obj = new DemoClass().tap {
+    sayHi()
+    value = 1
+    name = 'hello'
+    total = 100
+    clay = 'clay'
+    current = 5
+    sayGoodbye() // using tap will return the instance, not sayGoodBye()
+}
+```
+
+</TabItem>
+
+</Tabs>

@@ -17,41 +17,31 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: pnpm/action-setup@v6
-        name: Install pnpm
-        with:
-          version: 12.6.0
-          run_install: false
-
       - name: Install Node.js
         uses: actions/setup-node@v6
         with:
           node-version: 24
-          cache: "pnpm"
+          cache: "npm"
 
       - name: Install dependencies
-        run: pnpm install
+        run: npm ci
 
-      - name: Restore OG assets cache
+      - name: Restore OG image cache
         id: og-cache-restore
         uses: actions/cache/restore@v6
         with:
-          path: |
-            docs/public/og
-            docs/.vitepress/plugins/data/og-satori
-          key: og-${{ hashFiles('docs/.vitepress/plugins/satori-og.ts') }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: node_modules/.cache/cleanroom-og
+          key: og-${{ hashFiles('src/lib/og.ts') }}-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: |
-            og-${{ hashFiles('docs/.vitepress/plugins/satori-og.ts') }}-
+            og-${{ hashFiles('src/lib/og.ts') }}-
 
       - name: Build
-        run: pnpm run build
+        run: npm run build
 
-      - name: Save OG assets cache
+      - name: Save OG image cache
         uses: actions/cache/save@v6
         with:
-          path: |
-            docs/public/og
-            docs/.vitepress/plugins/data/og-satori
+          path: node_modules/.cache/cleanroom-og
           key: ${{ steps.og-cache-restore.outputs.cache-primary-key }}
 
       - name: Publish to Cloudflare Pages
@@ -59,5 +49,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy ./docs/.vitepress/dist --project-name=cleanroom
+          command: pages deploy ./dist --project-name=cleanroom
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}

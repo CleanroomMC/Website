@@ -1,0 +1,30 @@
+---
+title: Mods
+pagefind: false
+---
+
+* [Actually Additions](/zh/groovy-script/mods/actuallyadditions/)
+* [Advanced Mortars](/zh/groovy-script/mods/advancedmortars/)
+* [Applied Energistics 2](/zh/groovy-script/mods/appliedenergistics2/)
+* [Astral Sorcery](/zh/groovy-script/mods/astralsorcery/)
+* [Avaritia](/zh/groovy-script/mods/avaritia/)
+* [Blood Magic: Alchemical Wizardry](/zh/groovy-script/mods/bloodmagic/)
+* [Botania](/zh/groovy-script/mods/botania/)
+* [Chisel](/zh/groovy-script/mods/chisel/)
+* [Compact Machines 3](/zh/groovy-script/mods/compactmachines3/)
+* [Draconic Evolution](/zh/groovy-script/mods/draconicevolution/)
+* [EnderIO](/zh/groovy-script/mods/enderio/)
+* [EvilCraft](/zh/groovy-script/mods/evilcraft/)
+* [Extended Crafting](/zh/groovy-script/mods/extendedcrafting/)
+* [Forestry](/zh/groovy-script/mods/forestry/)
+* [GregTech](/zh/groovy-script/mods/gtceu/)
+* [Immersive Engineering](/zh/groovy-script/mods/immersiveengineering/)
+* [Inspirations](/zh/groovy-script/mods/inspirations/)
+* [Integrated Dynamics](/zh/groovy-script/mods/integrateddynamics/)
+* [JEI](/zh/groovy-script/mods/jei/)
+* [Mekanism](/zh/groovy-script/mods/mekanism/)
+* [Pyrotech](/zh/groovy-script/mods/pyrotech/)
+* [Roots](/zh/groovy-script/mods/roots/)
+* [Thaumcraft](/zh/groovy-script/mods/thaumcraft/)
+* [Thermal Expansion](/zh/groovy-script/mods/thermal/)
+* [Woot](/zh/groovy-script/mods/woot/)

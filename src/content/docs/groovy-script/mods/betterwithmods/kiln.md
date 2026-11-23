@@ -1,0 +1,163 @@
+---
+title: Kiln (Better With Mods)
+description: Converts a block into up to three output itemstacks, with the ability to require specific amounts of heat.
+sidebar:
+  label: Kiln
+source_code_link: https://github.com/CleanroomMC/GroovyScript/blob/master/src/main/java/com/cleanroommc/groovyscript/compat/mods/betterwithmods/Kiln.java
+---
+
+## Description
+
+Converts a block into up to three output itemstacks, with the ability to require specific amounts of heat.
+
+## Identifier
+
+The identifier `mods.betterwithmods.kiln` will be used as the default on this page.
+
+<details class="cr-block cr-quote" open>
+<summary>All Identifiers</summary>
+
+Any of these can be used to refer to this compat:
+
+```groovy {1}
+mods.betterwithmods.kiln/* Used as page default */
+mods.betterwithmods.Kiln
+```
+
+</details>
+
+## Adding Recipes
+
+- Add the given recipe to the recipe list:
+
+    ```groovy
+    mods.betterwithmods.kiln.add(KilnRecipe)
+    ```
+
+### Recipe Builder
+
+Just like other recipe types, the Kiln also uses a recipe builder.
+
+Don't know what a builder is? Check [the builder info page](/groovy-script/getting_started/builder/) out.
+
+<details class="cr-block cr-abstract" open>
+<summary>Recipe Builder</summary>
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy
+    mods.betterwithmods.kiln.recipeBuilder()
+    ```
+
+---
+
+- `ItemStackList`. Sets the item outputs of the recipe. Requires greater than or equal to 1 and less than or equal to 3.
+
+    ```groovy
+    output(ItemStack)
+    output(ItemStack...)
+    output(Collection<ItemStack>)
+    ```
+
+- `int`. Sets if the Kiln requires a normal fire (1) or a Stoked Fire (2) below it. (Default `1`).
+
+    ```groovy
+    heat(int)
+    ```
+
+- `BlockIngredient`. Sets the input block of the recipe.
+
+    ```groovy
+    input(String)
+    input(IIngredient)
+    input(ItemStack...)
+    input(IIngredient...)
+    input(BlockIngredient)
+    input(List<ItemStack>)
+    input(Collection<IIngredient>)
+    ```
+
+- `boolean`. Sets if the Kiln requires any heat source below it. (Default `false`).
+
+    ```groovy
+    ignoreHeat()
+    ignoreHeat(boolean)
+    ```
+
+---
+
+- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `betterwithmods.common.registry.block.recipe.KilnRecipe`).
+
+    ```groovy
+    register()
+    ```
+
+---
+
+<details class="cr-block cr-example" open>
+<summary>Example</summary>
+
+```groovy
+mods.betterwithmods.kiln.recipeBuilder()
+    .input(item('minecraft:clay'))
+    .output(item('minecraft:diamond'))
+    .heat(2)
+    .register()
+
+mods.betterwithmods.kiln.recipeBuilder()
+    .input(item('minecraft:diamond_block'))
+    .output(item('minecraft:gold_ingot') * 16)
+    .ignoreHeat()
+    .register()
+```
+
+</details>
+
+</details>
+
+## Removing Recipes
+
+- Removes the given recipe from the recipe list:
+
+    ```groovy
+    mods.betterwithmods.kiln.remove(KilnRecipe)
+    ```
+
+- Removes all recipes that match the given input:
+
+    ```groovy
+    mods.betterwithmods.kiln.removeByInput(IIngredient)
+    ```
+
+- Removes all recipes that match the given output:
+
+    ```groovy
+    mods.betterwithmods.kiln.removeByOutput(IIngredient)
+    ```
+
+- Removes all registered recipes:
+
+    ```groovy
+    mods.betterwithmods.kiln.removeAll()
+    ```
+
+<details class="cr-block cr-example" open>
+<summary>Example</summary>
+
+```groovy
+mods.betterwithmods.kiln.removeByInput(item('minecraft:end_stone'))
+mods.betterwithmods.kiln.removeByOutput(item('minecraft:brick'))
+mods.betterwithmods.kiln.removeAll()
+```
+
+</details>
+
+## Getting the value of recipes
+
+- Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
+
+    ```groovy
+    mods.betterwithmods.kiln.streamRecipes()
+    ```

@@ -1,0 +1,40 @@
+---
+import { site } from '../../data/site';
+
+const columns = site.footer.map((col) =>
+  col.title === 'Community' && site.fluxer
+    ? { ...col, links: [{ label: 'Fluxer', href: site.fluxer }, ...col.links] }
+    : col,
+);
+---
+
+<footer class="as-foot">
+  <div class="as-foot__top">
+    <div class="as-foot__brand">
+      <a class="as-foot__mark" href="/"><img src="/brand/cleanroom-aero.svg" alt="" width="28" height="28" />CleanroomMC</a>
+      <div class="as-foot__sponsor">
+        <p class="as-foot__label">Supported by</p>
+        <a href="https://www.yourkit.com/" class="as-foot__logo"><img src="/yourkit.png" alt="YourKit" height="28" /></a>
+        <p class="as-foot__text">
+          YourKit provides free licences for the <a href="https://www.yourkit.com/java/profiler/">YourKit Java Profiler</a> for our JVM projects.
+        </p>
+      </div>
+    </div>
+    {
+      columns.map((col) => (
+        <nav class="as-foot__col" aria-label={col.title}>
+          <h3>{col.title}</h3>
+          <ul>
+            {col.links.map((l) => (
+              <li><a href={l.href}>{l.label}</a></li>
+            ))}
+          </ul>
+        </nav>
+      ))
+    }
+  </div>
+  <div class="as-foot__fine">
+    <span>© CleanroomMC</span>
+    <span>Not affiliated with Mojang or Microsoft.</span>
+  </div>
+</footer>

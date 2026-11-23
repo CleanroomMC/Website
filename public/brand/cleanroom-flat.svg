@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Cleanroom — Flat mark"><title>Cleanroom — Flat mark</title><defs><clipPath id="rf"><polygon points="480,117 480,395 256,512 256,230"/></clipPath><clipPath id="hx"><polygon points="256,0 480,117 480,395 256,512 32,395 32,117"/></clipPath></defs>
+<polygon points="256,0 480,117 256,230 32,117" fill="#f3f9fb"/><polygon points="32,117 256,230 256,512 32,395" fill="#d5e9ef"/><polygon points="480,117 480,395 256,512 256,230" fill="#e7f3f6"/>
+<g clip-path="url(#hx)" fill="#7ec3dc"><path d="M32 118H313L251 180H96V265H174L112 327H32Z"/><path d="M184 265H256V327H122Z"/><path d="M265 181H480V244H202Z"/></g>
+<path d="M256 181H480V327H417L438 348H480V408H416L340 327H315V409H256ZM256 244V265H417V244Z" fill="#266ba2" fill-rule="evenodd" clip-path="url(#rf)"/></svg>

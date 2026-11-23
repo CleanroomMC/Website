@@ -1,0 +1,16 @@
+---
+import Default from '@astrojs/starlight/components/SocialIcons.astro';
+import BrandLogo from './landing/BrandLogo.astro';
+import { site } from '../data/site';
+const zh = Astro.locals.starlightRoute?.lang?.startsWith('zh');
+---
+
+{
+	site.fluxer && (
+		<a class="sl-fluxer" href={site.fluxer} rel="me" title={zh ? '加入 Cleanroom 的 Fluxer 服务器' : 'Join Cleanroom on Fluxer'}>
+			<BrandLogo name="fluxer" size={18} />
+			<span>Fluxer</span>
+		</a>
+	)
+}
+<Default />

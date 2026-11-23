@@ -1,0 +1,50 @@
+---
+import Icon from './Icon.astro';
+import { site } from '../../data/site';
+
+const tools = [
+  {
+    tag: 'Loader', title: 'Cleanroom Loader', text: 'A modern fork of Forge for Minecraft 1.12.2.',
+    chips: ['Java 25', 'LWJGL 3', '≈99% Forge mods'], link: { label: 'Download', href: site.install }, tone: 'blue',
+  },
+  {
+    tag: 'Scripting', title: 'GroovyScript', text: 'A scripting sandbox for tweaking recipes and mod behaviour in your pack.',
+    chips: ['76 mods documented'], link: { label: 'Read the docs', href: '/groovy-script/' }, tone: 'aqua',
+  },
+  {
+    tag: 'Learning', title: 'RenderBook', text: 'A rendering tutorial for mod developers working on 1.12.2, from GL states to stencils.',
+    chips: ['OpenGL', 'LWJGL'], link: { label: 'Start reading', href: '/renderbook/' }, tone: 'leaf',
+  },
+  {
+    tag: 'Build', title: 'CurseMaven', text: 'CurseForge files, served as a Maven repository you can depend on from Gradle.',
+    code: true, link: { label: 'Set up CurseMaven', href: '/curse-maven/' }, tone: 'sun',
+  },
+];
+---
+
+<section class="ls ls-tools" id="toolchain" aria-labelledby="toolchain-h">
+  <p class="ls-eyebrow">Toolchain</p>
+  <h2 class="ls-h" id="toolchain-h">Everything around the loader, too.</h2>
+  <p class="ls-sub">CleanroomMC maintains the tools players, pack makers and mod developers reach for next.</p>
+
+  <div class="ls-cards">
+    {
+      tools.map((t) => (
+        <article class={`ls-card ls-card--${t.tone}`}>
+          <span class="ls-card__tag">{t.tag}</span>
+          <h3 class="ls-card__title">{t.title}</h3>
+          <p class="ls-card__text">{t.text}</p>
+          {t.chips && (
+            <ul class="ls-card__chips">
+              {t.chips.map((c) => <li>{c}</li>)}
+            </ul>
+          )}
+          {t.code && (
+            <pre class="ls-code"><code><span class="k">implementation</span> <span class="s">'curse.maven:mouse-tweaks-60089:3359843+3359844'</span></code></pre>
+          )}
+          <a class="ls-card__more" href={t.link.href}>{t.link.label}<Icon name="arrowRight" size={16} /></a>
+        </article>
+      ))
+    }
+  </div>
+</section>

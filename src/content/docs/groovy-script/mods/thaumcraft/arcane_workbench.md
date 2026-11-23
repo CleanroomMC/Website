@@ -1,0 +1,316 @@
+---
+title: Arcane Workbench (Thaumcraft)
+description: A special crafting table, allowing additional requirements in the form of Vis Crystals, Vis, and having a specific research.
+sidebar:
+  label: Arcane Workbench
+source_code_link: https://github.com/CleanroomMC/GroovyScript/blob/master/src/main/java/com/cleanroommc/groovyscript/compat/mods/thaumcraft/arcane/ArcaneWorkbench.java
+---
+
+## Description
+
+A special crafting table, allowing additional requirements in the form of Vis Crystals, Vis, and having a specific research.
+
+## Identifier
+
+The identifier `mods.thaumcraft.arcane_workbench` will be used as the default on this page.
+
+<details class="cr-block cr-quote">
+<summary>All Identifiers</summary>
+
+Any of these can be used to refer to this compat:
+
+```groovy {12}
+mods.tc.arcaneworkbench
+mods.tc.arcaneWorkbench
+mods.tc.ArcaneWorkbench
+mods.tc.arcane_workbench
+mods.thaum.arcaneworkbench
+mods.thaum.arcaneWorkbench
+mods.thaum.ArcaneWorkbench
+mods.thaum.arcane_workbench
+mods.thaumcraft.arcaneworkbench
+mods.thaumcraft.arcaneWorkbench
+mods.thaumcraft.ArcaneWorkbench
+mods.thaumcraft.arcane_workbench/* Used as page default */
+```
+
+</details>
+
+## Adding Recipes
+
+### Recipe Builder
+
+Just like other recipe types, the Arcane Workbench also uses a recipe builder.
+
+Don't know what a builder is? Check [the builder info page](/groovy-script/getting_started/builder/) out.
+
+<details class="cr-block cr-abstract" open>
+<summary>Shaped Arcane Crafting Recipe Builder</summary>
+
+---
+
+- Create a Recipe Builder for Shaped Arcane Crafting recipes.
+
+    ```groovy
+    mods.thaumcraft.arcane_workbench.shapedBuilder()
+    ```
+
+---
+
+- `ResourceLocation`. Sets the Resource Location of the recipe.
+
+    ```groovy
+    name(String)
+    name(ResourceLocation)
+    ```
+
+- `String[]`. Sets the items required in each slot of the grid as char. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both.
+
+    ```groovy
+    row(String)
+    shape(String...)
+    matrix(String...)
+    ```
+
+- `List<List<IIngredient>>`. Sets the items required in each slot in the grid as IIngredients. Requires greater than or equal to 1, less than or equal to 9, and either the key-based matrix or the ingredient-based matrix can be defined, not both.
+
+    ```groovy
+    shape(List<List<IIngredient>>)
+    matrix(List<List<IIngredient>>)
+    ```
+
+- `Char2ObjectOpenHashMap<IIngredient>`. Sets the item the given char corresponds to. (Default `' ' = IIngredient.EMPTY`).
+
+    ```groovy
+    key(char, IIngredient)
+    key(String, IIngredient)
+    key(Map<String, IIngredient>)
+    ```
+
+- `ItemStack`. Sets the item output. Requires not null.
+
+    ```groovy
+    output(ItemStack)
+    ```
+
+- `int`. Sets the Vis taken from the aura of the chunk containing the Workbench, or a 3x3 chunk area if the Workbench Charged is installed. Can be reduced by armor and baubles. (Default `0`).
+
+    ```groovy
+    vis(int)
+    ```
+
+- `AspectList`. Sets the Aspect Crystals consumed. Requires that every Aspect can only be one of the main 6 (`aer`, `ignis`, `aqua`, `terra`, `ordo`, `perditio`), and to a maximum of 64 each.
+
+    ```groovy
+    aspect(String)
+    aspect(AspectStack)
+    aspect(String, int)
+    aspect(AspectStack...)
+    aspect(Collection<AspectStack>)
+    ```
+
+- `byte`. Sets if the recipe is removed. The `replace` method removes by the output itemstack, and the `replaceByName` method removes by the Resource Location. (Default `0`).
+
+    ```groovy
+    replace() // Makes the recipe remove by the ItemStack output
+    replaceByName() // Makes the recipe remove by the Resource Location name
+    ```
+
+- `boolean`. Sets if the recipe is horizontally mirrored. (Default `false`).
+
+    ```groovy
+    mirrored()
+    mirrored(boolean)
+    ```
+
+- `String`. Sets the research required to craft the recipe.
+
+    ```groovy
+    researchKey(String)
+    ```
+
+- `Closure<ItemStack>`. Sets an operation that modifies the input items or output item.
+
+    ```groovy
+    recipeFunction(Closure<ItemStack>)
+    ```
+
+- `Closure<Void>`. Sets an operation that happens when the recipe is crafted.
+
+    ```groovy
+    recipeAction(Closure<Void>)
+    ```
+
+---
+
+- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `net.minecraft.item.crafting.IRecipe`).
+
+    ```groovy
+    register()
+    ```
+
+---
+
+<details class="cr-block cr-example" open>
+<summary>Example</summary>
+
+```groovy
+mods.thaumcraft.arcane_workbench.shapedBuilder()
+    .researchKey('UNLOCKALCHEMY@3')
+    .output(item('minecraft:pumpkin'))
+    .row('SS ')
+    .row('   ')
+    .row('   ')
+    .key('S', item('minecraft:pumpkin_seeds'))
+    .aspect('terra')
+    .vis(5)
+    .register()
+
+mods.thaumcraft.arcane_workbench.shapedBuilder()
+    .researchKey('UNLOCKALCHEMY@3')
+    .output(item('minecraft:clay'))
+    .matrix('SS ',
+            '   ',
+            '   ')
+    .key('S', item('minecraft:pumpkin'))
+    .aspect(aspect('terra'))
+    .vis(5)
+    .register()
+```
+
+</details>
+
+</details>
+
+<details class="cr-block cr-abstract" open>
+<summary>Shapeless Arcane Crafting Recipe Builder</summary>
+
+---
+
+- Create a Recipe Builder for Shapeless Arcane Crafting recipes.
+
+    ```groovy
+    mods.thaumcraft.arcane_workbench.shapelessBuilder()
+    ```
+
+---
+
+- `ResourceLocation`. Sets the Resource Location of the recipe.
+
+    ```groovy
+    name(String)
+    name(ResourceLocation)
+    ```
+
+- `List<IIngredient>`. Sets the items required for the recipe. Requires greater than or equal to 1 and less than or equal to 9.
+
+    ```groovy
+    input(IIngredient)
+    input(IIngredient...)
+    input(Collection<IIngredient>)
+    ```
+
+- `ItemStack`. Sets the item output. Requires not null.
+
+    ```groovy
+    output(ItemStack)
+    ```
+
+- `int`. Sets the Vis taken from the aura of the chunk containing the Workbench, or a 3x3 chunk area if the Workbench Charged is installed. Can be reduced by armor and baubles. (Default `0`).
+
+    ```groovy
+    vis(int)
+    ```
+
+- `AspectList`. Sets the Aspect Crystals consumed. Requires that every Aspect can only be one of the main 6 (`aer`, `ignis`, `aqua`, `terra`, `ordo`, `perditio`), and to a maximum of 64 each.
+
+    ```groovy
+    aspect(String)
+    aspect(AspectStack)
+    aspect(String, int)
+    aspect(AspectStack...)
+    aspect(Collection<AspectStack>)
+    ```
+
+- `byte`. Sets if the recipe is removed. The `replace` method removes by the output itemstack, and the `replaceByName` method removes by the Resource Location. (Default `0`).
+
+    ```groovy
+    replace() // Makes the recipe remove by the ItemStack output
+    replaceByName() // Makes the recipe remove by the Resource Location name
+    ```
+
+- `String`. Sets the research required to craft the recipe.
+
+    ```groovy
+    researchKey(String)
+    ```
+
+- `Closure<ItemStack>`. Sets an operation that modifies the input items or output item.
+
+    ```groovy
+    recipeFunction(Closure<ItemStack>)
+    ```
+
+- `Closure<Void>`. Sets an operation that happens when the recipe is crafted.
+
+    ```groovy
+    recipeAction(Closure<Void>)
+    ```
+
+---
+
+- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `net.minecraft.item.crafting.IRecipe`).
+
+    ```groovy
+    register()
+    ```
+
+---
+
+<details class="cr-block cr-example" open>
+<summary>Example</summary>
+
+```groovy
+mods.thaumcraft.arcane_workbench.shapelessBuilder()
+    .researchKey('UNLOCKALCHEMY@3')
+    .input(item('minecraft:pumpkin'))
+    .input(item('minecraft:stick'))
+    .input(item('minecraft:stick'))
+    .output(item('thaumcraft:void_hoe'))
+    .vis(0)
+    .register()
+```
+
+</details>
+
+</details>
+
+## Removing Recipes
+
+- Removes the recipe with the matching name:
+
+    ```groovy
+    mods.thaumcraft.arcane_workbench.remove(String)
+    ```
+
+- Removes all recipes that match the given output:
+
+    ```groovy
+    mods.thaumcraft.arcane_workbench.removeByOutput(IIngredient)
+    ```
+
+- Removes all registered recipes:
+
+    ```groovy
+    mods.thaumcraft.arcane_workbench.removeAll()
+    ```
+
+<details class="cr-block cr-example" open>
+<summary>Example</summary>
+
+```groovy
+mods.thaumcraft.arcane_workbench.removeByOutput(item('thaumcraft:mechanism_simple'))
+mods.thaumcraft.arcane_workbench.removeAll()
+```
+
+</details>

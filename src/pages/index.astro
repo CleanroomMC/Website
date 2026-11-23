@@ -1,0 +1,38 @@
+---
+import Landing from '../layouts/Landing.astro';
+import SiteNav from '../components/landing/SiteNav.astro';
+import HeroIntro from '../components/landing/HeroIntro.astro';
+import LogoStage from '../components/landing/LogoStage.astro';
+import Compare from '../components/landing/Compare.astro';
+import FeatureCards from '../components/landing/FeatureCards.astro';
+import Overview from '../components/landing/Overview.astro';
+import Toolchain from '../components/landing/Toolchain.astro';
+import Ecosystem from '../components/landing/Ecosystem.astro';
+import Roadmap from '../components/landing/Roadmap.astro';
+import Faq from '../components/landing/Faq.astro';
+import InstallRows from '../components/landing/InstallRows.astro';
+import Community from '../components/landing/Community.astro';
+import SiteFooter from '../components/landing/SiteFooter.astro';
+---
+
+<Landing>
+  <div data-dialect="aero" class="as-bg as-main">
+    <SiteNav />
+    <main id="main" class="as-grid">
+      <HeroIntro />
+      <LogoStage />
+      <Compare />
+      <FeatureCards />
+    </main>
+    <div class="ls-wrap">
+      <Overview />
+      <Toolchain />
+      <Ecosystem />
+      <Roadmap />
+      <InstallRows />
+      <Faq />
+      <Community />
+    </div>
+    <SiteFooter />
+  </div>
+</Landing>

@@ -1,0 +1,137 @@
+---
+title: Terraneous Extractor (Factory Tech)
+description: Passively generates resources when placed at or below y 8 and.
+sidebar:
+  label: Terraneous Extractor
+source_code_link: https://github.com/CleanroomMC/GroovyScript/blob/master/src/main/java/com/cleanroommc/groovyscript/compat/mods/factorytech/DeepDrill.java
+---
+
+## Description
+
+Passively generates resources when placed at or below y 8 and.
+
+## Identifier
+
+The identifier `mods.factorytech.deep_drill` will be used as the default on this page.
+
+<details class="cr-block cr-quote" open>
+<summary>All Identifiers</summary>
+
+Any of these can be used to refer to this compat:
+
+```groovy {4}
+mods.factorytech.deepdrill
+mods.factorytech.deepDrill
+mods.factorytech.DeepDrill
+mods.factorytech.deep_drill/* Used as page default */
+```
+
+</details>
+
+## Adding Entries
+
+- Add the given recipe to the recipe list:
+
+    ```groovy
+    mods.factorytech.deep_drill.add(Pair<ItemStack, Double>)
+    ```
+
+### Recipe Builder
+
+Just like other recipe types, the Terraneous Extractor also uses a recipe builder.
+
+Don't know what a builder is? Check [the builder info page](/groovy-script/getting_started/builder/) out.
+
+<details class="cr-block cr-abstract" open>
+<summary>Recipe Builder</summary>
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy
+    mods.factorytech.deep_drill.recipeBuilder()
+    ```
+
+---
+
+- `ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
+
+    ```groovy
+    output(ItemStack)
+    output(ItemStack...)
+    output(Collection<ItemStack>)
+    ```
+
+- `double`. Sets the weight compared to other entries. Requires greater than or equal to 0. (Default `0.0d`).
+
+    ```groovy
+    weight(double)
+    ```
+
+---
+
+- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `dalapo.factech.helper.Pair<net.minecraft.item.ItemStack, java.lang.Double>`).
+
+    ```groovy
+    register()
+    ```
+
+---
+
+<details class="cr-block cr-example" open>
+<summary>Example</summary>
+
+```groovy
+mods.factorytech.deep_drill.recipeBuilder()
+    .output(item('minecraft:diamond'))
+    .weight(10)
+    .register()
+
+mods.factorytech.deep_drill.recipeBuilder()
+    .output(item('minecraft:clay'))
+    .weight(30)
+    .register()
+```
+
+</details>
+
+</details>
+
+## Removing Entries
+
+- Removes the given recipe from the recipe list:
+
+    ```groovy
+    mods.factorytech.deep_drill.remove(Pair<ItemStack, Double>)
+    ```
+
+- Removes all recipes that match the given input:
+
+    ```groovy
+    mods.factorytech.deep_drill.removeByInput(IIngredient)
+    ```
+
+- Removes all registered recipes:
+
+    ```groovy
+    mods.factorytech.deep_drill.removeAll()
+    ```
+
+<details class="cr-block cr-example" open>
+<summary>Example</summary>
+
+```groovy
+mods.factorytech.deep_drill.removeByInput(item('minecraft:gold_ore'))
+mods.factorytech.deep_drill.removeAll()
+```
+
+</details>
+
+## Getting the value of entries
+
+- Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
+
+    ```groovy
+    mods.factorytech.deep_drill.streamRecipes()
+    ```

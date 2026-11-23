@@ -1,0 +1,135 @@
+---
+title: Heat Coil (Embers Unofficial Extended Life)
+description: Convert an input item into an output item in a Heat Coil.
+sidebar:
+  label: Heat Coil
+source_code_link: https://github.com/Ender-Development/Embers-Extended-Life/blob/master/src/main/java/teamroots/embers/compat/groovyscript/HeatCoil.java
+---
+
+## Description
+
+Convert an input item into an output item in a Heat Coil.
+
+## Identifier
+
+The identifier `mods.embers.heat_coil` will be used as the default on this page.
+
+<details class="cr-block cr-quote" open>
+<summary>All Identifiers</summary>
+
+Any of these can be used to refer to this compat:
+
+```groovy {4}
+mods.embers.heatcoil
+mods.embers.heatCoil
+mods.embers.HeatCoil
+mods.embers.heat_coil/* Used as page default */
+```
+
+</details>
+
+## Adding Recipes
+
+### Recipe Builder
+
+Just like other recipe types, the Heat Coil also uses a recipe builder.
+
+Don't know what a builder is? Check [the builder info page](/groovy-script/getting_started/builder/) out.
+
+<details class="cr-block cr-abstract" open>
+<summary>Recipe Builder</summary>
+
+---
+
+- Create the Recipe Builder.
+
+    ```groovy
+    mods.embers.heat_coil.recipeBuilder()
+    ```
+
+---
+
+- `IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
+
+    ```groovy
+    input(IIngredient)
+    input(IIngredient...)
+    input(Collection<IIngredient>)
+    ```
+
+- `ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
+
+    ```groovy
+    output(ItemStack)
+    output(ItemStack...)
+    output(Collection<ItemStack>)
+    ```
+
+---
+
+- First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `teamroots.embers.recipe.HeatCoilRecipe`).
+
+    ```groovy
+    register()
+    ```
+
+---
+
+<details class="cr-block cr-example" open>
+<summary>Example</summary>
+
+```groovy
+mods.embers.heat_coil.recipeBuilder()
+    .input(item('minecraft:clay'))
+    .output(item('minecraft:gravel'))
+    .register()
+
+mods.embers.heat_coil.recipeBuilder()
+    .input(item('minecraft:gravel'))
+    .output(item('minecraft:grass'))
+    .register()
+```
+
+</details>
+
+</details>
+
+## Removing Recipes
+
+- Removes all recipes that match the given input:
+
+    ```groovy
+    mods.embers.heat_coil.removeByInput(IIngredient)
+    ```
+
+- Removes all recipes that match the given output:
+
+    ```groovy
+    mods.embers.heat_coil.removeByOutput(IIngredient)
+    ```
+
+- Removes all registered recipes:
+
+    ```groovy
+    mods.embers.heat_coil.removeAll()
+    ```
+
+<details class="cr-block cr-example" open>
+<summary>Example</summary>
+
+```groovy
+mods.embers.heat_coil.removeByInput(item('minecraft:iron_ore'))
+mods.embers.heat_coil.removeByOutput(item('minecraft:iron_ingot'))
+mods.embers.heat_coil.removeByOutput(item('minecraft:glass'))
+mods.embers.heat_coil.removeAll()
+```
+
+</details>
+
+## Getting the value of recipes
+
+- Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
+
+    ```groovy
+    mods.embers.heat_coil.streamRecipes()
+    ```

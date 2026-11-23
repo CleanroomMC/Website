@@ -1,0 +1,22 @@
+---
+import Icon from './Icon.astro';
+import BrandLogo from './BrandLogo.astro';
+import { site } from '../../data/site';
+---
+
+<section class="ls ls-community" id="community" aria-labelledby="community-h">
+  <div class="ls-community__panel">
+    <p class="ls-eyebrow">Community</p>
+    <h2 class="ls-h" id="community-h">Built in the open.</h2>
+    <p class="ls-sub">Ask questions, report issues, and follow development with the rest of the community. Join us on Fluxer, or find us on Discord.</p>
+    <div class="ls-community__ctas">
+      <a class="cr-btn cr-btn--lg cr-btn--fluxer ls-community__fluxer" href={site.fluxer}>
+        <span class="cr-btn__mark"><BrandLogo name="fluxer" size={26} /></span>
+        Join us on Fluxer
+      </a>
+      <a class="cr-btn cr-btn--lg cr-btn--discord" href={site.discord}><BrandLogo name="discord" size={22} />Discord</a>
+      <a class="cr-btn cr-btn--lg ls-community__gh" href={site.github}><Icon name="github" />GitHub</a>
+    </div>
+    <p class="ls-community__alt">Prefer to just watch? Follow <a href={site.x}>@CleanroomMC on X</a>.</p>
+  </div>
+</section>

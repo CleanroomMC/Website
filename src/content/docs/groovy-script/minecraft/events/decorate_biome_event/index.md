@@ -1,0 +1,50 @@
+---
+title: Decorate Biome Event
+---
+
+To use this event use the following import:
+```groovy
+import net.minecraftforge.event.terraingen.DecorateBiomeEvent
+```
+
+## Methods
+```groovy
+net.minecraft.util.math.BlockPos getPos()
+```
+
+```groovy
+net.minecraft.world.World getWorld()
+```
+
+```groovy
+java.util.Random getRand()
+```
+
+```groovy
+net.minecraft.util.math.ChunkPos getChunkPos()
+```
+
+# Pre
+
+To use this event use the following import:
+```groovy
+import net.minecraftforge.event.terraingen.DecorateBiomeEvent.Pre
+```
+
+## Sub-Classes
+This event extends the following events and can use all their methods and fields: <br>
+[DecorateBiomeEvent](/groovy-script/minecraft/events/decorate_biome_event/)
+
+## Methods
+# Post
+
+To use this event use the following import:
+```groovy
+import net.minecraftforge.event.terraingen.DecorateBiomeEvent.Post
+```
+
+## Sub-Classes
+This event extends the following events and can use all their methods and fields: <br>
+[DecorateBiomeEvent](/groovy-script/minecraft/events/decorate_biome_event/)
+
+## Methods

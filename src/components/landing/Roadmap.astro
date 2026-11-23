@@ -1,0 +1,56 @@
+---
+const lanes = [
+  { status: 'In progress', tone: 'aqua', items: [
+    { name: 'Kirino Engine', text: 'An explicit rendering runtime, wired into the loader lifecycle.' },
+    { name: 'Compute API', text: 'A managed computing layer that abstracts OpenCL.' },
+    { name: 'Backportium', text: 'A modular port of modern Minecraft content.' },
+  ] },
+  { status: 'Planned', tone: 'warn', items: [
+    { name: 'Pre-splash bootstrap screen', text: 'Feedback the moment you launch the game.' },
+    { name: 'Vanilla UI/UX overhaul', text: 'A modern design that keeps the vanilla pixel-art style.' },
+    { name: 'Strata', text: 'A unified asset loading pipeline.' },
+    { name: 'Shiro', text: 'Staged, multithreaded world generation. Same seed, same world, on every core.' }
+  ] },
+] as const;
+
+const shipped = [
+  { v: '0.7', name: 'LWJGL 3 + SDL 3', text: 'The rendering and input stack, via LWJGLY.' },
+  { v: '0.7', name: 'CleanroomGradle', text: 'Cleanroom’s own Gradle tooling for mod development.' },
+  { v: '0.7', name: 'Caching API' },
+  { v: '0.7', name: 'Kirino text and vector graphics', text: 'Font rendering and vector graphics APIs.' },
+  { v: '0.6', name: 'CleanMix', text: 'A Mixin fork at parity with MixinBooter 11+.' },
+  { v: '0.6', name: 'Modern mod list screen' },
+  { v: '0.5', name: 'Windows Mica, GUI scaling, taskbar', text: 'Mica window backdrop, modern GUI scaling and taskbar integration.' }
+];
+---
+
+<section class="ls ls-road" id="roadmap" aria-labelledby="road-h">
+  <p class="ls-eyebrow">Roadmap</p>
+  <h2 class="ls-h" id="road-h">Where Cleanroom is going.</h2>
+  <p class="ls-sub">What we shipped so far, what we're building now, what's next. Follow along on GitHub.</p>
+  <div class="ls-road__lanes">
+    {
+      lanes.map((lane) => (
+        <div class={`ls-lane ls-lane--${lane.tone}`}>
+          <h3 class="ls-lane__status"><span class="ls-lane__dot" />{lane.status}</h3>
+          <ul>
+            {lane.items.map((i) => (
+              <li><b>{i.name}</b><span>{i.text}</span></li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+    <div class="ls-lane ls-lane--leaf ls-lane--wide">
+      <h3 class="ls-lane__status"><span class="ls-lane__dot" />Shipped so far</h3>
+      <ul>
+        {shipped.map((i) => (
+          <li>
+            <b>{i.name}{i.v && <em class="ls-lane__v">{i.v}</em>}</b>
+            {i.text && <span>{i.text}</span>}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

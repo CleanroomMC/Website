@@ -1,0 +1,26 @@
+---
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+const link = Astro.locals.starlightRoute.entry.data.source_code_link;
+const label = Astro.locals.starlightRoute.lang?.startsWith('zh') ? '查看源码' : 'View Source Code';
+---
+
+<Default />
+{link && (
+  <a class="cr-source-link" href={link} target="_blank" rel="noopener noreferrer">
+    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8.7 15.9 4.8 12l3.9-3.9a1 1 0 0 0-1.4-1.4l-4.6 4.6a1 1 0 0 0 0 1.4l4.6 4.6a1 1 0 0 0 1.4-1.4Zm6.6 0 3.9-3.9-3.9-3.9a1 1 0 1 1 1.4-1.4l4.6 4.6a1 1 0 0 1 0 1.4l-4.6 4.6a1 1 0 0 1-1.4-1.4Z"/></svg>
+    {label}
+  </a>
+)}
+
+<style>
+  .cr-source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-3);
+    text-decoration: none;
+  }
+  .cr-source-link:hover { color: var(--sl-color-accent-high); }
+</style>

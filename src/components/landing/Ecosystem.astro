@@ -1,0 +1,72 @@
+---
+import Icon from './Icon.astro';
+import { site } from '../../data/site';
+
+const items = [
+  { icon: 'refresh', name: 'Cleanroom Relauncher', text: 'Relaunches a Forge 1.12.2 instance into Cleanroom and sets up a compatible Java for you.', href: 'https://www.curseforge.com/minecraft/mc-mods/cleanroom-relauncher' },
+  { icon: 'layers', name: 'MixinBooter', text: 'Lets mixins that target mods work on 1.12.2, with a single class and an annotation.', href: 'https://github.com/CleanroomMC/MixinBooter' },
+  { icon: 'search', name: 'HadEnoughItems', text: 'A maintained fork of JustEnoughItems for 1.12.2.', href: 'https://github.com/CleanroomMC/HadEnoughItems' },
+  { icon: 'cube', name: 'Kirino Engine', text: 'An explicit rendering runtime over Minecraft. In development.', href: 'https://github.com/CleanroomMC/Kirino-Engine' },
+  { icon: 'code', name: 'Cleanroom Mod Template', text: 'A mod development template for Cleanroom, built on CleanroomGradle.', href: 'https://github.com/CleanroomMC/CleanroomModTemplate' },
+  { icon: 'wrench', name: 'CleanroomGradle', text: 'The Gradle plugin for Cleanroom and Cleanroom-targeted mod development.', href: 'https://github.com/CleanroomMC/CleanroomGradle' },
+] as const;
+
+const refits = [
+  { name: 'SpongeForgeLTS', repo: 'SpongeForge', note: 'built on MixinBooter' },
+  { name: 'AgriCraft', repo: 'AgriCraft' },
+  { name: 'Matter Overdrive', repo: 'MatterOverdrive' },
+  { name: 'BetterPortals Refitted', repo: 'BetterPortalsRefitted' },
+  { name: 'CodeChickenLib', repo: 'CodeChickenLib' },
+  { name: 'Dyson Cube Project', repo: 'Dyson-Cube-Project' }
+];
+---
+
+<section class="ls ls-eco" id="ecosystem" aria-labelledby="eco-h">
+  <p class="ls-eyebrow">Ecosystem</p>
+  <h2 class="ls-h" id="eco-h">More than a loader.</h2>
+  <p class="ls-sub">Launch helpers, libraries, build tooling, and continuations of the mods 1.12.2 still runs on.</p>
+
+  <div class="ls-eco__grid">
+    {
+      items.map((it) => (
+        <a class="ls-mini" href={it.href}>
+          <span class="ls-mini__icon"><Icon name={it.icon} size={22} /></span>
+          <span class="ls-mini__name">{it.name}<Icon name="external" size={14} class="ls-mini__ext" /></span>
+          <span class="ls-mini__text">{it.text}</span>
+        </a>
+      ))
+    }
+  </div>
+  <p class="ls-eco__more">
+    We also keep unofficial continuations alive, like Better Questing, Mouse Tweaks and Flare (Spark for 1.12.2).
+    For more projects, Browse <a href={site.curseforge}>CurseForge</a> or <a href={site.modrinth}>Modrinth</a>.
+  </p>
+
+  <article class="ls-refit" aria-labelledby="refit-h">
+    <div class="ls-refit__body">
+      <span class="ls-refit__badge"><Icon name="wrench" size={16} />Sub-organization</span>
+      <div class="ls-refit__head">
+        <img class="ls-refit__logo" src="/brand/refitbench.png" alt="" width="72" height="72" />
+        <h3 class="ls-refit__title" id="refit-h">RefitBench</h3>
+      </div>
+      <p class="ls-refit__text">
+        Our workshop for old or badly maintained 1.12.2 mods. RefitBench picks up open-source mods that stopped getting updates, fixes them and keeps them running, and ports mods over from other versions.
+      </p>
+      <a class="cr-btn cr-btn--primary" href={site.refitbench}><Icon name="github" />RefitBench on GitHub</a>
+    </div>
+    <div class="ls-refit__list">
+      <p class="ls-refit__label">On the bench</p>
+      <ul>
+        {refits.map((r) => (
+          <li>
+            <a href={`${site.refitbench}/${r.repo}`}>
+              {r.name}
+              {r.note && <small>{r.note}</small>}
+              <Icon name="external" size={13} />
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </article>
+</section>

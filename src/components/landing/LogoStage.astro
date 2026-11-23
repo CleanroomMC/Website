@@ -1,0 +1,18 @@
+---
+// The tilted logo over an aqua/green glow. Hovering swings it to the left (CSS only).
+const sparks = [
+  { left: 64, top: 250, scale: 1 },
+  { left: 452, top: 210, scale: 0.7 },
+  { left: 420, top: 440, scale: 1.2 },
+  { left: 96, top: 430, scale: 0.6 },
+  { left: 250, top: 470, scale: 0.8 },
+];
+---
+
+<div class="as-stage" aria-hidden="true">
+  <div class="as-inner">
+    <span class="as-glow as-g3"></span><span class="as-glow as-g1"></span><span class="as-glow as-g2"></span><span class="as-ring"></span><span class="as-ripple"></span><span class="as-ripple as-ripple--late"></span>
+    {sparks.map((s, i) => <span class="as-spark" style={`left: ${s.left}px; top: ${s.top}px; transform: scale(${s.scale}); animation-delay: ${(i * 0.73).toFixed(2)}s;`} />)}
+    <span class="as-hit"><span class="as-swing"><img class="as-logo" src="/brand/cleanroom-aero.svg" alt="" width="380" height="380" /></span></span>
+  </div>
+</div>

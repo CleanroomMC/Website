@@ -1,0 +1,86 @@
+---
+import { authorsOf, historyFor } from '../lib/git-history';
+
+const REPO = 'https://github.com/CleanroomMC/Website';
+const BRANCH = 'main';
+const MAX_COMMITS = 20;
+
+const route = Astro.locals.starlightRoute;
+const zh = route.lang?.startsWith('zh');
+const t = zh
+	? { contributors: '贡献者', history: '页面历史', changes: (n: number) => `${n} 次修改`, all: '在 GitHub 上查看完整历史', commits: (n: number) => `${n} 次提交` }
+	: { contributors: 'Contributors', history: 'Page history', changes: (n: number) => `${n} change${n === 1 ? '' : 's'}`, all: 'Full history on GitHub', commits: (n: number) => `${n} commit${n === 1 ? '' : 's'}` };
+
+const file = route.entry.filePath;
+const history = file && route.entry.data.template !== 'splash' ? historyFor(file) : null;
+const authors = history ? authorsOf(history.commits) : [];
+const shown = history?.commits.slice(0, MAX_COMMITS) ?? [];
+const dateFmt = new Intl.DateTimeFormat(zh ? 'zh-CN' : 'en', { dateStyle: 'medium' });
+const refParts = (subject: string) => subject.split(/(#\d+)/).filter(Boolean);
+const initials = (name: string) => name.split(/[\s_-]+/).filter(Boolean).slice(0, 2).map((w) => [...w][0]).join('').toUpperCase();
+---
+
+{
+	history && (
+		<section class="cr-history" aria-label={t.history}>
+			<h2 class="cr-history__h">{t.contributors}</h2>
+			<ul class="cr-history__people">
+				{authors.map((a) => {
+					const inner = (
+						<>
+							{a.avatar && <img src={a.avatar} alt="" width="28" height="28" loading="lazy" decoding="async" referrerpolicy="no-referrer" />}
+							<span class="cr-history__initials" aria-hidden="true">{initials(a.name)}</span>
+							<span>{a.name}</span>
+						</>
+					);
+					return (
+						<li title={t.commits(a.commits)}>
+							{a.url ? <a href={a.url}>{inner}</a> : <span class="cr-history__person">{inner}</span>}
+						</li>
+					);
+				})}
+			</ul>
+
+			<details class="cr-history__log">
+				<summary>
+					<span class="cr-history__h">{t.history}</span>
+					<span class="cr-history__count">{t.changes(history.commits.length)}</span>
+				</summary>
+				<ol>
+					{shown.map((c) => (
+						<li>
+							<a class="cr-history__hash" href={`${REPO}/commit/${c.hash}`}>{c.hash.slice(0, 7)}</a>
+							<span class="cr-history__msg">
+								{refParts(c.subject).map((part) =>
+									/^#\d+$/.test(part) ? <a class="cr-history__ref" href={`${REPO}/pull/${part.slice(1)}`}>{part}</a> : part,
+								)}
+							</span>
+							<span class="cr-history__meta">
+								{c.author} · <time datetime={new Date(c.date * 1000).toISOString()} data-rel>{dateFmt.format(c.date * 1000)}</time>
+							</span>
+						</li>
+					))}
+				</ol>
+				<a class="cr-history__all" href={`${REPO}/commits/${BRANCH}/${history.path}`}>{t.all} →</a>
+			</details>
+		</section>
+	)
+}
+
+<script>
+	for (const img of document.querySelectorAll<HTMLImageElement>('.cr-history__people img')) {
+		const drop = () => img.remove();
+		if (img.complete && img.naturalWidth === 0) drop();
+		else img.addEventListener('error', drop, { once: true });
+	}
+
+	const lang = document.documentElement.lang || 'en';
+	const rtf = new Intl.RelativeTimeFormat(lang, { numeric: 'auto' });
+	const units: [Intl.RelativeTimeFormatUnit, number][] = [['year', 31536000], ['month', 2592000], ['week', 604800], ['day', 86400], ['hour', 3600], ['minute', 60]];
+	for (const el of document.querySelectorAll<HTMLTimeElement>('.cr-history time[data-rel]')) {
+		const secs = (new Date(el.dateTime).getTime() - Date.now()) / 1000;
+		const [unit, size] = units.find(([, s]) => Math.abs(secs) >= s) ?? ['minute', 60];
+		el.title = el.textContent ?? '';
+		el.textContent = rtf.format(Math.round(secs / size), unit);
+	}
+</script>

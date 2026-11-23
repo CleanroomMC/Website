@@ -1,0 +1,25 @@
+---
+title: Sapling Grow Tree Event
+---
+
+To use this event use the following import:
+```groovy
+import net.minecraftforge.event.terraingen.SaplingGrowTreeEvent
+```
+
+## Sub-Classes
+This event extends the following events and can use all their methods and fields: <br>
+[WorldEvent](/zh/groovy-script/minecraft/events/world_event/world_event/)
+
+## Methods
+```groovy
+boolean hasResult()
+```
+
+```groovy
+net.minecraft.util.math.BlockPos getPos()
+```
+
+```groovy
+java.util.Random getRand()
+```

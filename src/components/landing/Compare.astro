@@ -1,0 +1,66 @@
+---
+import Icon from './Icon.astro';
+
+type Row = { icon: 'globe' | 'layers' | 'zap' | 'rocket'; lines: string[] };
+const forge: Row[] = [
+  { icon: 'globe', lines: ['Java 8'] },
+  { icon: 'layers', lines: ['LWJGL 2'] },
+  { icon: 'zap', lines: ['Slow &', 'eats memory'] },
+];
+const cleanroom: Row[] = [
+  { icon: 'rocket', lines: ['Java 25+,', 'LWJGL 3, SDL 3'] },
+  { icon: 'zap', lines: ['Fast &', 'memory efficient'] },
+  { icon: 'layers', lines: ['API and Qol fixes'] },
+];
+---
+
+<div class="cmp" id="inside" data-cmp>
+  <div class="cmp__side cmp__before">
+    <h2 class="cmp__head" style="margin: 0;">Forge today</h2>
+    {
+      forge.map((r) => (
+        <div class="cmp__item">
+          <Icon name={r.icon} size={28} />
+          <span>{r.lines.map((l, i) => (<>{i > 0 && <br />}{l}</>))}</span>
+        </div>
+      ))
+    }
+  </div>
+  <div class="cmp__side cmp__after">
+    <span class="cmp__aurora" aria-hidden="true"></span>
+    {[0, 1, 2, 3, 4, 5, 6].map((i) => <span class={`cmp__bubble cmp__bubble--${i}`} aria-hidden="true" />)}
+    <h2 class="cmp__head" style="margin: 0;">Future with Cleanroom</h2>
+    {
+      cleanroom.map((r) => (
+        <div class="cmp__item">
+          <Icon name={r.icon} size={28} />
+          <span>{r.lines.map((l, i) => (<>{i > 0 && <br />}{l}</>))}</span>
+        </div>
+      ))
+    }
+  </div>
+  <div class="cmp__knob" aria-hidden="true">
+    <span class="cmp__ripple"></span>
+    <span class="cmp__ripple cmp__ripple--late"></span>
+    <span class="cmp__orb">
+      <img src="/brand/cleanroom-orb.svg" alt="" width="80" height="80" />
+      <span class="cmp__sheen"></span>
+    </span>
+  </div>
+</div>
+
+<script>
+  const card = document.querySelector<HTMLElement>('[data-cmp]');
+  if (card) {
+    if (!('IntersectionObserver' in window)) card.classList.add('is-in');
+    else {
+      const io = new IntersectionObserver((entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          card.classList.add('is-in');
+          io.disconnect();
+        }
+      }, { threshold: 0.3 });
+      io.observe(card);
+    }
+  }
+</script>

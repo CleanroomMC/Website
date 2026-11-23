@@ -1,0 +1,75 @@
+---
+import Icon from './Icon.astro';
+
+// Teasers revealed by the "Coming soon" card. Ordered as they fan out: the first lands furthest away.
+const upcoming = [
+  { cls: 'pop-1 un-aqua', chip: 'Planned', title: 'Strata', text: 'Data packs, layered: mods, resource packs and per-world packs in one pipeline that reloads in game.' },
+  { cls: 'pop-2 un-leaf', chip: 'In development', title: 'Shiro', text: 'Staged, multithreaded world generation. Same seed, same world, on every core.' },
+  { cls: 'pop-3 un-mystery', chip: 'Stay tuned', title: '???', text: 'We can’t show this one yet.' },
+];
+---
+
+<div class="as-cards">
+  <h2 class="cr-sr">Highlights</h2>
+  <div class="ac">
+    <article class="tile t-leaf">
+      <span class="cap"><Icon name="cube" size={28} /></span>
+      <p class="big as-count" style="display: block; margin: 0; font-size: 40px; line-height: 44px; letter-spacing: -0.02em;" aria-label="About 99%">≈<span data-count-to="99">99</span>%</p>
+      <p>of Forge mods are supported. Bring the mods you know into Cleanroom Minecraft.</p>
+    </article>
+  </div>
+  <div class="ac">
+    <article class="tile t-blue">
+      <span class="cap"><Icon name="users" size={28} /></span>
+      <h3>Community-built</h3>
+      <p>Fluent, modern APIs for mod developers, and features proposed by players, discussed in the open.</p>
+    </article>
+  </div>
+  <div class="ac soon" tabindex="0" aria-label="Coming soon: Strata, Shiro and one more we can’t show yet">
+    {
+      upcoming.map((u) => (
+        <article class={`pop ${u.cls}`}>
+          <span class="un-chip">{u.chip}</span>
+          {u.title === '???' ? (
+            <span class="un-q" style="font-size: 48px;">???</span>
+          ) : (
+            <h4>{u.title}</h4>
+          )}
+          <p>{u.text}</p>
+        </article>
+      ))
+    }
+    <article class="tile t-sun">
+      <span class="cap"><Icon name="sparkle" size={28} /></span>
+      <h3>Coming soon…</h3>
+      <p>Three things are on the way.</p>
+      <span class="soon-hint"><span class="hint-hover">Hover to peek</span><span class="hint-touch">Tap to peek</span> <Icon name="arrowRight" size={16} /></span>
+    </article>
+  </div>
+</div>
+
+<script>
+  const el = document.querySelector<HTMLElement>('[data-count-to]');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (el && !reduce && 'IntersectionObserver' in window) {
+    const to = Number(el.dataset.countTo);
+    const tile = el.closest('.tile');
+    el.textContent = '0';
+    const run = () => {
+      const start = performance.now();
+      const dur = 1600;
+      const tick = (now: number) => {
+        const t = Math.min(1, (now - start) / dur);
+        const eased = 1 - Math.pow(1 - t, 4);
+        el.textContent = String(Math.round(eased * to));
+        if (t < 1) requestAnimationFrame(tick);
+        else tile?.classList.add('is-counted');
+      };
+      requestAnimationFrame(tick);
+    };
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) { io.disconnect(); run(); }
+    }, { threshold: 0.6 });
+    io.observe(el);
+  }
+</script>
