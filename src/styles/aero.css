@@ -185,6 +185,7 @@ starlight-lang-select select { font-family: var(--font-sans); }
 	border-radius: 50%;
 	border-color: var(--line);
 	background: radial-gradient(circle at 50% 30%, #ffffffb3, #ffffff00 70%), var(--sky-200);
+	background-origin: border-box;
 	color: var(--ink-muted);
 }
 .starlight-sidebar-topics a:is(.starlight-sidebar-topics-current, :hover, :focus-visible),
@@ -192,11 +193,13 @@ starlight-lang-select select { font-family: var(--font-sans); }
 .starlight-sidebar-topics a:is(.starlight-sidebar-topics-current, :hover, :focus-visible) .starlight-sidebar-topics-icon {
 	border-color: transparent;
 	background: radial-gradient(circle at 50% 28%, #ffffff8c, #ffffff00 60%), linear-gradient(180deg, var(--brand), var(--brand-strong));
+	background-origin: border-box;
 	color: var(--on-brand);
 	box-shadow: 0 2px 6px -2px color-mix(in srgb, var(--brand) 60%, transparent);
 }
 :root[data-theme='dark'] .starlight-sidebar-topics a:is(.starlight-sidebar-topics-current, :hover, :focus-visible) .starlight-sidebar-topics-icon {
 	background: radial-gradient(circle at 50% 28%, #ffffff40, #ffffff00 60%), var(--brand);
+	background-origin: border-box;
 }
 
 .right-sidebar { border-inline-start: 1px solid var(--line); background: var(--sky-000); }
